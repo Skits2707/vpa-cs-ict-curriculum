@@ -26,11 +26,29 @@
   .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 60px; }
   .nav-logo { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
   .nav-logo span { color: var(--accent); }
-  .nav-links { display: flex; gap: 30px; list-style: none; }
-  .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
-  .nav-links a:hover { color: var(--primary); }
+  .nav-links { display: flex; gap: 8px; list-style: none; align-items: center; }
+  .nav-links > li { position: relative; }
+  .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; padding: 8px 14px; border-radius: 6px; display: block; }
+  .nav-links a:hover { color: var(--primary); background: var(--bg-alt); }
   .nav-cta { background: var(--primary); color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.3s; }
-  .nav-cta:hover { background: var(--primary-dark); }
+  .nav-cta:hover { background: var(--primary-dark); color: white; }
+  
+  /* Dropdown */
+  .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: white; border-radius: 10px; box-shadow: var(--card-hover); min-width: 220px; padding: 8px 0; margin-top: 4px; border: 1px solid var(--border); }
+  .dropdown-menu a { padding: 10px 18px; font-size: 0.85rem; border-radius: 0; }
+  .dropdown-menu a:hover { background: var(--bg-alt); }
+  .dropdown:hover .dropdown-menu { display: block; }
+  .dropdown-toggle::after { content: ' ▼'; font-size: 0.6rem; opacity: 0.6; }
+  
+  /* Mobile menu */
+  .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--primary); }
+  @media (max-width: 768px) {
+    .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: white; flex-direction: column; padding: 16px; box-shadow: var(--card-hover); }
+    .nav-links.active { display: flex; }
+    .dropdown-menu { position: static; box-shadow: none; border: none; padding-left: 16px; display: none; }
+    .dropdown.open .dropdown-menu { display: block; }
+    .menu-toggle { display: block; }
+  }
   
   /* Hero */
   .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--primary) 0%, #1e6091 50%, var(--primary-dark) 100%); color: white; text-align: center; padding: 100px 20px 60px; position: relative; overflow: hidden; }
@@ -46,7 +64,7 @@
   .stat-number { font-size: 2.2rem; font-weight: 800; color: var(--accent-light); }
   .stat-label { font-size: 0.8rem; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
   .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .btn-primary { background: var(--accent); color: #fff; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s; display: inline-block; }
+  .btn-primary { background: var(--accent); color: #fff; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s; display: inline-block; border: none; cursor: pointer; }
   .btn-primary:hover { background: #c96a52; transform: translateY(-2px); }
   .btn-secondary { background: transparent; color: #fff; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; border: 2px solid rgba(255,255,255,0.4); transition: all 0.3s; display: inline-block; }
   .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.12); }
@@ -58,9 +76,9 @@
   .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--primary); margin-bottom: 12px; }
   .section-header p { color: var(--text-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
   
-  /* About / Why Me */
+  /* About / Who I Am */
   .about { background: var(--bg-alt); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
   .about-text h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 16px; }
   .about-text p { color: var(--text-light); margin-bottom: 16px; font-size: 1rem; }
   .about-credentials { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
@@ -69,10 +87,23 @@
   .credential h4 { font-size: 0.9rem; color: var(--primary); margin-bottom: 4px; }
   .credential p { font-size: 0.8rem; color: var(--text-light); margin: 0; }
   
+  /* Story cards */
+  .story-card { background: white; padding: 28px; border-radius: 14px; box-shadow: var(--card-shadow); margin-bottom: 20px; border-left: 4px solid var(--accent); }
+  .story-card h4 { color: var(--primary); font-size: 1.1rem; margin-bottom: 8px; }
+  .story-card .story-meta { font-size: 0.8rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+  .story-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 10px; }
+  .story-card blockquote { font-style: italic; color: var(--primary); border-left: 3px solid var(--accent); padding-left: 16px; margin: 12px 0; font-size: 0.95rem; }
+  
+  /* Bilingual table */
+  .glossary-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  .glossary-table th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; font-size: 0.8rem; }
+  .glossary-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+  .glossary-table tr:hover { background: var(--bg-alt); }
+  
   /* Programme Cards */
   .programmes { background: var(--bg); }
   .prog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-  .prog-card { background: white; border-radius: 16px; padding: 32px; box-shadow: var(--card-shadow); transition: all 0.3s; position: relative; overflow: hidden; }
+  .prog-card { background: white; border-radius: 16px; padding: 32px; box-shadow: var(--card-shadow); transition: all 0.3s; position: relative; overflow: hidden; cursor: pointer; }
   .prog-card:hover { transform: translateY(-6px); box-shadow: var(--card-hover); }
   .prog-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent); }
   .prog-icon { width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary), #1e6091); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 16px; }
@@ -82,8 +113,34 @@
   .prog-features { list-style: none; margin-bottom: 20px; }
   .prog-features li { padding: 4px 0; font-size: 0.9rem; color: var(--text); }
   .prog-features li::before { content: '✓'; color: var(--accent); font-weight: bold; margin-right: 8px; }
-  .prog-btn { display: inline-block; background: var(--primary); color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.3s; }
+  .prog-btn { display: inline-block; background: var(--primary); color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.3s; border: none; cursor: pointer; }
   .prog-btn:hover { background: var(--primary-dark); }
+  
+  /* Collapsible Programme Sections */
+  .programme-section { background: white; border-radius: 16px; margin-bottom: 20px; box-shadow: var(--card-shadow); overflow: hidden; }
+  .programme-header { padding: 20px 28px; display: flex; align-items: center; gap: 16px; cursor: pointer; transition: background 0.2s; user-select: none; border: none; width: 100%; text-align: left; background: white; }
+  .programme-header:hover { background: var(--bg-alt); }
+  .programme-header h3 { font-size: 1.15rem; color: var(--primary); flex: 1; }
+  .programme-header .syllabus { font-size: 0.8rem; color: var(--text-light); display: block; margin-top: 2px; }
+  .programme-toggle { width: 32px; height: 32px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; transition: transform 0.3s; font-size: 0.8rem; }
+  .programme-section.open .programme-toggle { transform: rotate(180deg); }
+  .programme-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+  .programme-section.open .programme-body { max-height: 3000px; }
+  .programme-content { padding: 0 28px 28px; }
+  .sub-section { margin-bottom: 20px; }
+  .sub-section:last-child { margin-bottom: 0; }
+  .sub-header { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary); margin-bottom: 10px; padding: 8px 12px; background: var(--bg-alt); border-radius: 8px; }
+  .doc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+  .doc-link { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 8px; background: var(--bg); color: var(--text); text-decoration: none; font-size: 0.85rem; transition: all 0.15s; border: 1px solid transparent; }
+  .doc-link:hover { background: white; border-color: var(--accent); box-shadow: 0 2px 6px rgba(0,0,0,0.06); transform: translateX(2px); }
+  .doc-icon { width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; }
+  .doc-icon.html { background: #e3f2fd; color: #1565c0; }
+  .doc-icon.pdf { background: #ffebee; color: #c62828; }
+  .doc-info { flex: 1; min-width: 0; }
+  .doc-name { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .doc-meta { font-size: 0.75rem; color: var(--text-light); }
+  .doc-arrow { opacity: 0; transition: opacity 0.15s; color: var(--accent); }
+  .doc-link:hover .doc-arrow { opacity: 1; }
   
   /* Featured Docs */
   .featured { background: var(--bg-alt); }
@@ -99,30 +156,6 @@
   .featured-card p { color: var(--text-light); font-size: 0.85rem; margin-bottom: 12px; }
   .featured-card a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.85rem; }
   .featured-card a:hover { text-decoration: underline; }
-  
-  /* Full Library Toggle */
-  .library-toggle { text-align: center; margin-top: 40px; }
-  .toggle-btn { background: white; border: 2px solid var(--primary); color: var(--primary); padding: 12px 32px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: all 0.3s; }
-  .toggle-btn:hover { background: var(--primary); color: white; }
-  .library-content { display: none; margin-top: 40px; }
-  .library-content.active { display: block; }
-  
-  /* Document Table */
-  .doc-table { width: 100%; background: white; border-radius: 12px; overflow: hidden; box-shadow: var(--card-shadow); }
-  .doc-table th { background: var(--primary); color: white; padding: 14px 16px; text-align: left; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
-  .doc-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
-  .doc-table tr:hover { background: var(--bg-alt); }
-  .doc-link { color: var(--primary); text-decoration: none; font-weight: 500; }
-  .doc-link:hover { text-decoration: underline; }
-  .fmt { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
-  .fmt-html { background: #e3f2fd; color: #1565c0; }
-  .fmt-pdf { background: #ffebee; color: #c62828; }
-  
-  /* Search */
-  .search-box { max-width: 600px; margin: 0 auto 40px; position: relative; }
-  .search-box input { width: 100%; padding: 14px 20px 14px 50px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; transition: border-color 0.3s; background: var(--bg); }
-  .search-box input:focus { outline: none; border-color: var(--primary); }
-  .search-box::before { content: '🔍'; position: absolute; left: 18px; top: 50%; transform: translateY(-50%); font-size: 1.1rem; }
   
   /* Contact */
   .contact { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; text-align: center; }
@@ -143,13 +176,12 @@
   
   /* Mobile */
   @media (max-width: 768px) {
-    .nav-links { display: none; }
     .hero-stats { gap: 20px; }
     .about-grid { grid-template-columns: 1fr; }
     .about-credentials { grid-template-columns: 1fr; }
     .contact-grid { gap: 24px; }
-    .doc-table { font-size: 0.8rem; }
-    .doc-table th, .doc-table td { padding: 8px 10px; }
+    .doc-grid { grid-template-columns: 1fr; }
+    .programme-content { padding: 0 16px 20px; }
   }
   
   /* Scroll animations */
@@ -162,13 +194,22 @@
 <nav>
   <div class="nav-container">
     <div class="nav-logo">CS<span>Curriculum</span>.Portfolio</div>
-    <ul class="nav-links">
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
-      <li><a href="#programmes">Programmes</a></li>
-      <li><a href="#featured">Featured</a></li>
+      <li class="dropdown">
+        <a href="#programmes" class="dropdown-toggle">Programmes</a>
+        <div class="dropdown-menu">
+          <a href="#igcse-cs">IGCSE Computer Science</a>
+          <a href="#ict-program">ICT Programme</a>
+          <a href="#alevel-cs">A-Level Computer Science</a>
+          <a href="#ibdp-cs">IB DP Computer Science</a>
+        </div>
+      </li>
+      <li><a href="#featured">Documents</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Get in Touch</a>
   </div>
 </nav>
 
@@ -237,6 +278,121 @@
   </div>
 </section>
 
+<section style="background: var(--bg); padding: 80px 20px;">
+  <div class="container">
+    <div class="section-header">
+      <h2>My Practice</h2>
+      <p>These aren't just Computer Science stories. They're evidence of who I am as an educator.</p>
+    </div>
+    <div class="story-card">
+      <div class="story-meta">Story 01</div>
+      <h4>The Girl Nobody Saw</h4>
+      <p><strong>Background:</strong> A shy, quiet student who hid in the classroom, barely spoke, and had no confidence. Her parents and previous teachers had given up on her academically. At age three, the verdict was already set: she wouldn't achieve anything.</p>
+      <p><strong>My Approach:</strong> I stopped trying to 'teach' her and started trying to know her. Built trust slowly. Was honest with her — learning is hard, but we'll try. Created a space where she felt safe enough to fail and try again.</p>
+      <p><strong>The Outcome:</strong> At four, her English skyrocketed. By five and a half, she applied those strategies to Chinese and maths. At six, she became one of the top students in her class — not because she was the most gifted, but because she knew to ask for help and believed she could. Now seven, she attends one of Hong Kong's top schools. She messages me, calls me, asks for help, shares her victories.</p>
+      <blockquote>Relationship precedes learning. You cannot reach a child you do not see.</blockquote>
+    </div>
+    <div class="story-card">
+      <div class="story-meta">Story 02</div>
+      <h4>The Boy Everyone Gave Up On</h4>
+      <p><strong>Background:</strong> A student with severe behavioural needs, removed from the classroom for three years. His record: screaming, kicking, scratching, throwing chairs. Labelled 'unteachable'. He wasn't even allowed to hold a pencil — too dangerous, they believed.</p>
+      <p><strong>My Approach:</strong> I didn't fix him — he did that himself. I simply refused to give up on him. Six months of consistent expectations, patience, and finding things that made him feel capable. Built routines he could trust. Celebrated tiny wins until they became momentum.</p>
+      <p><strong>The Outcome:</strong> He can now sit, listen, participate, and complete work independently. He wrote a story on his own — came to me beaming with pride, high-fived me, and spent a week telling everyone how proud he was. He not only started primary school — he interviewed well.</p>
+      <blockquote>'Unteachable' usually means 'not yet reached'. Every child has a door to dignity.</blockquote>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--bg-alt); padding: 80px 20px;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Technology & AI Literacy</h2>
+      <p>Honest. Not Fearful.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h3>My Background</h3>
+        <p>I hold a Level 8 Honours Bachelor's in Cybercrime and IT Security from SETU Ireland. My formal training is in complex systems. My passion is making them accessible to young learners.</p>
+        <h3>How I Teach AI</h3>
+        <p>Kids are growing up in the age of AI. I don't pretend it doesn't exist or warn them that screens will ruin their eyes. I'm honest: AI can help you if you know how to use it. Screen time has limits, but small doses with purpose beat blind prohibition.</p>
+      </div>
+      <div class="about-text">
+        <h3>Cybersecurity in the Classroom</h3>
+        <p>My cybercrime background isn't just a credential — it's a teaching tool. I bring real case studies into the classroom: WannaCry, social engineering, password hygiene. Students learn to protect themselves, not because they're scared, but because they understand.</p>
+        <blockquote style="border-left: 3px solid var(--accent); padding-left: 16px; margin-top: 20px; color: var(--primary); font-style: italic;">I teach students to wield technology well — not to shield them from it.</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--bg); padding: 80px 20px;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Bilingual Practice</h2>
+      <p>EAL scaffolding in technical subjects. Every student deserves access to the language of Computer Science.</p>
+    </div>
+    <p style="text-align: center; color: var(--text-light); max-width: 700px; margin: 0 auto 40px;">Teaching Computer Science in a bilingual context isn't just translation — it's about building conceptual bridges. Every technical term is a potential barrier for EAL learners. My approach removes those barriers systematically.</p>
+    <div class="about-grid" style="margin-bottom: 40px;">
+      <div class="about-text">
+        <h3>My Approach</h3>
+        <p><strong>Bilingual Keywords First</strong> — Every lesson opens with 3–5 key terms displayed in English and Chinese. Students see the vocabulary before they encounter the concept, priming comprehension.</p>
+        <p><strong>Visual Scaffolding</strong> — Diagrams, flowcharts, and physical demonstrations reduce language dependency. A student can understand binary addition by moving physical cards before reading a single sentence.</p>
+        <p><strong>Sentence Starters</strong> — For extended written answers, I provide sentence starters in both languages. This removes the 'blank page' anxiety and lets students focus on demonstrating technical understanding.</p>
+      </div>
+      <div class="about-text">
+        <h3>Collaborative Learning</h3>
+        <p><strong>Pair Before Individual</strong> — Students discuss concepts in pairs (often mixing language abilities) before individual work. This builds confidence and generates peer explanations that are sometimes more effective than the teacher's.</p>
+        <p><strong>Bilingual Glossary Preview</strong> — Every programme includes a comprehensive glossary with English, Chinese characters, and Pinyin. Students reference these throughout the course.</p>
+      </div>
+    </div>
+    <table class="glossary-table">
+      <thead>
+        <tr><th>English</th><th>中文</th><th>Pinyin</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Binary</td><td>二进制</td><td>er jin zhi</td></tr>
+        <tr><td>CPU</td><td>中央处理器</td><td>zhong yang chu li qi</td></tr>
+        <tr><td>RAM</td><td>随机存取存储器</td><td>sui ji cun qu cun chu qi</td></tr>
+        <tr><td>Encryption</td><td>加密</td><td>jia mi</td></tr>
+        <tr><td>Firewall</td><td>防火墙</td><td>fang huo qiang</td></tr>
+        <tr><td>Algorithm</td><td>算法</td><td>suan fa</td></tr>
+      </tbody>
+    </table>
+    <p style="text-align: center; color: var(--text-light); margin-top: 16px; font-size: 0.9rem;">+ 500+ more terms across all four programmes</p>
+  </div>
+</section>
+
+<section style="background: var(--bg-alt); padding: 80px 20px;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Professional Standards</h2>
+      <p>High expectations. High support. Continuous growth.</p>
+    </div>
+    <div class="prog-grid">
+      <div class="prog-card fade-in">
+        <div class="prog-icon">🌍</div>
+        <h3>IB Philosophy</h3>
+        <p>Inquiry-based learning isn't a methodology I read about — it's how I teach every day. I design lessons that start with questions, not answers. Students construct understanding through exploration, reflection, and connection.</p>
+      </div>
+      <div class="prog-card fade-in">
+        <div class="prog-icon">✅</div>
+        <h3>QTS Framework</h3>
+        <p>My Qualified Teacher Status means I meet the UK's rigorous standards for teaching practice — subject knowledge, pedagogy, assessment, and professional conduct. Every lesson has a clear objective, every student has a clear pathway.</p>
+      </div>
+      <div class="prog-card fade-in">
+        <div class="prog-icon">🥋</div>
+        <h3>Martial Arts Discipline</h3>
+        <p>There's a taekwondo principle I live by: 'Unprepared is defeated.' I apply this to every aspect of my teaching. Every lesson is meticulously planned. Every resource is prepared in advance. Every contingency is considered.</p>
+      </div>
+      <div class="prog-card fade-in">
+        <div class="prog-icon">📈</div>
+        <h3>Continuous Growth</h3>
+        <p>I built this curriculum in my own time because I believe in proactive professional growth. I seek feedback, reflect on practice, and constantly refine. The best teachers never stop being students.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="programmes" id="programmes">
   <div class="container">
     <div class="section-header">
@@ -244,7 +400,7 @@
       <p>One seamless pathway from first digital steps to university-level computer science</p>
     </div>
     <div class="prog-grid">
-      <div class="prog-card fade-in">
+      <div class="prog-card fade-in" onclick="scrollToSection('igcse-cs')">
         <div class="prog-icon">🖥️</div>
         <h3>IGCSE Computer Science</h3>
         <div class="prog-exam">CIE 0478</div>
@@ -254,9 +410,9 @@
           <li>Python programming & pseudocode</li>
           <li>5 mock exams with gap analysis</li>
         </ul>
-        <a href="#featured" class="prog-btn">View Documents</a>
+        <button class="prog-btn" onclick="event.stopPropagation(); openProgramme('igcse-cs')">View Documents</button>
       </div>
-      <div class="prog-card fade-in">
+      <div class="prog-card fade-in" onclick="scrollToSection('ict-program')">
         <div class="prog-icon">📱</div>
         <h3>ICT Programme</h3>
         <div class="prog-exam">CIE 0417 + Common Core</div>
@@ -266,9 +422,9 @@
           <li>Microsoft Office / Google Workspace</li>
           <li>HTML, CSS & database skills</li>
         </ul>
-        <a href="#featured" class="prog-btn">View Documents</a>
+        <button class="prog-btn" onclick="event.stopPropagation(); openProgramme('ict-program')">View Documents</button>
       </div>
-      <div class="prog-card fade-in">
+      <div class="prog-card fade-in" onclick="scrollToSection('alevel-cs')">
         <div class="prog-icon">🎓</div>
         <h3>A-Level Computer Science</h3>
         <div class="prog-exam">CIE 9618</div>
@@ -278,9 +434,9 @@
           <li>Programming project (NEA-style)</li>
           <li>University & career pathways</li>
         </ul>
-        <a href="#featured" class="prog-btn">View Documents</a>
+        <button class="prog-btn" onclick="event.stopPropagation(); openProgramme('alevel-cs')">View Documents</button>
       </div>
-      <div class="prog-card fade-in">
+      <div class="prog-card fade-in" onclick="scrollToSection('ibdp-cs')">
         <div class="prog-icon">🌍</div>
         <h3>IB DP Computer Science</h3>
         <div class="prog-exam">IB DP (2024+)</div>
@@ -290,7 +446,7 @@
           <li>Complete IA guide with criteria</li>
           <li>TOK & university pathway links</li>
         </ul>
-        <a href="#featured" class="prog-btn">View Documents</a>
+        <button class="prog-btn" onclick="event.stopPropagation(); openProgramme('ibdp-cs')">View Documents</button>
       </div>
     </div>
   </div>
@@ -299,8 +455,8 @@
 <section class="featured" id="featured">
   <div class="container">
     <div class="section-header">
-      <h2>Featured Documents</h2>
-      <p>Key curriculum documents — click any to view</p>
+      <h2>Quick Access — Featured Documents</h2>
+      <p>Curated highlights from across all four programmes</p>
     </div>
     <div class="featured-grid">
       <div class="featured-card">
@@ -340,460 +496,256 @@
         <a href="ICT_Program/IGCSE_ICT/Year_9_Semester_1/Weeks_1-9_Computer_Systems_Networks.html">View HTML →</a>
       </div>
     </div>
-    
-    <div class="library-toggle">
-      <button class="toggle-btn" onclick="toggleLibrary()">📚 View Full Document Library (80+ documents)</button>
+  </div>
+</section>
+
+<section style="background: var(--bg); padding: 80px 20px;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Full Document Library</h2>
+      <p>All documents organised by programme — click to expand</p>
     </div>
     
-    <div class="library-content" id="libraryContent">
-      <div class="search-box">
-        <input type="text" id="docSearch" placeholder="Search documents by name, programme, or grade..." onkeyup="filterDocs()">
+    <!-- IGCSE CS -->
+    <div class="programme-section" id="igcse-cs">
+      <button class="programme-header" onclick="toggleProgramme('igcse-cs')">
+        <div class="prog-icon" style="width:40px;height:40px;font-size:1.2rem;">🖥️</div>
+        <div style="flex:1">
+          <h3>IGCSE Computer Science (0478)</h3>
+          <span class="syllabus">Cambridge Assessment International Education • Year 9 & Year 10 • 15 documents</span>
+        </div>
+        <div class="programme-toggle">▼</div>
+      </button>
+      <div class="programme-body">
+        <div class="programme-content">
+          <div class="sub-section">
+            <div class="sub-header">📁 Year 9 — Semester 1</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_9_Semester_1/Course%20Overview.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">Syllabus outline & structure</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_9_Semester_1/Weeks%201-6%20Data%20Representation.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Weeks 1–6: Data Representation</div><div class="doc-meta">Binary, hex, ASCII, images, sound</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_9_Semester_1/Weeks%207-11%20Hardware%20and%20Software.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Weeks 7–11: Hardware & Software</div><div class="doc-meta">CPU, memory, I/O, OS, utility software</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_9_Semester_1/Weeks%2012-18%20Networks%20and%20Revision.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Weeks 12–18: Networks & Revision</div><div class="doc-meta">Network types, protocols, security</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_9_Semester_1/Assessment%20Pack.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">Past papers, mark schemes, rubrics</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 Year 9 — Semester 2</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_9_Semester_2/Weeks%201-6%20Programming%20Fundamentals.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Weeks 1–6: Programming Fundamentals</div><div class="doc-meta">Variables, data types, I/O, operators</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_9_Semester_2/Weeks%207-12%20Control%20Structures.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Weeks 7–12: Control Structures</div><div class="doc-meta">Selection, iteration, subroutines</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_9_Semester_2/Weeks%2013-18%20Problem%20Solving.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Weeks 13–18: Problem Solving</div><div class="doc-meta">Algorithms, decomposition, abstraction</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_9_Semester_2/Assessment%20Pack.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">Programming tasks & theory tests</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 Year 10 — Semester 1</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_10_Semester_1/Weeks%201-9%20Consolidation.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Weeks 1–9: Consolidation</div><div class="doc-meta">Review of all Year 9 topics</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_10_Semester_1/Weeks%2010-18%20Exam%20Preparation.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Weeks 10–18: Exam Preparation</div><div class="doc-meta">Paper 1 & Paper 2 strategies</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_10_Semester_1/Assessment%20Pack.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">Mock exams & gap analysis</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 Year 10 — Semester 2</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_10_Semester_2/Weeks%201-9%20Final%20Revision.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Weeks 1–9: Final Revision</div><div class="doc-meta">Topic-by-topic review</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_10_Semester_2/Weeks%2010-18%20Mock%20Exams.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Weeks 10–18: Mock Exams</div><div class="doc-meta">Full mock exam series</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IGCSE_Computer_Science/Year_10_Semester_2/Assessment%20Pack.pdf"><div class="doc-icon pdf">PDF</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">Final exam preparation materials</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div style="overflow-x: auto;">
-        <table class="doc-table" id="docTable">
-          <thead>
-            <tr>
-              <th>Document</th>
-              <th>Programme</th>
-              <th>Grade/Year</th>
-              <th>Type</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_9_Semester_1/Course%20Overview.pdf" class="doc-link">IGCSE CS — Year 9 Course Overview</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_9_Semester_1/Weeks%201-6%20Data%20Representation.pdf" class="doc-link">IGCSE CS — Y9 S1: Data Representation</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_9_Semester_1/Weeks%207-11%20Hardware%20and%20Software.pdf" class="doc-link">IGCSE CS — Y9 S1: Hardware & Software</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_9_Semester_1/Weeks%2012-18%20Networks%20and%20Revision.pdf" class="doc-link">IGCSE CS — Y9 S1: Networks & Revision</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_9_Semester_1/Assessment%20Pack.pdf" class="doc-link">IGCSE CS — Y9 S1 Assessment Pack</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_9_Semester_2/Weeks%201-6%20Programming%20Fundamentals.pdf" class="doc-link">IGCSE CS — Y9 S2: Programming Fundamentals</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_9_Semester_2/Weeks%207-12%20Control%20Structures.pdf" class="doc-link">IGCSE CS — Y9 S2: Control Structures</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_9_Semester_2/Weeks%2013-18%20Problem%20Solving.pdf" class="doc-link">IGCSE CS — Y9 S2: Problem Solving</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_9_Semester_2/Assessment%20Pack.pdf" class="doc-link">IGCSE CS — Y9 S2 Assessment Pack</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_10_Semester_1/Weeks%201-9%20Consolidation.pdf" class="doc-link">IGCSE CS — Y10 S1: Consolidation</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 10</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_10_Semester_1/Weeks%2010-18%20Exam%20Preparation.pdf" class="doc-link">IGCSE CS — Y10 S1: Exam Preparation</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 10</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_10_Semester_1/Assessment%20Pack.pdf" class="doc-link">IGCSE CS — Y10 S1 Assessment Pack</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 10</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_10_Semester_2/Weeks%201-9%20Final%20Revision.pdf" class="doc-link">IGCSE CS — Y10 S2: Final Revision</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 10</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_10_Semester_2/Weeks%2010-18%20Mock%20Exams.pdf" class="doc-link">IGCSE CS — Y10 S2: Mock Exams</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 10</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="igcse-cs">
-              <td><a href="IGCSE_Computer_Science/Year_10_Semester_2/Assessment%20Pack.pdf" class="doc-link">IGCSE CS — Y10 S2 Assessment Pack</a></td>
-              <td>IGCSE CS</td>
-              <td>Year 10</td>
-              <td><span class="fmt fmt-pdf">PDF</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/AS_Level/Semester_1/Course_Overview.html" class="doc-link">A-Level — AS S1 Course Overview</a></td>
-              <td>A-Level</td>
-              <td>Year 11 (AS)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/AS_Level/Semester_1/Weeks_1-9_Information_Representation_Communication.html" class="doc-link">A-Level — AS S1: Info Representation</a></td>
-              <td>A-Level</td>
-              <td>Year 11 (AS)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/AS_Level/Semester_1/Weeks_10-18_Hardware_System_Software_Security.html" class="doc-link">A-Level — AS S1: Hardware & Security</a></td>
-              <td>A-Level</td>
-              <td>Year 11 (AS)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/AS_Level/Semester_1/Assessment_Pack.html" class="doc-link">A-Level — AS S1 Assessment Pack</a></td>
-              <td>A-Level</td>
-              <td>Year 11 (AS)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/AS_Level/Semester_2/Course_Overview.html" class="doc-link">A-Level — AS S2 Course Overview</a></td>
-              <td>A-Level</td>
-              <td>Year 11 (AS)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/AS_Level/Semester_2/Weeks_1-9_Programming_Fundamentals.html" class="doc-link">A-Level — AS S2: Programming</a></td>
-              <td>A-Level</td>
-              <td>Year 11 (AS)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/AS_Level/Semester_2/Assessment_Pack.html" class="doc-link">A-Level — AS S2 Assessment Pack</a></td>
-              <td>A-Level</td>
-              <td>Year 11 (AS)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/A2_Level/Semester_1/Course_Overview.html" class="doc-link">A-Level — A2 S1 Course Overview</a></td>
-              <td>A-Level</td>
-              <td>Year 12 (A2)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/A2_Level/Semester_1/Weeks_1-9_Advanced_Data_Communication.html" class="doc-link">A-Level — A2 S1: Advanced Data</a></td>
-              <td>A-Level</td>
-              <td>Year 12 (A2)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/A2_Level/Semester_1/Weeks_10-18_Hardware_System_Software_AI.html" class="doc-link">A-Level — A2 S1: Hardware & AI</a></td>
-              <td>A-Level</td>
-              <td>Year 12 (A2)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/A2_Level/Semester_1/Assessment_Pack.html" class="doc-link">A-Level — A2 S1 Assessment Pack</a></td>
-              <td>A-Level</td>
-              <td>Year 12 (A2)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/A2_Level/Semester_2/Course_Overview.html" class="doc-link">A-Level — A2 S2 Course Overview</a></td>
-              <td>A-Level</td>
-              <td>Year 12 (A2)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/A2_Level/Semester_2/Weeks_1-9_Practical_Programming_Project.html" class="doc-link">A-Level — A2 S2: Programming Project</a></td>
-              <td>A-Level</td>
-              <td>Year 12 (A2)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/A2_Level/Semester_2/Weeks_10-18_Revision_Final_Exams.html" class="doc-link">A-Level — A2 S2: Revision & Exams</a></td>
-              <td>A-Level</td>
-              <td>Year 12 (A2)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/A2_Level/Semester_2/Assessment_Pack.html" class="doc-link">A-Level — A2 S2 Assessment Pack</a></td>
-              <td>A-Level</td>
-              <td>Year 12 (A2)</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/Supporting_Documents/Bilingual_Glossary_150_Terms.html" class="doc-link">A-Level — Bilingual Glossary (150+)</a></td>
-              <td>A-Level</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/Supporting_Documents/IGCSE_to_A_Level_Bridge_Document.html" class="doc-link">A-Level — IGCSE to A-Level Bridge</a></td>
-              <td>A-Level</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/Supporting_Documents/Intervention_Protocol.html" class="doc-link">A-Level — Intervention Protocol</a></td>
-              <td>A-Level</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/Supporting_Documents/Predicted_Outcomes_and_Progression.html" class="doc-link">A-Level — Predicted Outcomes</a></td>
-              <td>A-Level</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="alevel">
-              <td><a href="A_Level_Computer_Science/Supporting_Documents/Enrichment_Programme.html" class="doc-link">A-Level — Enrichment Programme</a></td>
-              <td>A-Level</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Grades_2-3/Course_Overview.html" class="doc-link">ICT — Grades 2–3 Course Overview</a></td>
-              <td>ICT</td>
-              <td>Grades 2–3</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Grades_2-3/Term_1_Digital_Basics.html" class="doc-link">ICT — G2–3: Digital Basics</a></td>
-              <td>ICT</td>
-              <td>Grades 2–3</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Grades_2-3/Term_2_Digital_Creation.html" class="doc-link">ICT — G2–3: Digital Creation</a></td>
-              <td>ICT</td>
-              <td>Grades 2–3</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Grades_4-5/Course_Overview.html" class="doc-link">ICT — Grades 4–5 Course Overview</a></td>
-              <td>ICT</td>
-              <td>Grades 4–5</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Grades_4-5/Term_1_Productivity_Tools.html" class="doc-link">ICT — G4–5: Productivity Tools</a></td>
-              <td>ICT</td>
-              <td>Grades 4–5</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Grades_4-5/Term_2_Spreadsheets_Presentations.html" class="doc-link">ICT — G4–5: Spreadsheets</a></td>
-              <td>ICT</td>
-              <td>Grades 4–5</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Grades_6-8/Course_Overview.html" class="doc-link">ICT — Grades 6–8 Course Overview</a></td>
-              <td>ICT</td>
-              <td>Grades 6–8</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Grades_6-8/Year_6_Advanced_Productivity.html" class="doc-link">ICT — G6: Advanced Productivity</a></td>
-              <td>ICT</td>
-              <td>Grade 6</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Grades_6-8/Year_7_Programming_Databases.html" class="doc-link">ICT — G7: Programming & Databases</a></td>
-              <td>ICT</td>
-              <td>Grade 7</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Grades_6-8/Year_8_Cybersecurity_Robotics.html" class="doc-link">ICT — G8: Cybersecurity</a></td>
-              <td>ICT</td>
-              <td>Grade 8</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/IGCSE_ICT/Year_9_Semester_1/Course_Overview.html" class="doc-link">ICT — IGCSE ICT Y9 S1 Overview</a></td>
-              <td>ICT</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/IGCSE_ICT/Year_9_Semester_1/Weeks_1-9_Computer_Systems_Networks.html" class="doc-link">ICT — IGCSE ICT Y9 S1: Systems</a></td>
-              <td>ICT</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/IGCSE_ICT/Year_9_Semester_1/Weeks_10-18_Data_Types_Effects_Security.html" class="doc-link">ICT — IGCSE ICT Y9 S1: Data & Security</a></td>
-              <td>ICT</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/IGCSE_ICT/Year_9_Semester_2/Weeks_1-9_Document_Production.html" class="doc-link">ICT — IGCSE ICT Y9 S2: Documents</a></td>
-              <td>ICT</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/IGCSE_ICT/Year_9_Semester_2/Weeks_10-18_Data_Manipulation_Presentations.html" class="doc-link">ICT — IGCSE ICT Y9 S2: Data & Presentations</a></td>
-              <td>ICT</td>
-              <td>Year 9</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/IGCSE_ICT/Year_10_Semester_1/Weeks_1-9_Data_Analysis_Web_Authoring.html" class="doc-link">ICT — IGCSE ICT Y10 S1: Data Analysis</a></td>
-              <td>ICT</td>
-              <td>Year 10</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/IGCSE_ICT/Year_10_Semester_1/Weeks_10-18_Databases_Revision.html" class="doc-link">ICT — IGCSE ICT Y10 S1: Databases</a></td>
-              <td>ICT</td>
-              <td>Year 10</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/IGCSE_ICT/Year_10_Semester_2/Weeks_1-9_Consolidation_Practice.html" class="doc-link">ICT — IGCSE ICT Y10 S2: Consolidation</a></td>
-              <td>ICT</td>
-              <td>Year 10</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/IGCSE_ICT/Year_10_Semester_2/Weeks_10-18_Mock_Exams_Final_Prep.html" class="doc-link">ICT — IGCSE ICT Y10 S2: Mock Exams</a></td>
-              <td>ICT</td>
-              <td>Year 10</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Supporting_Documents/Bilingual_Glossary_200_Terms.html" class="doc-link">ICT — Bilingual Glossary (200+)</a></td>
-              <td>ICT</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Supporting_Documents/Common_Core_Standards_Mapping.html" class="doc-link">ICT — Common Core Mapping</a></td>
-              <td>ICT</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ict">
-              <td><a href="ICT_Program/Supporting_Documents/Digital_Citizenship_Framework.html" class="doc-link">ICT — Digital Citizenship</a></td>
-              <td>ICT</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_1/Course_Overview.html" class="doc-link">IB DP — Y1 S1 Course Overview</a></td>
-              <td>IB DP</td>
-              <td>Year 1</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_1/Weeks_1-9_System_Fundamentals.html" class="doc-link">IB DP — Y1 S1: System Fundamentals</a></td>
-              <td>IB DP</td>
-              <td>Year 1</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_1/Weeks_10-18_Computer_Organization.html" class="doc-link">IB DP — Y1 S1: Computer Organization</a></td>
-              <td>IB DP</td>
-              <td>Year 1</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_2/Weeks_1-9_Networks.html" class="doc-link">IB DP — Y1 S2: Networks</a></td>
-              <td>IB DP</td>
-              <td>Year 1</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_2/Weeks_10-18_Computational_Thinking.html" class="doc-link">IB DP — Y1 S2: Computational Thinking</a></td>
-              <td>IB DP</td>
-              <td>Year 1</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_1/Weeks_1-9_HL_Abstract_Data_Structures.html" class="doc-link">IB DP — Y2 S1: HL Data Structures</a></td>
-              <td>IB DP</td>
-              <td>Year 2</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_1/Weeks_10-18_HL_Resource_Management.html" class="doc-link">IB DP — Y2 S1: HL Resource Management</a></td>
-              <td>IB DP</td>
-              <td>Year 2</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_1/SL_Revision_IA_Development.html" class="doc-link">IB DP — Y2 S1: SL Revision & IA</a></td>
-              <td>IB DP</td>
-              <td>Year 2</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_2/Weeks_1-9_HL_Control_Systems.html" class="doc-link">IB DP — Y2 S2: HL Control Systems</a></td>
-              <td>IB DP</td>
-              <td>Year 2</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_2/Weeks_10-18_Revision_Exams.html" class="doc-link">IB DP — Y2 S2: Revision & Exams</a></td>
-              <td>IB DP</td>
-              <td>Year 2</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_2/IA_Guide_and_Support.html" class="doc-link">IB DP — IA Guide & Support</a></td>
-              <td>IB DP</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Supporting_Documents/Bilingual_Glossary_180_Terms.html" class="doc-link">IB DP — Bilingual Glossary (180+)</a></td>
-              <td>IB DP</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Supporting_Documents/TOK_Connections.html" class="doc-link">IB DP — TOK Connections</a></td>
-              <td>IB DP</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Supporting_Documents/IA_Handbook.html" class="doc-link">IB DP — IA Handbook</a></td>
-              <td>IB DP</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-            <tr data-category="ibdp">
-              <td><a href="IB_DP_Computer_Science/Supporting_Documents/University_Pathways.html" class="doc-link">IB DP — University Pathways</a></td>
-              <td>IB DP</td>
-              <td>All</td>
-              <td><span class="fmt fmt-html">HTML</span></td>
-            </tr>
-          </tbody>
-        </table>
+    </div>
+    
+    <!-- ICT -->
+    <div class="programme-section" id="ict-program">
+      <button class="programme-header" onclick="toggleProgramme('ict-program')">
+        <div class="prog-icon" style="width:40px;height:40px;font-size:1.2rem;">📱</div>
+        <div style="flex:1">
+          <h3>ICT Programme (Grades 2 → IGCSE ICT 0417)</h3>
+          <span class="syllabus">Cambridge IGCSE ICT + Common Core • Progressive ICT from Primary to IGCSE • 23 documents</span>
+        </div>
+        <div class="programme-toggle">▼</div>
+      </button>
+      <div class="programme-body">
+        <div class="programme-content">
+          <div class="sub-section">
+            <div class="sub-header">📁 Grades 2–3</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="ICT_Program/Grades_2-3/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">Foundation digital literacy</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/Grades_2-3/Term_1_Digital_Basics.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Term 1: Digital Basics</div><div class="doc-meta">Computer parts, typing, file management</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/Grades_2-3/Term_2_Digital_Creation.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Term 2: Digital Creation</div><div class="doc-meta">Drawing, simple presentations, stories</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 Grades 4–5</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="ICT_Program/Grades_4-5/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">Intermediate digital skills</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/Grades_4-5/Term_1_Productivity_Tools.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Term 1: Productivity Tools</div><div class="doc-meta">Word processing, formatting, documents</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/Grades_4-5/Term_2_Spreadsheets_Presentations.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Term 2: Spreadsheets & Presentations</div><div class="doc-meta">Data entry, charts, slide design</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 Grades 6–8</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="ICT_Program/Grades_6-8/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">Advanced ICT skills</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/Grades_6-8/Year_6_Advanced_Productivity.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Year 6: Advanced Productivity</div><div class="doc-meta">Advanced Word, Excel, PowerPoint</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/Grades_6-8/Year_7_Programming_Databases.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Year 7: Programming & Databases</div><div class="doc-meta">Python basics, database concepts</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/Grades_6-8/Year_8_Cybersecurity_Robotics.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Year 8: Cybersecurity & Robotics</div><div class="doc-meta">Security awareness, robotics projects</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 IGCSE ICT — Year 9</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="ICT_Program/IGCSE_ICT/Year_9_Semester_1/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Y9 S1: Course Overview</div><div class="doc-meta">IGCSE ICT (0417) introduction</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/IGCSE_ICT/Year_9_Semester_1/Weeks_1-9_Computer_Systems_Networks.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Y9 S1: Computer Systems & Networks</div><div class="doc-meta">Hardware, software, network fundamentals</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/IGCSE_ICT/Year_9_Semester_1/Weeks_10-18_Data_Types_Effects_Security.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Y9 S1: Data, Effects & Security</div><div class="doc-meta">Data handling, effects, security practices</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/IGCSE_ICT/Year_9_Semester_2/Weeks_1-9_Document_Production.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Y9 S2: Document Production</div><div class="doc-meta">Advanced word processing, mail merge</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/IGCSE_ICT/Year_9_Semester_2/Weeks_10-18_Data_Manipulation_Presentations.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Y9 S2: Data Manipulation & Presentations</div><div class="doc-meta">Spreadsheets, databases, presentations</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 IGCSE ICT — Year 10</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="ICT_Program/IGCSE_ICT/Year_10_Semester_1/Weeks_1-9_Data_Analysis_Web_Authoring.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Y10 S1: Data Analysis & Web Authoring</div><div class="doc-meta">Advanced Excel, HTML/CSS basics</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/IGCSE_ICT/Year_10_Semester_1/Weeks_10-18_Databases_Revision.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Y10 S1: Databases & Revision</div><div class="doc-meta">Relational databases, query design, review</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/IGCSE_ICT/Year_10_Semester_2/Weeks_1-9_Consolidation_Practice.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Y10 S2: Consolidation & Practice</div><div class="doc-meta">Skill consolidation, timed practice</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/IGCSE_ICT/Year_10_Semester_2/Weeks_10-18_Mock_Exams_Final_Prep.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Y10 S2: Mock Exams & Final Prep</div><div class="doc-meta">Full mock series, exam technique</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 Supporting Documents</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="ICT_Program/Supporting_Documents/Bilingual_Glossary_200_Terms.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Bilingual Glossary (200 Terms)</div><div class="doc-meta">English–Chinese ICT terminology</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/Supporting_Documents/Common_Core_Standards_Mapping.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Common Core Standards Mapping</div><div class="doc-meta">Alignment with international standards</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="ICT_Program/Supporting_Documents/Digital_Citizenship_Framework.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Digital Citizenship Framework</div><div class="doc-meta">Online safety & ethics curriculum</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- A-Level -->
+    <div class="programme-section" id="alevel-cs">
+      <button class="programme-header" onclick="toggleProgramme('alevel-cs')">
+        <div class="prog-icon" style="width:40px;height:40px;font-size:1.2rem;">🎓</div>
+        <div style="flex:1">
+          <h3>A-Level Computer Science (9618)</h3>
+          <span class="syllabus">Cambridge International A-Level • AS (Year 11) & A2 (Year 12) • 18 documents</span>
+        </div>
+        <div class="programme-toggle">▼</div>
+      </button>
+      <div class="programme-body">
+        <div class="programme-content">
+          <div class="sub-section">
+            <div class="sub-header">📁 AS Level — Semester 1</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="A_Level_Computer_Science/AS_Level/Semester_1/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">AS Level syllabus & structure</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/AS_Level/Semester_1/Weeks_1-9_Information_Representation_Communication.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 1–9: Information Representation</div><div class="doc-meta">Data types, encoding, compression, encryption</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/AS_Level/Semester_1/Weeks_10-18_Hardware_System_Software_Security.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 10–18: Hardware, Software & Security</div><div class="doc-meta">CPU architecture, OS, malware, encryption</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/AS_Level/Semester_1/Assessment_Pack.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">Past papers & marking guidance</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 AS Level — Semester 2</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="A_Level_Computer_Science/AS_Level/Semester_2/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">Semester 2 learning objectives</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/AS_Level/Semester_2/Weeks_1-9_Programming_Fundamentals.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 1–9: Programming Fundamentals</div><div class="doc-meta">Pseudocode, Python, data structures, file handling</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/AS_Level/Semester_2/Assessment_Pack.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">Programming tasks & theory assessments</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 A2 Level — Semester 1</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="A_Level_Computer_Science/A2_Level/Semester_1/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">A2 Level syllabus & structure</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/A2_Level/Semester_1/Weeks_1-9_Advanced_Data_Communication.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 1–9: Advanced Data Communication</div><div class="doc-meta">Networks, protocols, internet technologies, security</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/A2_Level/Semester_1/Weeks_10-18_Hardware_System_Software_AI.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 10–18: Hardware, Software & AI</div><div class="doc-meta">Advanced architecture, AI, machine learning basics</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/A2_Level/Semester_1/Assessment_Pack.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">A2 past papers & mark schemes</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 A2 Level — Semester 2</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="A_Level_Computer_Science/A2_Level/Semester_2/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">Final semester objectives</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/A2_Level/Semester_2/Weeks_1-9_Practical_Programming_Project.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 1–9: Practical Programming Project</div><div class="doc-meta">Coursework development & documentation</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/A2_Level/Semester_2/Weeks_10-18_Revision_Final_Exams.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 10–18: Revision & Final Exams</div><div class="doc-meta">Comprehensive exam preparation</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/A2_Level/Semester_2/Assessment_Pack.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">Mock exams & final preparation</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 Supporting Documents</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="A_Level_Computer_Science/Supporting_Documents/Bilingual_Glossary_150_Terms.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Bilingual Glossary (150 Terms)</div><div class="doc-meta">English–Chinese CS terminology</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/Supporting_Documents/IGCSE_to_A_Level_Bridge_Document.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">IGCSE to A-Level Bridge</div><div class="doc-meta">Transition guide & prerequisite review</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/Supporting_Documents/Intervention_Protocol.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Intervention Protocol</div><div class="doc-meta">Student support strategies</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/Supporting_Documents/Predicted_Outcomes_and_Progression.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Predicted Outcomes & Progression</div><div class="doc-meta">Grade targets & university pathways</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="A_Level_Computer_Science/Supporting_Documents/Enrichment_Programme.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Enrichment Programme</div><div class="doc-meta">Extension activities & competitions</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- IB DP -->
+    <div class="programme-section" id="ibdp-cs">
+      <button class="programme-header" onclick="toggleProgramme('ibdp-cs')">
+        <div class="prog-icon" style="width:40px;height:40px;font-size:1.2rem;">🌍</div>
+        <div style="flex:1">
+          <h3>IB DP Computer Science (SL/HL)</h3>
+          <span class="syllabus">International Baccalaureate Diploma Programme • Year 1 & Year 2 • 19 documents</span>
+        </div>
+        <div class="programme-toggle">▼</div>
+      </button>
+      <div class="programme-body">
+        <div class="programme-content">
+          <div class="sub-section">
+            <div class="sub-header">📁 Year 1 (SL/HL) — Semester 1</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_1/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">IB DP CS syllabus & assessment structure</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_1/Weeks_1-9_System_Fundamentals.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 1–9: System Fundamentals</div><div class="doc-meta">Computer systems, binary, logic gates, OS</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_1/Weeks_10-18_Computer_Organization.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 10–18: Computer Organization</div><div class="doc-meta">CPU, memory, machine instruction cycle</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_1/Assessment_Pack.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">IB-style questions & mark schemes</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 Year 1 (SL/HL) — Semester 2</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_2/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">Semester 2 learning plan</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_2/Weeks_1-9_Networks.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 1–9: Networks</div><div class="doc-meta">Network topology, protocols, security</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_2/Weeks_10-18_Computational_Thinking.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 10–18: Computational Thinking</div><div class="doc-meta">Algorithms, pseudocode, flowcharts, OOP</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_1_SL_HL/Semester_2/Assessment_Pack.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">Formative & summative assessments</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 Year 2 (SL/HL) — Semester 1</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_1/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">Year 2 advanced topics & IA timeline</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_1/Weeks_1-9_HL_Abstract_Data_Structures.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 1–9: HL Abstract Data Structures</div><div class="doc-meta">Stacks, queues, trees, graphs, recursion</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_1/Weeks_10-18_HL_Resource_Management.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 10–18: HL Resource Management</div><div class="doc-meta">Memory, CPU scheduling, deadlocks</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_1/SL_Revision_IA_Development.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">SL Revision & IA Development</div><div class="doc-meta">SL topic review, IA planning & coding</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_1/Assessment_Pack.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">HL practice papers & IA checkpoints</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 Year 2 (SL/HL) — Semester 2</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_2/Course_Overview.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Course Overview</div><div class="doc-meta">Final semester & exam preparation</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_2/Weeks_1-9_HL_Control_Systems.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 1–9: HL Control Systems</div><div class="doc-meta">Sensors, actuators, embedded systems, robotics</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_2/Weeks_10-18_Revision_Exams.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Weeks 10–18: Revision & Exams</div><div class="doc-meta">Comprehensive review, mock exams, IA completion</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_2/IA_Guide_and_Support.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">IA Guide & Support</div><div class="doc-meta">Internal Assessment documentation & support</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Year_2_SL_HL/Semester_2/Assessment_Pack.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Assessment Pack</div><div class="doc-meta">Final exam preparation materials</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+          <div class="sub-section">
+            <div class="sub-header">📁 Supporting Documents</div>
+            <div class="doc-grid">
+              <a class="doc-link" href="IB_DP_Computer_Science/Supporting_Documents/Bilingual_Glossary_180_Terms.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">Bilingual Glossary (180 Terms)</div><div class="doc-meta">English–Chinese IB CS terminology</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Supporting_Documents/IA_Handbook.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">IA Handbook</div><div class="doc-meta">Complete IA guide & exemplars</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Supporting_Documents/TOK_Connections.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">TOK Connections</div><div class="doc-meta">Theory of Knowledge integration</div></div><div class="doc-arrow">→</div></a>
+              <a class="doc-link" href="IB_DP_Computer_Science/Supporting_Documents/University_Pathways.html"><div class="doc-icon html">HTML</div><div class="doc-info"><div class="doc-name">University Pathways</div><div class="doc-meta">CS degree routes & application guidance</div></div><div class="doc-arrow">→</div></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -830,6 +782,11 @@
 </footer>
 
 <script>
+// Mobile menu toggle
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
+
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -841,29 +798,48 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Toggle library
-function toggleLibrary() {
-  const lib = document.getElementById('libraryContent');
-  lib.classList.toggle('active');
+// Programme accordion
+function toggleProgramme(id) {
+  const section = document.getElementById(id);
+  section.classList.toggle('open');
 }
 
-// Document search
-function filterDocs() {
-  const input = document.getElementById('docSearch').value.toLowerCase();
-  const rows = document.querySelectorAll('#docTable tbody tr');
-  rows.forEach(row => {
-    const text = row.textContent.toLowerCase();
-    row.style.display = text.includes(input) ? '' : 'none';
-  });
+function openProgramme(id) {
+  const section = document.getElementById(id);
+  section.classList.add('open');
+  scrollToSection(id);
 }
 
-// Smooth scroll
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    const href = this.getAttribute('href');
+    if (href.length > 1) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   });
 });
+
+// Mobile dropdown toggle
+if (window.innerWidth <= 768) {
+  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.closest('.dropdown').classList.toggle('open');
+    });
+  });
+}
 </script>
 
 </body>
