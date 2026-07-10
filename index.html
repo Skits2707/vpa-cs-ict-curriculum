@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete K–12 Computer Science & ICT Curriculum Suite</title>
+<style>
+  :root {
+    --primary: #0f4c81;
+    --primary-dark: #0a3358;
+    --accent: #e07a5f;
+    --accent-light: #f2cc8f;
+    --bg: #fdfcf8;
+    --bg-alt: #f4f1ea;
+    --text: #1a1a2e;
+    --text-light: #4a4a5a;
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    --card-hover: 0 8px 30px rgba(0,0,0,0.12);
+    --border: #e8e4da;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; color: var(--text); line-height: 1.6; background: var(--bg); }
+  
+  /* Navigation */
+  nav { position: fixed; top: 0; width: 100%; background: rgba(253,252,248,0.97); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--border); }
+  .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 60px; }
+  .nav-logo { font-size: 1.3rem; font-weight: 700; color: var(--primary); }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 30px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--primary); }
+  .nav-cta { background: var(--primary); color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.3s; }
+  .nav-cta:hover { background: var(--primary-dark); }
+  
+  /* Hero */
+  .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--primary) 0%, #1e6091 50%, var(--primary-dark) 100%); color: white; text-align: center; padding: 100px 20px 60px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: rgba(224,122,95,0.12); border-radius: 50%; }
+  .hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 400px; height: 400px; background: rgba(255,255,255,0.06); border-radius: 50%; }
+  .hero-content { position: relative; z-index: 1; max-width: 800px; }
+  .hero-badge { display: inline-block; background: rgba(224,122,95,0.2); border: 1px solid var(--accent); color: var(--accent-light); padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 24px; letter-spacing: 1px; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 20px; }
+  .hero h1 span { color: var(--accent-light); }
+  .hero-subtitle { font-size: clamp(1rem, 2vw, 1.3rem); opacity: 0.95; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .hero-stats { display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-number { font-size: 2.2rem; font-weight: 800; color: var(--accent-light); }
+  .stat-label { font-size: 0.8rem; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--accent); color: #fff; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s; display: inline-block; }
+  .btn-primary:hover { background: #c96a52; transform: translateY(-2px); }
+  .btn-secondary { background: transparent; color: #fff; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; border: 2px solid rgba(255,255,255,0.4); transition: all 0.3s; display: inline-block; }
+  .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.12); }
+  
+  /* Sections */
+  section { padding: 80px 20px; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-header { text-align: center; margin-bottom: 60px; }
+  .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--primary); margin-bottom: 12px; }
+  .section-header p { color: var(--text-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+  
+  /* Programme Cards */
+  .programmes { background: var(--bg-alt); }
+  .prog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .prog-card { background: white; border-radius: 16px; padding: 32px; box-shadow: var(--card-shadow); transition: all 0.3s; position: relative; overflow: hidden; }
+  .prog-card:hover { transform: translateY(-6px); box-shadow: var(--card-hover); }
+  .prog-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent); }
+  .prog-icon { width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary), #1e6091); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 16px; }
+  .prog-card h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 8px; }
+  .prog-exam { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+  .prog-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 16px; }
+  .prog-features { list-style: none; margin-bottom: 20px; }
+  .prog-features li { padding: 4px 0; font-size: 0.9rem; color: var(--text); }
+  .prog-features li::before { content: '✓'; color: var(--accent); font-weight: bold; margin-right: 8px; }
+  .prog-btn { display: inline-block; background: var(--primary); color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.3s; }
+  .prog-btn:hover { background: var(--primary-dark); }
+  
+  /* Timeline */
+  .timeline { position: relative; max-width: 900px; margin: 0 auto; }
+  .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, var(--primary), var(--accent)); transform: translateX(-50%); }
+  .timeline-item { display: flex; margin-bottom: 40px; position: relative; }
+  .timeline-item:nth-child(odd) { flex-direction: row-reverse; }
+  .timeline-content { width: 45%; background: white; padding: 24px; border-radius: 12px; box-shadow: var(--card-shadow); }
+  .timeline-dot { position: absolute; left: 50%; top: 24px; width: 16px; height: 16px; background: var(--accent); border-radius: 50%; transform: translateX(-50%); border: 3px solid white; box-shadow: 0 0 0 3px var(--accent); }
+  .timeline-grade { font-size: 0.75rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .timeline-content h4 { color: var(--primary); margin-bottom: 6px; }
+  .timeline-content p { font-size: 0.9rem; color: var(--text-light); }
+  
+  /* Differentiators */
+  .diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .diff-card { background: white; padding: 32px; border-radius: 12px; box-shadow: var(--card-shadow); text-align: center; transition: all 0.3s; }
+  .diff-card:hover { transform: translateY(-4px); box-shadow: var(--card-hover); }
+  .diff-icon { font-size: 2.5rem; margin-bottom: 16px; }
+  .diff-card h4 { color: var(--primary); margin-bottom: 10px; }
+  .diff-card p { color: var(--text-light); font-size: 0.9rem; }
+  
+  /* Document Library */
+  .library { background: var(--bg-alt); }
+  .search-box { max-width: 600px; margin: 0 auto 40px; position: relative; }
+  .search-box input { width: 100%; padding: 14px 20px 14px 50px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; transition: border-color 0.3s; background: var(--bg); }
+  .search-box input:focus { outline: none; border-color: var(--primary); }
+  .search-box::before { content: '🔍'; position: absolute; left: 18px; top: 50%; transform: translateY(-50%); font-size: 1.1rem; }
+  .filter-buttons { display: flex; gap: 10px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
+  .filter-btn { padding: 8px 18px; border: 2px solid var(--primary); background: var(--bg); color: var(--primary); border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: all 0.3s; }
+  .filter-btn.active, .filter-btn:hover { background: var(--primary); color: white; }
+  .doc-table { width: 100%; background: white; border-radius: 12px; overflow: hidden; box-shadow: var(--card-shadow); }
+  .doc-table th { background: var(--primary); color: white; padding: 14px 16px; text-align: left; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .doc-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+  .doc-table tr:hover { background: var(--bg-alt); }
+  .doc-tag { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+  .tag-overview { background: #e3f2fd; color: #1565c0; }
+  .tag-scheme { background: #e8f5e9; color: #2e7d32; }
+  .tag-assessment { background: #fff3e0; color: #e65100; }
+  .tag-supporting { background: #f3e5f5; color: #7b1fa2; }
+  .doc-link { color: var(--primary); text-decoration: none; font-weight: 500; }
+  .doc-link:hover { text-decoration: underline; }
+  .format-badge { display: inline-flex; gap: 4px; }
+  .fmt { padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
+  .fmt-html { background: #e3f2fd; color: #1565c0; }
+  .fmt-pdf { background: #ffebee; color: #c62828; }
+  
+  /* Sample Content */
+  .sample-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 24px; }
+  .sample-tab { padding: 12px 24px; background: none; border: none; cursor: pointer; font-weight: 600; color: var(--text-light); font-size: 0.95rem; transition: all 0.3s; border-bottom: 3px solid transparent; margin-bottom: -2px; }
+  .sample-tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+  .sample-tab:hover { color: var(--primary); }
+  .sample-content { display: none; background: white; padding: 32px; border-radius: 12px; box-shadow: var(--card-shadow); }
+  .sample-content.active { display: block; }
+  .sample-content pre { background: var(--bg-alt); padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; line-height: 1.6; border-left: 4px solid var(--accent); }
+  
+  /* CTA */
+  .cta { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: #fff; text-align: center; }
+  .cta h2 { font-size: 2.2rem; margin-bottom: 16px; }
+  .cta p { opacity: 0.95; margin-bottom: 32px; font-size: 1.1rem; }
+  .steps { display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
+  .step { text-align: center; }
+  .step-num { width: 50px; height: 50px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.3rem; margin: 0 auto 12px; }
+  .step h4 { margin-bottom: 6px; }
+  .step p { font-size: 0.9rem; opacity: 0.9; }
+  
+  /* Footer */
+  footer { background: var(--primary-dark); color: #f0ece3; padding: 40px 20px; text-align: center; }
+  footer p { opacity: 0.85; font-size: 0.9rem; }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-stats { gap: 20px; }
+    .timeline::before { left: 20px; }
+    .timeline-item, .timeline-item:nth-child(odd) { flex-direction: column; padding-left: 50px; }
+    .timeline-content { width: 100%; }
+    .timeline-dot { left: 20px; }
+    .doc-table { font-size: 0.8rem; }
+    .doc-table th, .doc-table td { padding: 8px 10px; }
+    .filter-buttons { gap: 6px; }
+    .filter-btn { padding: 6px 12px; font-size: 0.8rem; }
+    .steps { gap: 24px; }
+  }
+  
+  /* Scroll animations */
+  .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="nav-logo">CS<span>Curriculum</span>.Suite</div>
+    <ul class="nav-links">
+      <li><a href="#programmes">Programmes</a></li>
+      <li><a href="#structure">Structure</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#documents">Documents</a></li>
+      <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">K–12 Curriculum Solution</div>
+    <h1>Complete Computer Science <span>& ICT</span> Curriculum Suite</h1>
+    <p class="hero-subtitle">A comprehensive, standards-aligned programme from digital foundations through to university entrance — with bilingual scaffolding, differentiated instruction, and full assessment infrastructure.</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-number">4</div><div class="stat-label">Programmes</div></div>
+      <div class="stat"><div class="stat-number">80+</div><div class="stat-label">Documents</div></div>
+      <div class="stat"><div class="stat-number">2</div><div class="stat-label">Terms / Grade</div></div>
+      <div class="stat"><div class="stat-number">100%</div><div class="stat-label">Exam Aligned</div></div>
+    </div>
+    <div class="hero-buttons">
+      <a href="#programmes" class="btn-primary">Explore Programmes</a>
+      <a href="#documents" class="btn-secondary">View Documents</a>
+    </div>
+  </div>
+</section>
+
+<section class="programmes" id="programmes">
+  <div class="container">
+    <div class="section-header">
+      <h2>Four Integrated Programmes</h2>
+      <p>One seamless pathway from first digital steps to university-level computer science</p>
+    </div>
+    <div class="prog-grid">
+      <div class="prog-card fade-in">
+        <div class="prog-icon">🖥️</div>
+        <h3>IGCSE Computer Science</h3>
+        <div class="prog-exam">CIE 0478</div>
+        <p>Theory foundations and programming fundamentals. Two-year programme with Paper 1 (Theory) and Paper 2 (Problem Solving & Programming).</p>
+        <ul class="prog-features">
+          <li>Binary, hardware, networks, security</li>
+          <li>Python programming & pseudocode</li>
+          <li>5 mock exams with gap analysis</li>
+        </ul>
+        <a href="#" class="prog-btn" onclick="alert('IGCSE CS curriculum documents available on request')">View Curriculum</a>
+      </div>
+      <div class="prog-card fade-in">
+        <div class="prog-icon">📱</div>
+        <h3>ICT Programme</h3>
+        <div class="prog-exam">CIE 0417 + Common Core</div>
+        <p>Digital literacy to advanced productivity. Nine-year spiral from Grade 2 through IGCSE ICT — word processing, spreadsheets, databases, web design.</p>
+        <ul class="prog-features">
+          <li>Age-appropriate digital citizenship</li>
+          <li>Microsoft Office / Google Workspace</li>
+          <li>HTML, CSS & database skills</li>
+        </ul>
+        <a href="#" class="prog-btn" onclick="alert('ICT Programme documents available on request')">View Curriculum</a>
+      </div>
+      <div class="prog-card fade-in">
+        <div class="prog-icon">🎓</div>
+        <h3>A-Level Computer Science</h3>
+        <div class="prog-exam">CIE 9618</div>
+        <p>Advanced theory, programming project, and examination mastery. AS + A2 covering databases, Boolean logic, AI, and practical software development.</p>
+        <ul class="prog-features">
+          <li>SQL, Boolean algebra, floating-point</li>
+          <li>Programming project (NEA-style)</li>
+          <li>University & career pathways</li>
+        </ul>
+        <a href="#" class="prog-btn" onclick="alert('A-Level CS curriculum documents available on request')">View Curriculum</a>
+      </div>
+      <div class="prog-card fade-in">
+        <div class="prog-icon">🌍</div>
+        <h3>IB DP Computer Science</h3>
+        <div class="prog-exam">IB DP (2024+)</div>
+        <p>SL and HL pathways with Internal Assessment support. Topics 1–7, TOK connections, case study preparation, and IA handbook with exemplars.</p>
+        <ul class="prog-features">
+          <li>SL & HL differentiation</li>
+          <li>Complete IA guide with criteria</li>
+          <li>TOK & university pathway links</li>
+        </ul>
+        <a href="#" class="prog-btn" onclick="alert('IB DP CS curriculum documents available on request')">View Curriculum</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="structure">
+  <div class="container">
+    <div class="section-header">
+      <h2>Curriculum Structure</h2>
+      <p>One coherent pathway — 2 terms per grade, every year</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item fade-in">
+        <div class="timeline-content">
+          <div class="timeline-grade">Grades 2–3</div>
+          <h4>Digital Foundations</h4>
+          <p>Typing, mouse skills, digital art, online safety, unplugged coding. Common Core aligned.</p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-item fade-in">
+        <div class="timeline-content">
+          <div class="timeline-grade">Grades 4–5</div>
+          <h4>Productivity & Creation</h4>
+          <p>Word processing, spreadsheets, presentations, Scratch coding, internet research, email etiquette.</p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-item fade-in">
+        <div class="timeline-content">
+          <div class="timeline-grade">Grades 6–8</div>
+          <h4>Advanced Applications</h4>
+          <p>Web design (HTML/CSS), Python programming, databases, video editing, cybersecurity, micro:bit.</p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-item fade-in">
+        <div class="timeline-content">
+          <div class="timeline-grade">Grades 9–10</div>
+          <h4>IGCSE Examination</h4>
+          <p>Choose: Computer Science (0478) or ICT (0417). Theory + practical. Mock exam series. Gap analysis.</p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-item fade-in">
+        <div class="timeline-content">
+          <div class="timeline-grade">Grades 11–12</div>
+          <h4>A-Level or IB DP</h4>
+          <p>A-Level CS (9618): AS + A2 with programming project. OR IB DP CS: SL/HL with IA, TOK, case study.</p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="library" id="features">
+  <div class="container">
+    <div class="section-header">
+      <h2>What Makes This Suite Different</h2>
+      <p>Built from the ground up for international schools with EAL learners</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card fade-in">
+        <div class="diff-icon">🌐</div>
+        <h4>Bilingual Scaffolding</h4>
+        <p>Every document includes English + 中文 (Simplified) + Pinyin. Key terms displayed throughout lessons. Bilingual glossaries with 150–200+ terms per programme.</p>
+      </div>
+      <div class="diff-card fade-in">
+        <div class="diff-icon">🎯</div>
+        <h4>EAL-First Design</h4>
+        <p>Sentence starters, visual anchors, pair programming, mini-whiteboard checks, and oracy opportunities built into every lesson structure.</p>
+      </div>
+      <div class="diff-card fade-in">
+        <div class="diff-icon">📊</div>
+        <h4>Bronze / Silver / Gold</h4>
+        <p>Three-tier differentiation in every lesson. Emerging learners get scaffolds; Secure learners get open-ended challenges. No student left behind.</p>
+      </div>
+      <div class="diff-card fade-in">
+        <div class="diff-icon">📝</div>
+        <h4>Assessment-Ready</h4>
+        <p>Full mock exam series, mark schemes, grade boundaries, gap analysis templates, intervention protocols, and progression tracking.</p>
+      </div>
+      <div class="diff-card fade-in">
+        <div class="diff-icon">✅</div>
+        <h4>Standards Aligned</h4>
+        <p>Common Core State Standards (ICT Grades 2–8), CIE syllabi (0478, 0417, 9618), IB DP Guide (2024+). Every lesson maps to specification points.</p>
+      </div>
+      <div class="diff-card fade-in">
+        <div class="diff-icon">📦</div>
+        <h4>Complete Resource Pack</h4>
+        <p>Course overviews, week-by-week schemes of work, assessment packs, bilingual glossaries, bridge documents, career pathways, enrichment programmes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="library" id="documents">
+  <div class="container">
+    <div class="section-header">
+      <h2>Document Library</h2>
+      <p>80+ fully formatted curriculum documents — HTML for viewing, PDF for printing</p>
+    </div>
+    <div class="search-box">
+      <input type="text" id="docSearch" placeholder="Search documents by name, programme, or grade..." onkeyup="filterDocs()">
+    </div>
+    <div class="filter-buttons">
+      <button class="filter-btn active" onclick="filterBy('all')">All</button>
+      <button class="filter-btn" onclick="filterBy('igcse-cs')">IGCSE CS</button>
+      <button class="filter-btn" onclick="filterBy('ict')">ICT</button>
+      <button class="filter-btn" onclick="filterBy('alevel')">A-Level</button>
+      <button class="filter-btn" onclick="filterBy('ibdp')">IB DP</button>
+    </div>
+    <div style="overflow-x: auto;">
+      <table class="doc-table" id="docTable">
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Programme</th>
+            <th>Grade/Year</th>
+            <th>Term</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Year 9 Course Overview</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 9</td>
+            <td>All</td>
+            <td><span class="doc-tag tag-overview">Course Overview</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y9 S1: Data Representation</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 9</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y9 S1: Hardware & Software</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 9</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y9 S1: Networks & Revision</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 9</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y9 S1 Assessment Pack</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 9</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-assessment">Assessment</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y9 S2: Programming Fundamentals</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 9</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y9 S2: Control Structures</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 9</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y9 S2: Problem Solving</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 9</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y9 S2 Assessment Pack</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 9</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-assessment">Assessment</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y10 S1: Consolidation</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 10</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y10 S1: Exam Preparation</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 10</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y10 S1 Assessment Pack</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 10</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-assessment">Assessment</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y10 S2: Final Revision</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 10</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y10 S2: Mock Exams</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 10</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="igcse-cs">
+            <td><span class="doc-link">IGCSE CS — Y10 S2 Assessment Pack</span></td>
+            <td>IGCSE CS</td>
+            <td>Year 10</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-assessment">Assessment</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — AS S1 Course Overview</span></td>
+            <td>A-Level</td>
+            <td>Year 11 (AS)</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-overview">Course Overview</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — AS S1: Info Representation & Communication</span></td>
+            <td>A-Level</td>
+            <td>Year 11 (AS)</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — AS S1: Hardware, Software & Security</span></td>
+            <td>A-Level</td>
+            <td>Year 11 (AS)</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — AS S1 Assessment Pack</span></td>
+            <td>A-Level</td>
+            <td>Year 11 (AS)</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-assessment">Assessment</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — AS S2 Course Overview</span></td>
+            <td>A-Level</td>
+            <td>Year 11 (AS)</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-overview">Course Overview</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — AS S2: Programming Fundamentals</span></td>
+            <td>A-Level</td>
+            <td>Year 11 (AS)</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — AS S2 Assessment Pack</span></td>
+            <td>A-Level</td>
+            <td>Year 11 (AS)</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-assessment">Assessment</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — A2 S1 Course Overview</span></td>
+            <td>A-Level</td>
+            <td>Year 12 (A2)</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-overview">Course Overview</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — A2 S1: Advanced Data & Communication</span></td>
+            <td>A-Level</td>
+            <td>Year 12 (A2)</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — A2 S1: Hardware, Software & AI</span></td>
+            <td>A-Level</td>
+            <td>Year 12 (A2)</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — A2 S1 Assessment Pack</span></td>
+            <td>A-Level</td>
+            <td>Year 12 (A2)</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-assessment">Assessment</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — A2 S2 Course Overview</span></td>
+            <td>A-Level</td>
+            <td>Year 12 (A2)</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-overview">Course Overview</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — A2 S2: Practical Programming Project</span></td>
+            <td>A-Level</td>
+            <td>Year 12 (A2)</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — A2 S2: Revision & Final Exams</span></td>
+            <td>A-Level</td>
+            <td>Year 12 (A2)</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — A2 S2 Assessment Pack</span></td>
+            <td>A-Level</td>
+            <td>Year 12 (A2)</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-assessment">Assessment</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — Bilingual Glossary (150+ terms)</span></td>
+            <td>A-Level</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — IGCSE to A-Level Bridge</span></td>
+            <td>A-Level</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — Intervention Protocol</span></td>
+            <td>A-Level</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — Predicted Outcomes & Progression</span></td>
+            <td>A-Level</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="alevel">
+            <td><span class="doc-link">A-Level — Enrichment Programme</span></td>
+            <td>A-Level</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — Grades 2–3 Course Overview</span></td>
+            <td>ICT</td>
+            <td>Grades 2–3</td>
+            <td>All</td>
+            <td><span class="doc-tag tag-overview">Course Overview</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — G2–3: Digital Basics</span></td>
+            <td>ICT</td>
+            <td>Grades 2–3</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — G2–3: Digital Creation</span></td>
+            <td>ICT</td>
+            <td>Grades 2–3</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — Grades 4–5 Course Overview</span></td>
+            <td>ICT</td>
+            <td>Grades 4–5</td>
+            <td>All</td>
+            <td><span class="doc-tag tag-overview">Course Overview</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — G4–5: Productivity Tools</span></td>
+            <td>ICT</td>
+            <td>Grades 4–5</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — G4–5: Spreadsheets & Presentations</span></td>
+            <td>ICT</td>
+            <td>Grades 4–5</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — Grades 6–8 Course Overview</span></td>
+            <td>ICT</td>
+            <td>Grades 6–8</td>
+            <td>All</td>
+            <td><span class="doc-tag tag-overview">Course Overview</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — G6: Advanced Productivity</span></td>
+            <td>ICT</td>
+            <td>Grade 6</td>
+            <td>All</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — G7: Programming & Databases</span></td>
+            <td>ICT</td>
+            <td>Grade 7</td>
+            <td>All</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — G8: Cybersecurity & Robotics</span></td>
+            <td>ICT</td>
+            <td>Grade 8</td>
+            <td>All</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — IGCSE ICT Y9 S1 Course Overview</span></td>
+            <td>ICT</td>
+            <td>Year 9</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-overview">Course Overview</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — IGCSE ICT Y9 S1: Computer Systems & Networks</span></td>
+            <td>ICT</td>
+            <td>Year 9</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — IGCSE ICT Y9 S1: Data Types, Effects & Security</span></td>
+            <td>ICT</td>
+            <td>Year 9</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — IGCSE ICT Y9 S2: Document Production</span></td>
+            <td>ICT</td>
+            <td>Year 9</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — IGCSE ICT Y9 S2: Data Manipulation & Presentations</span></td>
+            <td>ICT</td>
+            <td>Year 9</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — IGCSE ICT Y10 S1: Data Analysis & Web Authoring</span></td>
+            <td>ICT</td>
+            <td>Year 10</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — IGCSE ICT Y10 S1: Databases & Revision</span></td>
+            <td>ICT</td>
+            <td>Year 10</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — IGCSE ICT Y10 S2: Consolidation</span></td>
+            <td>ICT</td>
+            <td>Year 10</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — IGCSE ICT Y10 S2: Mock Exams & Final Prep</span></td>
+            <td>ICT</td>
+            <td>Year 10</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — Bilingual Glossary (200+ terms)</span></td>
+            <td>ICT</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — Common Core Standards Mapping</span></td>
+            <td>ICT</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="ict">
+            <td><span class="doc-link">ICT — Digital Citizenship Framework</span></td>
+            <td>ICT</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — Year 1 S1 Course Overview</span></td>
+            <td>IB DP</td>
+            <td>Year 1</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-overview">Course Overview</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — Y1 S1: System Fundamentals</span></td>
+            <td>IB DP</td>
+            <td>Year 1</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — Y1 S1: Computer Organization</span></td>
+            <td>IB DP</td>
+            <td>Year 1</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — Y1 S2: Networks</span></td>
+            <td>IB DP</td>
+            <td>Year 1</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — Y1 S2: Computational Thinking</span></td>
+            <td>IB DP</td>
+            <td>Year 1</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — Y2 S1: HL Abstract Data Structures</span></td>
+            <td>IB DP</td>
+            <td>Year 2</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — Y2 S1: HL Resource Management</span></td>
+            <td>IB DP</td>
+            <td>Year 2</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — Y2 S1: SL Revision & IA Development</span></td>
+            <td>IB DP</td>
+            <td>Year 2</td>
+            <td>Semester 1</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — Y2 S2: HL Control Systems</span></td>
+            <td>IB DP</td>
+            <td>Year 2</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — Y2 S2: Revision & Exams</span></td>
+            <td>IB DP</td>
+            <td>Year 2</td>
+            <td>Semester 2</td>
+            <td><span class="doc-tag tag-scheme">Scheme of Work</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — IA Guide & Support</span></td>
+            <td>IB DP</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — Bilingual Glossary (180+ terms)</span></td>
+            <td>IB DP</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — TOK Connections</span></td>
+            <td>IB DP</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — IA Handbook</span></td>
+            <td>IB DP</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+          <tr data-category="ibdp">
+            <td><span class="doc-link">IB DP — University Pathways</span></td>
+            <td>IB DP</td>
+            <td>All</td>
+            <td>—</td>
+            <td><span class="doc-tag tag-supporting">Supporting</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="samples">
+  <div class="container">
+    <div class="section-header">
+      <h2>Sample Content Quality</h2>
+      <p>Every document is written to the same professional standard</p>
+    </div>
+    <div class="sample-tabs">
+      <button class="sample-tab active" onclick="showSample(0)">Course Overview</button>
+      <button class="sample-tab" onclick="showSample(1)">Scheme of Work</button>
+      <button class="sample-tab" onclick="showSample(2)">Bilingual Glossary</button>
+    </div>
+    <div class="sample-content active">
+      <h4>IGCSE Computer Science — Year 9 Semester 1 Course Overview (Excerpt)</h4>
+      <pre>STUDENT PROFILE
+• EAL (English as Additional Language): Heavy bilingual scaffolding
+• Mixed Ability: Differentiated worksheets (core/extension)
+• Prior Knowledge: Minimal computing background assumed
+• Programming: Introduced lightly in Weeks 16-17
+
+PROGRAMMING STRATEGY
+Year 9: Theory-focused with light Python exposure
+Year 10: Full programming curriculum
+Rationale: 2 lessons/week insufficient for deep programming + theory
+
+ASSESSMENT CALENDAR
+Binary/Hex Quiz              | Week 3  | 15 min | In-class
+Data Representation Test     | Week 6  | 30 min | End of unit
+Hardware Quiz                | Week 10 | 15 min | In-class
+End-of-Semester Mock         | Week 18 | 1 hour | Paper 1 style
+
+STANDARD LESSON TEMPLATE (40 Minutes)
+0-3 min   | Do Now          | Retrieval, settle, immediate engagement
+3-12 min  | Direct Instruction | New concept, visual, bilingual keywords
+12-25 min | Guided Practice | Worked examples, pair work, AfL
+25-35 min | Independent Practice | Worksheet, exam question
+35-40 min | Plenary + Homework | Check understanding, set HW</pre>
+    </div>
+    <div class="sample-content">
+      <h4>Week-by-Week Scheme of Work — Sample Week (Excerpt)</h4>
+      <pre>WEEK 5: IMAGES (Pixels, Resolution, Colour Depth)
+
+Lesson 1 (40 min): How Digital Images Work
+• Starter (5 min): "Guess the resolution" — show 3 versions of same image
+• Main (25 min):
+  - Pixel = picture element (像素 xiangsu)
+  - Resolution = width x height in pixels (分辨率 fenbianlv)
+  - Colour depth = bits per pixel (颜色深度 yan se shen du)
+  - File size formula: width x height x colour depth (bits)
+  - Worked example: 800x600 at 24-bit colour
+• Practice (10 min): Calculate file sizes for 3 scenarios
+  BRONZE: 100x100 at 8-bit
+  SILVER: 640x480 at 16-bit
+  GOLD: 1920x1080 at 24-bit + convert to KB
+• Plenary (5 min): "Why does a 4K video take so much space?"
+
+Homework: Past paper question (images) + vocabulary flashcards</pre>
+    </div>
+    <div class="sample-content">
+      <h4>Bilingual Glossary — Sample Entries</h4>
+      <pre>UNIT 1: DATA REPRESENTATION
+binary              | 二进制          | er jin zhi
+hexadecimal         | 十六进制        | shi liu jin zhi
+bit                 | 位              | wei
+byte                | 字节            | zi jie
+pixel               | 像素            | xiang su
+resolution          | 分辨率          | fen bian lv
+colour depth        | 颜色深度        | yan se shen du
+compression         | 压缩            | ya suo
+lossy               | 有损压缩        | you sun ya suo
+lossless            | 无损压缩        | wu sun ya suo
+
+UNIT 2: DATA TRANSMISSION
+packet switching    | 分组交换        | fen zu jiao huan
+error detection     | 错误检测        | cuo wu jian ce
+parity              | 奇偶校验        | ji ou jiao yan
+encryption          | 加密            | jia mi</pre>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="container">
+    <h2>Ready to Transform Your CS & ICT Provision?</h2>
+    <p>A complete, ready-to-teach curriculum suite — from first digital steps to university entrance.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Review</h4>
+        <p>Explore all 80+ documents<br>in the library above</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Customise</h4>
+        <p>Tailor to your school's<br>specific needs & context</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Deploy</h4>
+        <p>Train staff & launch<br>from Day 1</p>
+      </div>
+    </div>
+    <a href="#documents" class="btn-primary">Browse the Full Library</a>
+  </div>
+</section>
+
+<footer>
+  <p>Complete K–12 Computer Science & ICT Curriculum Suite | Professional Curriculum Consultancy</p>
+  <p style="margin-top: 8px; font-size: 0.8rem;">All documents include bilingual scaffolding (EN + 中文 + Pinyin) | Standards aligned: Common Core, CIE, IB</p>
+</footer>
+
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Document search
+function filterDocs() {
+  const input = document.getElementById('docSearch').value.toLowerCase();
+  const rows = document.querySelectorAll('#docTable tbody tr');
+  rows.forEach(row => {
+    const text = row.textContent.toLowerCase();
+    row.style.display = text.includes(input) ? '' : 'none';
+  });
+}
+
+// Category filter
+function filterBy(category) {
+  const rows = document.querySelectorAll('#docTable tbody tr');
+  const buttons = document.querySelectorAll('.filter-btn');
+  
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  rows.forEach(row => {
+    if (category === 'all') {
+      row.style.display = '';
+    } else {
+      row.style.display = row.dataset.category === category ? '' : 'none';
+    }
+  });
+}
+
+// Sample tabs
+function showSample(index) {
+  const tabs = document.querySelectorAll('.sample-tab');
+  const contents = document.querySelectorAll('.sample-content');
+  
+  tabs.forEach((t, i) => t.classList.toggle('active', i === index));
+  contents.forEach((c, i) => c.classList.toggle('active', i === index));
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
