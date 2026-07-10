@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA ICT — IGCSE Y9S1 Weeks 10-18: Data, Effects, Security & Systems</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .vocab-box { background: #eaf2f8; padding: 10px; border-radius: 5px; margin: 10px 0; }
+  .activity-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f39c12; margin: 15px 0; }
+  .assessment-box { background: #fdebd0; padding: 15px; border-left: 4px solid #e67e22; margin: 15px 0; }
+  .week-header { background-color: #d6eaf8; padding: 10px; margin-top: 20px; border-radius: 5px; }
+  .syllabus-ref { background: #e8daef; padding: 8px; border-radius: 5px; margin: 10px 0; font-weight: bold; }
+  .exam-tip { background: #d5f5e3; padding: 10px; border-left: 4px solid #27ae60; margin: 10px 0; }
+  .code-block { background: #f4f4f4; padding: 10px; border-left: 3px solid #3498db; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>Weeks 10–18: Data Types, Effects of ICT, Security &amp; Systems Analysis</h1>
+<p><strong>Syllabus:</strong> CIE IGCSE ICT (0417) Topics 5, 6, 8, 9 | <strong>Lesson Length:</strong> 40 minutes</p>
+
+<h2>Week 10 — Data Types: Logical, Text, Numeric</h2>
+<div class="syllabus-ref">Syllabus: 5.1 Data Types</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> Boolean <span class="bilingual">布尔型 (bù'ěr xíng)</span>, string <span class="bilingual">字符串 (zìfú chuàn)</span>, integer <span class="bilingual">整数 (zhěngshù)</span>, real/float <span class="bilingual">实数/浮点数 (shíshù/fúdiǎn shù)</span>, date/time <span class="bilingual">日期/时间 (rìqī/shíjiān)</span>, char <span class="bilingual">字符 (zìfú)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Data type sorting — Given 20 data items (e.g., "123", "Hello", TRUE, 3.14, 2024-01-15), sort into correct type categories.<br><br>
+<strong>Activity 2 (15 min):</strong> "Choose the right type" — For each field in a database (Age, Phone, Price, IsMember), select the most appropriate data type and justify.<br><br>
+<strong>Activity 3 (10 min):</strong> Validation link — How does data type choice affect what validation rules are possible?
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> For database questions, always choose the MOST SPECIFIC type. Age = INTEGER (not text). Price = REAL/CURRENCY (not integer). Phone = TEXT (not numeric — leading zeros matter!).
+</div>
+
+<h2>Week 11 — Data Structures: Arrays, Records, Files</h2>
+<div class="syllabus-ref">Syllabus: 5.2–5.3 Data Structures</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> array <span class="bilingual">数组 (shùzǔ)</span>, record <span class="bilingual">记录 (jìlù)</span>, file <span class="bilingual">文件 (wénjiàn)</span>, field <span class="bilingual">字段 (zìduàn)</span>, key field <span class="bilingual">关键字段 (guānjiàn zìduàn)</span>, fixed length <span class="bilingual">固定长度 (gùdìng chángdù)</span>, variable length <span class="bilingual">可变长度 (kěbiàn chángdù)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Array practice — Given array of 10 temperatures, find highest, lowest, average. Trace table exercise.<br><br>
+<strong>Activity 2 (15 min):</strong> Record design — Design a student record with 6 fields. Identify the key field. Why is it unique?<br><br>
+<strong>Activity 3 (10 min):</strong> Fixed vs. variable length — What are the advantages of each? When is fixed length faster?
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> For trace table questions, create a table with columns for each variable and work through the algorithm ONE STEP AT A TIME. Don't skip steps — examiners check each line.
+</div>
+
+<h2>Week 12 — Effects of ICT: Social &amp; Economic</h2>
+<div class="syllabus-ref">Syllabus: 6.1–6.2 Social and Economic Effects</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> unemployment <span class="bilingual">失业 (shīyè)</span>, teleworking <span class="bilingual">远程办公 (yuǎnchéng bàngōng)</span>, e-commerce <span class="bilingual">电子商务 (diànzǐ shāngwù)</span>, globalization <span class="bilingual">全球化 (quánqiú huà)</span>, digital divide <span class="bilingual">数字鸿沟 (shùzì hónggōu)</span>, job creation <span class="bilingual">创造就业 (chuàngzào jiùyè)</span>, job displacement <span class="bilingual">岗位替代 (gǎngwèi tìdài)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Then and Now" — Compare shopping, banking, communication in 1990 vs. 2024. What changed?<br><br>
+<strong>Activity 2 (15 min):</strong> Debate — "ICT creates more jobs than it destroys." Arguments for and against.<br><br>
+<strong>Activity 3 (10 min):</strong> Digital divide research — What percentage of the world has internet access? Why does this matter for education?
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> "Discuss" questions require balanced arguments. Always present BOTH sides: "On one hand... On the other hand..." Conclude with a justified opinion.
+</div>
+
+<h2>Week 13 — Effects of ICT: Environmental &amp; Health</h2>
+<div class="syllabus-ref">Syllabus: 6.3–6.4 Environmental and Health Effects</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> e-waste <span class="bilingual">电子垃圾 (diànzǐ lājī)</span>, recycling <span class="bilingual">回收利用 (huíshōu lìyòng)</span>, carbon footprint <span class="bilingual">碳足迹 (tàn zújì)</span>, data center <span class="bilingual">数据中心 (shùjù zhōngxīn)</span>, RSI <span class="bilingual">重复性劳损 (chóngfù xìng sǔnshāng)</span>, eye strain <span class="bilingual">眼睛疲劳 (yǎnjing píláo)</span>, ergonomics <span class="bilingual">人体工程学 (réntǐ gōngchéng xué)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> E-waste calculation — How many old phones are in your household? Class total? Research recycling options in Shenzhen.<br><br>
+<strong>Activity 2 (15 min):</strong> Ergonomics audit — Check your workstation: chair height, monitor distance, wrist position, lighting.<br><br>
+<strong>Activity 3 (10 min):</strong> "The Hidden Cost of Cloud" — Data centers use 1% of global electricity. Discuss sustainable solutions.
+</div>
+
+<h2>Week 14 — Safety &amp; Security: Threats</h2>
+<div class="syllabus-ref">Syllabus: 9.1 Security Threats</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> hacking <span class="bilingual">黑客攻击 (hēikè gōngjī)</span>, malware <span class="bilingual">恶意软件 (èyì ruǎnjiàn)</span>, virus <span class="bilingual">病毒 (bìngdú)</span>, worm <span class="bilingual">蠕虫 (rúchóng)</span>, trojan <span class="bilingual">木马 (mùmǎ)</span>, spyware <span class="bilingual">间谍软件 (jiàndié ruǎnjiàn)</span>, adware <span class="bilingual">广告软件 (guǎnggào ruǎnjiàn)</span>, ransomware <span class="bilingual">勒索软件 (lèsuǒ ruǎnjiàn)</span>, phishing <span class="bilingual">网络钓鱼 (wǎngluò diàoyú)</span>, pharming <span class="bilingual">域欺骗 (yù qīpiàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Malware matching — Match type to description, example, and damage caused.<br><br>
+<strong>Activity 2 (15 min):</strong> Case study analysis — WannaCry ransomware attack (2017). How did it spread? What was the impact? How could it have been prevented?<br><br>
+<strong>Activity 3 (10 min):</strong> "Phishing vs. Pharming" — Compare: phishing tricks the user; pharming redirects traffic without user knowledge.
+</div>
+
+<h2>Week 15 — Safety &amp; Security: Countermeasures</h2>
+<div class="syllabus-ref">Syllabus: 9.2–9.3 Security Measures</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> firewall <span class="bilingual">防火墙 (fánghuǒqiáng)</span>, antivirus <span class="bilingual">杀毒软件 (shādú ruǎnjiàn)</span>, encryption <span class="bilingual">加密 (jiāmì)</span>, SSL <span class="bilingual">安全套接层 (ānquán tàojiē céng)</span>, biometric <span class="bilingual">生物识别 (shēngwù shíbié)</span>, two-factor authentication <span class="bilingual">双因素认证 (shuāng yīnsù rènzhèng)</span>, backup <span class="bilingual">备份 (bèifèn)</span>, UPS <span class="bilingual">不间断电源 (bù jiànduàn diànyuán)</span>, access rights <span class="bilingual">访问权限 (fǎngwèn quánxiàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Defense in Depth" — Layered security diagram: firewall (outer) → antivirus (middle) → encryption (inner) → backup (recovery).<br><br>
+<strong>Activity 2 (15 min):</strong> Backup strategies — Compare full, incremental, differential backup. 3-2-1 rule: 3 copies, 2 media, 1 offsite.<br><br>
+<strong>Activity 3 (10 min):</strong> Biometrics debate — Fingerprint vs. facial recognition. Pros, cons, privacy concerns.
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> For "how to protect against X" questions, use the layered approach: 1) Prevention (firewall, antivirus), 2) Detection (monitoring, logs), 3) Recovery (backup, UPS). This structure guarantees full marks.
+</div>
+
+<h2>Week 16 — Systems Analysis: The SDLC</h2>
+<div class="syllabus-ref">Syllabus: 8.1–8.2 Systems Development Life Cycle</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> SDLC <span class="bilingual">系统开发生命周期 (xìtǒng kāifā shēngmìng zhōuqī)</span>, analysis <span class="bilingual">分析 (fēnxī)</span>, design <span class="bilingual">设计 (shèjì)</span>, implementation <span class="bilingual">实施 (shíshī)</span>, testing <span class="bilingual">测试 (cèshì)</span>, evaluation <span class="bilingual">评估 (pínggū)</span>, maintenance <span class="bilingual">维护 (wéihù)</span>, feasibility study <span class="bilingual">可行性研究 (kěxíng xìng yánjiū)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> SDLC timeline — Students create a visual timeline of the 6 stages with key activities in each.<br><br>
+<strong>Activity 2 (15 min):</strong> Case study — A school wants a new library system. What happens in each SDLC stage?<br><br>
+<strong>Activity 3 (10 min):</strong> Feasibility types — Technical, economic, operational, legal. Which is most important?
+</div>
+
+<h2>Week 17 — Systems Analysis: Methods &amp; Documentation</h2>
+<div class="syllabus-ref">Syllabus: 8.3–8.5 Analysis Methods and Documentation</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> data flow diagram (DFD) <span class="bilingual">数据流图 (shùjù liú tú)</span>, system flowchart <span class="bilingual">系统流程图 (xìtǒng liúchéng tú)</span>, IPO chart <span class="bilingual">输入处理输出图 (shūrù chǔlǐ shūchū tú)</span>, pseudocode <span class="bilingual">伪代码 (wěi dàimǎ)</span>, algorithm <span class="bilingual">算法 (suànfǎ)</span>, entity <span class="bilingual">实体 (shítǐ)</span>, process <span class="bilingual">处理 (chǔlǐ)</span>, data store <span class="bilingual">数据存储 (shùjù cúnchǔ)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> DFD drawing — Draw a Level 0 DFD for an online shopping system: Customer, Website, Order Database, Payment Processor.<br><br>
+<strong>Activity 2 (15 min):</strong> Pseudocode writing — Write pseudocode for "calculate total price including tax."<br><br>
+<strong>Activity 3 (10 min):</strong> Flowchart symbols — Match: oval (start/end), rectangle (process), diamond (decision), parallelogram (input/output).
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> DFD questions often ask you to identify missing entities or data flows. Check: Is there a source for every input? A destination for every output? Is the data store read from AND written to?
+</div>
+
+<h2>Week 18 — Semester 1 Revision &amp; Assessment</h2>
+<div class="assessment-box">
+<strong>Mock Paper 1 (40 min):</strong>
+<p>Students complete a shortened Paper 1 covering all Semester 1 topics:</p>
+<ol>
+<li>Define: LAN, WAN, protocol, firewall [4 marks]</li>
+<li>Describe the fetch-decode-execute cycle [4 marks]</li>
+<li>Compare SSD and HDD for a gaming laptop [3 marks]</li>
+<li>Explain how DNS works when accessing a website [3 marks]</li>
+<li>Discuss the social effects of increased ICT use in education [6 marks]</li>
+</ol>
+</div>
+
+<div class="exam-tip">
+<strong>Revision Strategy:</strong> Create topic cards with: 1) Key definition, 2) Diagram, 3) Example, 4) Past question. Review 5 cards per day.
+</div>
+
+<h2>Standards &amp; Syllabus Mapping</h2>
+<table>
+<tr><th>Weeks</th><th>Syllabus</th><th>Topic</th><th>Past Paper Focus</th></tr>
+<tr><td>10–11</td><td>5.1–5.3</td><td>Data Types &amp; Structures</td><td>MJ 2023 Q2, ON 2022 Q4</td></tr>
+<tr><td>12–13</td><td>6.1–6.4</td><td>Effects of ICT</td><td>MJ 2022 Q6, ON 2021 Q7</td></tr>
+<tr><td>14–15</td><td>9.1–9.3</td><td>Safety &amp; Security</td><td>MJ 2023 Q5, ON 2022 Q6</td></tr>
+<tr><td>16–17</td><td>8.1–8.5</td><td>Systems Analysis</td><td>MJ 2022 Q8, ON 2021 Q9</td></tr>
+</table>
+</body>
+</html>

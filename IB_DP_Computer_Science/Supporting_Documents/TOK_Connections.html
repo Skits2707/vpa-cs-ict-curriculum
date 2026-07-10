@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — Theory of Knowledge Connections</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+  .code { background: #f4f4f4; padding: 10px; border-left: 3px solid #666; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>Theory of Knowledge (TOK) Connections <span class="bilingual">知识理论连接 Zhīshi Lǐlùn Liánjiē</span></h1>
+<p><strong>Core Theme:</strong> Knowledge and Technology | <strong>Optional Themes:</strong> Knowledge and Politics, Knowledge and Indigenous Societies</p>
+
+<h2>Introduction: Why TOK in Computer Science?</h2>
+<p>Computer Science is not merely a technical discipline — it raises profound questions about the nature of knowledge, the ethics of creation, and the limits of computation. The TOK connections in this curriculum are designed to help students see their CS studies as part of a broader intellectual landscape.</p>
+
+<h2>Topic 1: System Fundamentals</h2>
+<div class="tok-box">
+<strong>Knowledge Question 1.1:</strong> To what extent can we <em>know</em> that a new system will solve the problems it was designed to address?<br><br>
+<strong>Exploration:</strong> When a systems analyst creates an ER diagram or flowchart, they produce a simplified representation of reality. Models are necessarily selective — they include some features and exclude others. Is the knowledge produced by modelling more reliable because it is abstract, or less reliable because it omits detail? Consider how a map (model) is useful precisely because it is not the territory (reality), yet its usefulness depends on what it omits.<br><br>
+<strong>Links:</strong> Knowledge and Technology (models as tools for knowing); Knowledge and Politics (who decides what the model includes?)
+</div>
+
+<div class="tok-box">
+<strong>Knowledge Question 1.2:</strong> How do the tools we use to represent systems (diagrams, tables, pseudocode) shape the systems we can imagine?<br><br>
+<strong>Exploration:</strong> Different modelling techniques reveal different aspects of a system. An ER diagram shows data relationships; a flowchart shows process sequence; a DFD shows data movement. Does the choice of representation determine what we can know about a system? Can some aspects of reality only be captured by certain representations?
+</div>
+
+<h2>Topic 2: Computer Organization</h2>
+<div class="tok-box">
+<strong>Knowledge Question 2.1:</strong> If a computer processes everything as binary, how does meaning emerge from mere 1s and 0s?<br><br>
+<strong>Exploration:</strong> At the hardware level, a computer manipulates voltages representing 1 and 0. Yet these patterns become text, images, music, and meaning for humans. Is meaning intrinsic to the pattern, or is it imposed by interpretation? Consider the same bit pattern interpreted as ASCII, as an integer, or as a machine instruction — the "meaning" changes entirely.<br><br>
+<strong>Links:</strong> Knowledge and Technology (symbolic representation); Language (how symbols acquire meaning)
+</div>
+
+<div class="tok-box">
+<strong>Knowledge Question 2.2:</strong> Is the CPU a model of human thought, or is it a fundamentally different kind of processor?<br><br>
+<strong>Exploration:</strong> The Fetch-Decode-Execute cycle resembles human information processing (perceive, understand, act). But the CPU has no understanding, no intention, no consciousness. Does the similarity in structure suggest a similarity in nature? Or is this an example of the pathetic fallacy — attributing human qualities to machines?<br><br>
+<strong>Links:</strong> Human Sciences (cognitive science); Knowledge and Technology (AI and consciousness)
+</div>
+
+<h2>Topic 3: Networks</h2>
+<div class="tok-box">
+<strong>Knowledge Question 3.1:</strong> When we claim to "know" something we read online, how does the distributed, ungoverned nature of the network affect the reliability of that knowledge?<br><br>
+<strong>Exploration:</strong> The internet has no central authority verifying content. Information propagates through peer-to-peer sharing, social media amplification, and algorithmic recommendation. In what ways does this decentralisation make internet knowledge more reliable (many sources, rapid correction) or less reliable (no gatekeepers, misinformation spreads)?<br><br>
+<strong>Links:</strong> Knowledge and Technology (information ecosystems); Knowledge and Politics (platform power)
+</div>
+
+<div class="tok-box">
+<strong>Knowledge Question 3.2:</strong> Does encryption protect knowledge, or does it hide it? When should governments have the right to decrypt?<br><br>
+<strong>Exploration:</strong> Encryption enables private communication — a foundation of free expression. But it also enables criminal activity beyond state surveillance. Is this a factual dispute (will backdoors be exploited?) or a values dispute (privacy vs security)? Can we know the answer through evidence, or is it a matter of ethical commitment?<br><br>
+<strong>Links:</strong> Knowledge and Politics (state power vs individual rights); Ethics (utilitarian vs deontological frameworks)
+</div>
+
+<h2>Topic 4: Computational Thinking</h2>
+<div class="tok-box">
+<strong>Knowledge Question 4.1:</strong> An algorithm is a set of instructions that, followed mechanically, produces a result. In what sense does an algorithm "know" what it is doing?<br><br>
+<strong>Exploration:</strong> A sorting algorithm arranges data correctly without understanding what the data represents. Is the algorithm's correctness a form of knowledge? Or is knowledge necessarily connected to understanding? If an algorithm can be correct without understanding, what does this tell us about the relationship between procedure and knowledge?<br><br>
+<strong>Links:</strong> Mathematics (algorithmic proof); Knowledge and Technology (machine "knowledge")
+</div>
+
+<div class="tok-box">
+<strong>Knowledge Question 4.2:</strong> We say binary search is "more efficient" than linear search. But efficiency depends on sorted data. Is the claim "binary search is better" an absolute truth, or is it relative to assumptions about the world?<br><br>
+<strong>Exploration:</strong> In computer science, we often present algorithmic comparisons as objective facts. But every algorithm operates within assumptions about data, hardware, and requirements. Are computational truths absolute (true in all contexts) or contextual (true given certain conditions)? How do hidden assumptions shape what we claim to know in CS?<br><br>
+<strong>Links:</strong> Mathematics (proof and precondition); Natural Sciences (ceteris paribus conditions)
+</div>
+
+<h2>Topic 5: Abstract Data Structures (HL)</h2>
+<div class="tok-box">
+<strong>Knowledge Question 5.1:</strong> Do abstract data structures like trees and graphs exist independently of their computer implementations?<br><br>
+<strong>Exploration:</strong> A binary tree can be drawn on paper, implemented in code, or described mathematically. Is the "tree" the same thing in all three cases? Do mathematical abstractions have an existence independent of their physical or computational instantiations? This is the ancient debate between Platonism (abstract objects exist) and formalism (they are merely useful fictions).<br><br>
+<strong>Links:</strong> Mathematics (philosophy of mathematics); Knowledge and Technology (abstraction and implementation)
+</div>
+
+<div class="tok-box">
+<strong>Knowledge Question 5.2:</strong> Inorder traversal of a BST produces a sorted list. Is this sorting "discovered" or "created"?<br><br>
+<strong>Exploration:</strong> When we traverse a BST inorder, the output is sorted. Was the sorted order already present in the tree (waiting to be discovered), or does the traversal impose an order that did not exist before? What does this suggest about the relationship between representation and knowledge?<br><br>
+<strong>Links:</strong> Mathematics (discovery vs invention); Arts (interpretation and meaning)
+</div>
+
+<h2>Topic 6: Resource Management (HL)</h2>
+<div class="tok-box">
+<strong>Knowledge Question 6.1:</strong> CPU scheduling algorithms embody different notions of "fairness." Is fairness a mathematical property or a moral one?<br><br>
+<strong>Exploration:</strong> Round robin gives equal time; priority scheduling favours important tasks; shortest job first maximises throughput. Each embodies a different conception of fairness. Can mathematics tell us which is "best," or does this require moral reasoning? What happens when we try to reduce ethical questions to mathematical optimisation?<br><br>
+<strong>Links:</strong> Ethics (theories of justice); Human Sciences (political philosophy); Mathematics (optimisation)
+</div>
+
+<div class="tok-box">
+<strong>Knowledge Question 6.2:</strong> A thermostat "knows" the temperature and "decides" to turn on the heater. Where is the boundary between control and intelligence?<br><br>
+<strong>Exploration:</strong> Feedback loops are everywhere in nature and technology. At what level of complexity does a feedback loop become "intelligent"? Is intelligence merely complex control, or is there something qualitatively different? How do we know whether a system is genuinely intelligent or merely simulating intelligence?<br><br>
+<strong>Links:</strong> Knowledge and Technology (AI definitions); Natural Sciences (cybernetics)
+</div>
+
+<h2>Topic 7: Control (HL)</h2>
+<div class="tok-box">
+<strong>Knowledge Question 7.1:</strong> A centralized controller has a "God's eye view" of the system. Is complete information always possible, or do centralised systems necessarily operate with simplified models?<br><br>
+<strong>Exploration:</strong> Centralized control assumes that one entity can know enough to make optimal decisions. But real systems are too complex for complete knowledge. Does this mean centralized control is epistemically impossible, or merely practically difficult? How does the inevitable simplification of models affect the legitimacy of centralized authority?<br><br>
+<strong>Links:</strong> Knowledge and Politics (centralization vs decentralization); Human Sciences (bounded rationality)
+</div>
+
+<div class="tok-box">
+<strong>Knowledge Question 7.2:</strong> In a distributed system, no single node has complete knowledge. Can the system as a whole be said to "know" things that no individual node knows?<br><br>
+<strong>Exploration:</strong> Emergent properties appear at the system level but not at the component level. Is emergence a form of collective knowledge, or merely the appearance of knowledge? Can a system "know" something without any part of it knowing it? What does this suggest about the relationship between parts and wholes in knowledge systems?<br><br>
+<strong>Links:</strong> Natural Sciences (emergence); Human Sciences (collective intelligence)
+</div>
+
+<div class="tok-box">
+<strong>Knowledge Question 7.3:</strong> If an autonomous vehicle must choose between hitting a pedestrian or swerving into a wall, how should it decide?<br><br>
+<strong>Exploration:</strong> The "trolley problem" in computer science forces us to confront whether ethical decisions can be algorithmic. Is there a "correct" answer that can be programmed, or is any choice merely a programmed preference? Who has the authority to decide — programmer, company, government, or society?<br><br>
+<strong>Links:</strong> Ethics (consequentialism vs deontology); Knowledge and Politics (technocratic governance)
+</div>
+
+<h2>Using TOK in Assessment</h2>
+<p>TOK connections can enhance IB assessment responses:</p>
+<ul>
+<li><strong>Paper 1 essays (10–12 marks):</strong> A brief TOK-aware conclusion can demonstrate critical thinking</li>
+<li><strong>IA Evaluation (Criterion E):</strong> Consider ethical implications and limitations of knowledge in your solution</li>
+<li><strong>TOK Exhibition/ Essay:</strong> CS students have rich material on AI, privacy, algorithms, and knowledge</li>
+</ul>
+
+<h2>Cross-Curricular TOK</h2>
+<p>Computer Science TOK connects to:</p>
+<table>
+<tr><th>Subject</th><th>Shared TOK Questions</th></tr>
+<tr><td>Mathematics</td><td>Are algorithms discovered or invented? Is computational proof as valid as mathematical proof?</td></tr>
+<tr><td>Physics</td><td>What are the physical limits of computation? Does quantum computing change what we can know?</td></tr>
+<tr><td>Economics</td><td>How do algorithms shape markets? Is algorithmic trading fair?</td></tr>
+<tr><td>Psychology</td><td>Can machines think? What does the Turing test really test?</td></tr>
+<tr><td>Philosophy</td><td>What is the nature of information? Is mind computation?</td></tr>
+</table>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | TOK Connections</p>
+
+</body>
+</html>

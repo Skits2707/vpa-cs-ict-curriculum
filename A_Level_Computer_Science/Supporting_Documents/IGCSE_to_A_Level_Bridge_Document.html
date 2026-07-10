@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IGCSE to A-Level Bridge Document — VPA Computer Science</title>
+<style>
+:root {
+  --vpa-blue: #003366;
+  --vpa-gold: #C9A227;
+  --vpa-light: #F5F7FA;
+  --vpa-accent: #0055A4;
+  --text-dark: #1F2937;
+  --text-body: #374151;
+  --border: #D1D5DB;
+  --success: #059669;
+  --warning: #D97706;
+  --danger: #DC2626;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: #FFFFFF;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+header {
+  background: var(--vpa-blue);
+  color: #FFFFFF;
+  padding: 40px 30px;
+  text-align: center;
+  border-bottom: 6px solid var(--vpa-gold);
+}
+header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 0.5px; }
+header h2 { margin: 8px 0 0; font-size: 1.15rem; font-weight: 400; color: #B0C4DE; }
+.container { max-width: 1100px; margin: 0 auto; padding: 30px; }
+.section { margin-bottom: 50px; }
+.section h2 {
+  color: var(--vpa-blue);
+  font-size: 1.6rem;
+  border-left: 5px solid var(--vpa-gold);
+  padding-left: 14px;
+  margin-bottom: 18px;
+}
+.section h3 {
+  color: var(--vpa-accent);
+  font-size: 1.2rem;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+.section h4 { color: var(--text-dark); font-size: 1.05rem; margin: 18px 0 8px; }
+
+/* Tables */
+table {
+  width: 100%; border-collapse: collapse;
+  margin: 16px 0; font-size: 0.95rem;
+}
+th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+th { background: var(--vpa-blue); color: #FFFFFF; font-weight: 600; }
+tr:nth-child(even) { background: var(--vpa-light); }
+
+/* Lists */
+ul, ol { margin: 10px 0 10px 20px; padding-left: 14px; }
+li { margin-bottom: 6px; }
+
+/* Boxes */
+.info-box {
+  background: #EFF6FF; border-left: 4px solid var(--vpa-accent);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+.warning-box {
+  background: #FFFBEB; border-left: 4px solid var(--warning);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+.success-box {
+  background: #ECFDF5; border-left: 4px solid var(--success);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+.danger-box {
+  background: #FEF2F2; border-left: 4px solid var(--danger);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+
+/* Checklist */
+.checklist { list-style: none; padding-left: 0; }
+.checklist li::before {
+  content: "☐ "; color: var(--vpa-accent); font-weight: bold; font-size: 1.1rem;
+}
+
+/* Bilingual */
+.zh { color: #4B5563; font-style: italic; }
+
+footer {
+  background: var(--vpa-blue); color: #FFFFFF;
+  text-align: center; padding: 24px 20px;
+  font-size: 0.9rem; margin-top: 40px;
+}
+
+@media print {
+  body { font-size: 10pt; }
+  .section { page-break-inside: avoid; }
+  header { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>IGCSE to A-Level Bridge Document</h1>
+  <h2>IGCSE计算机科学(0478)到A-Level计算机科学(9618)衔接指南 / Victoria Park Academy</h2>
+</header>
+
+<div class="container">
+
+<!-- Section 1: Overview -->
+<div class="section">
+  <h2>1. Overview / 概述</h2>
+  <p>This bridge document is designed for students transitioning from <strong>Cambridge IGCSE Computer Science (0478)</strong> to <strong>Cambridge International A-Level Computer Science (9618)</strong>. It maps prior knowledge to new requirements, highlights skills progression, and provides a structured transition plan for the summer before Year 12.</p>
+  <p class="zh">本衔接文件旨在帮助学生从剑桥IGCSE计算机科学(0478)过渡到剑桥国际A-Level计算机科学(9618)。它将先前学习的知识映射到新的课程要求，突出技能进阶，并为12年级前的暑假提供结构化的过渡计划。</p>
+
+  <div class="info-box">
+    <strong>Key Message / 关键信息：</strong> A-Level Computer Science is not simply "more of the same." It demands deeper theoretical understanding, more sophisticated programming, and the ability to apply knowledge to unfamiliar contexts. Students who consolidate IGCSE fundamentals over the summer start Year 12 with confidence.
+    <p class="zh">A-Level计算机科学不仅仅是"更多相同的内容"。它要求更深入的理论理解、更复杂的编程能力，以及将知识应用于陌生情境的能力。那些在暑假巩固IGCSE基础知识的学生将以自信的状态开始12年级的学习。</p>
+  </div>
+</div>
+
+<!-- Section 2: Topic-by-Topic Mapping -->
+<div class="section">
+  <h2>2. Topic-by-Topic Mapping / 主题对照表</h2>
+  <p>The table below shows how each IGCSE topic connects to A-Level content. <span class="zh">下表展示了每个IGCSE主题如何与A-Level内容相连接。</span></p>
+
+  <h3>2.1 Theory Topics / 理论主题</h3>
+  <table>
+    <tr>
+      <th>IGCSE Topic (0478)</th>
+      <th>A-Level Topic (9618)</th>
+      <th>Progression / 进阶</th>
+      <th>Priority / 优先级</th>
+    </tr>
+    <tr>
+      <td>1.1 Binary systems &amp; hex (number bases, conversions, uses)</td>
+      <td>1.1 Information representation (binary, BCD, ASCII, Unicode, bitmaps, sound, video compression)</td>
+      <td>From simple conversion to understanding why different representations exist and how compression algorithms work.</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>1.2 Data transmission (types, methods, error detection: parity, checksum, ARQ)</td>
+      <td>1.3 Communication &amp; Internet technologies (packet switching, protocols, TCP/IP stack, encryption)</td>
+      <td>From basic error detection to full protocol stacks, encryption, and network security principles.</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>1.3 Hardware (CPU components, von Neumann, fetch-decode-execute, I/O, storage)</td>
+      <td>1.2 Hardware (processor architecture, registers, assembly language, Boolean algebra, logic gates, flip-flops, embedded systems)</td>
+      <td>From conceptual CPU to register-level detail, assembly programming, and sequential logic circuits.</td>
+      <td>Critical</td>
+    </tr>
+    <tr>
+      <td>1.4 Software (system vs application, OS functions)</td>
+      <td>1.4 System software (compilers, interpreters, assemblers, linkers, loaders, OS memory management)</td>
+      <td>From OS functions to understanding how high-level code becomes machine code; memory management algorithms.</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>1.5 Data representation (binary, hex, ASCII, file sizes)</td>
+      <td>1.1 (extended) + 3.1 Data representation in depth (floating-point, normalisation, two's complement arithmetic)</td>
+      <td>From integer representation to floating-point, normalisation, and binary arithmetic operations.</td>
+      <td>Critical</td>
+    </tr>
+    <tr>
+      <td>2.1 Algorithm design (pseudocode, flowcharts, trace tables)</td>
+      <td>2.1 Algorithm design (stepwise refinement, modular design, recursion, Big-O complexity)</td>
+      <td>From simple algorithms to recursive solutions, complexity analysis, and structured decomposition.</td>
+      <td>Critical</td>
+    </tr>
+    <tr>
+      <td>2.2 Programming (sequence, selection, iteration, arrays, file handling)</td>
+      <td>2.2 Programming (OOP, classes, inheritance, polymorphism, file handling, exception handling)</td>
+      <td>From procedural to object-oriented programming; exception handling and more complex data structures.</td>
+      <td>Critical</td>
+    </tr>
+    <tr>
+      <td>2.3 Databases (flat file, relational, SQL, normalisation basics)</td>
+      <td>2.3 Databases (3NF, BCNF, referential integrity, complex queries, E-R diagrams)</td>
+      <td>From basic SQL to full normalisation theory, E-R modelling, and database design principles.</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>2.4 Boolean logic (truth tables, logic gates, simplification)</td>
+      <td>1.2 Boolean algebra (Karnaugh maps, De Morgan's laws, simplification, circuit design)</td>
+      <td>From truth tables to algebraic simplification, Karnaugh maps, and sequential circuit design.</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>3.1 Ethics, security, AI (basic concepts)</td>
+      <td>4.1 Security, privacy, ethics (encryption standards, legislation, AI ethics, professional responsibility)</td>
+      <td>From awareness to deep analysis of legislation, encryption standards, and professional codes of conduct.</td>
+      <td>Medium</td>
+    </tr>
+  </table>
+
+  <h3>2.2 Practical Skills / 实践技能</h3>
+  <table>
+    <tr>
+      <th>IGCSE Skill</th>
+      <th>A-Level Skill</th>
+      <th>Progression / 进阶</th>
+    </tr>
+    <tr>
+      <td>Programming in Python (procedural)</td>
+      <td>Programming in Python (OOP, file I/O, exception handling)</td>
+      <td>Must master classes, objects, inheritance, and exception handling before Year 12.</td>
+    </tr>
+    <tr>
+      <td>Simple trace tables</td>
+      <td>Complex trace tables with recursion, nested loops, and OOP</td>
+      <td>Practice tracing recursive algorithms and object method calls.</td>
+    </tr>
+    <tr>
+      <td>Basic SQL (SELECT, INSERT, UPDATE, DELETE)</td>
+      <td>Advanced SQL (JOINs, nested queries, aggregate functions, DDL)</td>
+      <td>Revise all SQL basics; learn JOINs and aggregate functions over summer.</td>
+    </tr>
+    <tr>
+      <td>Writing pseudocode for simple problems</td>
+      <td>Writing pseudocode for complex, modular systems</td>
+      <td>Practice decomposing problems into modules with clear interfaces.</td>
+    </tr>
+    <tr>
+      <td>Understanding test data (normal, boundary, erroneous)</td>
+      <td>Designing comprehensive test plans with equivalence partitioning</td>
+      <td>Learn equivalence partitioning and how to justify test case selection.</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Section 3: Skills Progression -->
+<div class="section">
+  <h2>3. Skills Progression: What's New vs. What's Deepened / 技能进阶：新增与深化</h2>
+
+  <h3>3.1 What is New at A-Level? / A-Level新增内容</h3>
+  <ul>
+    <li><strong>Object-Oriented Programming (OOP)</strong> — classes, objects, inheritance, polymorphism, encapsulation. <span class="zh">面向对象编程——类、对象、继承、多态、封装。</span></li>
+    <li><strong>Recursion</strong> — recursive algorithms, base cases, recursive case design, stack frames. <span class="zh">递归——递归算法、基准情形、递归情形设计、栈帧。</span></li>
+    <li><strong>Big-O Complexity</strong> — time and space complexity, comparing algorithm efficiency. <span class="zh">大O复杂度——时间和空间复杂度，比较算法效率。</span></li>
+    <li><strong>Assembly Language</strong> — low-level programming, register operations, addressing modes. <span class="zh">汇编语言——低级编程、寄存器操作、寻址模式。</span></li>
+    <li><strong>Floating-Point Representation</strong> — IEEE 754, mantissa and exponent, normalisation. <span class="zh">浮点数表示——IEEE 754标准、尾数和指数、规范化。</span></li>
+    <li><strong>Network Protocols in Depth</strong> — TCP/IP stack, packet switching, encryption protocols. <span class="zh">网络协议深入——TCP/IP协议栈、分组交换、加密协议。</span></li>
+    <li><strong>Database Normalisation</strong> — 1NF, 2NF, 3NF, BCNF with formal proofs. <span class="zh">数据库规范化——第一至第三范式、BC范式及形式化证明。</span></li>
+    <li><strong>Computer Security &amp; Encryption</strong> — symmetric/asymmetric encryption, digital signatures, certificates, hashing. <span class="zh">计算机安全与加密——对称/非对称加密、数字签名、证书、哈希。</span></li>
+    <li><strong>Artificial Intelligence</strong> — machine learning basics, neural networks, AI ethics. <span class="zh">人工智能——机器学习基础、神经网络、AI伦理。</span></li>
+    <li><strong>System Software</strong> — compilers, interpreters, assemblers, linkers, loaders, memory management. <span class="zh">系统软件——编译器、解释器、汇编器、链接器、加载器、内存管理。</span></li>
+  </ul>
+
+  <h3>3.2 What is Deepened? / 深化内容</h3>
+  <ul>
+    <li><strong>Binary Arithmetic</strong> — from simple conversion to addition, subtraction, two's complement overflow, shift operations. <span class="zh">二进制运算——从简单转换到加减法、补码溢出、移位操作。</span></li>
+    <li><strong>Logic Design</strong> — from truth tables to Karnaugh maps, De Morgan's laws, and sequential circuits (flip-flops). <span class="zh">逻辑设计——从真值表到卡诺图、德摩根定律和时序电路（触发器）。</span></li>
+    <li><strong>Algorithm Design</strong> — from simple pseudocode to stepwise refinement, modular design, and complexity analysis. <span class="zh">算法设计——从简单伪代码到逐步求精、模块化设计和复杂度分析。</span></li>
+    <li><strong>Data Structures</strong> — from 1D arrays to 2D arrays, stacks, queues, linked lists, trees, graphs. <span class="zh">数据结构——从一维数组到二维数组、栈、队列、链表、树、图。</span></li>
+    <li><strong>Programming</strong> — from procedural scripts to structured OOP programs with file handling and exception handling. <span class="zh">编程——从过程式脚本到具有文件处理和异常处理的结构化OOP程序。</span></li>
+    <li><strong>Systems Architecture</strong> — from conceptual CPU to register-level detail, instruction sets, and assembly language. <span class="zh">系统架构——从概念性CPU到寄存器级细节、指令集和汇编语言。</span></li>
+  </ul>
+
+  <div class="warning-box">
+    <strong>Warning / 警告：</strong> Students who achieved a high grade at IGCSE through memorisation alone often struggle at A-Level. A-Level requires <em>application</em> of knowledge to novel problems. The summer transition work (Section 5) is designed to develop this skill.
+    <p class="zh">仅通过死记硬背在IGCSE取得高分的学生往往在A-Level遇到困难。A-Level要求将知识<em>应用</em>于新问题。暑假过渡作业（第5节）旨在培养这一能力。</p>
+  </div>
+</div>
+
+<!-- Section 4: Prerequisite Knowledge Checklist -->
+<div class="section">
+  <h2>4. Prerequisite Knowledge Checklist / 先修知识检查清单</h2>
+  <p>Before starting A-Level Computer Science, students should be confident in ALL of the following. <span class="zh">在开始A-Level计算机科学之前，学生应对以下内容全部掌握。</span></p>
+
+  <h3>4.1 Number Systems &amp; Data Representation / 数制与数据表示</h3>
+  <ul class="checklist">
+    <li>Convert between binary, denary, and hexadecimal confidently. <span class="zh">熟练进行二进制、十进制和十六进制之间的转换。</span></li>
+    <li>Understand binary addition and the concept of overflow. <span class="zh">理解二进制加法和溢出概念。</span></li>
+    <li>Know how ASCII represents characters and why Unicode is needed. <span class="zh">了解ASCII如何表示字符以及为什么需要Unicode。</span></li>
+    <li>Calculate file sizes for bitmap images (resolution × colour depth). <span class="zh">计算位图图像的文件大小（分辨率 × 颜色深度）。</span></li>
+    <li>Understand the difference between analogue and digital data. <span class="zh">理解模拟数据与数字数据的区别。</span></li>
+  </ul>
+
+  <h3>4.2 Computer Architecture / 计算机体系结构</h3>
+  <ul class="checklist">
+    <li>Name and describe the function of the ALU, CU, MAR, MDR, PC, and accumulator. <span class="zh">说出并描述ALU、CU、MAR、MDR、PC和累加器的功能。</span></li>
+    <li>Explain the fetch-decode-execute cycle with a diagram. <span class="zh">用图示解释取指-译码-执行周期。</span></li>
+    <li>Understand the von Neumann architecture and stored program concept. <span class="zh">理解冯·诺依曼架构和存储程序概念。</span></li>
+    <li>Describe the purpose of cache, RAM, and ROM. <span class="zh">描述缓存、RAM和ROM的用途。</span></li>
+  </ul>
+
+  <h3>4.3 Programming Fundamentals / 编程基础</h3>
+  <ul class="checklist">
+    <li>Write programs using sequence, selection (IF...ELSE), and iteration (FOR, WHILE, REPEAT). <span class="zh">使用顺序、选择（IF...ELSE）和迭代（FOR、WHILE、REPEAT）编写程序。</span></li>
+    <li>Use 1D arrays effectively (declaration, assignment, traversal). <span class="zh">有效使用一维数组（声明、赋值、遍历）。</span></li>
+    <li>Write and call functions/procedures with parameters and return values. <span class="zh">编写和调用带参数和返回值的函数/过程。</span></li>
+    <li>Perform file operations: open, read, write, close text files. <span class="zh">执行文件操作：打开、读取、写入、关闭文本文件。</span></li>
+    <li>Validate user input and handle invalid data gracefully. <span class="zh">验证用户输入并优雅地处理无效数据。</span></li>
+  </ul>
+
+  <h3>4.4 Algorithms &amp; Problem-Solving / 算法与问题解决</h3>
+  <ul class="checklist">
+    <li>Trace simple algorithms using a trace table. <span class="zh">使用跟踪表跟踪简单算法。</span></li>
+    <li>Identify and correct logic errors in given code. <span class="zh">识别并修正给定代码中的逻辑错误。</span></li>
+    <li>Explain the difference between linear search and binary search. <span class="zh">解释线性搜索和二分搜索的区别。</span></li>
+    <li>Describe bubble sort and insertion sort with examples. <span class="zh">用示例描述冒泡排序和插入排序。</span></li>
+    <li>Understand the concept of abstraction and decomposition. <span class="zh">理解抽象和分解的概念。</span></li>
+  </ul>
+
+  <h3>4.5 Databases / 数据库</h3>
+  <ul class="checklist">
+    <li>Write SQL SELECT statements with WHERE clauses. <span class="zh">编写带WHERE子句的SQL SELECT语句。</span></li>
+    <li>Understand the difference between flat-file and relational databases. <span class="zh">理解平面文件数据库和关系数据库的区别。</span></li>
+    <li>Explain primary keys and foreign keys. <span class="zh">解释主键和外键。</span></li>
+    <li>Know the purpose of normalisation (removing redundancy). <span class="zh">了解规范化的目的（消除冗余）。</span></li>
+  </ul>
+
+  <h3>4.6 Networks &amp; Security / 网络与安全</h3>
+  <ul class="checklist">
+    <li>Describe the client-server model. <span class="zh">描述客户端-服务器模型。</span></li>
+    <li>Explain how parity and checksum detect errors. <span class="zh">解释奇偶校验和校验和如何检测错误。</span></li>
+    <li>List common threats (malware, phishing, DDoS) and basic protections. <span class="zh">列出常见威胁（恶意软件、钓鱼、DDoS）和基本防护措施。</span></li>
+    <li>Understand the difference between the Internet and the World Wide Web. <span class="zh">理解互联网和万维网的区别。</span></li>
+  </ul>
+
+  <div class="danger-box">
+    <strong>Action Required / 需要行动：</strong> If you cannot confidently tick ALL items in this checklist, you MUST complete the summer transition work (Section 5) before starting Year 12. Speak to your teacher if you need support.
+    <p class="zh">如果您不能自信地勾选此清单中的所有项目，您必须在开始12年级之前完成暑假过渡作业（第5节）。如需支持，请与您的老师联系。</p>
+  </div>
+</div>
+
+<!-- Section 5: Summer Transition Work -->
+<div class="section">
+  <h2>5. Summer Transition Work / 暑假过渡作业</h2>
+  <p>The following structured programme should be completed over 6 weeks (approximately 4–5 hours per week). <span class="zh">以下结构化计划应在6周内完成（每周约4-5小时）。</span></p>
+
+  <h3>Week 1: Consolidate IGCSE Fundamentals / 巩固IGCSE基础</h3>
+  <ul>
+    <li>Revise all number system conversions (binary ↔ denary ↔ hex) — 50 practice questions. <span class="zh">复习所有数制转换（二进制 ↔ 十进制 ↔ 十六进制）——50道练习题。</span></li>
+    <li>Revise binary addition and two's complement representation. <span class="zh">复习二进制加法和补码表示。</span></li>
+    <li>Review the fetch-decode-execute cycle and draw a detailed diagram. <span class="zh">复习取指-译码-执行周期并绘制详细图示。</span></li>
+  </ul>
+
+  <h3>Week 2: Programming Refresher / 编程复习</h3>
+  <ul>
+    <li>Write a Python program that reads a text file, processes the data, and writes results to a new file. <span class="zh">编写一个Python程序，读取文本文件，处理数据，并将结果写入新文件。</span></li>
+    <li>Implement a simple menu system using functions. <span class="zh">使用函数实现一个简单的菜单系统。</span></li>
+    <li>Practice writing pseudocode for 5 different problems (search, sort, validation). <span class="zh">为5个不同的问题（搜索、排序、验证）练习编写伪代码。</span></li>
+  </ul>
+
+  <h3>Week 3: Introduction to OOP / 面向对象编程入门</h3>
+  <ul>
+    <li>Complete the free <a href="https://www.sololearn.com/" target="_blank">SoloLearn Python OOP course</a> (or equivalent). <span class="zh">完成免费的SoloLearn Python OOP课程（或同等课程）。</span></li>
+    <li>Design a <code>Student</code> class with attributes (name, age, grades) and methods (add_grade, get_average). <span class="zh">设计一个<code>Student</code>类，包含属性（姓名、年龄、成绩）和方法（添加成绩、获取平均分）。</span></li>
+    <li>Create a <code>BankAccount</code> class with deposit, withdraw, and display_balance methods. <span class="zh">创建一个<code>BankAccount</code>类，包含存款、取款和显示余额方法。</span></li>
+  </ul>
+
+  <h3>Week 4: Data Structures &amp; Algorithms / 数据结构与算法</h3>
+  <ul>
+    <li>Implement bubble sort and insertion sort in Python; compare their performance on large datasets. <span class="zh">用Python实现冒泡排序和插入排序；比较它们在大型数据集上的性能。</span></li>
+    <li>Implement linear search and binary search; understand when each is appropriate. <span class="zh">实现线性搜索和二分搜索；理解何时使用每种方法。</span></li>
+    <li>Learn about stacks and queues; implement a stack using a Python list. <span class="zh">学习栈和队列；使用Python列表实现栈。</span></li>
+  </ul>
+
+  <h3>Week 5: Databases &amp; SQL / 数据库与SQL</h3>
+  <ul>
+    <li>Install SQLite and practice writing SELECT, INSERT, UPDATE, DELETE statements. <span class="zh">安装SQLite并练习编写SELECT、INSERT、UPDATE、DELETE语句。</span></li>
+    <li>Learn JOINs (INNER JOIN, LEFT JOIN) with at least 10 practice queries. <span class="zh">学习JOIN（INNER JOIN、LEFT JOIN），至少练习10个查询。</span></li>
+    <li>Design a simple database schema for a school library system (3+ tables). <span class="zh">为学校图书馆系统设计一个简单的数据库模式（3个以上表）。</span></li>
+  </ul>
+
+  <h3>Week 6: Preview A-Level Content / 预习A-Level内容</h3>
+  <ul>
+    <li>Read Chapter 1 of the A-Level textbook (Information Representation). <span class="zh">阅读A-Level教科书第1章（信息表示）。</span></li>
+    <li>Watch Cambridge-recommended videos on floating-point representation. <span class="zh">观看剑桥推荐的关于浮点数表示的视频。</span></li>
+    <li>Attempt 3 past A-Level Paper 1 questions (do not worry about getting them right — focus on understanding the style). <span class="zh">尝试3道A-Level试卷1的历年试题（不必担心答对——重点是理解题型风格）。</span></li>
+  </ul>
+
+  <div class="success-box">
+    <strong>Submission / 提交：</strong> Bring evidence of completed summer work (code files, screenshots, notes) to your first A-Level lesson. Your teacher will review it and provide feedback.
+    <p class="zh">将完成的暑假作业证据（代码文件、截图、笔记）带到您的第一节A-Level课程。您的老师将审阅并提供反馈。</p>
+  </div>
+</div>
+
+<!-- Section 6: Recommended Reading -->
+<div class="section">
+  <h2>6. Recommended Reading / 推荐阅读</h2>
+
+  <h3>6.1 Textbooks / 教科书</h3>
+  <ul>
+    <li><strong>Cambridge International AS &amp; A Level Computer Science Coursebook</strong> by Sylvia Langfield and Dave Duddell (Hodder Education) — <em>Essential / 必备</em></li>
+    <li><strong>Cambridge International AS &amp; A Level Computer Science Revision Guide</strong> by Helen Williams (Hodder Education) — <em>Highly recommended / 强烈推荐</em></li>
+    <li><strong>Computer Science: An Overview</strong> by J. Glenn Brookshear and Dennis Brylow (Pearson) — <em>Excellent for breadth / 拓展阅读 excellent</em></li>
+  </ul>
+
+  <h3>6.2 Supplementary Books / 补充读物</h3>
+  <ul>
+    <li><strong>Code: The Hidden Language of Computer Hardware and Software</strong> by Charles Petzold — <em>Brilliant explanation of how computers work from first principles / 从第一性原理解释计算机工作原理的杰作</em></li>
+    <li><strong>Grokking Algorithms</strong> by Aditya Bhargava — <em>Visual, intuitive introduction to algorithms / 直观易懂的算法入门</em></li>
+    <li><strong>Clean Code</strong> by Robert C. Martin — <em>For students who want to write professional-quality code / 希望编写专业级代码的学生</em></li>
+    <li><strong>The Pragmatic Programmer</strong> by Andrew Hunt and David Thomas — <em>Broader software engineering perspective / 更广泛的软件工程视角</em></li>
+    <li><strong>Algorithms to Live By</strong> by Brian Christian and Tom Griffiths — <em>Accessible, engaging link between CS and everyday life / 计算机科学与日常生活的有趣联系</em></li>
+  </ul>
+
+  <h3>6.3 Chinese-Language Resources / 中文资源</h3>
+  <ul>
+    <li><strong>《计算机科学导论》</strong>（原书第4版）—— 布鲁克希尔著，全面覆盖计算机科学基础</li>
+    <li><strong>《算法图解》</strong>—— 算法入门经典，配有丰富图示</li>
+    <li><strong>《编码：隐匿在计算机软硬件背后的语言》</strong>—— Charles Petzold 著，中文版可读性极佳</li>
+    <li><strong>《Python编程：从入门到实践》</strong>—— Eric Matthes 著，适合巩固Python基础</li>
+  </ul>
+</div>
+
+<!-- Section 7: Online Resources -->
+<div class="section">
+  <h2>7. Online Resources / 在线资源</h2>
+
+  <h3>7.1 Free Learning Platforms / 免费学习平台</h3>
+  <table>
+    <tr>
+      <th>Resource / 资源</th>
+      <th>Content / 内容</th>
+      <th>Best For / 最适合</th>
+    </tr>
+    <tr>
+      <td><a href="https://www.cambridgeinternational.org/" target="_blank">Cambridge International</a></td>
+      <td>Syllabus, specimen papers, examiner reports</td>
+      <td>Official syllabus understanding / 理解官方大纲</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.zakonweb.com/" target="_blank">Zakonweb</a></td>
+      <td>A-Level CS theory notes, quizzes, past paper solutions</td>
+      <td>Theory revision / 理论复习</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.sololearn.com/" target="_blank">SoloLearn</a></td>
+      <td>Interactive Python, C++, Java courses</td>
+      <td>Programming practice / 编程练习</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></td>
+      <td>Structured programming courses (free tier available)</td>
+      <td>OOP and Python deep dive / OOP和Python深入学习</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.khanacademy.org/computing/computer-science" target="_blank">Khan Academy</a></td>
+      <td>Algorithms, cryptography, Internet protocols</td>
+      <td>Visual explanations / 可视化解释</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></td>
+      <td>SQL tutorials, Python reference</td>
+      <td>Quick syntax lookup / 快速语法查询</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.csunplugged.org/" target="_blank">CS Unplugged</a></td>
+      <td>Activities teaching CS concepts without computers</td>
+      <td>Understanding fundamentals / 理解基础概念</td>
+    </tr>
+    <tr>
+      <td><a href="https://visualgo.net/" target="_blank">VisuAlgo</a></td>
+      <td>Animated visualisations of data structures and algorithms</td>
+      <td>Algorithm visualisation / 算法可视化</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/c/Computerphile" target="_blank">Computerphile (YouTube)</a></td>
+      <td>Expert explanations of CS topics by university academics</td>
+      <td>Deep understanding / 深入理解</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/c/CrashCourse" target="_blank">CrashCourse Computer Science</a></td>
+      <td>40-episode comprehensive CS overview</td>
+      <td>Broad overview / 广泛概览</td>
+    </tr>
+  </table>
+
+  <h3>7.2 Programming Practice / 编程练习</h3>
+  <ul>
+    <li><strong>HackerRank</strong> — Structured challenges in Python, algorithms, and data structures. <span class="zh">Python、算法和数据结构的结构化挑战。</span></li>
+    <li><strong>LeetCode</strong> — Interview-style problems excellent for developing algorithmic thinking. <span class="zh">面试风格的问题，非常适合培养算法思维。</span></li>
+    <li><strong>Project Euler</strong> — Mathematical problems requiring programming solutions. <span class="zh">需要编程解决方案的数学问题。</span></li>
+    <li><strong>Codewars</strong> — Gamified coding challenges with community solutions. <span class="zh">带有社区解决方案的游戏化编码挑战。</span></li>
+    <li><strong>Replit</strong> — Browser-based IDE; excellent for quick Python experiments. <span class="zh">基于浏览器的IDE；非常适合快速Python实验。</span></li>
+  </ul>
+
+  <h3>7.3 Chinese-Language Online Resources / 中文在线资源</h3>
+  <ul>
+    <li><strong>中国大学MOOC（慕课）</strong> — 搜索"计算机科学导论"、"Python程序设计"等课程</li>
+    <li><strong>B站（哔哩哔哩）</strong> — 搜索"CS61A"、"计算机网络"、"数据结构与算法"等优质课程</li>
+    <li><strong>菜鸟教程 (runoob.com)</strong> — Python、SQL、数据结构等快速参考</li>
+    <li><strong>力扣 (LeetCode 中国)</strong> — 中文界面的算法练习平台</li>
+  </ul>
+</div>
+
+<!-- Section 8: Key Differences Summary -->
+<div class="section">
+  <h2>8. Key Differences: IGCSE vs. A-Level / 关键差异：IGCSE与A-Level</h2>
+  <table>
+    <tr>
+      <th>Aspect / 方面</th>
+      <th>IGCSE (0478)</th>
+      <th>A-Level (9618)</th>
+    </tr>
+    <tr>
+      <td>Exam structure / 考试结构</td>
+      <td>2 papers (Theory + Practical)</td>
+      <td>4 papers (AS: 2 papers; A2: 2 papers)</td>
+    </tr>
+    <tr>
+      <td>Programming focus / 编程重点</td>
+      <td>Procedural Python</td>
+      <td>OOP Python + Pseudocode</td>
+    </tr>
+    <tr>
+      <td>Theory depth / 理论深度</td>
+      <td>Broad, conceptual understanding</td>
+      <td>Deep, technical detail with application</td>
+    </tr>
+    <tr>
+      <td>Mathematical demand / 数学要求</td>
+      <td>Basic arithmetic and logic</td>
+      <td>Binary arithmetic, Boolean algebra, complexity analysis</td>
+    </tr>
+    <tr>
+      <td>Problem-solving / 问题解决</td>
+      <td>Structured, familiar problems</td>
+      <td>Novel, unfamiliar contexts requiring synthesis</td>
+    </tr>
+    <tr>
+      <td>Written communication / 书面表达</td>
+      <td>Short answers, some explanation</td>
+      <td>Extended prose, justification, evaluation</td>
+    </tr>
+    <tr>
+      <td>Independent study / 独立学习</td>
+      <td>Moderate</td>
+      <td>High — students must read beyond the textbook</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Section 9: Advice from Former Students / 往届学生建议 -->
+<div class="section">
+  <h2>9. Advice from Former VPA Students / 往届VPA学生建议</h2>
+  <div class="info-box">
+    <p><strong>"Start OOP in the summer. I didn't, and I spent the first term catching up."</strong> — Year 13 student, achieved A*.</p>
+    <p class="zh"><strong>"暑假就开始学OOP。我当时没学，结果整个第一学期都在补课。"</strong> — 13年级学生，获得A*。</p>
+  </div>
+  <div class="info-box">
+    <p><strong>"The jump in theory is bigger than the jump in programming. Don't underestimate the hardware and data representation topics."</strong> — Year 13 student, achieved A.</p>
+    <p class="zh"><strong>"理论的跳跃比编程的跳跃更大。不要低估硬件和数据表示主题。"</strong> — 13年级学生，获得A。</p>
+  </div>
+  <div class="info-box">
+    <p><strong>"Do every past paper you can find. The question style is very specific to Cambridge."</strong> — Year 13 student, achieved A*.</p>
+    <p class="zh"><strong>"尽可能做每一套历年试卷。剑桥的题型非常独特。"</strong> — 13年级学生，获得A*。</p>
+  </div>
+  <div class="info-box">
+    <p><strong>"Don't just memorise — understand. The exam tests whether you can apply concepts, not recite them."</strong> — Year 13 student, achieved A*.</p>
+    <p class="zh"><strong>"不要只是记忆——要理解。考试测试的是你是否能应用概念，而不是背诵它们。"</strong> — 13年级学生，获得A*。</p>
+  </div>
+</div>
+
+<!-- Section 10: Contact & Support -->
+<div class="section">
+  <h2>10. Contact &amp; Support / 联系与支持</h2>
+  <p>If you have questions about the transition to A-Level Computer Science, or if you are concerned about any prerequisite knowledge, please contact:</p>
+  <p class="zh">如果您对过渡到A-Level计算机科学有任何疑问，或者担心任何先修知识，请联系：</p>
+  <ul>
+    <li><strong>Head of Computer Science:</strong> cs@victoriaparkacademy.edu</li>
+    <li><strong>A-Level Coordinator:</strong> alevel@victoriaparkacademy.edu</li>
+    <li><strong>Subject Teacher:</strong> Your IGCSE CS teacher will provide handover notes to your A-Level teacher.</li>
+  </ul>
+  <div class="success-box">
+    <strong>Remember / 记住：</strong> The bridge from IGCSE to A-Level is challenging but absolutely achievable with preparation. Use this summer wisely, and you will begin Year 12 with confidence and momentum.
+    <p class="zh">从IGCSE到A-Level的过渡充满挑战，但只要做好准备就绝对可以实现。明智地利用这个暑假，您将以自信和动力开始12年级的学习。</p>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <p>© Victoria Park Academy | A-Level Computer Science (9618) | IGCSE to A-Level Bridge Document</p>
+  <p>Document Version 1.0 | Updated: 2025</p>
+</footer>
+
+</body>
+</html>

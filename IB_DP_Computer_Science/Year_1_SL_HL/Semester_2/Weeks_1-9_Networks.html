@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — Topic 3: Networks (Weeks 1–9)</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+</style>
+</head>
+<body>
+
+<h1>Topic 3: Networks <span class="bilingual">网络 Wǎngluò</span></h1>
+<p><strong>IB Syllabus:</strong> Topic 3 (3.1–3.3) | <strong>Level:</strong> SL + HL | <strong>Duration:</strong> 9 weeks (30 hours)</p>
+
+<h2>Topic 3.1: Network Fundamentals <span class="bilingual">网络基础 Wǎngluò Jīchǔ</span></h2>
+
+<h3>Week 1 — Introduction to Networks <span class="bilingual">网络简介 Wǎngluò Jiǎnjiè</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th><th>Differentiation</th></tr>
+<tr><td>1</td><td>Network types: LAN, WAN, PAN, WLAN, SAN, VPN <span class="bilingual">(局域网, 广域网, 个人网)</span></td><td>Map VPA's network topology; identify network types</td><td>Bronze: Label network types; Silver: Explain differences; Gold: Analyse VPA network design decisions</td></tr>
+<tr><td>2</td><td>Network topologies: bus, star, mesh, ring, tree, hybrid</td><td>Build physical models with string/cards; compare reliability</td><td>All: Build models; Gold: Calculate redundancy in mesh</td></tr>
+<tr><td>3</td><td>Network hardware: NIC, switch, router, hub, bridge, gateway, access point <span class="bilingual">(网卡, 交换机, 路由器)</span></td><td>Label physical hardware; trace packet path</td><td>Bronze: Identify devices; Silver: Explain function; Gold: Compare layer 2 vs layer 3 switches</td></tr>
+<tr><td>4</td><td>Transmission media: twisted pair, coaxial, fibre optic, wireless; bandwidth and attenuation</td><td>Calculate file transfer times across different media</td><td>Bronze: Match media to use; Silver: Calculate; Gold: Discuss attenuation vs interference</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> Is the internet a single "thing," or is it better understood as an emergent property of countless interactions?</td><td>Socratic discussion; written reflection</td><td>All: Contribute; Gold: Reference complexity theory</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> We speak of "the internet" as if it were a unified entity, yet it is a decentralised collection of autonomous networks. When we claim to "know" something we read online, how does the distributed, ungoverned nature of the network affect the reliability of that knowledge?
+</div>
+
+<h3>Week 2 — Protocols and Packet Switching <span class="bilingual">协议与分组交换 Xiéyì yǔ Fēnzǔ Jiāohuàn</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Protocols: TCP, UDP, IP, HTTP, HTTPS, FTP, SMTP, POP3, IMAP <span class="bilingual">(传输控制协议, 用户数据报协议, 网际协议)</span></td><td>Protocol matching game; trace an email's journey</td></tr>
+<tr><td>2</td><td>The TCP/IP model: application, transport, internet, network access layers</td><td>Map OSI to TCP/IP; place protocols at correct layers</td></tr>
+<tr><td>3</td><td>IP addressing: IPv4 structure, subnet mask, private vs public addresses, IPv6 necessity</td><td>Calculate network ranges; debate IPv6 adoption</td></tr>
+<tr><td>4</td><td>Packet switching: packets, headers, routing, reassembly; circuit switching comparison</td><td>Simulation: students act as packets navigating a network</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Protocols and packet switching quiz (25 marks)</td><td>Timed quiz; peer review</td></tr>
+</table>
+
+<h3>Week 3 — Network Utilities and Troubleshooting</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Common network utilities: ping, traceroute, ipconfig/ifconfig, nslookup</td><td>Lab: use utilities to diagnose network issues</td></tr>
+<tr><td>2</td><td>DNS: domain name system, resolution process, caching, root servers</td><td>Trace DNS lookup; discuss DNS security</td></tr>
+<tr><td>3</td><td>DHCP: dynamic host configuration, lease time, IP allocation</td><td>Diagram DHCP handshake; configure a simple DHCP scope</td></tr>
+<tr><td>4</td><td>MAC addressing vs IP addressing; ARP protocol</td><td>Packet capture observation (if permitted); ARP table inspection</td></tr>
+<tr><td>5</td><td><strong>Consolidation:</strong> Network troubleshooting case study</td><td>Groups diagnose and resolve a network fault scenario</td></tr>
+</table>
+
+<h2>Topic 3.2: Network Structures <span class="bilingual">网络结构 Wǎngluò Jiégòu</span></h2>
+
+<h3>Week 4 — Client-Server and Peer-to-Peer <span class="bilingual">客户机-服务器与对等网 Kèhùjī-Fúwùqì yǔ Duìděng Wǎng</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Client-server model: thin client, thick client, server roles (file, web, database, mail)</td><td>Diagram VPA's client-server infrastructure</td></tr>
+<tr><td>2</td><td>Advantages and disadvantages of client-server</td><td>Debate: client-server vs alternative models</td></tr>
+<tr><td>3</td><td>Peer-to-peer (P2P) networks: structure, use cases, BitTorrent, blockchain introduction</td><td>Research: legitimate and illegitimate P2P uses</td></tr>
+<tr><td>4</td><td>Comparing C-S and P2P: cost, security, scalability, administration</td><td>Comparison table with justified conclusions</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> 8-mark "Compare" question on C-S vs P2P</td><td>Timed writing; peer mark with markscheme</td></tr>
+</table>
+
+<h3>Week 5 — Cloud and Virtual Networks <span class="bilingual">云与虚拟网络 Yún yǔ Xūnǐ Wǎngluò</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Cloud computing models: IaaS, PaaS, SaaS <span class="bilingual">(基础设施即服务, 平台即服务, 软件即服务)</span></td><td>Classify VPA's cloud services; calculate cost comparisons</td></tr>
+<tr><td>2</td><td>Public, private, hybrid cloud; advantages and risks</td><td>Evaluate cloud migration for a given organisation</td></tr>
+<tr><td>3</td><td>Virtual private networks (VPN): tunneling, encryption, use cases</td><td>Diagram VPN operation; discuss censorship circumvention ethics</td></tr>
+<tr><td>4</td><td>Virtual LANs (VLAN), software-defined networking (SDN) — HL extension</td><td>Design VLANs for a multi-department school</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> When your data is "in the cloud," where is it really? Who owns it? Who can access it?</td><td>Ethical discussion; connection to knowledge claims</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> Cloud storage blurs the line between possession and access. If you store your photos "in the cloud," do you <em>know</em> where they are? Does physical location matter for ownership, privacy, and legal jurisdiction? How does trust replace direct knowledge in networked systems?
+</div>
+
+<h2>Topic 3.3: Network Security <span class="bilingual">网络安全 Wǎngluò Ānquán</span></h2>
+
+<h3>Week 6 — Threats and Vulnerabilities <span class="bilingual">威胁与漏洞 Wēixié yǔ Lòudòng</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Security threats: malware (virus, worm, trojan, ransomware, spyware), phishing, DDoS, MITM <span class="bilingual">(恶意软件, 钓鱼, 拒绝服务攻击)</span></td><td>Research recent major breaches; create threat awareness poster</td></tr>
+<tr><td>2</td><td>Vulnerabilities: unpatched software, weak passwords, social engineering, insider threats</td><td>Password strength analysis; social engineering scenario</td></tr>
+<tr><td>3</td><td>Authentication: something you know, have, are; MFA, biometrics</td><td>Evaluate authentication for a banking app</td></tr>
+<tr><td>4</td><td>Access control: MAC, DAC, RBAC <span class="bilingual">(强制/自主/基于角色的访问控制)</span></td><td>Design RBAC for a hospital system</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Security scenario analysis (identify threats, recommend controls)</td><td>Case study; structured response</td></tr>
+</table>
+
+<h3>Week 7 — Encryption and Protocols <span class="bilingual">加密与协议 Jiāmì yǔ Xiéyì</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Encryption: symmetric (AES), asymmetric (RSA), hashing (SHA) <span class="bilingual">(对称加密, 非对称加密, 哈希)</span></td><td>Caesar cipher → modern encryption progression</td></tr>
+<tr><td>2</td><td>Public key infrastructure (PKI): certificates, CAs, trust chains</td><td>Examine a website's certificate; verify chain</td></tr>
+<tr><td>3</td><td>SSL/TLS: handshake process, HTTPS, padlock meaning</td><td>Diagram SSL handshake; explain why it matters</td></tr>
+<tr><td>4</td><td>Firewalls: packet filtering, stateful inspection, application layer, proxy</td><td>Design firewall rules for a school network</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> Does encryption protect knowledge, or does it hide it? When should governments have the right to decrypt?</td><td>Structured debate; preparation for Paper 1 essays</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> Governments argue that "backdoors" in encryption are necessary for security; cryptographers argue they destroy security. Is this a dispute about facts, or about values? Can we <em>know</em> whether a backdoor will be exploited, or is this a matter of probabilistic judgement?
+</div>
+
+<h3>Week 8 — Topic 3 Consolidation</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Revision: Network architecture and protocols mind map</td><td>Collaborative digital mind map</td></tr>
+<tr><td>2</td><td>Revision: Security mechanisms and encryption review</td><td>Flashcard competition</td></tr>
+<tr><td>3</td><td>Exam technique: network diagram questions (6 marks)</td><td>Guided practice with markscheme</td></tr>
+<tr><td>4</td><td>Exam technique: 10-mark "Evaluate" questions on network security</td><td>Essay planning; peer review of plans</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Topic 3 progress test (40 marks, Paper 1 style)</td><td>Timed; self-assessment</td></tr>
+</table>
+
+<h3>Week 9 — Topic 3 End-of-Topic Assessment</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Revision clinic: student-requested topics</td><td>Student-led Q&A</td></tr>
+<tr><td>2</td><td><strong>Assessment:</strong> Topic 3 End-of-Topic Test (1 hour, 50 marks)</td><td>Formal conditions</td></tr>
+<tr><td>3</td><td>Test feedback and DIRT</td><td>Markscheme analysis</td></tr>
+<tr><td>4</td><td>Introduction to Topic 4: What is computational thinking?</td><td>Unplugged activity: sorting algorithms with students</td></tr>
+<tr><td>5</td><td>Topic 4 preview: programming environments and pseudocode conventions</td><td>Set up IDE; write first pseudocode</td></tr>
+</table>
+
+<h2>Key Vocabulary (Topic 3)</h2>
+<table>
+<tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+<tr><td>LAN</td><td>局域网</td><td>júyù wǎng</td><td>Local Area Network: covers a small geographical area</td></tr>
+<tr><td>WAN</td><td>广域网</td><td>guǎngyù wǎng</td><td>Wide Area Network: spans large geographical areas</td></tr>
+<tr><td>Protocol</td><td>协议</td><td>xiéyì</td><td>A set of rules governing data communication</td></tr>
+<tr><td>Packet switching</td><td>分组交换</td><td>fēnzǔ jiāohuàn</td><td>Breaking data into packets sent independently across a network</td></tr>
+<tr><td>Router</td><td>路由器</td><td>lùyóu qì</td><td>A device that forwards packets between networks</td></tr>
+<tr><td>IP address</td><td>IP地址</td><td>IP dìzhǐ</td><td>A unique numerical identifier for a device on a network</td></tr>
+<tr><td>DNS</td><td>域名系统</td><td>yùmíng xìtǒng</td><td>Translates domain names to IP addresses</td></tr>
+<tr><td>Encryption</td><td>加密</td><td>jiāmì</td><td>Converting data into a coded form to prevent unauthorised access</td></tr>
+<tr><td>Firewall</td><td>防火墙</td><td>fánghuǒqiáng</td><td>A security system monitoring and controlling network traffic</td></tr>
+<tr><td>VPN</td><td>虚拟专用网络</td><td>xūnǐ zhuānyòng wǎngluò</td><td>Extends a private network across a public network securely</td></tr>
+</table>
+
+<div class="checklist">
+<strong>Teacher Checklist — End of Topic 3:</strong>
+<ul>
+<li>☐ All IB 3.1–3.3 syllabus points covered</li>
+<li>☐ Network simulation or practical activities completed</li>
+<li>☐ TOK discussions documented</li>
+<li>☐ EAL vocabulary tracked</li>
+<li>☐ IA client meetings ongoing</li>
+</ul>
+</div>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | Topic 3 Scheme of Work</p>
+
+</body>
+</html>

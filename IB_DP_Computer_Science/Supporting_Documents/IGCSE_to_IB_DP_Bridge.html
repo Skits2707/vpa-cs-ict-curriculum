@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — IGCSE to IB DP Bridge Guide</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+  .code { background: #f4f4f4; padding: 10px; border-left: 3px solid #666; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>IGCSE to IB DP Bridge Guide <span class="bilingual">从IGCSE到IB DP过渡指南 Cóng IGCSE dào IB DP Guòdù Zhǐnán</span></h1>
+<p><strong>From:</strong> IGCSE Computer Science (0478) | <strong>To:</strong> IB DP Computer Science (First Assessment 2024)</p>
+
+<h2>Introduction</h2>
+<p>VPA students enter IB DP Computer Science with strong foundations from IGCSE 0478. This guide maps the transition, identifies knowledge gaps, and provides targeted preparation to ensure every student starts Year 1 confident and ready.</p>
+
+<h2>1. Topic Mapping: IGCSE → IB DP</h2>
+<table>
+<tr><th>IGCSE 0478 Topic</th><th>IB DP Topic</th><th>Transition Notes</th></tr>
+<tr><td>1.1 Data representation (binary, hex, ASCII, images, sound)</td><td>2.4 Binary representation + 2.2 Memory</td><td>IB adds: floating-point, two's complement, truncation errors, compression</td></tr>
+<tr><td>1.2 Data transmission (packets, errors, protocols)</td><td>3.1 Network fundamentals</td><td>IB adds: TCP/IP layers, DNS, DHCP, packet switching depth</td></tr>
+<tr><td>1.3 Hardware (CPU, memory, storage, I/O)</td><td>2.1 Computer architecture + 2.2 Memory & storage</td><td>IB adds: FDE cycle detail, registers, cache, virtual memory, OS functions</td></tr>
+<tr><td>1.4 Software (OS, utilities, applications)</td><td>2.3 Operating systems & application software</td><td>IB adds: software licensing, types of OS in depth</td></tr>
+<tr><td>1.5 Security (malware, hacking, prevention)</td><td>3.3 Network security</td><td>IB adds: encryption algorithms, SSL/TLS, PKI, firewalls in depth</td></tr>
+<tr><td>2.1 Algorithm design (pseudocode, flowcharts)</td><td>4.1 Programming fundamentals</td><td>IB adds: IB-specific pseudocode conventions, collections, file handling</td></tr>
+<tr><td>2.2 Programming (Python, variables, loops, IF)</td><td>4.1 Programming fundamentals</td><td>IB adds: procedures/functions, parameters, scope, array handling</td></tr>
+<tr><td>2.3 Databases (tables, queries, forms, reports)</td><td>1.2 System design (ER diagrams)</td><td>IB adds: ER modelling, cardinality, normalisation concepts</td></tr>
+<tr><td>2.4 Boolean logic (AND, OR, NOT)</td><td>2.5 Simple logic gates</td><td>IB adds: NAND, NOR, XOR, circuit construction, truth tables for all gates</td></tr>
+<tr><td>N/A</td><td>1.1 Systems in organizations</td><td><span class="highlight">NEW:</span> Feasibility, changeover, project management, stakeholders</td></tr>
+<tr><td>N/A</td><td>4.2 Data structures</td><td><span class="highlight">NEW:</span> Records, arrays of records, collections, stacks, queues</td></tr>
+<tr><td>N/A</td><td>4.3 Algorithms</td><td><span class="highlight">NEW:</span> Bubble, selection, insertion, merge sort; linear/binary search; recursion</td></tr>
+<tr><td>N/A</td><td>4.4 Software development</td><td><span class="highlight">NEW:</span> Testing types, debugging, documentation, trace tables</td></tr>
+<tr><td>N/A</td><td>5.1–5.3 Abstract Data Structures</td><td><span class="hl-only">HL ONLY:</span> Linked lists, trees, graphs, dynamic allocation</td></tr>
+<tr><td>N/A</td><td>6.1–6.2 Resource Management</td><td><span class="hl-only">HL ONLY:</span> Scheduling, paging, deadlock, control systems</td></tr>
+<tr><td>N/A</td><td>7.1–7.3 Control</td><td><span class="hl-only">HL ONLY:</span> Centralized, distributed, autonomous systems</td></tr>
+</table>
+
+<h2>2. Knowledge Gaps to Address</h2>
+
+<h3>Gap 1: Systems Thinking (Topic 1)</h3>
+<p>IGCSE focuses on technical components. IB DP Topic 1 requires organisational understanding: stakeholders, feasibility, changeover, project management. Students must shift from "how does this work?" to "how do we implement this in an organisation?"</p>
+<div class="checklist">
+<strong>Preparation Tasks:</strong>
+<ul>
+<li>Interview a staff member about a system change at VPA</li>
+<li>Read a case study of a failed IT implementation (e.g., NHS IT project)</li>
+<li>Define: stakeholder, feasibility, milestone, changeover in your own words</li>
+</ul>
+</div>
+
+<h3>Gap 2: Binary Depth (Topic 2.4)</h3>
+<p>IGCSE covers binary, hex, and basic ASCII. IB DP adds:</p>
+<ul>
+<li>Two's complement for negative numbers</li>
+<li>Floating-point representation (mantissa and exponent)</li>
+<li>Truncation and rounding errors</li>
+<li>Binary shifts (logical and arithmetic)</li>
+</ul>
+
+<h3>Gap 3: Logic Gates (Topic 2.5)</h3>
+<p>IGCSE covers AND, OR, NOT. IB DP requires:</p>
+<ul>
+<li>NAND, NOR, XOR, XNOR</li>
+<li>Constructing circuits from Boolean expressions</li>
+<li>Deriving expressions from truth tables</li>
+<li>Simple applications (half-adders, security systems)</li>
+</ul>
+
+<h3>Gap 4: Algorithm Rigor (Topic 4)</h3>
+<p>IGCSE programming is practical. IB DP requires:</p>
+<ul>
+<li>Standard IB pseudocode (not Python-specific)</li>
+<li>Trace tables for all algorithms</li>
+<li>Efficiency analysis (Big O at HL)</li>
+<li>Formal testing strategies</li>
+</ul>
+
+<h2>3. Summer Preparation Programme (Pre-Year 1)</h2>
+<table>
+<tr><th>Week</th><th>Focus</th><th>Tasks</th><th>Time</th></tr>
+<tr><td>1</td><td>Binary Mastery</td><td>Two's complement practice; binary shifts; floating-point introduction</td><td>3 hrs</td></tr>
+<tr><td>2</td><td>Logic Gates</td><td>Learn NAND, NOR, XOR; complete truth tables; build simple circuits</td><td>3 hrs</td></tr>
+<tr><td>3</td><td>IB Pseudocode</td><td>Translate Python programs to IB pseudocode; practice conventions</td><td>3 hrs</td></tr>
+<tr><td>4</td><td>Systems Thinking</td><td>Read about a real system implementation; identify stakeholders and risks</td><td>2 hrs</td></tr>
+<tr><td>5</td><td>Sorting & Searching</td><td>Learn bubble sort and linear search; trace through examples</td><td>3 hrs</td></tr>
+<tr><td>6</td><td>Review & Consolidation</td><td>Mixed practice test; identify remaining weak areas</td><td>2 hrs</td></tr>
+</table>
+
+<h2>4. Differentiated Entry Points</h2>
+<table>
+<tr><th>Level</th><th>IGCSE Grade</th><th>Starting Focus</th><th>Target</th></tr>
+<tr><td><span class="bronze">Bronze</span></td><td>C–D</td><td>Secure IGCSE fundamentals; master IB pseudocode; build confidence</td><td>IB grade 4–5</td></tr>
+<tr><td><span class="silver">Silver</span></td><td>B–A</td><td>Extend to IB depth; practise exam technique; begin IA thinking</td><td>IB grade 5–6</td></tr>
+<tr><td><span class="gold">Gold</span></td><td>A*–A</td><td>HL preparation; advanced reading; mentor Bronze students; IA client identified</td><td>IB grade 6–7</td></tr>
+</table>
+
+<h2>5. Resources for Bridging</h2>
+<ul>
+<li><strong>Computer Science Illuminated</strong> (Dale & Lewis) — Chapters 1–4, 6–8</li>
+<li><strong>Cambridge IB Computer Science Coursebook</strong> (Watson & Reyner) — Topic 1 and 2</li>
+<li><strong>VPA Bilingual Glossary</strong> — Start reviewing 10 terms per week</li>
+<li><strong>IB Pseudocode Reference</strong> — Available on VPA CS portal</li>
+<li><strong>Codecademy Python</strong> — Review for programming confidence</li>
+<li><strong>CS50's Introduction to Computer Science</strong> (Harvard) — Free on edX</li>
+</ul>
+
+<h2>6. Key Mindset Shifts</h2>
+<table>
+<tr><th>IGCSE Mindset</th><th>IB DP Mindset</th></tr>
+<tr><td>"What is the right answer?"</td><td>"What are the assumptions behind this answer?"</td></tr>
+<tr><td>"Does the code work?"</td><td>"Is the code efficient, testable, and well-documented?"</td></tr>
+<tr><td>"Learn the facts"</td><td>"Evaluate the arguments and justify conclusions"</td></tr>
+<tr><td>"Programming is about syntax"</td><td>"Programming is about solving problems for people"</td></tr>
+<tr><td>"Technology is neutral"</td><td>"Technology has ethical and social implications"</td></tr>
+</table>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | Bridge Guide</p>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA ICT — IGCSE Y10S1 Weeks 10-18: Databases & Revision</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .vocab-box { background: #eaf2f8; padding: 10px; border-radius: 5px; margin: 10px 0; }
+  .activity-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f39c12; margin: 15px 0; }
+  .assessment-box { background: #fdebd0; padding: 15px; border-left: 4px solid #e67e22; margin: 15px 0; }
+  .week-header { background-color: #d6eaf8; padding: 10px; margin-top: 20px; border-radius: 5px; }
+  .syllabus-ref { background: #e8daef; padding: 8px; border-radius: 5px; margin: 10px 0; font-weight: bold; }
+  .exam-tip { background: #d5f5e3; padding: 10px; border-left: 4px solid #27ae60; margin: 10px 0; }
+  .code-block { background: #f4f4f4; padding: 10px; border-left: 3px solid #3498db; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>Weeks 10–18: Databases &amp; Revision</h1>
+<p><strong>Syllabus:</strong> CIE IGCSE ICT (0417) Topic 15 + Paper 1 Revision | <strong>Software:</strong> Microsoft Access / LibreOffice Base</p>
+
+<h2>Week 10 — Relational Database Design</h2>
+<div class="syllabus-ref">Syllabus: 15.1 Database Design</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> relational database <span class="bilingual">关系型数据库 (guānxì xíng shùjùkù)</span>, entity <span class="bilingual">实体 (shítǐ)</span>, attribute <span class="bilingual">属性 (shǔxìng)</span>, primary key <span class="bilingual">主键 (zhǔjiàn)</span>, foreign key <span class="bilingual">外键 (wài jiàn)</span>, relationship <span class="bilingual">关系 (guānxì)</span>, one-to-many <span class="bilingual">一对多 (yī duì duō)</span>, many-to-many <span class="bilingual">多对多 (duō duì duō)</span>, normalization <span class="bilingual">规范化 (guīfàn huà)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Why relational?" — Compare flat file (single table) vs. relational for a school system. What problems does repeating data cause?<br><br>
+<strong>Activity 2 (15 min):</strong> Entity identification — Given a school scenario, identify entities: Students, Teachers, Classes, Subjects. Draw entity relationship diagram.<br><br>
+<strong>Activity 3 (10 min):</strong> Primary key practice — For each entity, choose the best primary key. Why is "Name" a bad primary key?
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> For database design questions, always identify: 1) Entities (tables), 2) Attributes (fields), 3) Primary keys (underlined), 4) Relationships (1:N or M:N). Missing any component loses marks.
+</div>
+
+<h2>Week 11 — Creating Tables &amp; Relationships</h2>
+<div class="syllabus-ref">Syllabus: 15.2 Creating Tables</div>
+<div class="activity-box">
+<strong>Activity 1 (20 min):</strong> Create 3 tables in Access: Customers (CustomerID, Name, Email), Orders (OrderID, CustomerID, Date, Total), Products (ProductID, Name, Price).<br><br>
+<strong>Activity 2 (15 min):</strong> Set relationships — One Customer has Many Orders. Enforce referential integrity. Cascade updates.<br><br>
+<strong>Activity 3 (5 min):</strong> Test referential integrity — Try to delete a customer who has orders. What happens?
+</div>
+
+<h2>Week 12 — Queries: SELECT, WHERE, ORDER BY</h2>
+<div class="syllabus-ref">Syllabus: 15.3 Queries</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> query <span class="bilingual">查询 (cháxún)</span>, SELECT <span class="bilingual">选择 (xuǎnzé)</span>, WHERE <span class="bilingual">条件 (tiáojiàn)</span>, ORDER BY <span class="bilingual">排序 (páixù)</span>, AND <span class="bilingual">与 (yǔ)</span>, OR <span class="bilingual">或 (huò)</span>, BETWEEN <span class="bilingual">在...之间 (zài... zhījiān)</span>, LIKE <span class="bilingual">模糊匹配 (móhú pǐpèi)</span>, wildcard <span class="bilingual">通配符 (tōngpèi fú)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Simple queries — Show all customers from "Shenzhen." Show orders over $100.<br><br>
+<strong>Activity 2 (15 min):</strong> Compound criteria — Orders over $100 from Shenzhen. Names starting with "L" (LIKE "L*").<br><br>
+<strong>Activity 3 (10 min):</strong> Sorting — Sort customers by LastName ascending, then by FirstName descending.
+</div>
+<div class="code-block">
+SELECT CustomerName, Email FROM Customers WHERE City = "Shenzhen" ORDER BY CustomerName ASC;
+</div>
+
+<h2>Week 13 — Calculated Queries &amp; Aggregates</h2>
+<div class="syllabus-ref">Syllabus: 15.3 Advanced Queries</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> calculated field <span class="bilingual">计算字段 (jìsuàn zìduàn)</span>, aggregate <span class="bilingual">聚合 (jùhé)</span>, SUM <span class="bilingual">求和 (qiúhé)</span>, AVG <span class="bilingual">平均 (píngjūn)</span>, COUNT <span class="bilingual">计数 (jìshù)</span>, GROUP BY <span class="bilingual">分组 (fēnzǔ)</span>, HAVING <span class="bilingual">分组条件 (fēnzǔ tiáojiàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Calculated field — Create query showing OrderTotal with 10% tax: [Total]*1.10.<br><br>
+<strong>Activity 2 (15 min):</strong> Aggregate query — Total sales by month. Count orders by customer. Average order value.<br><br>
+<strong>Activity 3 (10 min):</strong> GROUP BY with HAVING — Show customers with more than 5 orders.
+</div>
+<div class="code-block">
+SELECT CustomerID, COUNT(OrderID) AS OrderCount FROM Orders GROUP BY CustomerID HAVING COUNT(OrderID) > 5;
+</div>
+
+<h2>Week 14 — Forms &amp; Reports</h2>
+<div class="syllabus-ref">Syllabus: 15.4 Forms and 15.5 Reports</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> form <span class="bilingual">窗体 (chuāngtǐ)</span>, report <span class="bilingual">报表 (bàobiǎo)</span>, control <span class="bilingual">控件 (kòngjiàn)</span>, text box <span class="bilingual">文本框 (wénběn kuàng)</span>, label <span class="bilingual">标签 (biāoqiān)</span>, combo box <span class="bilingual">组合框 (zǔhé kuàng)</span>, subform <span class="bilingual">子窗体 (zǐ chuāngtǐ)</span>, header/footer <span class="bilingual">页眉/页脚 (yèméi/yèjiǎo)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Create a data entry form for Customers with text boxes, labels, and navigation buttons.<br><br>
+<strong>Activity 2 (15 min):</strong> Create a sales report with: report header (title), page header (column labels), detail (data), group footer (subtotals), report footer (grand total).<br><br>
+<strong>Activity 3 (10 min):</strong> Subform — Customer form with subform showing their orders.
+</div>
+
+<h2>Week 15 — Database Integration with Web</h2>
+<div class="syllabus-ref">Syllabus: 15.5 Integration</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Export Access table as HTML. View in browser. Discuss limitations.<br><br>
+<strong>Activity 2 (15 min):</strong> Export query results to Excel. Create chart from exported data.<br><br>
+<strong>Activity 3 (10 min):</strong> Paper 3 integration task practice — Import data from CSV → create database → query → export to HTML → display on web page.
+</div>
+
+<h2>Week 16 — Paper 1 Revision: Systems &amp; Security</h2>
+<div class="activity-box">
+<strong>Activity 1 (20 min):</strong> Topic 1–4 rapid review — Hardware, software, storage, networks. Flashcard drill.<br><br>
+<strong>Activity 2 (15 min):</strong> Topic 9 security revision — Threats and countermeasures matching. Case study: a company loses data. What went wrong?<br><br>
+<strong>Activity 3 (5 min):</strong> Quick-fire questions: 10 questions, 30 seconds each.
+</div>
+
+<h2>Week 17 — Paper 1 Revision: Data, Effects &amp; Systems Analysis</h2>
+<div class="activity-box">
+<strong>Activity 1 (20 min):</strong> Topic 5 data types — Binary, hexadecimal, ASCII. Convert A to binary (01000001). Convert 255 to hex (FF).<br><br>
+<strong>Activity 2 (15 min):</strong> Topic 6 effects — "Discuss the impact of e-commerce on traditional retail." Practice 6-mark answer structure.<br><br>
+<strong>Activity 3 (5 min):</strong> Topic 8 SDLC — Draw DFD for online booking system. Write pseudocode for login validation.
+</div>
+
+<h2>Week 18 — End of Semester Assessment</h2>
+<div class="assessment-box">
+<strong>Mock Paper 3 (2h 30m):</strong>
+<ol>
+<li><strong>Data Analysis (25 min):</strong> Import data, clean it, create formulas, generate 2 charts, create pivot table</li>
+<li><strong>Web Authoring (45 min):</strong> Create 3-page website with external CSS, table, form, navigation, images</li>
+<li><strong>Databases (50 min):</strong> Create 2 related tables, set relationships, create 3 queries (simple, compound, aggregate), design form and report</li>
+<li><strong>Integration (30 min):</strong> Export data from database to spreadsheet, create chart, embed in web page</li>
+</ol>
+<p><strong>Revision focus:</strong> All Paper 1 topics through 50 mixed questions.</p>
+</div>
+
+<h2>Common Paper 3 Errors to Avoid</h2>
+<div class="exam-tip">
+<ul>
+<li>❌ Not setting primary keys before creating relationships</li>
+<li>❌ Creating relationships without referential integrity</li>
+<li>❌ Using wrong field type (e.g., number for phone number)</li>
+<li>❌ Missing WHERE clause in update/delete queries</li>
+<li>❌ Not testing web pages in browser after making changes</li>
+<li>❌ Using spaces in filenames or HTML file paths</li>
+<li>❌ Not saving evidence screenshots to designated folder</li>
+<li>❌ Forgetting to print required evidence</li>
+</ul>
+</div>
+</body>
+</html>

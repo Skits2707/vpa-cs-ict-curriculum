@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intervention Protocol — VPA A-Level Computer Science</title>
+<style>
+:root {
+  --vpa-blue: #003366;
+  --vpa-gold: #C9A227;
+  --vpa-light: #F5F7FA;
+  --vpa-accent: #0055A4;
+  --text-dark: #1F2937;
+  --text-body: #374151;
+  --border: #D1D5DB;
+  --success: #059669;
+  --warning: #D97706;
+  --danger: #DC2626;
+  --info: #2563EB;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: #FFFFFF;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+header {
+  background: var(--vpa-blue);
+  color: #FFFFFF;
+  padding: 40px 30px;
+  text-align: center;
+  border-bottom: 6px solid var(--vpa-gold);
+}
+header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 0.5px; }
+header h2 { margin: 8px 0 0; font-size: 1.15rem; font-weight: 400; color: #B0C4DE; }
+.container { max-width: 1100px; margin: 0 auto; padding: 30px; }
+.section { margin-bottom: 50px; }
+.section h2 {
+  color: var(--vpa-blue);
+  font-size: 1.6rem;
+  border-left: 5px solid var(--vpa-gold);
+  padding-left: 14px;
+  margin-bottom: 18px;
+}
+.section h3 {
+  color: var(--vpa-accent);
+  font-size: 1.2rem;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+.section h4 { color: var(--text-dark); font-size: 1.05rem; margin: 18px 0 8px; }
+
+/* Tables */
+table {
+  width: 100%; border-collapse: collapse;
+  margin: 16px 0; font-size: 0.95rem;
+}
+th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+th { background: var(--vpa-blue); color: #FFFFFF; font-weight: 600; }
+tr:nth-child(even) { background: var(--vpa-light); }
+
+/* Lists */
+ul, ol { margin: 10px 0 10px 20px; padding-left: 14px; }
+li { margin-bottom: 6px; }
+
+/* Boxes */
+.info-box {
+  background: #EFF6FF; border-left: 4px solid var(--info);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+.warning-box {
+  background: #FFFBEB; border-left: 4px solid var(--warning);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+.success-box {
+  background: #ECFDF5; border-left: 4px solid var(--success);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+.danger-box {
+  background: #FEF2F2; border-left: 4px solid var(--danger);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+
+/* Tier badges */
+.tier-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.tier1 { background: #D1FAE5; color: #065F46; }
+.tier2 { background: #FEF3C7; color: #92400E; }
+.tier3 { background: #FEE2E2; color: #991B1B; }
+
+/* Bilingual */
+.zh { color: #4B5563; font-style: italic; }
+
+/* Template boxes */
+.template {
+  background: #F9FAFB;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin: 14px 0;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+}
+
+footer {
+  background: var(--vpa-blue); color: #FFFFFF;
+  text-align: center; padding: 24px 20px;
+  font-size: 0.9rem; margin-top: 40px;
+}
+
+@media print {
+  body { font-size: 10pt; }
+  .section { page-break-inside: avoid; }
+  header { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>A-Level Computer Science Intervention Protocol</h1>
+  <h2>A-Level计算机科学干预方案 / Victoria Park Academy</h2>
+</header>
+
+<div class="container">
+
+<!-- Section 1: Purpose -->
+<div class="section">
+  <h2>1. Purpose &amp; Scope / 目的与范围</h2>
+  <p>This document sets out the systematic intervention framework for A-Level Computer Science (9618) students at Victoria Park Academy who are identified as struggling or at risk of underachievement. It applies to all Year 12 and Year 13 students following the Cambridge International A-Level Computer Science syllabus.</p>
+  <p class="zh">本文件为维多利亚公园学院A-Level计算机科学（9618）中被识别为学习困难或有成绩不达标风险的学生制定了系统的干预框架。它适用于所有遵循剑桥国际A-Level计算机科学大纲的12年级和13年级学生。</p>
+
+  <div class="info-box">
+    <strong>Definition of Intervention / 干预定义：</strong> A structured, time-limited, and measurable support strategy designed to close the gap between a student's current performance and the expected standard for A-Level Computer Science. Interventions are <em>proactive</em> (triggered by early warning signs) and <em>reactive</em> (triggered by formal assessment results).
+    <p class="zh">干预是一种结构化、有时间限制且可衡量的支持策略，旨在缩小学生当前表现与A-Level计算机科学预期标准之间的差距。干预是<em>主动的</em>（由早期预警信号触发）和<em>被动的</em>（由正式评估结果触发）。</p>
+  </div>
+</div>
+
+<!-- Section 2: Identification Criteria -->
+<div class="section">
+  <h2>2. Identification Criteria / 识别标准</h2>
+  <p>Students are identified for intervention through multiple data points. No single indicator is sufficient. <span class="zh">学生通过多个数据点被识别为需要干预。单一指标不足以启动干预。</span></p>
+
+  <h3>2.1 Academic Indicators / 学业指标</h3>
+  <table>
+    <tr>
+      <th>Indicator / 指标</th>
+      <th>Threshold / 阈值</th>
+      <th>Data Source / 数据来源</th>
+    </tr>
+    <tr>
+      <td>End-of-topic test score</td>
+      <td>&lt; 50% (E grade equivalent)</td>
+      <td>Teacher-assessed tests</td>
+    </tr>
+    <tr>
+      <td>Mock examination result</td>
+      <td>&lt; Grade D (AS) or &lt; Grade C (A2)</td>
+      <td>Formal mock exams</td>
+    </tr>
+    <tr>
+      <td>Programming assignment score</td>
+      <td>&lt; 60% (fails to meet specification)</td>
+      <td>Practical coursework</td>
+    </tr>
+    <tr>
+      <td>Past paper practice (timed)</td>
+      <td>&lt; 40% on two consecutive papers</td>
+      <td>Teacher-marked practice</td>
+    </tr>
+    <tr>
+      <td>IGCSE to A-Level transition gap</td>
+      <td>IGCSE grade B or below entering A-Level</td>
+      <td>Admissions data</td>
+    </tr>
+    <tr>
+      <td>Prerequisite knowledge deficit</td>
+      <td>Failed summer transition work checklist</td>
+      <td>Baseline assessment</td>
+    </tr>
+  </table>
+
+  <h3>2.2 Engagement &amp; Behavioural Indicators / 参与度与行为指标</h3>
+  <table>
+    <tr>
+      <th>Indicator / 指标</th>
+      <th>Threshold / 阈值</th>
+      <th>Data Source / 数据来源</th>
+    </tr>
+    <tr>
+      <td>Homework submission rate</td>
+      <td>&lt; 70% over a half-term</td>
+      <td>Homework tracker</td>
+    </tr>
+    <tr>
+      <td>Class participation</td>
+      <td>Teacher observation: "rarely contributes"</td>
+      <td>Teacher log / seating plan</td>
+    </tr>
+    <tr>
+      <td>Attendance</td>
+      <td>&lt; 90% in CS lessons</td>
+      <td>School MIS system</td>
+    </tr>
+    <tr>
+      <td>Lateness to lessons</td>
+      <td>3+ late arrivals in a half-term</td>
+      <td>Attendance register</td>
+    </tr>
+    <tr>
+      <td>Failure to bring equipment</td>
+      <td>Consistent lack of laptop/notes</td>
+      <td>Teacher observation</td>
+    </tr>
+    <tr>
+      <td>Self-reported difficulty</td>
+      <td>Student reports "I don't understand" repeatedly</td>
+      <td>Student voice / pastoral</td>
+    </tr>
+  </table>
+
+  <h3>2.3 EAL-Specific Indicators / EAL特定指标</h3>
+  <ul>
+    <li>Difficulty understanding English-medium technical vocabulary (e.g., "encapsulation," "normalisation," "polymorphism"). <span class="zh">难以理解英语技术词汇（如"封装"、"规范化"、"多态"）。</span></li>
+    <li>Can solve problems in Chinese but struggles to express solutions in English pseudocode or prose. <span class="zh">能用中文解决问题，但难以用英语伪代码或散文表达解决方案。</span></li>
+    <li>Extended time needed to read and comprehend examination questions. <span class="zh">需要更多时间来阅读和理解考试题目。</span></li>
+    <li>Strong mathematical/logical ability masked by language barriers. <span class="zh">强大的数学/逻辑能力被语言障碍掩盖。</span></li>
+  </ul>
+
+  <div class="danger-box">
+    <strong>Trigger Point / 触发点：</strong> A student is flagged for intervention when they meet <em>any two</em> academic indicators OR <em>any one</em> academic indicator plus <em>any two</em> engagement indicators. EAL students may be flagged on EAL-specific criteria alone.
+    <p class="zh">当学生满足<em>任意两项</em>学业指标，或<em>任意一项</em>学业指标加<em>任意两项</em>参与度指标时，将被标记为需要干预。EAL学生可仅根据EAL特定标准被标记。</p>
+  </div>
+</div>
+
+<!-- Section 3: Tier 1 — Classroom Support -->
+<div class="section">
+  <h2>3. Tier 1: Classroom Support (Universal) / 第一层级：课堂支持（普遍性）</h2>
+  <span class="tier-badge tier1">TIER 1 — All Students / 全体学生</span>
+  <p>High-quality teaching that meets the needs of all learners. Tier 1 is <em>preventative</em> and reduces the need for higher-tier intervention. <span class="zh">满足所有学习者需求的高质量教学。第一层级是<em>预防性的</em>，可减少对更高层级干预的需求。</span></p>
+
+  <h3>3.1 Quality-First Teaching Strategies / 优质教学策略</h3>
+  <ul>
+    <li><strong>Explicit instruction of technical vocabulary</strong> — Every new term is defined, exemplified, and revisited. Maintain a running glossary. <span class="zh">明确教授技术词汇——每个新术语都被定义、举例并反复回顾。维护一个持续更新的词汇表。</span></li>
+    <li><strong>Worked examples with faded guidance</strong> — Start with fully worked solutions, then gradually remove scaffolding. <span class="zh">带逐步减少指导的示范例题——从完整解答开始，然后逐步减少支架。</span></li>
+    <li><strong>Dual coding</strong> — Combine diagrams, flowcharts, and code with verbal explanations. <span class="zh">双重编码——将图表、流程图和代码与口头解释结合。</span></li>
+    <li><strong>Retrieval practice</strong> — Begin every lesson with 5 questions from previous topics. <span class="zh">检索练习——每节课以5个之前主题的问题开始。</span></li>
+    <li><strong>Think-Pair-Share</strong> — Reduce individual pressure; increase participation. <span class="zh">思考-配对-分享——减少个人压力，增加参与度。</span></li>
+    <li><strong>Live coding</strong> — Model problem-solving in real-time, verbalising thought processes. <span class="zh">实时编程——实时建模问题解决，口头表达思维过程。</span></li>
+    <li><strong>Structured note-taking</strong> — Provide Cornell-style note templates for theory lessons. <span class="zh">结构化笔记——为理论课提供康奈尔式笔记模板。</span></li>
+  </ul>
+
+  <h3>3.2 Differentiation in the Classroom / 课堂差异化</h3>
+  <table>
+    <tr>
+      <th>Strategy / 策略</th>
+      <th>Application in CS / 在CS中的应用</th>
+    </tr>
+    <tr>
+      <td>By outcome</td>
+      <td>All students attempt the same problem; extension challenges for high attainers, structured hints for struggling students.</td>
+    </tr>
+    <tr>
+      <td>By task</td>
+      <td>Struggling students trace a given algorithm; confident students write their own.</td>
+    </tr>
+    <tr>
+      <td>By support</td>
+      <td>Provide sentence starters for written answers; vocabulary banks for EAL students.</td>
+    </tr>
+    <tr>
+      <td>By resource</td>
+      <td>Offer video explanations, interactive simulations, and textbook references for independent review.</td>
+    </tr>
+  </table>
+
+  <h3>3.3 Tier 1 Monitoring / 第一层级监控</h3>
+  <ul>
+    <li>Weekly mini-quizzes (5 marks) auto-marked where possible. <span class="zh">每周小测验（5分），尽可能自动评分。</span></li>
+    <li>Homework marked within 48 hours with specific, actionable feedback. <span class="zh">作业在48小时内批改，提供具体、可操作的反馈。</span></li>
+    <li>Seating plan reviewed half-termly to optimise peer support. <span class="zh">每半学期审视座位安排以优化同伴支持。</span></li>
+    <li>Student self-assessment checklists after each topic. <span class="zh">每个主题后的学生自我评估清单。</span></li>
+  </ul>
+</div>
+
+<!-- Section 4: Tier 2 — Small Group Intervention -->
+<div class="section">
+  <h2>4. Tier 2: Small Group Intervention (Targeted) / 第二层级：小组干预（针对性）</h2>
+  <span class="tier-badge tier2">TIER 2 — 3–6 Students / 3-6名学生</span>
+  <p>Targeted support for students who have been identified through the criteria in Section 2 but do not require intensive 1-to-1 support. Tier 2 runs for a minimum of 6 weeks. <span class="zh">为通过第2节标准被识别但不需要密集一对一支持的学生提供针对性支持。第二层级至少运行6周。</span></p>
+
+  <h3>4.1 Structure / 结构</h3>
+  <ul>
+    <li><strong>Frequency:</strong> 1 session per week, 45–60 minutes, during lunch or after school. <span class="zh">频率：每周1次，45-60分钟，在午餐时间或放学后。</span></li>
+    <li><strong>Group size:</strong> 3–6 students with similar needs (e.g., all struggling with programming, or all with theory gaps). <span class="zh">小组规模：3-6名有相似需求的学生（如都在编程上有困难，或都有理论缺口）。</span></li>
+    <li><strong>Duration:</strong> Minimum 6 weeks; review at Week 3 and Week 6. <span class="zh">持续时间：至少6周；在第3周和第6周进行审查。</span></li>
+    <li><strong>Led by:</strong> Subject teacher or HLTA with CS specialism. <span class="zh">负责人：学科教师或具有CS专业资格的高级教学助理。</span></li>
+  </ul>
+
+  <h3>4.2 Tier 2 Intervention Strategies by Topic / 按主题的第二层级干预策略</h3>
+
+  <h4>4.2.1 Programming &amp; OOP / 编程与面向对象编程</h4>
+  <ul>
+    <li>Guided programming exercises with partially completed code (scaffolding). <span class="zh">带部分完成代码的引导式编程练习（支架式）。</span></li>
+    <li>Peer programming pairs within the group — one student explains, one codes. <span class="zh">小组内的同伴编程配对——一名学生解释，一名学生编码。</span></li>
+    <li>Visual OOP modelling using physical objects (e.g., "Car" class with toy cars). <span class="zh">使用实物进行可视化OOP建模（如用玩具车表示"Car"类）。</span></li>
+    <li>Code reading exercises — trace and explain what given code does before writing. <span class="zh">代码阅读练习——在编写之前跟踪并解释给定代码的功能。</span></li>
+    <li>Debugging clinics — analyse broken code collaboratively. <span class="zh">调试诊所——协作分析有错误的代码。</span></li>
+  </ul>
+
+  <h4>4.2.2 Theory: Hardware &amp; Architecture / 理论：硬件与架构</h4>
+  <ul>
+    <li>Physical model of the CPU using classroom props (registers = boxes, bus = string). <span class="zh">使用课堂道具制作CPU物理模型（寄存器=盒子，总线=绳子）。</span></li>
+    <li>Step-by-step fetch-decode-execute trace using a large printed diagram. <span class="zh">使用大型打印图表逐步跟踪取指-译码-执行过程。</span></li>
+    <li>Assembly language "human computer" simulation — students act as CPU components. <span class="zh">汇编语言"人体计算机"模拟——学生扮演CPU组件。</span></li>
+    <li>Comparison cards: match IGCSE concepts to A-Level extensions. <span class="zh">对比卡片：将IGCSE概念与A-Level扩展内容配对。</span></li>
+  </ul>
+
+  <h4>4.2.3 Theory: Data Representation / 理论：数据表示</h4>
+  <ul>
+    <li>Binary arithmetic card games — practise addition and subtraction with cards. <span class="zh">二进制算术卡片游戏——用卡片练习加减法。</span></li>
+    <li>Floating-point "mantissa and exponent" physical modelling with decimal numbers first. <span class="zh">浮点数"尾数和指数"物理建模，先用十进制数字。</span></li>
+    <li>Colour-by-number bitmap exercises to understand image representation. <span class="zh">按数字填色的位图练习，以理解图像表示。</span></li>
+    <li>Sound wave sampling exercises using Audacity and printed waveforms. <span class="zh">使用Audacity和打印波形进行声波采样练习。</span></li>
+  </ul>
+
+  <h4>4.2.4 Theory: Algorithms &amp; Complexity / 理论：算法与复杂度</h4>
+  <ul>
+    <li>Sorting algorithm races — students physically sort themselves using different algorithms. <span class="zh">排序算法竞赛——学生用不同算法 physically 排序自己。</span></li>
+    <li>Recursion tracing using stack frame diagrams (paper-based before code). <span class="zh">使用栈帧图跟踪递归（先纸质再代码）。</span></li>
+    <li>Big-O concept introduced through "how many steps?" counting exercises. <span class="zh">通过"多少步？"计数练习引入大O概念。</span></li>
+    <li>Algorithm card matching: match problem to algorithm to complexity. <span class="zh">算法卡片配对：将问题与算法和复杂度配对。</span></li>
+  </ul>
+
+  <h4>4.2.5 Theory: Databases / 理论：数据库</h4>
+  <ul>
+    <li>Normalisation workshops using physical cards for entities and attributes. <span class="zh">使用实体和属性的物理卡片进行规范化工作坊。</span></li>
+    <li>SQL "sentence building" — construct queries using colour-coded word cards. <span class="zh">SQL"句子构建"——使用彩色编码单词卡片构建查询。</span></li>
+    <li>E-R diagram construction using whiteboard and magnetic shapes. <span class="zh">使用白板和磁性形状构建E-R图。</span></li>
+  </ul>
+
+  <h3>4.3 Tier 2 Tracking / 第二层级跟踪</h3>
+  <p>Each Tier 2 student has an intervention record card updated weekly:</p>
+  <div class="template">
+╔══════════════════════════════════════════════════════════════════╗
+║  TIER 2 INTERVENTION RECORD / 第二层级干预记录                    ║
+╠══════════════════════════════════════════════════════════════════╣
+  Student Name: _______________________  Group: ___________________
+  Start Date: _____________  Review Date: _____________
+  Focus Area: _________________________________________________
+
+  Week 1: Topic covered: ____________  Engagement: □ High □ Med □ Low
+  Week 2: Topic covered: ____________  Engagement: □ High □ Med □ Low
+  Week 3: MID-POINT REVIEW — Progress: □ On track □ Needs adjustment
+  Week 4: Topic covered: ____________  Engagement: □ High □ Med □ Low
+  Week 5: Topic covered: ____________  Engagement: □ High □ Med □ Low
+  Week 6: FINAL REVIEW — Exit criteria met: □ Yes □ No → Move to Tier 3?
+
+  Exit Criteria (tick all that apply):
+  □ Achieved 60%+ on end-of-intervention assessment
+  □ Homework submission rate improved to ≥80%
+  □ Student reports increased confidence
+  □ Teacher observation: participates actively in class
+  □ Parent informed of progress
+  </div>
+</div>
+
+<!-- Section 5: Tier 3 — 1-to-1 Support -->
+<div class="section">
+  <h2>5. Tier 3: 1-to-1 Intensive Support / 第三层级：一对一密集支持</h2>
+  <span class="tier-badge tier3">TIER 3 — Individual / 个人</span>
+  <p>For students who have not made sufficient progress after Tier 2, or who present with significant barriers to learning. Tier 3 is highly individualised and may involve external support. <span class="zh">适用于在第二层级后未取得足够进步，或面临重大学习障碍的学生。第三层级高度个性化，可能涉及外部支持。</span></p>
+
+  <h3>5.1 Trigger for Tier 3 / 第三层级触发条件</h3>
+  <ul>
+    <li>No measurable progress after 6 weeks of Tier 2 intervention. <span class="zh">经过6周第二层级干预后没有可衡量的进步。</span></li>
+    <li>Baseline assessment score &lt; 30% (indicating fundamental gaps). <span class="zh">基线评估分数低于30%（表明存在根本性缺口）。</span></li>
+    <li>Student has missed &gt; 20% of lessons due to absence. <span class="zh">学生因缺勤错过了超过20%的课程。</span></li>
+    <li>Student has identified SEND needs affecting CS specifically. <span class="zh">学生有已识别的SEND需求，特别影响CS学习。</span></li>
+    <li>Student is at risk of failing the A-Level (predicted grade U/E). <span class="zh">学生有A-Level不及格的风险（预测成绩U/E）。</span></li>
+  </ul>
+
+  <h3>5.2 Structure / 结构</h3>
+  <ul>
+    <li><strong>Frequency:</strong> 1–2 sessions per week, 30–45 minutes each. <span class="zh">频率：每周1-2次，每次30-45分钟。</span></li>
+    <li><strong>Setting:</strong> Quiet room, one-to-one with subject teacher or SEN specialist. <span class="zh">环境：安静房间，与学科教师或SEN专家一对一。</span></li>
+    <li><strong>Duration:</strong> Minimum 8 weeks; continuous review. <span class="zh">持续时间：至少8周；持续审查。</span></li>
+    <li><strong>Documentation:</strong> Individual Learning Plan (ILP) updated fortnightly. <span class="zh">文档：每两周更新一次的个人学习计划（ILP）。</span></li>
+  </ul>
+
+  <h3>5.3 Tier 3 Strategies / 第三层级策略</h3>
+  <ul>
+    <li><strong>Diagnostic assessment</strong> — Identify the exact point of breakdown (e.g., "student understands binary but not two's complement subtraction"). <span class="zh">诊断评估——识别具体崩溃点（如"学生理解二进制但不理解补码减法"）。</span></li>
+    <li><strong>Micro-teaching</strong> — Break topics into 10-minute chunks with immediate practice. <span class="zh">微教学——将主题分解为10分钟小块，并立即练习。</span></li>
+    <li><strong>Overlearning</strong> — Repeat core skills until automatic (e.g., binary conversion daily for 2 weeks). <span class="zh">过度学习——重复核心技能直到自动化（如连续2周每天练习二进制转换）。</span></li>
+    <li><strong>Multisensory approaches</strong> — Use physical manipulatives, colour coding, and movement for kinaesthetic learners. <span class="zh">多感官方法——使用实物操作、颜色编码和动作适合动觉学习者。</span></li>
+    <li><strong>Metacognitive scaffolding</strong> — "Think aloud" protocols where the student verbalises their reasoning. <span class="zh">元认知支架——"大声思考"协议，学生口头表达他们的推理。</span></li>
+    <li><strong>Exam technique coaching</strong> — Deconstruct mark schemes; practise writing to the point. <span class="zh">考试技巧辅导——分解评分方案；练习切题写作。</span></li>
+    <li><strong>Emotional coaching</strong> — Address maths anxiety, coding anxiety, or fixed mindset. <span class="zh">情感辅导——解决数学焦虑、编程焦虑或固定型思维。</span></li>
+  </ul>
+
+  <h3>5.4 Tier 3 Individual Learning Plan (ILP) Template / 第三层级个人学习计划模板</h3>
+  <div class="template">
+╔══════════════════════════════════════════════════════════════════╗
+║  TIER 3 INDIVIDUAL LEARNING PLAN (ILP) / 第三层级个人学习计划     ║
+╠══════════════════════════════════════════════════════════════════╣
+  Student: ___________________  Year Group: _______  Date: _________
+  Teacher: ___________________  SENCo involved: □ Yes □ No
+
+  DIAGNOSTIC FINDINGS / 诊断发现:
+  _________________________________________________________________
+  _________________________________________________________________
+
+  TARGETS (SMART) / 目标（SMART原则）:
+  1. _____________________________________________ By: _________
+  2. _____________________________________________ By: _________
+  3. _____________________________________________ By: _________
+
+  STRATEGIES / 策略:
+  □ Micro-teaching    □ Overlearning    □ Multisensory
+  □ Exam technique    □ Emotional coaching    □ Peer mentoring
+  □ Other: _____________________________________________________
+
+  RESOURCES / 资源:
+  □ Zakonweb theory notes    □ Cambridge past papers
+  □ Python programming tasks    □ Physical manipulatives
+  □ EAL vocabulary bank    □ Other: ___________________________
+
+  REVIEW DATES / 审查日期:
+  Week 2: _______  Week 4: _______  Week 6: _______  Week 8: _______
+
+  OUTCOME / 结果:
+  □ Returned to mainstream (Tier 1)    □ Continued Tier 3
+  □ Referral to external support    □ Other: ___________________
+  </div>
+</div>
+
+<!-- Section 6: EAL-Specific Interventions -->
+<div class="section">
+  <h2>6. EAL-Specific Interventions / EAL特定干预</h2>
+  <p>English as an Additional Language students face unique challenges in Computer Science, where technical vocabulary is dense and examination responses require precise English. <span class="zh">英语作为附加语言的学生在计算机科学中面临独特挑战，因为技术词汇密集，且考试回答需要精确的英语。</span></p>
+
+  <h3>6.1 Vocabulary Support / 词汇支持</h3>
+  <ul>
+    <li><strong>Bilingual glossary</strong> — Maintain a Chinese-English glossary of all CS terms, updated per topic. <span class="zh">双语词汇表——维护一份中英计算机科学术语词汇表，按主题更新。</span></li>
+    <li><strong>Word walls</strong> — Display key terms with definitions and Chinese translations in the classroom. <span class="zh">词汇墙——在教室展示关键术语及其定义和中文翻译。</span></li>
+    <li><strong>Root word analysis</strong> — Teach Latin/Greek roots (e.g., "poly-" = many, "morph-" = form). <span class="zh">词根分析——教授拉丁/希腊词根（如"poly-"=多，"morph-"=形态）。</span></li>
+    <li><strong>Sentence frames</strong> — Provide scaffolded sentence structures for written answers. <span class="zh">句子框架——为书面回答提供支架式句子结构。</span></li>
+  </ul>
+
+  <h3>6.2 Assessment Accommodations / 评估调整</h3>
+  <table>
+    <tr>
+      <th>Accommodation / 调整</th>
+      <th>Application / 应用</th>
+      <th>Notes / 备注</th>
+    </tr>
+    <tr>
+      <td>Extra time (25%)</td>
+      <td>All formal assessments and mock exams</td>
+      <td>Must be applied for via Examinations Officer</td>
+    </tr>
+    <tr>
+      <td>Bilingual dictionary</td>
+      <td>Internal assessments and practice papers</td>
+      <td>Not permitted in Cambridge exams; use for learning</td>
+    </tr>
+    <tr>
+      <td>Pre-teaching vocabulary</td>
+      <td>Key terms taught 48 hours before new topic</td>
+      <td>Reduces cognitive load during main lesson</td>
+    </tr>
+    <tr>
+      <td>Visual organisers</td>
+      <td>Mind maps, concept maps for each topic</td>
+      <td>Reduces reliance on dense English text</td>
+    </tr>
+    <tr>
+      <td>Oral assessment option</td>
+      <td>Where appropriate, verbal explanation recorded</td>
+      <td>For internal tracking only; builds confidence</td>
+    </tr>
+  </table>
+
+  <h3>6.3 EAL Intervention Strategies by Skill / 按技能的EAL干预策略</h3>
+  <h4>Reading Examination Questions / 阅读考试题目</h4>
+  <ul>
+    <li>Teach "question deconstruction" — identify command words, topic, and mark allocation. <span class="zh">教授"题目解构"——识别指令词、主题和分数分配。</span></li>
+    <li>Provide practice with past paper questions where the English is complex but the CS is simple. <span class="zh">提供历年试题练习，其中英语复杂但CS内容简单。</span></li>
+    <li>Use "dual-language highlighting" — student highlights English words they know in one colour, unknown in another. <span class="zh">使用"双语高亮"——学生用一种颜色标记认识的英语单词，另一种颜色标记不认识的。</span></li>
+  </ul>
+
+  <h4>Writing Pseudocode / 编写伪代码</h4>
+  <ul>
+    <li>Accept pseudocode with Chinese comments initially; transition to English over time. <span class="zh">初期接受带中文注释的伪代码；逐渐过渡到英语。</span></li>
+    <li>Provide "pseudocode phrasebook" — common structures in English and Chinese side-by-side. <span class="zh">提供"伪代码常用语手册"——常见结构的英语和中文对照。</span></li>
+    <li>Focus on logic correctness first, language accuracy second. <span class="zh">先关注逻辑正确性，再关注语言准确性。</span></li>
+  </ul>
+
+  <h4>Extended Written Answers / 扩展书面回答</h4>
+  <ul>
+    <li>Provide paragraph structures: "Point — Evidence — Explain — Link." <span class="zh">提供段落结构："观点——证据——解释——联系。"</span></li>
+    <li>Allow planning in Chinese before writing in English. <span class="zh">允许先用中文规划，再用英语写作。</span></li>
+    <li>Use peer review with bilingual students assisting. <span class="zh">使用双语学生协助的同伴评审。</span></li>
+  </ul>
+
+  <h3>6.4 EAL Parent Communication / EAL家长沟通</h3>
+  <p>See Section 8 for templates. Key principle: communicate in the parent's preferred language where possible. Use translation services or bilingual staff. <span class="zh">见第8节模板。关键原则：尽可能用家长偏好的语言沟通。使用翻译服务或双语员工。</span></p>
+</div>
+
+<!-- Section 7: Specific Topic Interventions -->
+<div class="section">
+  <h2>7. Specific Intervention Strategies by A-Level Topic / 按A-Level主题的特定干预策略</h2>
+
+  <h3>7.1 Information Representation (Topic 1.1) / 信息表示</h3>
+  <div class="warning-box">
+    <strong>Common difficulty:</strong> Students confuse mantissa/exponent, or cannot normalise floating-point numbers.
+    <p class="zh"><strong>常见困难：</strong>学生混淆尾数/指数，或无法规范化浮点数。</p>
+  </div>
+  <ul>
+    <li><strong>Concrete-pictorial-abstract approach:</strong> Start with decimal scientific notation (concrete), move to binary diagrams (pictorial), then formal notation (abstract). <span class="zh">具体-图示-抽象法：从十进制科学记数法（具体）开始，过渡到二进制图示（图示），再到正式表示（抽象）。</span></li>
+    <li><strong>Colour-coded worksheets:</strong> Mantissa in blue, exponent in red, sign bit in green. <span class="zh">彩色编码工作表：尾数用蓝色，指数用红色，符号位用绿色。</span></li>
+    <li><strong>"Spot the error" activities:</strong> Give incorrect normalisations; students identify and correct. <span class="zh">"找错误"活动：给出错误的规范化；学生识别并纠正。</span></li>
+  </ul>
+
+  <h3>7.2 Hardware &amp; Architecture (Topic 1.2) / 硬件与架构</h3>
+  <div class="warning-box">
+    <strong>Common difficulty:</strong> Students memorise register names but cannot explain the fetch-decode-execute cycle with register contents.
+    <p class="zh"><strong>常见困难：</strong>学生记住寄存器名称，但无法用寄存器内容解释取指-译码-执行周期。</p>
+  </div>
+  <ul>
+    <li><strong>Role-play simulation:</strong> Students take roles (PC, MAR, MDR, CIR, ACC) and physically pass "instructions" around. <span class="zh">角色扮演模拟：学生扮演角色（PC、MAR、MDR、CIR、ACC）并 physically 传递"指令"。</span></li>
+    <li><strong>Step-by-step worksheets:</strong> Every cycle stage with blank registers to fill in. <span class="zh">分步工作表：每个周期阶段都有空白寄存器需要填写。</span></li>
+    <li><strong>Video creation:</strong> Students make a 2-minute video explaining the cycle to a peer. <span class="zh">视频制作：学生制作2分钟视频向同伴解释该周期。</span></li>
+  </ul>
+
+  <h3>7.3 Programming &amp; OOP (Topic 2.2) / 编程与面向对象编程</h3>
+  <div class="warning-box">
+    <strong>Common difficulty:</strong> Students can write procedural code but cannot design classes or understand inheritance.
+    <p class="zh"><strong>常见困难：</strong>学生能编写过程式代码，但无法设计类或理解继承。</p>
+  </div>
+  <ul>
+    <li><strong>Real-world analogy first:</strong> "A Dog is an Animal" — physical sorting activity before code. <span class="zh">先使用现实类比："狗是动物"——编码前先进行物理分类活动。</span></li>
+    <li><strong>UML diagramming:</strong> Draw class diagrams before writing any code. <span class="zh">UML图绘制：在编写任何代码之前先绘制类图。</span></li>
+    <li><strong>Code completion exercises:</strong> Given a class diagram, fill in the Python code. <span class="zh">代码补全练习：给定类图，填写Python代码。</span></li>
+    <li><strong>Incremental OOP projects:</strong> Start with a single class, add inheritance in Week 2, polymorphism in Week 3. <span class="zh">渐进式OOP项目：从单个类开始，第2周添加继承，第3周添加多态。</span></li>
+  </ul>
+
+  <h3>7.4 Recursion (Topic 2.1) / 递归</h3>
+  <div class="warning-box">
+    <strong>Common difficulty:</strong> Students cannot identify base cases or trace recursive calls.
+    <p class="zh"><strong>常见困难：</strong>学生无法识别基准情形或跟踪递归调用。</p>
+  </div>
+  <ul>
+    <li><strong>"Russian doll" analogy:</strong> Each doll is a function call; the smallest doll is the base case. <span class="zh">"俄罗斯套娃"类比：每个套娃是一个函数调用；最小的套娃是基准情形。</span></li>
+    <li><strong>Stack frame drawing:</strong> Every recursive call gets its own paper "frame" stacked on the desk. <span class="zh">栈帧绘制：每次递归调用都在桌上堆叠自己的纸质"帧"。</span></li>
+    <li><strong>Start with mathematical recursion:</strong> Factorial and Fibonacci before tree recursion. <span class="zh">从数学递归开始：先学习阶乘和斐波那契，再学习树递归。</span></li>
+  </ul>
+
+  <h3>7.5 Database Normalisation (Topic 2.3) / 数据库规范化</h3>
+  <div class="warning-box">
+    <strong>Common difficulty:</strong> Students can identify 1NF but struggle with 2NF, 3NF, and functional dependencies.
+    <p class="zh"><strong>常见困难：</strong>学生能识别第一范式，但在第二范式、第三范式和函数依赖方面有困难。</span></li>
+  </div>
+  <ul>
+    <li><strong>"Unnormalised to normalised" card sort:</strong> Physical cards representing data; students sort into tables. <span class="zh">"非规范化到规范化"卡片分类：代表数据的物理卡片；学生将其分类到表中。</span></li>
+    <li><strong>Functional dependency mapping:</strong> Draw arrows between attributes before formalising. <span class="zh">函数依赖映射：在形式化之前先绘制属性之间的箭头。</span></li>
+    <li><strong>Repeated practice:</strong> 10 different unnormalised schemas; normalise to 3NF each. <span class="zh">重复练习：10个不同的非规范化模式；每个都规范化到第三范式。</span></li>
+  </ul>
+
+  <h3>7.6 Boolean Algebra &amp; Logic Circuits (Topic 1.2) / 布尔代数与逻辑电路</h3>
+  <div class="warning-box">
+    <strong>Common difficulty:</strong> Students cannot apply De Morgan's laws or simplify using Karnaugh maps.
+    <p class="zh"><strong>常见困难：</strong>学生无法应用德摩根定律或使用卡诺图简化。</p>
+  </div>
+  <ul>
+    <li><strong>Truth table verification:</strong> Prove De Morgan's by completing both sides of the truth table. <span class="zh">真值表验证：通过完成真值表两边来证明德摩根定律。</span></li>
+    <li><strong>K-map colouring:</strong> Use highlighters to identify groups on printed K-maps before drawing. <span class="zh">卡诺图着色：在绘制之前使用荧光笔在打印的卡诺图上标识组。</span></li>
+    <li><strong>Circuit simulation software:</strong> Use Logisim (free) to build and test circuits visually. <span class="zh">电路仿真软件：使用Logisim（免费）可视地构建和测试电路。</span></li>
+  </ul>
+</div>
+
+<!-- Section 8: Parent Communication -->
+<div class="section">
+  <h2>8. Parent Communication Templates / 家长沟通模板</h2>
+
+  <h3>8.1 Initial Concern Letter / 初步关注函</h3>
+  <div class="template">
+Dear [Parent Name],
+
+I am writing to inform you that [Student Name] has been identified as
+needing additional support in A-Level Computer Science. This is a
+proactive intervention designed to ensure [Student Name] achieves
+their full potential.
+
+Current concerns:
+• [Specific assessment score / engagement issue]
+• [Specific topic difficulty]
+
+Planned support:
+• [Tier 1/2/3 intervention details]
+• [Frequency and duration]
+
+We would welcome the opportunity to discuss this with you. Please
+contact me to arrange a brief meeting or phone call.
+
+Yours sincerely,
+[Teacher Name]
+Head of Computer Science
+Victoria Park Academy
+
+---
+
+尊敬的[家长姓名]：
+
+我写信通知您，[学生姓名]在A-Level计算机科学中被识别为需要
+额外支持。这是一项预防性干预，旨在确保[学生姓名]充分发挥
+其潜力。
+
+当前关注点：
+• [具体评估分数/参与度问题]
+• [具体主题困难]
+
+计划支持：
+• [第一/二/三层级干预详情]
+• [频率和持续时间]
+
+我们期待与您讨论此事。请联系我安排简短会面或电话沟通。
+
+此致
+[教师姓名]
+计算机科学学科主管
+维多利亚公园学院
+  </div>
+
+  <h3>8.2 Progress Update / 进展更新</h3>
+  <div class="template">
+Dear [Parent Name],
+
+Update on [Student Name]'s intervention progress:
+
+Intervention focus: _______________________________
+Duration: ___ weeks completed
+
+Progress indicators:
+□ Assessment scores improved from ___% to ___%
+□ Homework submission rate: ___%
+□ Class participation: □ Increased □ Stable □ Decreased
+□ Student confidence: □ Increased □ Stable □ Decreased
+
+Next steps:
+_________________________________________________
+
+Thank you for your continued support.
+
+[Teacher Name]
+
+---
+
+尊敬的[家长姓名]：
+
+[学生姓名]的干预进展更新：
+
+干预重点：_____________________________________
+持续时间：已完成___周
+
+进展指标：
+□ 评估分数从___%提高到___%
+□ 作业提交率：___%
+□ 课堂参与度：□ 提高 □ 稳定 □ 下降
+□ 学生信心：□ 提高 □ 稳定 □ 下降
+
+下一步：
+_________________________________________________
+
+感谢您持续的支持。
+
+[教师姓名]
+  </div>
+
+  <h3>8.3 EAL-Specific Parent Letter / EAL特定家长函</h3>
+  <div class="template">
+Dear [Parent Name],
+
+[Student Name] is making good progress in Computer Science, but we
+have identified that language is a barrier to demonstrating their
+full understanding in written assessments.
+
+Support being provided:
+• Bilingual vocabulary glossary for all topics
+• Extra time in assessments (25%)
+• Pre-teaching of key terms before each topic
+• Visual organisers and concept maps
+
+How you can help at home:
+• Discuss CS topics in [home language] to reinforce understanding
+• Encourage [Student Name] to explain concepts aloud
+• Review the bilingual glossary together
+
+We are confident that with this support, [Student Name] will
+overcome the language barrier and achieve highly.
+
+[Teacher Name]
+
+---
+
+尊敬的[家长姓名]：
+
+[学生姓名]在计算机科学方面进步良好，但我们发现语言是其在
+书面评估中充分展示理解的障碍。
+
+提供的支持：
+• 所有主题的双语词汇表
+• 评估中的额外时间（25%）
+• 每个主题前的关键术语预教
+• 可视化组织工具和概念图
+
+您在家可以如何帮助：
+• 用[家庭语言]讨论CS主题以加强理解
+• 鼓励[学生姓名]大声解释概念
+• 一起复习双语词汇表
+
+我们相信，在这些支持下，[学生姓名]将克服语言障碍并取得
+优异成绩。
+
+[教师姓名]
+  </div>
+</div>
+
+<!-- Section 9: Tracking &amp; Review -->
+<div class="section">
+  <h2>9. Tracking &amp; Review / 跟踪与审查</h2>
+
+  <h3>9.1 Intervention Tracker (Whole Cohort) / 干预跟踪表（整个年级）</h3>
+  <table>
+    <tr>
+      <th>Student / 学生</th>
+      <th>Year / 年级</th>
+      <th>Tier / 层级</th>
+      <th>Focus / 重点</th>
+      <th>Start Date / 开始日期</th>
+      <th>Review Date / 审查日期</th>
+      <th>Progress / 进展</th>
+      <th>Exit Date / 退出日期</th>
+    </tr>
+    <tr>
+      <td>Example Student A</td>
+      <td>12</td>
+      <td>Tier 2</td>
+      <td>OOP programming</td>
+      <td>15/09/2025</td>
+      <td>15/11/2025</td>
+      <td>On track</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Example Student B</td>
+      <td>13</td>
+      <td>Tier 3</td>
+      <td>Data representation</td>
+      <td>01/10/2025</td>
+      <td>01/12/2025</td>
+      <td>Needs adjustment</td>
+      <td>—</td>
+    </tr>
+  </table>
+
+  <h3>9.2 Review Schedule / 审查时间表</h3>
+  <ul>
+    <li><strong>Weekly:</strong> Teacher reviews intervention group progress; updates record cards. <span class="zh">每周：教师审查干预小组进展；更新记录卡。</span></li>
+    <li><strong>Half-termly:</strong> Department meeting reviews all intervention data; adjusts groupings. <span class="zh">每半学期：部门会议审查所有干预数据；调整分组。</span></li>
+    <li><strong>Termly:</strong> SLT review of intervention impact; resource allocation decisions. <span class="zh">每学期：SLT审查干预影响；资源分配决策。</span></li>
+    <li><strong>Annually:</strong> Full protocol review; update based on examination results and student voice. <span class="zh">每年：全面协议审查；根据考试成绩和学生反馈更新。</span></li>
+  </ul>
+
+  <h3>9.3 Success Metrics / 成功指标</h3>
+  <table>
+    <tr>
+      <th>Metric / 指标</th>
+      <th>Target / 目标</th>
+      <th>Measurement / 测量</th>
+    </tr>
+    <tr>
+      <td>Students exiting intervention</td>
+      <td>≥70% exit within 8 weeks</td>
+      <td>Intervention tracker</td>
+    </tr>
+    <tr>
+      <td>Grade improvement</td>
+      <td>≥1 grade improvement for Tier 3 students</td>
+      <td>Mock vs. final grade</td>
+    </tr>
+    <tr>
+      <td>Homework submission</td>
+      <td>≥80% for all intervention students</td>
+      <td>Homework tracker</td>
+    </tr>
+    <tr>
+      <td>Student confidence</td>
+      <td>Self-reported increase on exit survey</td>
+      <td>Exit questionnaire</td>
+    </tr>
+    <tr>
+      <td>Parent satisfaction</td>
+      <td>≥80% positive feedback</td>
+      <td>Parent survey</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Section 10: Roles & Responsibilities -->
+<div class="section">
+  <h2>10. Roles &amp; Responsibilities / 角色与职责</h2>
+  <table>
+    <tr>
+      <th>Role / 角色</th>
+      <th>Responsibilities / 职责</th>
+    </tr>
+    <tr>
+      <td>Head of Computer Science</td>
+      <td>Overall protocol ownership; quality assurance; Tier 3 delivery; staff training; parent communication for Tier 3.</td>
+    </tr>
+    <tr>
+      <td>Classroom Teacher</td>
+      <td>Tier 1 quality-first teaching; identification of students; Tier 2 delivery; weekly tracking updates.</td>
+    </tr>
+    <tr>
+      <td>HLTA / Teaching Assistant</td>
+      <td>Support Tier 2 sessions; resource preparation; 1-to-1 support under teacher direction.</td>
+    </tr>
+    <tr>
+      <td>SENCo</td>
+      <td>Advise on SEND-specific strategies; liaise with external agencies; ensure access arrangements.</td>
+    </tr>
+    <tr>
+      <td>EAL Coordinator</td>
+      <td>Bilingual resource development; EAL-specific strategy advice; parent communication in home language.</td>
+    </tr>
+    <tr>
+      <td>Head of Year / Pastoral</td>
+      <td>Attendance monitoring; emotional support; communication with parents; barrier identification.</td>
+    </tr>
+    <tr>
+      <td>Student</td>
+      <td>Attend all intervention sessions; complete assigned work; communicate difficulties; engage with feedback.</td>
+    </tr>
+    <tr>
+      <td>Parent</td>
+      <td>Support at home; attend meetings; reinforce vocabulary; encourage independent study.</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Section 11: Appendices -->
+<div class="section">
+  <h2>11. Appendices / 附录</h2>
+
+  <h3>Appendix A: Intervention Flowchart / 附录A：干预流程图</h3>
+  <div class="template">
+    ┌─────────────────────────────────────────┐
+    │  Whole-class teaching (Tier 1)           │
+    │  全班教学（第一层级）                     │
+    └─────────────────┬───────────────────────┘
+                      │
+        ┌─────────────▼─────────────┐
+        │  Identification criteria   │
+        │  met? (Section 2)          │
+        │  识别标准满足？（第2节）    │
+        └─────────────┬─────────────┘
+                      │
+           ┌──────────┴──────────┐
+           ▼                     ▼
+    ┌─────────────┐       ┌─────────────┐
+    │  No —       │       │  Yes —      │
+    │  Continue   │       │  Begin Tier │
+    │  Tier 1     │       │  2          │
+    │  继续第一层级│       │  开始第二层级│
+    └─────────────┘       └──────┬──────┘
+                                 │
+                    ┌────────────┴────────────┐
+                    ▼                         ▼
+           ┌─────────────┐          ┌─────────────┐
+           │  Progress   │          │  No progress│
+           │  after 6 wks│          │  after 6 wks│
+           │  6周后有进步 │          │  6周后无进步  │
+           └──────┬──────┘          └──────┬──────┘
+                  │                         │
+                  ▼                         ▼
+           ┌─────────────┐          ┌─────────────┐
+           │  Exit to    │          │  Begin Tier │
+           │  Tier 1     │          │  3          │
+           │  退出到第一层级│       │  开始第三层级│
+           └─────────────┘          └──────┬──────┘
+                                           │
+                                ┌─────────┴─────────┐
+                                ▼                   ▼
+                         ┌─────────────┐    ┌─────────────┐
+                         │  Progress   │    │  No progress│
+                         │  after 8 wks│    │  after 8 wks│
+                         │  8周后有进步 │    │  8周后无进步  │
+                         └──────┬──────┘    └──────┬──────┘
+                                │                  │
+                                ▼                  ▼
+                         ┌─────────────┐    ┌─────────────┐
+                         │  Exit to    │    │  External   │
+                         │  Tier 1/2   │    │  referral   │
+                         │  退出到第一/二层级│    │  外部转介    │
+                         └─────────────┘    └─────────────┘
+  </div>
+
+  <h3>Appendix B: Student Self-Assessment Checklist / 附录B：学生自我评估清单</h3>
+  <p>Students complete this after each topic. <span class="zh">学生在每个主题后完成此清单。</span></p>
+  <div class="template">
+Topic: _______________________  Date: ___________
+
+Rate your confidence (1 = not confident, 5 = very confident):
+
+□ 1  □ 2  □ 3  □ 4  □ 5  I can explain this topic to a peer.
+□ 1  □ 2  □ 3  □ 4  □ 5  I can answer past paper questions on this topic.
+□ 1  □ 2  □ 3  □ 4  □ 5  I can write code related to this topic.
+□ 1  □ 2  □ 3  □ 4  □ 5  I understand the key vocabulary.
+
+What I found difficult: _________________________________
+What I need help with: _________________________________
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <p>© Victoria Park Academy | A-Level Computer Science (9618) | Intervention Protocol</p>
+  <p>Document Version 1.0 | Updated: 2025 | Review Date: Annually</p>
+</footer>
+
+</body>
+</html>

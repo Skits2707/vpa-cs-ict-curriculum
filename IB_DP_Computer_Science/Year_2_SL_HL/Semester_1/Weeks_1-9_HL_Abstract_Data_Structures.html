@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — Topic 5: Abstract Data Structures (HL Only, Weeks 1–9)</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+</style>
+</head>
+<body>
+
+<h1>Topic 5: Abstract Data Structures <span class="bilingual">抽象数据结构 Chōuxiàng Shùjù Jiégòu</span> <span class="hl-only">HL ONLY</span></h1>
+<p><strong>IB Syllabus:</strong> Topic 5 (5.1–5.3) | <strong>Level:</strong> HL ONLY | <strong>Duration:</strong> 9 weeks (30 hours)</p>
+
+<h2>Topic 5.1: Stacks, Queues, Linked Lists, Trees, Graphs <span class="bilingual">栈、队列、链表、树、图</span></h2>
+
+<h3>Week 1 — Linked Lists <span class="bilingual">链表 Liànbiǎo</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th><th>Differentiation</th></tr>
+<tr><td>1</td><td>Linked list structure: nodes, data field, pointer/reference field, head, tail, null <span class="bilingual">(节点, 指针, 头节点)</span></td><td>Draw linked list diagrams; trace traversal</td><td>Bronze: Label diagram; Silver: Trace operations; Gold: Compare to arrays</td></tr>
+<tr><td>2</td><td>Singly linked list operations: insert at start, insert at end, delete, traverse, search</td><td>Write pseudocode for each operation; trace on diagrams</td><td>Bronze: Trace given code; Silver: Write pseudocode; Gold: Handle edge cases (empty list, single node)</td></tr>
+<tr><td>3</td><td>Doubly linked lists: forward and backward traversal; advantages over singly linked</td><td>Modify singly linked pseudocode for doubly linked</td><td>All: Understand concept; Gold: Implement with error checking</td></tr>
+<tr><td>4</td><td>Circular linked lists; sentinel nodes; comparison of all variants</td><td>Comparison table: memory, access time, use cases</td><td>All: Complete table; Gold: Analyse cache performance</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> A linked list is an abstraction with no physical existence. In what sense can we say it "exists"? Is it a mathematical object, a computational one, or both?</td><td>Discussion; written reflection</td><td>All: Contribute; Gold: Reference Platonism vs formalism</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> A linked list is defined entirely by relationships (pointers) between nodes, not by the nodes themselves. Does this mean the structure has an existence independent of its contents? Can the <em>form</em> of a data structure be said to exist in a different way from its <em>matter</em>?
+</div>
+
+<h3>Week 2 — Stacks and Queues (Dynamic Implementation) <span class="bilingual">栈与队列 Zhàn yǔ Duìliè</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Stack as linked list: push (insert at head), pop (remove from head), dynamic sizing <span class="bilingual">(栈的动态实现)</span></td><td>Implement dynamic stack; compare to array-based</td></tr>
+<tr><td>2</td><td>Queue as linked list: enqueue (insert at tail), dequeue (remove from head)</td><td>Implement dynamic queue; trace pointer updates</td></tr>
+<tr><td>3</td><td>Circular queue implementation using arrays; full/empty detection</td><td>Design circular buffer for streaming data</td></tr>
+<tr><td>4</td><td>Priority queue: concept, insertion by priority, dequeuing highest priority</td><td>Implement simple priority queue; discuss heap optimisation</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Implement stack and queue operations in pseudocode (30 marks)</td><td>Timed; peer mark with criteria</td></tr>
+</table>
+
+<h3>Week 3 — Trees <span class="bilingual">树 Shù</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Tree terminology: root, node, edge, parent, child, sibling, leaf, depth, height, subtree <span class="bilingual">(根节点, 叶子节点, 深度, 高度)</span></td><td>Label tree diagrams; identify relationships</td></tr>
+<tr><td>2</td><td>Binary trees: each node has at most two children; binary search tree (BST) property</td><td>Build BST from sequence; trace search operations</td></tr>
+<tr><td>3</td><td>BST operations: insert, search, delete (leaf, one child, two children cases)</td><td>Write pseudocode; trace complex deletions</td></tr>
+<tr><td>4</td><td>Tree balancing: why it matters; AVL and Red-Black trees (conceptual)</td><td>Analyse unbalanced vs balanced tree search times</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> BST construction and search trace table (25 marks)</td><td>Individual; markscheme review</td></tr>
+</table>
+
+<h2>Topic 5.2: Tree Traversal and Graph Algorithms <span class="bilingual">树遍历与图算法</span></h2>
+
+<h3>Week 4 — Tree Traversal <span class="bilingual">树遍历 Shù Biànlì</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Preorder traversal: root, left, right <span class="bilingual">(前序遍历)</span></td><td>Traverse given trees; write traversal sequence</td></tr>
+<tr><td>2</td><td>Inorder traversal: left, root, right; BST inorder yields sorted sequence <span class="bilingual">(中序遍历)</span></td><td>Verify: inorder of BST is sorted; prove to peer</td></tr>
+<tr><td>3</td><td>Postorder traversal: left, right, root; deletion order <span class="bilingual">(后序遍历)</span></td><td>Determine postorder; relate to expression trees</td></tr>
+<tr><td>4</td><td>Expression trees: constructing from infix; evaluating with postorder</td><td>Build tree from expression; evaluate</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> Tree traversals produce different "readings" of the same structure. Is any traversal more "true" than another? What determines the right way to traverse?</td><td>Discussion; connect to hermeneutics</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> Inorder traversal of a BST produces a sorted list. Is this sorting "discovered" (the order was already there) or "created" (the traversal imposes an order)? What does this suggest about the relationship between representation and knowledge?
+</div>
+
+<h3>Week 5 — Graphs <span class="bilingual">图 Tú</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Graph terminology: vertex, edge, directed/undirected, weighted, adjacent, degree, path, cycle <span class="bilingual">(顶点, 边, 有向图, 无向图)</span></td><td>Model real networks as graphs; identify properties</td></tr>
+<tr><td>2</td><td>Graph representations: adjacency matrix, adjacency list; comparison</td><td>Represent same graph both ways; compare space/time</td></tr>
+<tr><td>3</td><td>Graph applications: social networks, navigation, dependency graphs, state machines</td><td>Research: how does Google Maps represent roads?</td></tr>
+<tr><td>4</td><td>Depth-first search (DFS): algorithm, stack-based, recursive; applications</td><td>Trace DFS on graph; implement recursively</td></tr>
+<tr><td>5</td><td>Breadth-first search (BFS): algorithm, queue-based; shortest path in unweighted graphs</td><td>Trace BFS; compare to DFS for finding paths</td></tr>
+</table>
+
+<h3>Week 6 — Graph Algorithms <span class="bilingual">图算法 Tú Suànfǎ</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Dijkstra's shortest path: algorithm, greedy approach, trace table</td><td>Trace Dijkstra on weighted graph; verify shortest path</td></tr>
+<tr><td>2</td><td>Minimum spanning tree: Prim's and Kruskal's algorithms (conceptual comparison)</td><td>Apply both to same graph; compare results</td></tr>
+<tr><td>3</td><td>Topological sort: concept, DAGs, scheduling applications</td><td>Schedule modules with prerequisites; detect cycles</td></tr>
+<tr><td>4</td><td>Algorithm comparison and selection: which algorithm for which problem?</td><td>Scenario cards: choose and justify algorithm</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Graph algorithm trace and comparison (30 marks)</td><td>Timed; peer review</td></tr>
+</table>
+
+<h2>Topic 5.3: Dynamic Data Structures <span class="bilingual">动态数据结构 Dòngtài Shùjù Jiégòu</span></h2>
+
+<h3>Week 7 — Dynamic Memory and Pointers <span class="bilingual">动态内存与指针 Dòngtài Nèicún yǔ Zhǐzhēn</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Dynamic memory allocation: heap vs stack; new/delete (conceptual); memory leaks</td><td>Analyse code for memory leaks; discuss garbage collection</td></tr>
+<tr><td>2</td><td>Pointers/references: indirection, null pointers, dangling pointers</td><td>Trace pointer operations; identify dangerous code</td></tr>
+<tr><td>3</td><td>Self-referential structures: nodes that contain pointers to same type</td><td>Diagram self-referential structures; relate to linked lists</td></tr>
+<tr><td>4</td><td>Dynamic resizing: array lists, hash tables (conceptual); amortised analysis</td><td>Calculate cost of dynamic array resizing</td></tr>
+<tr><td>5</td><td><strong>Consolidation:</strong> Dynamic vs static data structures comparison essay</td><td>8-mark timed response</td></tr>
+</table>
+
+<h3>Week 8 — Topic 5 Consolidation</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Revision: Linked lists, stacks, queues — implementation patterns</td><td>Code review; common errors analysis</td></tr>
+<tr><td>2</td><td>Revision: Trees — construction, traversal, BST operations</td><td>Speed tracing; peer quizzing</td></tr>
+<tr><td>3</td><td>Revision: Graphs — representations, DFS, BFS, Dijkstra</td><td>Problem-solving carousel</td></tr>
+<tr><td>4</td><td>Exam technique: 12-mark algorithm design questions</td><td>Plan responses; share structures</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Topic 5 progress test (40 marks, Paper 1 style)</td><td>Timed; self-assessment</td></tr>
+</table>
+
+<h3>Week 9 — Topic 5 End-of-Topic Assessment</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Revision clinic</td><td>Student-led Q&A</td></tr>
+<tr><td>2</td><td><strong>Assessment:</strong> Topic 5 End-of-Topic Test (1 hour, 50 marks)</td><td>Formal conditions</td></tr>
+<tr><td>3</td><td>Test feedback and DIRT</td><td>Markscheme analysis</td></tr>
+<tr><td>4</td><td>Introduction to Topic 6: Operating systems deep dive</td><td>Review OS basics; preview HL depth</td></tr>
+<tr><td>5</td><td>IA check: HL students confirm development progress</td><td>One-to-one tutorials</td></tr>
+</table>
+
+<h2>Key Vocabulary (Topic 5)</h2>
+<table>
+<tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+<tr><td>Linked list</td><td>链表</td><td>liànbiǎo</td><td>A dynamic data structure where elements are linked by pointers</td></tr>
+<tr><td>Node</td><td>节点</td><td>jiédiǎn</td><td>An element in a linked list or tree containing data and references</td></tr>
+<tr><td>Pointer</td><td>指针</td><td>zhǐzhēn</td><td>A reference to a memory location containing another data item</td></tr>
+<tr><td>Binary tree</td><td>二叉树</td><td>èrchà shù</td><td>A tree where each node has at most two children</td></tr>
+<tr><td>Binary search tree</td><td>二叉搜索树</td><td>èrchà sōusuǒ shù</td><td>A binary tree where left < parent < right</td></tr>
+<tr><td>Traversal</td><td>遍历</td><td>biànlì</td><td>Visiting each node in a tree in a specified order</td></tr>
+<tr><td>Graph</td><td>图</td><td>tú</td><td>A set of vertices connected by edges</td></tr>
+<tr><td>Adjacency matrix</td><td>邻接矩阵</td><td>línjiē jǔzhèn</td><td>A 2D array representing which vertices are connected</td></tr>
+<tr><td>Depth-first search</td><td>深度优先搜索</td><td>shēndù yōuxiān sōusuǒ</td><td>Explores as far as possible along each branch before backtracking</td></tr>
+<tr><td>Breadth-first search</td><td>广度优先搜索</td><td>guǎngdù yōuxiān sōusuǒ</td><td>Explores all neighbours at current depth before moving deeper</td></tr>
+<tr><td>Dynamic allocation</td><td>动态分配</td><td>dòngtài fēnpèi</td><td>Memory allocated at runtime rather than compile time</td></tr>
+</table>
+
+<div class="checklist">
+<strong>Teacher Checklist — End of Topic 5:</strong>
+<ul>
+<li>☐ All IB 5.1–5.3 syllabus points covered</li>
+<li>☐ Students can implement linked list, stack, queue in pseudocode</li>
+<li>☐ Students can traverse trees and construct BSTs</li>
+<li>☐ Students can represent graphs and apply DFS/BFS/Dijkstra</li>
+<li>☐ TOK connections documented</li>
+<li>☐ IA progress monitored for all HL students</li>
+</ul>
+</div>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | Topic 5 Scheme of Work</p>
+
+</body>
+</html>

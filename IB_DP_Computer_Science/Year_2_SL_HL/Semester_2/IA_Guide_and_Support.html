@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — IA Guide and Support</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+  .code { background: #f4f4f4; padding: 10px; border-left: 3px solid #666; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>IA Guide and Support <span class="bilingual">内部评估指南 Nèibù Pínggū Zhǐnán</span></h1>
+<p><strong>Weight:</strong> 30% SL / 20% HL | <strong>Hours:</strong> ~34 class hours + independent study</p>
+
+<h2>1. What is the IA?</h2>
+<p>The Internal Assessment is a software development project that solves a real problem for a real client. It is not a hypothetical exercise — the client must exist, the problem must be genuine, and the solution must be implemented and evaluated.</p>
+
+<h2>2. IA Timeline (2-Year View)</h2>
+<table>
+<tr><th>Date</th><th>Milestone</th><th>Criterion</th><th>Deliverable</th></tr>
+<tr><td>Year 1, Week 8</td><td>Client identified</td><td>A</td><td>Client name, role, contact details</td></tr>
+<tr><td>Year 1, Week 16</td><td>Problem confirmed</td><td>A</td><td>Written problem statement with client signature</td></tr>
+<tr><td>Year 1, Week 18</td><td>Success criteria drafted</td><td>A</td><td>3–5 measurable criteria</td></tr>
+<tr><td>Year 2, Week 1</td><td>Planning complete</td><td>A</td><td>Full Criterion A with record of tasks started</td></tr>
+<tr><td>Year 2, Week 3</td><td>Design complete</td><td>B</td><td>System diagrams, algorithms, test plan</td></tr>
+<tr><td>Year 2, Week 9</td><td>Development core complete</td><td>C</td><td>Working prototype with key features</td></tr>
+<tr><td>Year 2, Week 12</td><td>Testing complete</td><td>D</td><td>Test table with evidence</td></tr>
+<tr><td>Year 2, Week 14</td><td>Evaluation complete</td><td>E</td><td>Client feedback, success criteria review</td></tr>
+<tr><td>Year 2, Week 15</td><td>First full draft</td><td>A–E</td><td>Complete documentation for feedback</td></tr>
+<tr><td>Year 2, Week 17</td><td><strong>FINAL SUBMISSION</strong></td><td>A–E</td><td>Upload to IBIS + video evidence</td></tr>
+</table>
+
+<h2>3. Criterion A: Planning (6 marks)</h2>
+
+<h3>A.1 — The Scenario (Context)</h3>
+<p>Describe the client's organisation and their role. Explain why the client needs a software solution.</p>
+<div class="code">
+<strong>Good example:</strong><br>
+"Ms. Zhang is the librarian at Victoria Park Academy Shenzhen. She currently manages book loans using a paper logbook, which makes it difficult to track overdue books, identify popular titles, or generate reports for the administration. She has agreed to be my client for this project."
+</div>
+
+<h3>A.2 — The Problem</h3>
+<p>State the problem clearly, in the client's own words where possible. The problem must be specific and solvable with software.</p>
+
+<h3>A.3 — Rationale</h3>
+<p>Explain why a computational solution is appropriate. Consider alternatives and justify your choice.</p>
+
+<h3>A.4 — Success Criteria</h3>
+<p>3–5 criteria that are <strong>specific, measurable, and testable</strong>.</p>
+<div class="code">
+<strong>Good example:</strong><br>
+1. The system shall allow a book to be checked out in fewer than 30 seconds.<br>
+2. The system shall generate an overdue report automatically every Monday morning.<br>
+3. The system shall store at least 5,000 book records.<br>
+4. The system shall be usable by the librarian without technical training (intuitive interface).
+</div>
+
+<h3>A.5 — Record of Tasks</h3>
+<p>A dated log of all activities undertaken. Must show evidence of consultation with the client.</p>
+<table>
+<tr><th>Date</th><th>Task</th><th>Time</th><th>Client Consultation?</th></tr>
+<tr><td>2025-09-10</td><td>Initial meeting with Ms. Zhang to discuss library problems</td><td>30 min</td><td>Yes — meeting notes attached</td></tr>
+<tr><td>2025-09-15</td><td>Drafted success criteria; sent to client for approval</td><td>45 min</td><td>Yes — email response received</td></tr>
+</table>
+
+<h2>4. Criterion B: Design (6 marks)</h2>
+
+<h3>B.1 — Record of Tasks (continued)</h3>
+<p>The record of tasks spans Criteria A and B. Show design-phase activities.</p>
+
+<h3>B.2 — System Overview</h3>
+<p>A diagram showing the overall structure of your solution. Include:</p>
+<ul>
+<li>Main modules/components</li>
+<li>Data storage</li>
+<li>User interface overview</li>
+<li>Data flow between components</li>
+</ul>
+
+<h3>B.3 — Algorithms</h3>
+<p>Design your key algorithms in pseudocode <strong>before</strong> coding. Show:</p>
+<ul>
+<li>Input and output</li>
+<li>Processing steps</li>
+<li>Loops and conditions</li>
+<li>Complex techniques (e.g., file handling, searching, sorting)</li>
+</ul>
+
+<h3>B.4 — Test Plan</h3>
+<table>
+<tr><th>Test #</th><th>Success Criterion</th><th>Test Data</th><th>Expected Result</th><th>Type</th></tr>
+<tr><td>1</td><td>Check out in &lt;30s</td><td>Valid book ID, valid member ID</td><td>Loan recorded; confirmation displayed</td><td>Normal</td></tr>
+<tr><td>2</td><td>Overdue report</td><td>5 overdue books, 3 on-time</td><td>Report lists exactly the 5 overdue</td><td>Normal</td></tr>
+<tr><td>3</td><td>Store 5,000 records</td><td>5,000 book records loaded</td><td>System remains responsive</td><td>Boundary</td></tr>
+<tr><td>4</td><td>Usability</td><td>Invalid book ID entered</td><td>Error message; no crash</td><td>Erroneous</td></tr>
+</table>
+
+<h2>5. Criterion C: Development (12 marks)</h2>
+
+<h3>C.1 — Complex Techniques</h3>
+<p>To achieve high marks, you must demonstrate <strong>at least two</strong> complex techniques. Examples include:</p>
+<ul>
+<li>File handling (reading/writing structured data)</li>
+<li>Searching or sorting algorithms</li>
+<li>Use of collections/arrays of records</li>
+<li>Object-oriented programming (classes, inheritance)</li>
+<li>Database connectivity (SQL)</li>
+<li>API integration</li>
+<li>Recursive algorithms</li>
+<li>Multi-threading/concurrency</li>
+</ul>
+
+<h3>C.2 — Code with Commentary</h3>
+<p>Include key sections of code with inline commentary explaining:</p>
+<ul>
+<li>What the code does</li>
+<li>Why you chose this approach</li>
+<li>How it relates to your design</li>
+</ul>
+
+<h3>C.3 — Video Evidence</h3>
+<p>A 5–7 minute video demonstrating your solution. The video must:</p>
+<ul>
+<li>Show the program running</li>
+<li>Demonstrate each success criterion being met</li>
+<li>Include narration explaining what is happening</li>
+<li>Be clear and well-paced</li>
+</ul>
+
+<h2>6. Criterion D: Evaluation (4 marks)</h2>
+
+<h3>D.1 — Testing Against Success Criteria</h3>
+<p>Show evidence that each success criterion was tested. Use screenshots, test data, and results.</p>
+
+<h3>D.2 — Client Feedback</h3>
+<p>Include direct feedback from your client. This can be:</p>
+<ul>
+<li>Written evaluation</li>
+<li>Email response</li>
+<li>Meeting notes</li>
+<li>Audio/video recording</li>
+</ul>
+
+<h3>D.3 — Future Improvements</h3>
+<p>Identify at least two realistic improvements that could be made with more time/resources.</p>
+
+<h2>7. Common IA Pitfalls</h2>
+<table>
+<tr><th>Pitfall</th><th>Why It Fails</th><th>How to Avoid</th></tr>
+<tr><td>Fake client</td><td>IB moderators can detect invented clients</td><td>Choose a real person; document all contact</td></tr>
+<tr><td>Trivial problem</td><td>Insufficient complexity for 12-mark Criterion C</td><td>Ensure problem requires multiple features and complex techniques</td></tr>
+<tr><td>No client consultation evidence</td><td>Criterion A and D require proof of interaction</td><td>Save all emails, meeting notes, photos</td></tr>
+<tr><td>Success criteria too vague</td><td>Cannot be tested or evaluated</td><td>Use numbers, times, quantities</td></tr>
+<tr><td>Video too long or unclear</td><td>Moderator cannot verify functionality</td><td>Script the video; keep to 7 minutes; show each criterion clearly</td></tr>
+<tr><td>Design after coding</td><td>Design must precede development</td><td>Complete design before writing code</td></tr>
+</table>
+
+<h2>8. IA Exemplar Outline (Grade 7)</h2>
+<p><strong>Client:</strong> PE Department Head</p>
+<p><strong>Problem:</strong> Managing sports equipment loans, tracking condition, generating maintenance alerts</p>
+<p><strong>Solution:</strong> Equipment inventory system with barcode scanning, loan tracking, automated maintenance scheduling</p>
+<p><strong>Complex Techniques:</strong></p>
+<ul>
+<li>File I/O with CSV parsing (structured data handling)</li>
+<li>Binary search for equipment lookup (efficient searching)</li>
+<li>Object-oriented design (Equipment, Loan, User classes)</li>
+</ul>
+
+<h2>9. EAL Support for IA</h2>
+<table>
+<tr><th>Challenge</th><th>Support Provided</th></tr>
+<tr><td>Writing in academic English</td><td>Bilingual templates; sentence starters; peer review with fluent English speakers</td></tr>
+<tr><td>Understanding command terms</td><td>Bilingual glossary of IA-specific terms; exemplar annotations</td></tr>
+<tr><td>Client communication</td><td>Permission to conduct consultations in L1; translation of key documents permitted</td></tr>
+<tr><td>Technical vocabulary</td><td>Bilingual code commentary template; pre-translated common phrases</td></tr>
+</table>
+
+<div class="checklist">
+<strong>IA Final Submission Checklist:</strong>
+<ul>
+<li>☐ Criterion A: Planning (client, problem, rationale, success criteria, record of tasks)</li>
+<li>☐ Criterion B: Design (record of tasks, system overview, algorithms, test plan)</li>
+<li>☐ Criterion C: Development (complex techniques, commented code, video evidence)</li>
+<li>☐ Criterion D: Evaluation (testing evidence, client feedback, future improvements)</li>
+<li>☐ Word count checked (no maximum, but quality over quantity)</li>
+<li>☐ Video uploaded and link working</li>
+<li>☐ File naming follows IB requirements</li>
+<li>☐ Coversheet completed</li>
+<li>☐ Teacher has reviewed draft and given feedback</li>
+</ul>
+</div>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | IA Guide</p>
+
+</body>
+</html>

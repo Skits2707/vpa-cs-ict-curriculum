@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — Topic 4: Computational Thinking (Weeks 10–18)</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+</style>
+</head>
+<body>
+
+<h1>Topic 4: Computational Thinking <span class="bilingual">计算思维 Jìsuàn Sīwéi</span></h1>
+<p><strong>IB Syllabus:</strong> Topic 4 (4.1–4.4) | <strong>Level:</strong> SL + HL | <strong>Duration:</strong> 9 weeks (30 hours)</p>
+
+<h2>Topic 4.1: Programming Fundamentals <span class="bilingual">编程基础 Biānchéng Jīchǔ</span></h2>
+
+<h3>Week 10 — Pseudocode and Variables <span class="bilingual">伪代码与变量 Wěi Dàimǎ yǔ Biànliàng</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th><th>Differentiation</th></tr>
+<tr><td>1</td><td>IB pseudocode conventions; variables, constants, data types (integer, real, boolean, string, char) <span class="bilingual">(伪代码, 变量, 常量)</span></td><td>Write pseudocode for simple calculations; identify errors</td><td>Bronze: Fill gaps; Silver: Write from scratch; Gold: Validate input</td></tr>
+<tr><td>2</td><td>Operators: arithmetic (+, −, *, /, MOD, DIV), relational, logical</td><td>Evaluate expressions; predict outputs</td><td>Bronze: Integer arithmetic; Silver: Mixed types; Gold: Complex boolean</td></tr>
+<tr><td>3</td><td>Selection: IF...THEN...ELSE...ENDIF; nested IF; CASE <span class="bilingual">(选择结构, 条件语句)</span></td><td>Write grade calculator; letter classification</td><td>Bronze: Single IF; Silver: Nested; Gold: CASE with multiple conditions</td></tr>
+<tr><td>4</td><td>Iteration: FOR, WHILE, REPEAT...UNTIL; loop control; infinite loops <span class="bilingual">(循环, 迭代)</span></td><td>Sum of series; factorial; validate input with loop</td><td>Bronze: FOR loop; Silver: WHILE with condition; Gold: Nested loops</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> Is pseudocode a language? Does it have rules, meaning, and truth values like natural language?</td><td>Discussion; compare pseudocode to recipe, mathematical notation, poetry</td><td>All: Contribute; Gold: Reference philosophy of language</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> Pseudocode occupies a space between natural language and formal programming languages. When we write pseudocode, are we creating a precise set of instructions, or are we merely suggesting an approach? Can pseudocode be "wrong," or is it too informal to have truth values?
+</div>
+
+<h3>Week 11 — Arrays and Strings <span class="bilingual">数组与字符串 Shùzǔ yǔ Zìfúchuàn</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>One-dimensional arrays: declaration, indexing, traversal <span class="bilingual">(数组, 索引)</span></td><td>Store and display temperatures; calculate average</td></tr>
+<tr><td>2</td><td>Two-dimensional arrays: rows, columns, nested loops for traversal</td><td>Matrix operations; game board representation</td></tr>
+<tr><td>3</td><td>String operations: length, substring, concatenation, ASCII/Unicode comparison</td><td>Palindrome checker; password validator</td></tr>
+<tr><td>4</td><td>File handling: open, read, write, close; CSV parsing <span class="bilingual">(文件处理)</span></td><td>Read student data from file; calculate statistics</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Programming exercises (3 problems, 45 minutes)</td><td>Timed coding; peer review</td></tr>
+</table>
+
+<h3>Week 12 — Sub-programs and Parameters <span class="bilingual">子程序与参数 Zǐchéngxù yǔ Cānshù</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Procedures and functions: definition, call, return <span class="bilingual">(过程, 函数)</span></td><td>Refactor code into functions; identify benefits</td></tr>
+<tr><td>2</td><td>Parameters: value vs reference passing; local vs global scope</td><td>Trace programs with parameter passing; predict outputs</td></tr>
+<tr><td>3</td><td>Built-in functions: mathematical, string, random; library usage</td><td>Documentation reading; use unfamiliar library</td></tr>
+<tr><td>4</td><td>Modular design: cohesion, coupling, information hiding</td><td>Evaluate code modules for quality</td></tr>
+<tr><td>5</td><td><strong>IA Application:</strong> Plan modular structure for your IA project</td><td>Diagram modules; define interfaces</td></tr>
+</table>
+
+<h2>Topic 4.2: Data Structures <span class="bilingual">数据结构 Shùjù Jiégòu</span></h2>
+
+<h3>Week 13 — Collections and Records <span class="bilingual">集合与记录 Jíhé yǔ Jìlù</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th><th>Differentiation</th></tr>
+<tr><td>1</td><td>Records: composite data types, fields, arrays of records <span class="bilingual">(记录, 字段)</span></td><td>Define student record; array of students</td><td>Bronze: Define record; Silver: Array of records; Gold: Search by field</td></tr>
+<tr><td>2</td><td>Lists/Collections: dynamic sizing, adding, removing, searching <span class="bilingual">(集合, 列表)</span></td><td>Implement playlist manager; shopping list</td><td>Bronze: Add/remove; Silver: Search; Gold: Sort collection</td></tr>
+<tr><td>3</td><td>Stacks: LIFO, push, pop, peek, isEmpty; applications (undo, back button) <span class="bilingual">(栈)</span></td><td>Simulate stack with array; bracket checker</td><td>Bronze: Trace operations; Silver: Implement; Gold: Evaluate expressions</td></tr>
+<tr><td>4</td><td>Queues: FIFO, enqueue, dequeue, circular queue; applications (print spool, buffering) <span class="bilingual">(队列)</span></td><td>Simulate queue; supermarket checkout model</td><td>Bronze: Trace; Silver: Implement; Gold: Priority queue discussion</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Data structures implementation test (30 marks)</td><td>Write pseudocode for stack/queue operations</td><td>All: Core operations; Gold: Error handling</td></tr>
+</table>
+
+<h2>Topic 4.3: Algorithms <span class="bilingual">算法 Suànfǎ</span></h2>
+
+<h3>Week 14 — Searching Algorithms <span class="bilingual">搜索算法 Sōusuǒ Suànfǎ</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Linear search: algorithm, trace, best/average/worst case <span class="bilingual">(线性搜索)</span></td><td>Trace on small arrays; implement in pseudocode</td></tr>
+<tr><td>2</td><td>Binary search: precondition, algorithm, trace; comparison to linear</td><td>Play "guess the number"; trace binary search tree</td></tr>
+<tr><td>3</td><td>Algorithm efficiency: Big O notation introduction (HL depth)</td><td>Compare O(n) vs O(log n) graphically</td></tr>
+<tr><td>4</td><td>Trace tables: constructing and using to verify algorithm correctness <span class="bilingual">(追踪表)</span></td><td>Complete trace tables for given algorithms</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> Is efficiency a property of an algorithm itself, or only of its implementation? Can we know an algorithm is optimal?</td><td>Discussion; link to P vs NP</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> We say binary search is "more efficient" than linear search. But efficiency depends on sorted data. Is the claim "binary search is better" an absolute truth, or is it relative to assumptions about the world? How do hidden assumptions shape what we claim to know in computer science?
+</div>
+
+<h3>Week 15 — Sorting Algorithms <span class="bilingual">排序算法 Páixù Suànfǎ</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th><th>Differentiation</th></tr>
+<tr><td>1</td><td>Bubble sort: algorithm, trace, optimisation (flag), complexity <span class="bilingual">(冒泡排序)</span></td><td>Sort cards manually; trace pseudocode</td><td>All: Trace; Gold: Prove O(n²) worst case</td></tr>
+<tr><td>2</td><td>Selection sort: algorithm, trace, comparison to bubble</td><td>Implement; compare number of swaps</td><td>All: Implement; Gold: Analyse swap efficiency</td></tr>
+<tr><td>3</td><td>Insertion sort: algorithm, trace; when it performs well</td><td>Sort a hand of cards; trace</td><td>All: Trace; Gold: Best case O(n) analysis</td></tr>
+<tr><td>4</td><td>Merge sort: divide and conquer, recursion preview (HL); quick sort mention</td><td>Trace merge sort; watch visualisation</td><td>Bronze: Understand divide/conquer; Silver: Trace; Gold: Implement recursively</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Sorting algorithm comparison essay (8 marks)</td><td>Timed writing; peer assessment</td><td>All: Complete; Gold: Reference stability and adaptivity</td></tr>
+</table>
+
+<h3>Week 16 — Recursion <span class="bilingual">递归 Dìguī</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Recursion concept: base case, recursive case, call stack <span class="bilingual">(递归, 基本情况, 递归情况)</span></td><td>Factorial; trace call stack</td></tr>
+<tr><td>2</td><td>Recursive algorithms: Fibonacci, binary search recursively</td><td>Implement; trace; compare iterative versions</td></tr>
+<tr><td>3</td><td>Advantages and disadvantages of recursion; stack overflow risk</td><td>Debate: when to use recursion vs iteration</td></tr>
+<tr><td>4</td><td>Backtracking introduction: maze solving, N-queens (HL enrichment)</td><td>Paper-based maze backtracking</td></tr>
+<tr><td>5</td><td><strong>IA Application:</strong> Identify algorithms needed for IA project</td><td>Algorithm design document</td></tr>
+</table>
+
+<h2>Topic 4.4: Software Development <span class="bilingual">软件开发 Ruǎnjiàn Kāifā</span></h2>
+
+<h3>Week 17 — Testing and Debugging <span class="bilingual">测试与调试 Cèshì yǔ Tiáoshì</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Testing types: black-box, white-box, unit, integration, system, acceptance <span class="bilingual">(黑盒测试, 白盒测试)</span></td><td>Design test cases for a simple program</td></tr>
+<tr><td>2</td><td>Test data: normal, boundary, erroneous/invalid <span class="bilingual">(正常/边界/错误数据)</span></td><td>Generate test data sets; justify choices</td></tr>
+<tr><td>3</td><td>Debugging techniques: trace tables, breakpoints, watch variables, rubber ducking</td><td>Debug intentionally buggy code</td></tr>
+<tr><td>4</td><td>Documentation: internal comments, external user guide, technical manual</td><td>Write documentation for a given program</td></tr>
+<tr><td>5</td><td><strong>IA Application:</strong> Plan testing strategy for IA; draft test plan table</td><td>Test plan with normal, boundary, invalid cases</td></tr>
+</table>
+
+<h3>Week 18 — Topic 4 Review and Semester 2 Examination</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Revision: Programming constructs and trace tables</td><td>Flashcard relay; trace table races</td></tr>
+<tr><td>2</td><td>Revision: Sorting, searching, recursion</td><td>Algorithm card sort; complexity matching</td></tr>
+<tr><td>3</td><td><strong>Semester 2 Examination</strong> (Paper 2 mock, 1h30, SL/HL combined)</td><td>Formal conditions</td></tr>
+<tr><td>4</td><td>Examination feedback; IA development check</td><td>DIRT; IA progress review</td></tr>
+<tr><td>5</td><td>Semester roundup; Year 2 preview</td><td>Goal setting; celebrate IA milestones</td></tr>
+</table>
+
+<h2>Key Vocabulary (Topic 4)</h2>
+<table>
+<tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+<tr><td>Pseudocode</td><td>伪代码</td><td>wěi dàimǎ</td><td>A structured, language-independent description of an algorithm</td></tr>
+<tr><td>Variable</td><td>变量</td><td>biànliàng</td><td>A named storage location whose value can change</td></tr>
+<tr><td>Array</td><td>数组</td><td>shùzǔ</td><td>A collection of elements of the same type, indexed by position</td></tr>
+<tr><td>Iteration</td><td>迭代/循环</td><td>diédài / xúnhuán</td><td>Repeating a set of instructions until a condition is met</td></tr>
+<tr><td>Recursion</td><td>递归</td><td>dìguī</td><td>A function calling itself with a simpler version of the problem</td></tr>
+<tr><td>Algorithm</td><td>算法</td><td>suànfǎ</td><td>A step-by-step procedure for solving a problem</td></tr>
+<tr><td>Efficiency</td><td>效率</td><td>xiàolǜ</td><td>A measure of resource usage (time/space) by an algorithm</td></tr>
+<tr><td>Trace table</td><td>追踪表</td><td>zhuīzōng biǎo</td><td>A table showing variable values at each step of an algorithm</td></tr>
+<tr><td>Black-box testing</td><td>黑盒测试</td><td>hēi hé cèshì</td><td>Testing without knowledge of internal code structure</td></tr>
+<tr><td>White-box testing</td><td>白盒测试</td><td>bái hé cèshì</td><td>Testing with knowledge of internal code structure</td></tr>
+</table>
+
+<div class="checklist">
+<strong>Teacher Checklist — End of Topic 4:</strong>
+<ul>
+<li>☐ All IB 4.1–4.4 syllabus points covered</li>
+<li>☐ Students can write pseudocode fluently</li>
+<li>☐ Students can construct and use trace tables</li>
+<li>☐ Sorting and searching algorithms understood and compared</li>
+<li>☐ IA test plans drafted</li>
+<li>☐ TOK discussions documented</li>
+</ul>
+</div>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | Topic 4 Scheme of Work</p>
+
+</body>
+</html>

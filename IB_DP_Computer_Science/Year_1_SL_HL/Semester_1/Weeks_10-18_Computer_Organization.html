@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — Topic 2: Computer Organization (Weeks 10–18)</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+</style>
+</head>
+<body>
+
+<h1>Topic 2: Computer Organization <span class="bilingual">计算机组成 Jìsuànjī Zǔchéng</span></h1>
+<p><strong>IB Syllabus:</strong> Topic 2 (2.1–2.5) | <strong>Level:</strong> SL + HL | <strong>Duration:</strong> 9 weeks (30 hours)</p>
+
+<h2>Topic 2.1: Computer Architecture <span class="bilingual">计算机体系结构 Jìsuànjī Tǐxì Jiégòu</span></h2>
+
+<h3>Week 10 — CPU Components <span class="bilingual">CPU组件 CPU Zǔjiàn</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th><th>Differentiation</th></tr>
+<tr><td>1</td><td>The CPU: ALU, CU, registers (PC, IR, MAR, MDR, ACC) <span class="bilingual">(算术逻辑单元, 控制单元, 寄存器)</span></td><td>Label CPU diagram; match register to function</td><td>Bronze: Label diagram; Silver: Explain function; Gold: Trace data flow during execution</td></tr>
+<tr><td>2</td><td>The Fetch-Decode-Execute (FDE) cycle <span class="bilingual">(取指-译码-执行周期)</span></td><td>Step-through animation; manual trace on worksheet</td><td>Bronze: Identify stages; Silver: Describe each stage; Gold: Explain interrupt handling</td></tr>
+<tr><td>3</td><td>FDE cycle continued: role of each register at each stage</td><td>Trace table: show register contents cycle by cycle</td><td>Scaffolded trace tables with varying detail</td></tr>
+<tr><td>4</td><td>Bus systems: data bus, address bus, control bus <span class="bilingual">(总线 zǒngxiàn)</span></td><td>Calculate address bus width from memory capacity</td><td>Bronze: Identify buses; Silver: Calculate width; Gold: Discuss bottleneck implications</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> Is the CPU a model of human thought, or is it a fundamentally different kind of processor?</td><td>Discussion + written reflection</td><td>All: Contribute; Gold: Reference cognitive science</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> The Fetch-Decode-Execute cycle is a mechanistic description of how computers "think." To what extent does this mechanical process illuminate—or obscure—what it means to "process information"? Can a machine truly "understand" what it processes?
+</div>
+
+<h3>Week 11 — Memory and the Stored Program Concept</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Von Neumann architecture: stored program concept, sequential execution <span class="bilingual">(冯·诺依曼架构, 存储程序概念)</span></td><td>Compare Von Neumann to Harvard architecture</td></tr>
+<tr><td>2</td><td>Machine code vs assembly language vs high-level languages</td><td>Translate a simple program through all three levels</td></tr>
+<tr><td>3</td><td>Interrupts: purpose, interrupt service routine, vectored interrupts</td><td>Scenario: handle multiple interrupt sources</td></tr>
+<tr><td>4</td><td>Clock speed, word length, cores, cache size: impact on performance</td><td>Compare CPUs using specification sheets; justify purchase</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> CPU architecture quiz (20 marks, 25 minutes)</td><td>Timed quiz; instant feedback</td></tr>
+</table>
+
+<h2>Topic 2.2: Memory and Storage <span class="bilingual">内存与存储 Nèicún yǔ Cúnchǔ</span></h2>
+
+<h3>Week 12 — Primary Memory <span class="bilingual">主存储器 Zhǔ Cúnchǔ Qì</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>RAM: DRAM, SRAM, volatile memory <span class="bilingual">(随机存取存储器)</span></td><td>Compare RAM types; explain why RAM is volatile</td></tr>
+<tr><td>2</td><td>ROM: Mask ROM, PROM, EPROM, EEPROM, BIOS <span class="bilingual">(只读存储器)</span></td><td>Research: what is stored in your computer's BIOS?</td></tr>
+<tr><td>3</td><td>Cache memory: L1, L2, L3; spatial and temporal locality</td><td>Analogy exercise: cache as desk, RAM as bookshelf, HDD as library</td></tr>
+<tr><td>4</td><td>Virtual memory: paging, page fault, thrashing <span class="bilingual">(虚拟内存, 分页)</span></td><td>Simulate paging with physical counters; observe thrashing</td></tr>
+<tr><td>5</td><td><strong>Consolidation:</strong> Memory hierarchy poster task</td><td>Create visual hierarchy with speed, capacity, cost per bit</td></tr>
+</table>
+
+<h3>Week 13 — Secondary Storage <span class="bilingual">辅助存储器 Fǔzhù Cúnchǔ Qì</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Magnetic storage: HDD structure, platters, read/write heads, seek time, latency <span class="bilingual">(硬盘 yìngpán)</span></td><td>Calculate average access time; discuss fragmentation</td></tr>
+<tr><td>2</td><td>Optical storage: CD, DVD, Blu-ray; reflective layers, pit/land</td><td>Compare capacities and use cases</td></tr>
+<tr><td>3</td><td>Solid-state storage: flash memory, NAND, SSD advantages/disadvantages</td><td>Debate: SSD vs HDD for different applications</td></tr>
+<tr><td>4</td><td>Emerging storage: MRAM, optical holographic, DNA storage (HL discussion)</td><td>Research presentation on future storage</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Memory and storage comparison table (graded for accuracy and completeness)</td><td>Individual submission</td></tr>
+</table>
+
+<h2>Topic 2.3: Operating Systems and Application Software <span class="bilingual">操作系统与应用软件 Cāozuò Xìtǒng yǔ Yìngyòng Ruǎnjiàn</span></h2>
+
+<h3>Week 14 — Operating Systems <span class="bilingual">操作系统 Cāozuò Xìtǒng</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>OS functions: user interface, memory management, peripheral management, multitasking, security <span class="bilingual">(操作系统功能)</span></td><td>Map OS functions to user experiences</td></tr>
+<tr><td>2</td><td>Types of OS: batch, real-time, distributed, embedded, multi-user</td><td>Classify OS examples; justify classification</td></tr>
+<tr><td>3</td><td>Application software: general-purpose, specialist, custom-written, utility software</td><td>Audit software on a lab computer; categorise each</td></tr>
+<tr><td>4</td><td>Software licensing: proprietary, open source, freeware, shareware, EULA <span class="bilingual">(软件许可 ruǎnjiàn xǔkě)</span></td><td>Ethical discussion: piracy, FOSS, digital rights</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> Is software "real" in the same way hardware is? What kind of existence does code have?</td><td>Philosophy of software discussion</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> Software controls hardware, yet software itself is intangible—a pattern of 1s and 0s. In what sense can something non-physical <em>cause</em> physical effects? Does this challenge our standard categories of existence?
+</div>
+
+<h2>Topic 2.4: Binary Representation <span class="bilingual">二进制表示 Èrjìnzhì Biǎoshì</span></h2>
+
+<h3>Week 15 — Number Systems <span class="bilingual">数制系统 Shùzhì Xìtǒng</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th><th>Differentiation</th></tr>
+<tr><td>1</td><td>Binary, denary, hexadecimal: conversion between all three <span class="bilingual">(二进制, 十进制, 十六进制)</span></td><td>Conversion drills; bingo</td><td>Bronze: Binary↔Denary; Silver: +Hex; Gold: Fractional binary</td></tr>
+<tr><td>2</td><td>Binary addition and overflow; two's complement representation <span class="bilingual">(补码 bǔmǎ)</span></td><td>Binary addition race; detect overflow</td><td>Bronze: Positive numbers; Silver: Two's complement; Gold: Subtraction via addition</td></tr>
+<tr><td>3</td><td>Binary shifts: logical and arithmetic; multiplication/division by powers of 2</td><td>Worksheet: predict result of shifts</td><td>Bronze: Left shift; Silver: Right shift; Gold: Arithmetic shift with sign preservation</td></tr>
+<tr><td>4</td><td>Floating-point representation: mantissa and exponent, normalisation <span class="bilingual">(浮点数 fúdiǎn shù)</span></td><td>Convert denary to normalised floating-point</td><td>Bronze: Understand concept; Silver: 8-bit conversions; Gold: Discuss precision trade-offs</td></tr>
+<tr><td>5</td><td>Truncation errors, rounding errors, underflow, overflow <span class="bilingual">(截断错误 jiéduàn cuòwù)</span></td><td>Calculate errors in given examples; discuss real-world consequences</td><td>All: Calculate; Gold: Research Patriot missile / Ariane 5 case studies</td></tr>
+</table>
+
+<h3>Week 16 — Data Representation <span class="bilingual">数据表示 Shùjù Biǎoshì</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Character encoding: ASCII, Unicode (UTF-8, UTF-16) <span class="bilingual">(字符编码 zìfú biānmǎ)</span></td><td>Encode/decode messages; explore Unicode for Chinese characters</td></tr>
+<tr><td>2</td><td>Colour representation: RGB, bit depth, resolution; bitmap vs vector</td><td>Calculate file size of images; compare formats</td></tr>
+<tr><td>3</td><td>Sound representation: sampling rate, bit depth, Nyquist theorem; MIDI</td><td>Calculate audio file sizes; discuss compression</td></tr>
+<tr><td>4</td><td>Data compression: lossy vs lossless; RLE, Huffman coding (HL)</td><td>Compress text using RLE; compare before/after</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Binary calculations test (30 marks, 40 minutes)</td><td>Timed test; peer marking</td></tr>
+</table>
+
+<h2>Topic 2.5: Simple Logic Gates <span class="bilingual">基本逻辑门 Jīběn Luójí Mén</span></h2>
+
+<h3>Week 17 — Boolean Logic <span class="bilingual">布尔逻辑 Bù'ěr Luójí</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th><th>Differentiation</th></tr>
+<tr><td>1</td><td>Logic gates: AND, OR, NOT; symbols, truth tables <span class="bilingual">(与门, 或门, 非门)</span></td><td>Build truth tables; match symbols to names</td><td>Bronze: Complete given tables; Silver: Construct from description; Gold: Simplify expressions</td></tr>
+<tr><td>2</td><td>NAND, NOR, XOR, XNOR <span class="bilingual">(与非门, 或非门, 异或门)</span></td><td>Complete all 7 truth tables; identify from timing diagrams</td><td>Bronze: 3 basic gates; Silver: All 7; Gold: Universal gate proofs</td></tr>
+<tr><td>3</td><td>Constructing logic circuits from Boolean expressions</td><td>Draw circuit diagrams; use logic simulator software</td><td>Bronze: 2-gate circuits; Silver: 3-4 gates; Gold: Multi-level optimisation</td></tr>
+<tr><td>4</td><td>Deriving Boolean expressions from truth tables (sum of products)</td><td>Given a scenario, create truth table, expression, circuit</td><td>Scaffolded worksheets</td></tr>
+<tr><td>5</td><td>Simple logic applications: half-adder, full-adder (HL), security system design</td><td>Design a 2-floor burglar alarm system</td><td>All: Participate; Gold: Design full-adder and explain carry propagation</td></tr>
+</table>
+
+<h3>Week 18 — Topic 2 Review and Semester 1 Examination</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Revision: Computer architecture and memory hierarchy</td><td>Flashcard relay; concept connections</td></tr>
+<tr><td>2</td><td>Revision: Binary representation and logic gates</td><td>Calculation practice; circuit design challenge</td></tr>
+<tr><td>3</td><td><strong>Semester 1 Examination</strong> (Paper 1 mock, SL 1h30 / HL 2h10)</td><td>Formal examination conditions</td></tr>
+<tr><td>4</td><td>Examination feedback and DIRT (Dedicated Improvement Reflection Time)</td><td>Markscheme analysis; target setting</td></tr>
+<tr><td>5</td><td>Semester 1 roundup; IA client proposal check</td><td>Submit IA client proposal draft; celebrate progress</td></tr>
+</table>
+
+<h2>Key Vocabulary (Topic 2)</h2>
+<table>
+<tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+<tr><td>CPU</td><td>中央处理器</td><td>zhōngyāng chǔlǐ qì</td><td>The main processing unit of a computer; executes instructions</td></tr>
+<tr><td>ALU</td><td>算术逻辑单元</td><td>suànshù luójí dānyuán</td><td>Performs arithmetic and logical operations</td></tr>
+<tr><td>Register</td><td>寄存器</td><td>jìcúnqì</td><td>High-speed storage locations within the CPU</td></tr>
+<tr><td>Bus</td><td>总线</td><td>zǒngxiàn</td><td>A communication pathway for data between components</td></tr>
+<tr><td>RAM</td><td>随机存取存储器</td><td>suíjī cúnqǔ cúnchǔ qì</td><td>Volatile primary memory for currently running programs</td></tr>
+<tr><td>ROM</td><td>只读存储器</td><td>zhǐdú cúnchǔ qì</td><td>Non-volatile memory containing permanent instructions</td></tr>
+<tr><td>Cache</td><td>高速缓存</td><td>gāosù huǎncún</td><td>Fast memory between CPU and RAM for frequently used data</td></tr>
+<tr><td>Virtual memory</td><td>虚拟内存</td><td>xūnǐ nèicún</td><td>Using disk space to extend apparent RAM capacity</td></tr>
+<tr><td>Two's complement</td><td>补码</td><td>bǔmǎ</td><td>A method for representing signed integers in binary</td></tr>
+<tr><td>Logic gate</td><td>逻辑门</td><td>luójí mén</td><td>An electronic circuit performing a Boolean function</td></tr>
+<tr><td>Mantissa</td><td>尾数</td><td>wěishù</td><td>The significant digits in a floating-point number</td></tr>
+<tr><td>Exponent</td><td>指数</td><td>zhǐshù</td><td>The power to which the base is raised in floating-point</td></tr>
+<tr><td>Interrupt</td><td>中断</td><td>zhōngduàn</td><td>A signal suspending current processing for urgent handling</td></tr>
+<tr><td>Word length</td><td>字长</td><td>zìcháng</td><td>The number of bits processed by the CPU in one operation</td></tr>
+</table>
+
+<div class="checklist">
+<strong>Teacher Checklist — End of Topic 2:</strong>
+<ul>
+<li>☐ All IB 2.1–2.5 syllabus points covered</li>
+<li>☐ Binary calculations practised to fluency</li>
+<li>☐ Logic gate truth tables memorised</li>
+<li>☐ TOK connections documented</li>
+<li>☐ IA client proposals submitted and approved</li>
+<li>☐ Semester 1 examination sat and reviewed</li>
+</ul>
+</div>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | Topic 2 Scheme of Work</p>
+
+</body>
+</html>

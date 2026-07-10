@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A2 Level Computer Science — Semester 1 Assessment Pack | Victoria Park Academy</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #1a5276; margin-top: 30px; border-bottom: 2px solid #ddd; padding-bottom: 8px; }
+  h3 { color: #2874a6; margin-top: 25px; }
+  h4 { color: #555; margin-top: 20px; }
+  .bilingual { background: #f9f9f9; border-left: 4px solid #1a5276; padding: 8px 12px; margin: 8px 0; font-style: italic; }
+  .bronze { background: #fdf2e9; border-left: 4px solid #e67e22; padding: 10px; margin: 10px 0; }
+  .silver { background: #eaf2f8; border-left: 4px solid #3498db; padding: 10px; margin: 10px 0; }
+  .gold { background: #e8f8f5; border-left: 4px solid #1abc9c; padding: 10px; margin: 10px 0; }
+  .checklist { background: #fef9e7; border: 1px solid #f4d03f; padding: 12px; margin: 12px 0; border-radius: 4px; }
+  .checklist ul { list-style: none; padding-left: 0; }
+  .checklist li::before { content: "☐ "; color: #f4d03f; font-weight: bold; }
+  table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #1a5276; color: white; }
+  tr:nth-child(even) { background: #f9f9f9; }
+  .mark-scheme { background: #f5f5f5; padding: 12px; border-left: 4px solid #7f8c8d; margin: 10px 0; }
+  .grade-boundary { background: #eafaf1; padding: 12px; border: 1px solid #2ecc71; margin: 12px 0; border-radius: 4px; }
+  .exam-box { background: #fff3cd; border: 2px solid #ffc107; padding: 15px; margin: 15px 0; border-radius: 6px; }
+  .code-block { background: #2c3e50; color: #ecf0f1; padding: 12px; border-radius: 4px; font-family: 'Courier New', monospace; overflow-x: auto; margin: 10px 0; }
+  .answer-space { border: 1px dashed #999; min-height: 80px; padding: 10px; margin: 8px 0; background: #fafafa; }
+  .timer { font-weight: bold; color: #c0392b; }
+  .total-marks { font-weight: bold; color: #1a5276; font-size: 1.1em; }
+  .vpa-header { background: #1a5276; color: white; padding: 15px; text-align: center; margin-bottom: 20px; border-radius: 6px; }
+  .vpa-header h1 { color: white; border: none; padding: 0; margin: 0; }
+  .section-divider { border: none; height: 3px; background: linear-gradient(to right, #1a5276, #3498db, #1a5276); margin: 30px 0; }
+  .circuit-box { background: #f8f9fa; border: 1px solid #dee2e6; padding: 15px; margin: 10px 0; text-align: center; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<div class="vpa-header">
+  <h1>Victoria Park Academy</h1>
+  <p>A2 Level Computer Science — Semester 1 Assessment Pack</p>
+  <p>Academic Year 2024–2025</p>
+</div>
+
+<h1>A2 Level Computer Science — Semester 1 Assessment Pack</h1>
+
+<p class="total-marks">Total Assessment Marks: 180 (Quizzes 85 + Mock Exam 75 + Practical Investigation 20)</p>
+<p><strong>Assessment Weighting:</strong> Quizzes 35% | Mock Exam 40% | Practical Investigation 25%</p>
+
+<div class="bilingual">
+  <strong>A2 计算机科学 — 第一学期评估包 / A2 Computer Science — Semester 1 Assessment Pack</strong><br>
+  本评估包涵盖数据库、布尔逻辑、排序与验证、网络、硬件和人工智能。This assessment pack covers databases, Boolean logic, sorting and validation, networks, hardware, and artificial intelligence.
+</div>
+
+<hr class="section-divider">
+
+<h2>Assessment Calendar — Semester 1</h2>
+
+<table>
+  <tr><th>Week</th><th>Assessment</th><th>Topic</th><th>Marks</th><th>Duration</th><th>Format</th></tr>
+  <tr><td>Week 3</td><td>Quiz 1: Boolean &amp; Floating-Point</td><td>Boolean algebra, K-maps, IEEE 754</td><td>20</td><td>25 min</td><td>Closed-book</td></tr>
+  <tr><td>Week 6</td><td>Quiz 2: Networks &amp; Routing</td><td>TCP/IP, routing algorithms, DNS</td><td>20</td><td>25 min</td><td>Closed-book</td></tr>
+  <tr><td>Week 9</td><td>Formative Test: Weeks 1–8</td><td>Data Representation &amp; Communication</td><td>40</td><td>90 min</td><td>Closed-book</td></tr>
+  <tr><td>Week 11</td><td>Quiz 3: Hardware &amp; Adders</td><td>Logic circuits, half-adders, full-adders</td><td>20</td><td>25 min</td><td>Closed-book</td></tr>
+  <tr><td>Week 14</td><td>Quiz 4: System Software</td><td>Memory management, scheduling</td><td>20</td><td>25 min</td><td>Closed-book</td></tr>
+  <tr><td>Week 17</td><td>Quiz 5: AI &amp; Ethics</td><td>Expert systems, neural networks, ethics</td><td>20</td><td>25 min</td><td>Closed-book</td></tr>
+  <tr><td>Week 18</td><td>Mock Exam: Paper 1 Style</td><td>All Semester 1 topics</td><td>75</td><td>1h 45m</td><td>Closed-book</td></tr>
+</table>
+
+<div class="checklist">
+  <h4>EAL Support Checklist — Assessment Preparation</h4>
+  <ul>
+    <li>Bilingual glossary (80+ terms) provided 1 week before each assessment</li>
+    <li>Extra reading time: +5 minutes for 25-minute quizzes, +15 minutes for mock exam</li>
+    <li>Visual diagrams included for all hardware and network questions</li>
+    <li>Command words defined: define, explain, compare, evaluate, design, trace</li>
+    <li>Sentence starters provided for extended-answer questions</li>
+    <li>Oral explanation option available for practical demonstrations</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<h2>Quiz 1: Boolean Algebra &amp; Floating-Point (20 Marks, 25 Minutes)</h2>
+<p><strong>Topic Coverage:</strong> Boolean laws, De Morgan's, Karnaugh maps, IEEE 754 floating-point representation, normalisation, error calculation.</p>
+
+<h3>Question 1 — Boolean Simplification (6 marks)</h3>
+<p><strong>1.1</strong> Simplify the following Boolean expression using algebraic laws. Show each step clearly.</p>
+<div class="code-block">
+F = A·B + A·B' + A'·B
+</div>
+<p><em>(3 marks)</em></p>
+<div class="answer-space" style="min-height: 100px;"></div>
+
+<p><strong>1.2</strong> Use De Morgan's laws to simplify the expression below. Show your working.</p>
+<div class="code-block">
+F = (A + B)' · (A · B)'
+</div>
+<p><em>(3 marks)</em></p>
+<div class="answer-space" style="min-height: 100px;"></div>
+
+<h3>Question 2 — Karnaugh Map (6 marks)</h3>
+<p><strong>2.1</strong> A Boolean function has the following truth table:</p>
+<table>
+  <tr><th>A</th><th>B</th><th>C</th><th>F</th></tr>
+  <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+  <tr><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+  <tr><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+  <tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+  <tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+  <tr><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+  <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+  <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+</table>
+<p>Construct a 3-variable Karnaugh map and derive the minimal Sum-of-Products expression. <em>(4 marks)</em></p>
+<div class="answer-space" style="min-height: 150px;"></div>
+
+<p><strong>2.2</strong> Draw the logic circuit for your simplified expression using AND, OR, and NOT gates. <em>(2 marks)</em></p>
+<div class="answer-space" style="min-height: 100px;"></div>
+
+<h3>Question 3 — Floating-Point (5 marks)</h3>
+<p><strong>3.1</strong> Convert the denary number +6.5 to IEEE 754 single-precision floating-point format. Show all steps: binary conversion, normalisation, exponent with bias, and final 32-bit pattern. <em>(4 marks)</em></p>
+<div class="answer-space" style="min-height: 150px;"></div>
+
+<p><strong>3.2</strong> A floating-point representation uses 8 bits for the mantissa and 4 bits for the exponent (both two's complement). State the smallest positive normalised number that can be represented. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<h3>Question 4 — Error Calculation (3 marks)</h3>
+<p>A number is stored as 0.1010 × 2³ (4-bit mantissa). The exact value is 5.125.</p>
+<p><strong>4.1</strong> Calculate the absolute error. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+<p><strong>4.2</strong> Calculate the relative error as a percentage. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<div class="mark-scheme">
+  <h4>Mark Scheme — Quiz 1: Boolean &amp; Floating-Point</h4>
+  <p><strong>Q1 Boolean Simplification (6 marks)</strong></p>
+  <ul>
+    <li>1.1 F = A·B + A·B' + A'·B = A·(B + B') + A'·B = A·1 + A'·B = A + A'·B = A + B (1 mark per correct step, max 3)</li>
+    <li>1.2 F = (A + B)' · (A · B)' = A'·B' · (A' + B') = A'·B'·A' + A'·B'·B' = A'·B' + A'·B' = A'·B' (1 mark per correct step, max 3)</li>
+  </ul>
+  <p><strong>Q2 Karnaugh Map (6 marks)</strong></p>
+  <ul>
+    <li>2.1 Correct K-map populated (2 marks); correct grouping (1 mark); minimal SOP: F = B + C (1 mark)</li>
+    <li>2.2 OR gate with B and C as inputs (2 marks)</li>
+  </ul>
+  <p><strong>Q3 Floating-Point (5 marks)</strong></p>
+  <ul>
+    <li>3.1 6.5 = 110.1₂ = 1.101 × 2² (1 mark); sign = 0, exponent = 2 + 127 = 129 = 10000001₂ (1 mark); mantissa = 10100000000000000000000 (1 mark); final pattern assembled (1 mark)</li>
+    <li>3.2 0.10000000 × 2⁻⁷ (or equivalent) (1 mark)</li>
+  </ul>
+  <p><strong>Q4 Error (3 marks)</strong></p>
+  <ul>
+    <li>4.1 Stored value = 0.1010 × 2³ = 5.0; Absolute error = |5.125 − 5.0| = 0.125 (1 mark)</li>
+    <li>4.2 Relative error = 0.125 / 5.125 = 0.02439... ≈ 2.44% (2 marks)</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<h2>Quiz 2: Networks &amp; Routing (20 Marks, 25 Minutes)</h2>
+<p><strong>Topic Coverage:</strong> TCP/IP stack, routing algorithms (distance-vector, link-state, Dijkstra's), DNS, email protocols, HTML/CSS basics.</p>
+
+<h3>Question 1 — TCP/IP Protocol Stack (5 marks)</h3>
+<p><strong>1.1</strong> State the four layers of the TCP/IP model in order from highest to lowest. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>1.2</strong> For each layer, name one protocol that operates at that layer. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>1.3</strong> Explain the process of encapsulation as data moves from the application layer to the link layer. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<h3>Question 2 — Routing Algorithms (7 marks)</h3>
+<p><strong>2.1</strong> Explain the difference between distance-vector and link-state routing algorithms. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>2.2</strong> State one advantage of link-state routing over distance-vector routing. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>2.3</strong> Use Dijkstra's algorithm to find the shortest path from node A to all other nodes in the following network. Show your working in a table.</p>
+<table>
+  <tr><th>Edge</th><th>Weight</th></tr>
+  <tr><td>A–B</td><td>4</td></tr>
+  <tr><td>A–C</td><td>2</td></tr>
+  <tr><td>B–C</td><td>1</td></tr>
+  <tr><td>B–D</td><td>5</td></tr>
+  <tr><td>C–D</td><td>8</td></tr>
+  <tr><td>C–E</td><td>10</td></tr>
+  <tr><td>D–E</td><td>2</td></tr>
+</table>
+<p><em>(4 marks)</em></p>
+<div class="answer-space" style="min-height: 150px;"></div>
+
+<h3>Question 3 — DNS and Email (5 marks)</h3>
+<p><strong>3.1</strong> Explain the hierarchical structure of DNS, naming the levels from top to bottom. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>3.2</strong> Describe the difference between POP3 and IMAP for email retrieval. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>3.3</strong> State the purpose of an MX record in DNS. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<h3>Question 4 — HTML/CSS (3 marks)</h3>
+<p><strong>4.1</strong> Write the HTML code to create a heading "Welcome to VPA" and a paragraph describing the Computer Science department. <em>(2 marks)</em></p>
+<div class="answer-space" style="min-height: 80px;"></div>
+
+<p><strong>4.2</strong> Write CSS to make all paragraph text blue and 16 pixels in size. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<div class="mark-scheme">
+  <h4>Mark Scheme — Quiz 2: Networks &amp; Routing</h4>
+  <p><strong>Q1 TCP/IP (5 marks)</strong></p>
+  <ul>
+    <li>1.1 Application, Transport, Internet, Link (2 marks; 0.5 each)</li>
+    <li>1.2 One correct protocol per layer (2 marks; 0.5 each)</li>
+    <li>1.3 Each layer adds header information as data passes down (1 mark)</li>
+  </ul>
+  <p><strong>Q2 Routing (7 marks)</strong></p>
+  <ul>
+    <li>2.1 Distance-vector: routers share entire routing table with neighbours (1 mark); Link-state: routers share link information, each builds complete topology map (1 mark)</li>
+    <li>2.2 Any valid advantage: faster convergence, no count-to-infinity, more accurate (1 mark)</li>
+    <li>2.3 Correct Dijkstra's table (2 marks); correct shortest paths: A→B=3, A→C=2, A→D=7, A→E=9 (2 marks)</li>
+  </ul>
+  <p><strong>Q3 DNS &amp; Email (5 marks)</strong></p>
+  <ul>
+    <li>3.1 Root, TLD, authoritative, subdomain (2 marks; 0.5 each)</li>
+    <li>3.2 POP3 downloads and typically deletes emails from server (1 mark); IMAP keeps emails on server and syncs across devices (1 mark)</li>
+    <li>3.3 Specifies mail server responsible for accepting email on behalf of a domain (1 mark)</li>
+  </ul>
+  <p><strong>Q4 HTML/CSS (3 marks)</strong></p>
+  <ul>
+    <li>4.1 Correct &lt;h1&gt; and &lt;p&gt; tags with content (2 marks)</li>
+    <li>4.2 p { color: blue; font-size: 16px; } (1 mark)</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<h2>Quiz 3: Sorting, Validation &amp; Error Detection (20 Marks, 25 Minutes)</h2>
+<p><strong>Topic Coverage:</strong> Sorting algorithms (merge sort, quick sort), validation techniques, parity checking, checksums, Hamming codes.</p>
+
+<h3>Question 1 — Sorting Algorithms (8 marks)</h3>
+<p><strong>1.1</strong> Describe how merge sort works, including the divide and conquer approach. <em>(3 marks)</em></p>
+<div class="answer-space" style="min-height: 100px;"></div>
+
+<p><strong>1.2</strong> Trace merge sort on the array [8, 3, 6, 2, 7, 1, 5, 4]. Show the divide steps and the merge steps. <em>(4 marks)</em></p>
+<div class="answer-space" style="min-height: 150px;"></div>
+
+<p><strong>1.3</strong> State the time complexity of merge sort in the best, average, and worst cases. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<h3>Question 2 — Validation (6 marks)</h3>
+<p><strong>2.1</strong> A program accepts a student's age as input. Describe three different validation checks that could be applied. <em>(3 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>2.2</strong> Explain the difference between validation and verification. Give an example of each. <em>(3 marks)</em></p>
+<div class="answer-space"></div>
+
+<h3>Question 3 — Error Detection (6 marks)</h3>
+<p><strong>3.1</strong> A 7-bit Hamming code is used to protect a 4-bit data word. The data is 1011. Calculate the parity bits (even parity) and write the complete 7-bit code. Show your working. <em>(4 marks)</em></p>
+<div class="answer-space" style="min-height: 120px;"></div>
+
+<p><strong>3.2</strong> Explain why Hamming codes can detect and correct single-bit errors, whereas simple parity can only detect errors. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<div class="mark-scheme">
+  <h4>Mark Scheme — Quiz 3: Sorting, Validation &amp; Error Detection</h4>
+  <p><strong>Q1 Sorting (8 marks)</strong></p>
+  <ul>
+    <li>1.1 Divide array into halves recursively until single elements (1 mark); merge pairs in sorted order (1 mark); repeat merging until fully sorted (1 mark)</li>
+    <li>1.2 Correct divide tree (2 marks); correct merge steps showing sorted subarrays (2 marks)</li>
+    <li>1.3 O(n log n) for all cases (1 mark)</li>
+  </ul>
+  <p><strong>Q2 Validation (6 marks)</strong></p>
+  <ul>
+    <li>2.1 Any three valid checks: range (e.g., 0–120), type (integer), presence (not empty), format (numeric only), length (1–3 digits) (3 marks)</li>
+    <li>2.2 Validation ensures data is reasonable/allowed (1 mark); verification ensures data is correctly entered/transferred (1 mark); valid example of each (1 mark)</li>
+  </ul>
+  <p><strong>Q3 Error Detection (6 marks)</strong></p>
+  <ul>
+    <li>3.1 p1 covers positions 1,3,5,7; p2 covers 2,3,6,7; p4 covers 4,5,6,7 (1 mark); data at positions 3,5,6,7 = 1,0,1,1 (1 mark); p1=0, p2=1, p4=0 (1 mark); complete code: 0,1,1,0,0,1,1 (1 mark)</li>
+    <li>3.2 Hamming uses multiple parity bits covering overlapping groups (1 mark); can identify exact error position and flip bit; simple parity only detects odd number of errors (1 mark)</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<h2>Quiz 4: Networks &amp; Protocols (20 Marks, 25 Minutes)</h2>
+<p><strong>Topic Coverage:</strong> Network topologies, media access control, Ethernet, Wi-Fi, network security (firewalls, encryption, certificates), client-server vs peer-to-peer.</p>
+
+<h3>Question 1 — Network Topologies (5 marks)</h3>
+<p><strong>1.1</strong> Draw and label a star topology and a bus topology. <em>(2 marks)</em></p>
+<div class="answer-space" style="min-height: 100px;"></div>
+
+<p><strong>1.2</strong> Compare star and bus topologies in terms of reliability and cost. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>1.3</strong> State one advantage of a mesh topology over a star topology. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<h3>Question 2 — Network Security (7 marks)</h3>
+<p><strong>2.1</strong> Explain the purpose of a firewall in a network. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>2.2</strong> Distinguish between symmetric and asymmetric encryption. Give an example of when each would be used. <em>(3 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>2.3</strong> Explain how digital certificates are used to verify the identity of a website. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<h3>Question 3 — Client-Server vs P2P (5 marks)</h3>
+<p><strong>3.1</strong> Describe the client-server model of networking. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>3.2</strong> Describe the peer-to-peer (P2P) model of networking. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>3.3</strong> Give one advantage and one disadvantage of P2P compared to client-server. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<h3>Question 4 — Media Access Control (3 marks)</h3>
+<p><strong>4.1</strong> Explain how CSMA/CD works in Ethernet networks. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>4.2</strong> Explain why CSMA/CD is not needed in full-duplex switched Ethernet. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<div class="mark-scheme">
+  <h4>Mark Scheme — Quiz 4: Networks &amp; Protocols</h4>
+  <p><strong>Q1 Topologies (5 marks)</strong></p>
+  <ul>
+    <li>1.1 Correct diagrams with labels (2 marks)</li>
+    <li>1.2 Star: more reliable (single point of failure is central node), higher cost (more cable) (1 mark); Bus: less reliable (single cable failure), lower cost (1 mark)</li>
+    <li>1.3 Any valid advantage: multiple paths, no single point of failure, higher redundancy (1 mark)</li>
+  </ul>
+  <p><strong>Q2 Security (7 marks)</strong></p>
+  <ul>
+    <li>2.1 Monitors incoming/outgoing traffic (1 mark); blocks unauthorised access based on rules (1 mark)</li>
+    <li>2.2 Symmetric: same key for encryption and decryption, fast, used for bulk data (1 mark); Asymmetric: public/private key pair, slower, used for key exchange and digital signatures (1 mark); valid example of each (1 mark)</li>
+    <li>2.3 Certificate contains public key and identity signed by trusted CA (1 mark); browser verifies CA signature to confirm website identity (1 mark)</li>
+  </ul>
+  <p><strong>Q3 Models (5 marks)</strong></p>
+  <ul>
+    <li>3.1 Central server provides resources/services; clients request and receive (2 marks)</li>
+    <li>3.2 Each peer acts as both client and server; no central authority (2 marks)</li>
+    <li>3.3 Advantage: no single point of failure, scalable, lower infrastructure cost; Disadvantage: security concerns, inconsistent availability, harder to manage (1 mark for valid pair)</li>
+  </ul>
+  <p><strong>Q4 MAC (3 marks)</strong></p>
+  <ul>
+    <li>4.1 Listen before transmitting, detect collisions, back off and retry (2 marks)</li>
+    <li>4.2 Full-duplex uses separate channels for send/receive; no shared medium means no collisions (1 mark)</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<h2>Mock Exam: Paper 1 Style (75 Marks, 1 Hour 45 Minutes)</h2>
+<div class="exam-box">
+  <p><strong>Examination:</strong> A2 Level Computer Science — Paper 1 Mock</p>
+  <p><strong>Time Allowed:</strong> <span class="timer">1 hour 45 minutes</span></p>
+  <p><strong>Total Marks:</strong> <span class="total-marks">75</span></p>
+  <p><strong>Instructions:</strong> Answer ALL questions. Write your answers in the spaces provided. Calculators are permitted. Show all working for calculation questions.</p>
+</div>
+
+<h3>Section A: Short Answer (25 marks)</h3>
+
+<p><strong>Question 1 — Boolean Algebra (4 marks)</strong></p>
+<p><strong>1.1</strong> Simplify the following expression using Boolean algebra laws. Show each step.</p>
+<div class="code-block">
+F = (A + B) · (A + B')
+</div>
+<p><em>(2 marks)</em></p>
+<div class="answer-space" style="min-height: 80px;"></div>
+
+<p><strong>1.2</strong> Use a Karnaugh map to simplify the function F(A,B,C,D) = Σ(0,2,5,7,8,10,13,15). Show your K-map and the simplified expression. <em>(2 marks)</em></p>
+<div class="answer-space" style="min-height: 120px;"></div>
+
+<p><strong>Question 2 — Floating-Point (5 marks)</strong></p>
+<p><strong>2.1</strong> A floating-point number is stored with an 8-bit two's complement mantissa and a 4-bit two's complement exponent. The stored pattern is:</p>
+<div class="code-block">
+Mantissa: 0.1101000<br>
+Exponent: 0011
+</div>
+<p>Calculate the denary value. Show your working. <em>(3 marks)</em></p>
+<div class="answer-space" style="min-height: 100px;"></div>
+
+<p><strong>2.2</strong> Explain why normalisation is important in floating-point representation. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>Question 3 — Networking (5 marks)</strong></p>
+<p><strong>3.1</strong> Describe the function of the transport layer in the TCP/IP model. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>3.2</strong> Explain the difference between a router and a switch in a network. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>3.3</strong> State the purpose of the DNS protocol. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>Question 4 — Hardware (5 marks)</strong></p>
+<p><strong>4.1</strong> Draw the truth table for a full-adder. <em>(2 marks)</em></p>
+<div class="answer-space" style="min-height: 120px;"></div>
+
+<p><strong>4.2</strong> Explain how a ripple-carry adder is constructed from full-adders. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>4.3</strong> State one disadvantage of a ripple-carry adder compared to a carry-lookahead adder. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>Question 5 — System Software (6 marks)</strong></p>
+<p><strong>5.1</strong> Explain the difference between paging and segmentation in memory management. <em>(3 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>5.2</strong> A system uses paging with a page size of 1024 bytes. A logical address is 3075. Calculate the page number and offset. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>5.3</strong> Explain what happens during a page fault. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<h3>Section B: Structured Problem Solving (30 marks)</h3>
+
+<p><strong>Question 6 — Logic Circuit Design (8 marks)</strong></p>
+<p>A security system has three sensors: A (door), B (window), and C (motion). The alarm should sound when:</p>
+<ul>
+  <li>The door AND window are both triggered, OR</li>
+  <li>The motion sensor is triggered AND at least one of door or window is triggered</li>
+</ul>
+
+<p><strong>6.1</strong> Write the Boolean expression for the alarm output. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>6.2</strong> Simplify the expression using Boolean algebra or a Karnaugh map. <em>(3 marks)</em></p>
+<div class="answer-space" style="min-height: 100px;"></div>
+
+<p><strong>6.3</strong> Draw the logic circuit for the simplified expression using AND, OR, and NOT gates. <em>(3 marks)</em></p>
+<div class="answer-space" style="min-height: 120px;"></div>
+
+<p><strong>Question 7 — Dijkstra's Algorithm (8 marks)</strong></p>
+<p>The following weighted graph represents a network of routers:</p>
+<table>
+  <tr><th>Edge</th><th>Weight</th></tr>
+  <tr><td>A–B</td><td>2</td></tr>
+  <tr><td>A–C</td><td>6</td></tr>
+  <tr><td>B–C</td><td>3</td></tr>
+  <tr><td>B–D</td><td>1</td></tr>
+  <tr><td>C–D</td><td>4</td></tr>
+  <tr><td>C–E</td><td>5</td></tr>
+  <tr><td>D–E</td><td>3</td></tr>
+</table>
+
+<p><strong>7.1</strong> Use Dijkstra's algorithm to find the shortest path from A to E. Show your working in a table. <em>(5 marks)</em></p>
+<div class="answer-space" style="min-height: 150px;"></div>
+
+<p><strong>7.2</strong> State the shortest path and its total weight. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>7.3</strong> Explain why Dijkstra's algorithm is classified as a greedy algorithm. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>Question 8 — Memory Management (7 marks)</strong></p>
+<p>A computer has 64KB of physical memory and uses paging with 4KB pages. The page table for a process is:</p>
+<table>
+  <tr><th>Page</th><th>Frame</th><th>Valid</th></tr>
+  <tr><td>0</td><td>5</td><td>1</td></tr>
+  <tr><td>1</td><td>2</td><td>1</td></tr>
+  <tr><td>2</td><td>—</td><td>0</td></tr>
+  <tr><td>3</td><td>7</td><td>1</td></tr>
+</table>
+
+<p><strong>8.1</strong> How many frames are available in physical memory? <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>8.2</strong> Translate the following logical addresses to physical addresses, or state if a page fault occurs:</p>
+<ul>
+  <li>2048</li>
+  <li>8192</li>
+  <li>12288</li>
+</ul>
+<p><em>(4 marks)</em></p>
+<div class="answer-space" style="min-height: 120px;"></div>
+
+<p><strong>8.3</strong> Explain how virtual memory allows a process to use more memory than is physically available. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>Question 9 — CPU Scheduling (7 marks)</strong></p>
+<p>Four processes arrive at time 0 with the following burst times:</p>
+<table>
+  <tr><th>Process</th><th>Burst Time</th></tr>
+  <tr><td>P1</td><td>8</td></tr>
+  <tr><td>P2</td><td>4</td></tr>
+  <tr><td>P3</td><td>9</td></tr>
+  <tr><td>P4</td><td>5</td></tr>
+</table>
+
+<p><strong>9.1</strong> Draw the Gantt chart and calculate the average waiting time for FCFS scheduling. <em>(3 marks)</em></p>
+<div class="answer-space" style="min-height: 100px;"></div>
+
+<p><strong>9.2</strong> Draw the Gantt chart and calculate the average waiting time for SJF scheduling. <em>(3 marks)</em></p>
+<div class="answer-space" style="min-height: 100px;"></div>
+
+<p><strong>9.3</strong> State which algorithm gives the lower average waiting time and explain why. <em>(1 mark)</em></p>
+<div class="answer-space"></div>
+
+<h3>Section C: Extended Response (20 marks)</h3>
+
+<p><strong>Question 10 — Artificial Intelligence and Ethics (10 marks)</strong></p>
+<p>A local council is considering implementing an AI system to screen job applications. The system uses machine learning trained on historical hiring data to predict which candidates are most likely to succeed.</p>
+
+<p><strong>10.1</strong> Explain how a neural network could be trained to perform this classification task. <em>(4 marks)</em></p>
+<div class="answer-space" style="min-height: 150px;"></div>
+
+<p><strong>10.2</strong> Identify and explain three ethical concerns with using this AI system for hiring decisions. <em>(6 marks)</em></p>
+<div class="answer-space" style="min-height: 200px;"></div>
+
+<p><strong>Question 11 — System Design and Evaluation (10 marks)</strong></p>
+<p>A university wants to design a new student registration system that must handle 10,000 concurrent users during peak registration periods. The system must be secure, reliable, and scalable.</p>
+
+<p><strong>11.1</strong> Describe two hardware features that would improve the reliability of the system. <em>(2 marks)</em></p>
+<div class="answer-space"></div>
+
+<p><strong>11.2</strong> Explain how the system could use client-server architecture to support scalability. <em>(3 marks)</em></p>
+<div class="answer-space" style="min-height: 100px;"></div>
+
+<p><strong>11.3</strong> Evaluate the use of cloud computing versus on-premises infrastructure for this system. Your answer should consider cost, security, and scalability. <em>(5 marks)</em></p>
+<div class="answer-space" style="min-height: 150px;"></div>
+
+<div class="mark-scheme">
+  <h4>Mark Scheme — Mock Exam Paper 1</h4>
+  <p><strong>Section A (25 marks)</strong></p>
+  <ul>
+    <li>1.1 F = (A + B)·(A + B') = A + B·B' = A + 0 = A (1 mark per step, max 2)</li>
+    <li>1.2 Correct 4-variable K-map (1 mark); correct grouping (0.5 mark); simplified expression: F = B'D' + BD (0.5 mark)</li>
+    <li>2.1 Mantissa = 0.1101000 = +0.8125; Exponent = 0011 = +3; Value = 0.8125 × 2³ = 6.5 (1 mark per step, max 3)</li>
+    <li>2.2 Maximises precision by ensuring most significant bit is used (1 mark); ensures unique representation (1 mark)</li>
+    <li>3.1 Provides end-to-end communication (1 mark); TCP reliable/ordered, UDP fast/unreliable (1 mark)</li>
+    <li>3.2 Router: forwards between networks using IP addresses (1 mark); Switch: forwards within LAN using MAC addresses (1 mark)</li>
+    <li>3.3 Translates domain names to IP addresses (1 mark)</li>
+    <li>4.1 Full-adder truth table: 8 rows, sum and carry correct for all (2 marks)</li>
+    <li>4.2 Full-adders chained, carry-out of one to carry-in of next (2 marks)</li>
+    <li>4.3 Slower due to carry propagation delay (1 mark)</li>
+    <li>5.1 Paging: fixed-size pages, no external fragmentation (1 mark); Segmentation: variable-sized logical segments, matches program structure (1 mark); comparison of fragmentation or table structure (1 mark)</li>
+    <li>5.2 Page number = 3, offset = 3 (2 marks)</li>
+    <li>5.3 Required page not in memory, OS fetches from disk (1 mark)</li>
+  </ul>
+  <p><strong>Section B (30 marks)</strong></p>
+  <ul>
+    <li>6.1 Alarm = (A·B) + (C·(A+B)) (2 marks)</li>
+    <li>6.2 Simplified: Alarm = A·B + A·C + B·C or equivalent (2 marks); working shown (1 mark)</li>
+    <li>6.3 Correct circuit diagram (3 marks)</li>
+    <li>7.1 Correct Dijkstra's table (3 marks); correct shortest path calculation (2 marks)</li>
+    <li>7.2 A→B→D→E, weight = 6 (2 marks)</li>
+    <li>7.3 Makes locally optimal choice at each step (1 mark)</li>
+    <li>8.1 16 frames (1 mark)</li>
+    <li>8.2 2048 → page 2, frame —, page fault (1 mark); 8192 → page 2, frame —, page fault (1 mark); 12288 → page 3, frame 7, offset 0, physical = 28672 (2 marks)</li>
+    <li>8.3 Pages stored on disk, loaded on demand (1 mark); page table maps to disk locations (1 mark)</li>
+    <li>9.1 FCFS Gantt: P1(0-8), P2(8-12), P3(12-21), P4(21-26); waiting times: 0, 8, 12, 21; average = 10.25 (3 marks)</li>
+    <li>9.2 SJF Gantt: P2(0-4), P4(4-9), P1(9-17), P3(17-26); waiting times: 9, 0, 17, 4; average = 7.5 (3 marks)</li>
+    <li>9.3 SJF gives lower average waiting time; shorter jobs don't wait behind long jobs (1 mark)</li>
+  </ul>
+  <p><strong>Section C (20 marks)</strong></p>
+  <ul>
+    <li>10.1 Input features from applications (1 mark); labelled training data (historical hires) (1 mark); forward propagation through layers (1 mark); backpropagation to adjust weights (1 mark)</li>
+    <li>10.2 Any three valid concerns with explanation: bias in training data (2 marks), lack of transparency (2 marks), privacy of applicant data (2 marks), accountability for decisions (2 marks), automation of human judgment (2 marks) — max 6 marks</li>
+    <li>11.1 Any two: RAID for redundancy, UPS for power failure, ECC memory, dual power supplies (2 marks)</li>
+    <li>11.2 Multiple servers handle requests (1 mark); load balancer distributes traffic (1 mark); database replication for read scaling (1 mark)</li>
+    <li>11.3 Cost: cloud = OpEx, on-prem = CapEx (1 mark); Security: on-prem = more control, cloud = shared responsibility (1 mark); Scalability: cloud = elastic, on-prem = limited by hardware (1 mark); balanced evaluation with conclusion (2 marks)</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<h2>Grade Boundaries</h2>
+
+<div class="grade-boundary">
+  <h4>Quiz Grade Boundaries (Raw Marks)</h4>
+  <table>
+    <tr><th>Grade</th><th>Quiz 1 (20)</th><th>Quiz 2 (20)</th><th>Quiz 3 (20)</th><th>Quiz 4 (20)</th></tr>
+    <tr><td>A</td><td>16–20</td><td>16–20</td><td>16–20</td><td>16–20</td></tr>
+    <tr><td>B</td><td>14–15</td><td>14–15</td><td>14–15</td><td>14–15</td></tr>
+    <tr><td>C</td><td>12–13</td><td>12–13</td><td>12–13</td><td>12–13</td></tr>
+    <tr><td>D</td><td>10–11</td><td>10–11</td><td>10–11</td><td>10–11</td></tr>
+    <tr><td>E</td><td>8–9</td><td>8–9</td><td>8–9</td><td>8–9</td></tr>
+    <tr><td>U</td><td>0–7</td><td>0–7</td><td>0–7</td><td>0–7</td></tr>
+  </table>
+</div>
+
+<div class="grade-boundary">
+  <h4>Mock Exam Grade Boundaries (75 marks)</h4>
+  <table>
+    <tr><th>Grade</th><th>Marks</th><th>UMS Equivalent</th></tr>
+    <tr><td>A</td><td>60–75</td><td>80–100%</td></tr>
+    <tr><td>B</td><td>52–59</td><td>70–79%</td></tr>
+    <tr><td>C</td><td>45–51</td><td>60–69%</td></tr>
+    <tr><td>D</td><td>37–44</td><td>50–59%</td></tr>
+    <tr><td>E</td><td>30–36</td><td>40–49%</td></tr>
+    <tr><td>U</td><td>0–29</td><td>0–39%</td></tr>
+  </table>
+</div>
+
+<div class="grade-boundary">
+  <h4>Semester 1 Overall Grade Boundaries (180 marks)</h4>
+  <table>
+    <tr><th>Grade</th><th>Marks</th><th>Percentage</th></tr>
+    <tr><td>A</td><td>144–180</td><td>80–100%</td></tr>
+    <tr><td>B</td><td>126–143</td><td>70–79%</td></tr>
+    <tr><td>C</td><td>108–125</td><td>60–69%</td></tr>
+    <tr><td>D</td><td>90–107</td><td>50–59%</td></tr>
+    <tr><td>E</td><td>72–89</td><td>40–49%</td></tr>
+    <tr><td>U</td><td>0–71</td><td>0–39%</td></tr>
+  </table>
+</div>
+
+<hr class="section-divider">
+
+<h2>Practical Investigation (20 Marks)</h2>
+<p><strong>Deadline:</strong> Week 16 of Semester 1</p>
+<p><strong>Task:</strong> Conduct a practical investigation into one of the topics covered in Semester 1, producing a structured report with evidence of practical work.</p>
+
+<h3>Investigation Options</h3>
+<table>
+  <tr><th>Option</th><th>Title</th><th>Practical Component</th></tr>
+  <tr><td>A</td><td>Boolean Logic Circuit Design</td><td>Design and simulate a combinational circuit in Logisim</td></tr>
+  <tr><td>B</td><td>Network Protocol Analysis</td><td>Capture and analyse packets using Wireshark</td></tr>
+  <tr><td>C</td><td>Memory Management Simulation</td><td>Implement paging address translation in Python</td></tr>
+  <tr><td>D</td><td>Neural Network Experiment</td><td>Train a simple perceptron on a dataset using Python</td></tr>
+</table>
+
+<h3>Report Structure and Marks</h3>
+<table>
+  <tr><th>Component</th><th>Marks</th><th>Description</th></tr>
+  <tr><td>Introduction &amp; Aims</td><td>2</td><td>Clear statement of investigation purpose and research question</td></tr>
+  <tr><td>Background Research</td><td>3</td><td>Relevant theory explained with citations</td></tr>
+  <tr><td>Methodology</td><td>3</td><td>Detailed description of practical approach and tools used</td></tr>
+  <tr><td>Practical Evidence</td><td>5</td><td>Screenshots, code, diagrams, or logs showing practical work</td></tr>
+  <tr><td>Results &amp; Analysis</td><td>4</td><td>Data presented and interpreted with clear reasoning</td></tr>
+  <tr><td>Conclusion &amp; Evaluation</td><td>3</td><td>Findings summarised, limitations acknowledged, improvements suggested</td></tr>
+</table>
+
+<div class="bronze">
+  <strong>Bronze:</strong> Complete investigation with basic practical work; report follows structure with some evidence; limited analysis.
+</div>
+<div class="silver">
+  <strong>Silver:</strong> Thorough practical work with clear evidence; good understanding of theory; structured analysis with some evaluation.
+</div>
+<div class="gold">
+  <strong>Gold:</strong> Sophisticated practical work with original elements; excellent theoretical understanding; critical analysis; creative evaluation with realistic improvements.
+</div>
+
+<div class="checklist">
+  <h4>EAL Practical Investigation Support</h4>
+  <ul>
+    <li>Investigation brief provided in bilingual format</li>
+    <li>Report template with section headings and sentence starters</li>
+    <li>Visual evidence requirements clearly specified</li>
+    <li>One-to-one methodology check-in before practical work begins</li>
+    <li>Draft feedback provided at Week 14</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<h2>Assessment Policy and Procedures</h2>
+
+<h3>Special Considerations</h3>
+<ul>
+  <li>EAL students receive +25% extra time for all timed assessments</li>
+  <li>Bilingual glossaries (80+ terms) permitted in all closed-book assessments</li>
+  <li>Students with learning support plans may use assistive technology as specified</li>
+  <li>All assessment materials available in large print upon request</li>
+  <li>Rest breaks available for students with medical needs</li>
+</ul>
+
+<h3>Academic Integrity</h3>
+<ul>
+  <li>All submitted work must be the student's own</li>
+  <li>Plagiarism in the practical investigation will result in a zero mark and disciplinary action</li>
+  <li>Collaboration is permitted for peer review only; all practical work and writing must be individual</li>
+  <li>External sources must be cited using Harvard referencing style</li>
+  <li>Use of AI tools (e.g., ChatGPT) must be declared and appropriately referenced</li>
+</ul>
+
+<h3>Feedback and Review</h3>
+<ul>
+  <li>Marked quizzes returned within one week with written feedback and target grades</li>
+  <li>Mock exam results discussed in individual target-setting meetings within two weeks</li>
+  <li>Practical investigation draft feedback provided at Week 14 (formative checkpoint)</li>
+  <li>Parents receive assessment reports after each quiz cycle</li>
+  <li>Student-teacher conferencing available on request for all assessments</li>
+</ul>
+
+<div class="bilingual">
+  <strong>中英双语术语 / Bilingual Assessment Terms:</strong><br>
+  Boolean algebra = 布尔代数 | Karnaugh map = 卡诺图 | Floating-point = 浮点数 | Normalisation = 规范化 | TCP/IP = 传输控制协议/网际协议 | Routing = 路由 | DNS = 域名系统 | Encryption = 加密 | Firewall = 防火墙 | Logic gate = 逻辑门 | Half-adder = 半加器 | Full-adder = 全加器 | Flip-flop = 触发器 | Microprocessor = 微处理器 | Paging = 分页 | Segmentation = 分段 | Virtual memory = 虚拟内存 | Scheduling = 调度 | Interrupt = 中断 | Neural network = 神经网络 | Machine learning = 机器学习 | Big data = 大数据 | Ethics = 伦理 | Algorithmic bias = 算法偏见
+</div>
+
+<footer style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #1a5276; text-align: center; color: #666;">
+  <p>Victoria Park Academy | A-Level Computer Science Department</p>
+  <p>Assessment Pack v1.0 | Semester 1 2024–2025</p>
+</footer>
+
+</body>
+</html>

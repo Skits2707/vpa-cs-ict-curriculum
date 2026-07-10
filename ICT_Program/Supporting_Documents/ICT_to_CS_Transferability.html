@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPA ICT to CS Transferability Guide</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; border-left: 5px solid #2874a6; padding-left: 10px; }
+  h3 { color: #2e86c1; margin-top: 20px; }
+  .intro { background: #eaf2f8; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; vertical-align: top; }
+  th { background: #1a5276; color: white; }
+  tr:nth-child(even) { background: #f8f9fa; }
+  .transfer-path { background: #e8f8f5; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #27ae60; }
+  .skill-box { background: #d6eaf8; padding: 12px; border-radius: 8px; margin: 8px 0; }
+  .skill-title { font-weight: bold; color: #1a5276; }
+  .bilingual { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #2e86c1; }
+  .chinese { color: #c0392b; font-weight: 500; }
+  .grade-tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.8em; margin-left: 5px; }
+  .g2-5 { background: #d5f5e3; color: #27ae60; }
+  .g6-8 { background: #fadbd8; color: #c0392b; }
+  .g9-10 { background: #d6eaf8; color: #2874a6; }
+  .example { background: #fef9e7; padding: 10px; border-radius: 6px; margin: 8px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  .note { background: #f5eef8; padding: 10px; border-radius: 6px; margin: 10px 0; font-size: 0.9em; }
+  ul { margin: 8px 0; padding-left: 20px; }
+  li { margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<h1>🔄 VPA ICT to Computer Science Transferability Guide</h1>
+<div class="intro">
+  <strong>Victoria Park Academy</strong> | ICT Programme → IB DP Computer Science Bridge<br>
+  This document maps how ICT skills developed throughout the VPA curriculum directly prepare students for advanced Computer Science study. Each ICT skill is linked to its CS application, with grade-level progression and concrete examples.
+</div>
+
+<h2>Transferability Overview</h2>
+<div class="bilingual">
+  <p><strong>English:</strong> The VPA ICT curriculum is intentionally designed as a foundation for Computer Science. Skills in productivity software, data management, programming, and systems thinking build progressively toward the rigour of IB DP Computer Science. This guide shows students, parents, and teachers exactly how each ICT topic transfers.</p>
+  <p class="chinese"><strong>中文：</strong>VPA ICT课程被有意设计为计算机科学的基础。生产力软件、数据管理、编程和系统思维方面的技能逐步建立，为IB DP计算机科学的严谨性做好准备。本指南向学生、家长和教师展示每个ICT主题如何转移。</p>
+</div>
+
+<h2>1. Spreadsheet Formulas → Programming Logic</h2>
+<div class="transfer-path">
+  <p><strong>Core Transfer:</strong> The logical thinking required for spreadsheet formulas directly maps to algorithmic thinking in programming. Both require understanding variables, operators, conditions, and functions.</p>
+</div>
+
+<table>
+  <tr><th>ICT Skill</th><th>CS Application</th><th>Grade Level</th><th>Example</th></tr>
+  <tr>
+    <td>Simple formulas (+, -, *, /)</td>
+    <td>Arithmetic operators in Python/Java</td>
+    <td><span class="grade-tag g2-5">G2-5</span></td>
+    <td class="example">=A1+B1 → x = a + b</td>
+  </tr>
+  <tr>
+    <td>Cell references (relative/absolute)</td>
+    <td>Variable scope and memory addressing</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">$A$1 → const int MAX = 100;</td>
+  </tr>
+  <tr>
+    <td>IF function</td>
+    <td>Conditional statements (if-else)</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">=IF(A1>50,"Pass","Fail") → if (score > 50) { result = "Pass"; } else { result = "Fail"; }</td>
+  </tr>
+  <tr>
+    <td>Nested IF / IFS</td>
+    <td>Nested conditionals, switch statements</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">=IF(A1>=90,"A",IF(A1>=80,"B"...)) → if-elif-else chains</td>
+  </tr>
+  <tr>
+    <td>VLOOKUP / HLOOKUP</td>
+    <td>Array searching, hash maps, dictionary lookup</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">=VLOOKUP(X,A1:D10,2,FALSE) → dict[key] or binary search</td>
+  </tr>
+  <tr>
+    <td>COUNTIF / SUMIF</td>
+    <td>Loop accumulation with conditionals</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">=COUNTIF(A1:A10,">50") → for i in range(10): if data[i] > 50: count += 1</td>
+  </tr>
+  <tr>
+    <td>Goal Seek / Solver</td>
+    <td>Algorithm optimisation, root-finding algorithms</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Goal Seek → Newton-Raphson method, binary search for solutions</td>
+  </tr>
+  <tr>
+    <td>Pivot Tables</td>
+    <td>Data aggregation, SQL GROUP BY, MapReduce</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Pivot Table → SELECT category, SUM(sales) FROM data GROUP BY category</td>
+  </tr>
+  <tr>
+    <td>Macro recording</td>
+    <td>Procedural programming, automation scripts</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Excel Macro → Python script with loops and file I/O</td>
+  </tr>
+</table>
+
+<div class="note">
+  <strong>Teaching Tip:</strong> When teaching spreadsheets, explicitly draw the parallel to programming. For example, after students write =IF(A1>50,"Pass","Fail"), show the Python equivalent and discuss how both evaluate a condition and branch execution.
+</div>
+
+<h2>2. Web Design → HTML/CSS → Web Development</h2>
+<div class="transfer-path">
+  <p><strong>Core Transfer:</strong> HTML and CSS skills from ICT provide the foundational markup and styling knowledge that underpin all web development, from static sites to dynamic full-stack applications.</p>
+</div>
+
+<table>
+  <tr><th>ICT Skill</th><th>CS Application</th><th>Grade Level</th><th>Example</th></tr>
+  <tr>
+    <td>HTML tags (h1, p, img, a)</td>
+    <td>Semantic markup, DOM manipulation</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">&lt;h1&gt;Title&lt;/h1&gt; → document.createElement('h1') in JavaScript</td>
+  </tr>
+  <tr>
+    <td>CSS selectors and properties</td>
+    <td>Styling frameworks (Bootstrap, Tailwind), CSS-in-JS</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">.class { color: red; } → styled-components in React</td>
+  </tr>
+  <tr>
+    <td>CSS Box Model</td>
+    <td>Layout engines, UI component design</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">margin + border + padding → Flutter/Android layout constraints</td>
+  </tr>
+  <tr>
+    <td>Responsive design (media queries)</td>
+    <td>Mobile-first development, adaptive UI</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">@media (max-width: 600px) → React Native flexbox, SwiftUI</td>
+  </tr>
+  <tr>
+    <td>Forms and input validation</td>
+    <td>Backend form handling, API endpoints, security</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">&lt;input type="email" required&gt; → Express.js validation, SQL injection prevention</td>
+  </tr>
+  <tr>
+    <td>Multi-page site navigation</td>
+    <td>Single-page applications (SPA), routing</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">&lt;a href="page.html"&gt; → React Router, Vue Router</td>
+  </tr>
+  <tr>
+    <td>Embedding media (images, video)</td>
+    <td>Content delivery networks (CDN), streaming protocols</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">&lt;img src="photo.jpg"&gt; → CloudFront, adaptive bitrate streaming</td>
+  </tr>
+  <tr>
+    <td>Accessibility considerations</td>
+    <td>WCAG compliance, inclusive design, screen reader support</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">alt text → ARIA labels, semantic HTML5 for assistive technology</td>
+  </tr>
+</table>
+
+<div class="note">
+  <strong>Teaching Tip:</strong> Have students build a static website in ICT, then in IB CS extend it with JavaScript interactivity and a backend database. This creates a clear progression from markup to full-stack development.
+</div>
+
+<h2>3. Databases → SQL & Data Structures</h2>
+<div class="transfer-path">
+  <p><strong>Core Transfer:</strong> Database design skills in ICT (tables, relationships, queries) map directly to relational database theory in CS, SQL programming, and data structure concepts.</p>
+</div>
+
+<table>
+  <tr><th>ICT Skill</th><th>CS Application</th><th>Grade Level</th><th>Example</th></tr>
+  <tr>
+    <td>Table design (fields, data types)</td>
+    <td>Relational schema design, data modelling</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">Access table designer → CREATE TABLE statements, ER diagrams</td>
+  </tr>
+  <tr>
+    <td>Primary keys</td>
+    <td>Unique identifiers, UUID generation, indexing</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">AutoNumber → PRIMARY KEY, AUTO_INCREMENT, UUIDv4</td>
+  </tr>
+  <tr>
+    <td>Relationships (1:N, M:N)</td>
+    <td>Foreign keys, join tables, referential integrity</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Access Relationships → FOREIGN KEY constraints, junction tables</td>
+  </tr>
+  <tr>
+    <td>Simple queries (SELECT, WHERE)</td>
+    <td>SQL programming, database APIs</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">Access Query Designer → SELECT * FROM Students WHERE Grade = 10</td>
+  </tr>
+  <tr>
+    <td>Sorting and filtering</td>
+    <td>ORDER BY, indexing strategies, query optimisation</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Sort A-Z → ORDER BY name ASC; CREATE INDEX idx_name</td>
+  </tr>
+  <tr>
+    <td>Aggregate queries (COUNT, SUM, AVG)</td>
+    <td>SQL aggregation, data analytics, BigQuery</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Query totals → SELECT AVG(score) FROM Exams GROUP BY subject</td>
+  </tr>
+  <tr>
+    <td>Forms for data entry</td>
+    <td>CRUD applications, RESTful API design</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Access Form → POST /api/students, form validation, CSRF tokens</td>
+  </tr>
+  <tr>
+    <td>Reports and grouping</td>
+    <td>Business intelligence, data visualisation, dashboards</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Access Report → Tableau, Power BI, matplotlib/seaborn</td>
+  </tr>
+  <tr>
+    <td>Normalisation (1NF, 2NF, 3NF)</td>
+    <td>Database design theory, redundancy elimination, ACID properties</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Splitting tables → Normal forms, Boyce-Codd Normal Form (BCNF)</td>
+  </tr>
+  <tr>
+    <td>Data validation rules</td>
+    <td>Input validation, schema constraints, type safety</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Field validation → CHECK constraints, JSON Schema, TypeScript types</td>
+  </tr>
+</table>
+
+<div class="note">
+  <strong>Teaching Tip:</strong> When students design a database in Access, ask them to write the equivalent SQL CREATE TABLE statements. This bridges the gap between GUI tools and text-based programming.
+</div>
+
+<h2>4. Programming Foundations → Advanced CS</h2>
+<div class="transfer-path">
+  <p><strong>Core Transfer:</strong> Block-based programming in primary years and text-based programming in middle years build the computational thinking foundations for IB DP Computer Science algorithms, data structures, and OOP.</p>
+</div>
+
+<table>
+  <tr><th>ICT Skill</th><th>CS Application</th><th>Grade Level</th><th>Example</th></tr>
+  <tr>
+    <td>Sequences (Scratch blocks)</td>
+    <td>Statement execution, control flow</td>
+    <td><span class="grade-tag g2-5">G2-5</span></td>
+    <td class="example">Move 10 steps, say "Hello" → print("Hello"); x = x + 10</td>
+  </tr>
+  <tr>
+    <td>Loops (repeat, forever)</td>
+    <td>for loops, while loops, iteration</td>
+    <td><span class="grade-tag g2-5">G2-5</span></td>
+    <td class="example">Repeat 10 → for i in range(10): or while count &lt; 10:</td>
+  </tr>
+  <tr>
+    <td>Conditionals (if-then)</td>
+    <td>if-else, switch, ternary operators</td>
+    <td><span class="grade-tag g2-5">G2-5</span></td>
+    <td class="example">If touching mouse → if (distance &lt; 10) { ... }</td>
+  </tr>
+  <tr>
+    <td>Variables (Scratch)</td>
+    <td>Typed variables, scope, memory allocation</td>
+    <td><span class="grade-tag g2-5">G2-5</span></td>
+    <td class="example">Set score to 0 → int score = 0;</td>
+  </tr>
+  <tr>
+    <td>Events (broadcast, when clicked)</td>
+    <td>Event-driven programming, callbacks, listeners</td>
+    <td><span class="grade-tag g2-5">G2-5</span></td>
+    <td class="example">When green flag clicked → button.addEventListener('click', handler)</td>
+  </tr>
+  <tr>
+    <td>Python variables and I/O</td>
+    <td>Strong typing, stdin/stdout, file I/O</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">name = input() → BufferedReader, Scanner, std::cin</td>
+  </tr>
+  <tr>
+    <td>Python lists</td>
+    <td>Arrays, ArrayLists, linked lists, dynamic arrays</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">my_list = [1, 2, 3] → int[] arr = {1, 2, 3}; ArrayList&lt;Integer&gt;</td>
+  </tr>
+  <tr>
+    <td>Python functions (def)</td>
+    <td>Methods, parameter passing, return types, recursion</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">def greet(name): → public void greet(String name) { }</td>
+  </tr>
+  <tr>
+    <td>Python dictionaries</td>
+    <td>Hash maps, hash tables, JSON objects</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">student = {"name": "Amy"} → HashMap&lt;String, String&gt;, JSON.parse()</td>
+  </tr>
+  <tr>
+    <td>Python file I/O</td>
+    <td>Streams, serialization, CSV parsing, exception handling</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">with open('data.txt') → FileReader, try-catch blocks, CSV libraries</td>
+  </tr>
+  <tr>
+    <td>Flowcharts and pseudocode</td>
+    <td>Algorithm design, UML, formal specification</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">Diamond decision box → if statements, state machines</td>
+  </tr>
+  <tr>
+    <td>Debugging strategies</td>
+    <td>Unit testing, breakpoints, stack traces, logging</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">Print variable values → debugger, JUnit, pytest, console.log</td>
+  </tr>
+</table>
+
+<h2>5. Systems Thinking → Computer Science Theory</h2>
+<div class="transfer-path">
+  <p><strong>Core Transfer:</strong> Understanding how hardware, software, and networks work together in ICT provides the systems-level thinking required for CS theory, architecture, and networking.</p>
+</div>
+
+<table>
+  <tr><th>ICT Skill</th><th>CS Application</th><th>Grade Level</th><th>Example</th></tr>
+  <tr>
+    <td>Input → Process → Output model</td>
+    <td>Von Neumann architecture, CPU cycles</td>
+    <td><span class="grade-tag g2-5">G2-5</span></td>
+    <td class="example">Keyboard → CPU → Screen → fetch-decode-execute cycle</td>
+  </tr>
+  <tr>
+    <td>File organisation (folders)</td>
+    <td>File systems, directory trees, path resolution</td>
+    <td><span class="grade-tag g2-5">G2-5</span></td>
+    <td class="example">My Documents/Projects → /home/user/projects, inode structure</td>
+  </tr>
+  <tr>
+    <td>Storage devices (HDD, SSD, USB)</td>
+    <td>Memory hierarchy, cache, virtual memory</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">SSD vs HDD → RAM vs ROM, L1/L2/L3 cache, paging</td>
+  </tr>
+  <tr>
+    <td>Binary and data representation</td>
+    <td>Number systems, bitwise operations, encoding</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">8-bit colour → ASCII, Unicode, UTF-8, floating-point representation</td>
+  </tr>
+  <tr>
+    <td>Network basics (LAN, WAN, Wi-Fi)</td>
+    <td>OSI model, TCP/IP, routing algorithms</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">Wi-Fi router → OSI layers 1-7, packet switching, Dijkstra's algorithm</td>
+  </tr>
+  <tr>
+    <td>IP addresses and DNS</td>
+    <td>Network layer, addressing schemes, NAT</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">192.168.1.1 → IPv4/IPv6, subnetting, CIDR notation</td>
+  </tr>
+  <tr>
+    <td>Security (passwords, encryption)</td>
+    <td>Cryptography, hashing, public-key infrastructure</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Strong password → bcrypt, SHA-256, RSA, SSL/TLS handshake</td>
+  </tr>
+  <tr>
+    <td>Cloud storage</td>
+    <td>Distributed systems, replication, CAP theorem</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Google Drive → AWS S3, Hadoop, distributed file systems</td>
+  </tr>
+</table>
+
+<h2>6. Multimedia → Graphics, Vision & HCI</h2>
+<div class="transfer-path">
+  <p><strong>Core Transfer:</strong> Multimedia skills in image editing, video production, and audio processing connect to computer graphics, computer vision, and human-computer interaction in CS.</p>
+</div>
+
+<table>
+  <tr><th>ICT Skill</th><th>CS Application</th><th>Grade Level</th><th>Example</th></tr>
+  <tr>
+    <td>Image resolution and pixels</td>
+    <td>Raster graphics, image processing, convolution</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">1920x1080 pixels → OpenCV, image kernels, edge detection</td>
+  </tr>
+  <tr>
+    <td>Bitmap vs Vector</td>
+    <td>Graphics pipelines, SVG rendering, Bézier curves</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">Vector graphics → PostScript, PDF rendering, game asset pipelines</td>
+  </tr>
+  <tr>
+    <td>Colour models (RGB, hex)</td>
+    <td>Colour spaces, image compression, dithering</td>
+    <td><span class="grade-tag g6-8">G6-8</span></td>
+    <td class="example">#FF5733 → HSV, CMYK, JPEG chroma subsampling</td>
+  </tr>
+  <tr>
+    <td>Audio sampling and bit depth</td>
+    <td>Digital signal processing, Fourier transforms, compression</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">44.1kHz, 16-bit → Nyquist theorem, MP3 psychoacoustics</td>
+  </tr>
+  <tr>
+    <td>Video frame rates and compression</td>
+    <td>Video codecs, streaming protocols, computer vision</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">30fps, H.264 → H.265/AV1, DCT, motion estimation, YOLO object detection</td>
+  </tr>
+  <tr>
+    <td>User interface design</td>
+    <td>Human-Computer Interaction (HCI), UX research, accessibility</td>
+    <td><span class="grade-tag g9-10">G9-10</span></td>
+    <td class="example">Button placement → Fitts's Law, Nielsen's heuristics, A/B testing</td>
+  </tr>
+</table>
+
+<h2>Progression Map: ICT → IB DP Computer Science</h2>
+<table>
+  <tr><th>Year</th><th>ICT Focus</th><th>CS Readiness</th></tr>
+  <tr>
+    <td><strong>G1-2</strong></td>
+    <td>Mouse/keyboard, digital drawing, basic sequencing</td>
+    <td>Computational thinking foundations; comfort with technology</td>
+  </tr>
+  <tr>
+    <td><strong>G3-5</strong></td>
+    <td>Word processing, spreadsheets, Scratch programming, safe searching</td>
+    <td>Logic and structure; algorithmic thinking; digital literacy</td>
+  </tr>
+  <tr>
+    <td><strong>G6-7</strong></td>
+    <td>Advanced productivity, Python basics, HTML/CSS, hardware</td>
+    <td>Text-based programming; markup languages; systems understanding</td>
+  </tr>
+  <tr>
+    <td><strong>G8</strong></td>
+    <td>Databases, networks, multimedia, digital citizenship</td>
+    <td>Data structures; networking concepts; ethical reasoning</td>
+  </tr>
+  <tr>
+    <td><strong>G9-10 (IGCSE)</strong></td>
+    <td>Document production, data analysis, web authoring, advanced DB/SQL</td>
+    <td>Ready for IB DP CS: programming, data structures, systems, theory</td>
+  </tr>
+  <tr>
+    <td><strong>G11-12 (IB DP)</strong></td>
+    <td colspan="2"><strong>IB Computer Science:</strong> OOP, abstract data structures, resource management, HL extension topics, IA, case study</td>
+  </tr>
+</table>
+
+<h2>Key Takeaways for Students</h2>
+<div class="skill-box">
+  <span class="skill-title">Every ICT skill is a stepping stone to CS.</span> The spreadsheet formula you write today is the algorithm you'll optimise tomorrow. The database you design today is the schema you'll scale tomorrow. The webpage you code today is the application you'll architect tomorrow.
+</div>
+<div class="bilingual">
+  <p class="chinese"><strong>给学生的关键信息：</strong>每一项ICT技能都是通往计算机科学的垫脚石。你今天写的电子表格公式就是明天要优化的算法；你今天设计的数据库就是明天要扩展的架构；你今天编写的网页就是明天要构建的应用。</p>
+</div>
+
+<div class="note">
+  <strong>Parent Guidance:</strong> Encourage students to see ICT not as "using computers" but as "learning how computers work." Ask them to explain the logic behind their spreadsheet formulas or the structure of their HTML — this metacognitive practice accelerates transfer to CS.
+</div>
+
+<p style="text-align:center; margin-top:40px; color:#666; font-size:0.9em;">© Victoria Park Academy | ICT → CS Transferability Guide v1.0</p>
+
+</body>
+</html>

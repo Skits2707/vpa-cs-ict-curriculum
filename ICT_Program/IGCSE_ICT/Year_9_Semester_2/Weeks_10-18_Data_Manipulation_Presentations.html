@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA ICT — IGCSE Y9S2 Weeks 10-18: Data Manipulation & Presentations</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .vocab-box { background: #eaf2f8; padding: 10px; border-radius: 5px; margin: 10px 0; }
+  .activity-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f39c12; margin: 15px 0; }
+  .assessment-box { background: #fdebd0; padding: 15px; border-left: 4px solid #e67e22; margin: 15px 0; }
+  .week-header { background-color: #d6eaf8; padding: 10px; margin-top: 20px; border-radius: 5px; }
+  .syllabus-ref { background: #e8daef; padding: 8px; border-radius: 5px; margin: 10px 0; font-weight: bold; }
+  .exam-tip { background: #d5f5e3; padding: 10px; border-left: 4px solid #27ae60; margin: 10px 0; }
+  .code-block { background: #f4f4f4; padding: 10px; border-left: 3px solid #3498db; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>Weeks 10–18: Data Manipulation &amp; Presentations</h1>
+<p><strong>Syllabus:</strong> CIE IGCSE ICT (0417) Topics 11–12 | <strong>Software:</strong> Excel/Calc + PowerPoint/Impress</p>
+
+<h2>Week 10 — Spreadsheet Setup &amp; Data Entry</h2>
+<div class="syllabus-ref">Syllabus: 11.1 Data Manipulation — Spreadsheets</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> worksheet <span class="bilingual">工作表 (gōngzuò biǎo)</span>, workbook <span class="bilingual">工作簿 (gōngzuò bù)</span>, cell reference <span class="bilingual">单元格引用 (dānyuán gé yǐnyòng)</span>, absolute reference <span class="bilingual">绝对引用 (juéduì yǐnyòng)</span>, relative reference <span class="bilingual">相对引用 (xiāngduì yǐnyòng)</span>, named range <span class="bilingual">命名区域 (mìngmíng qūyù)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Import CSV data into Excel. Check for formatting issues (dates, leading zeros).<br><br>
+<strong>Activity 2 (15 min):</strong> Absolute vs. relative reference — Create a multiplication table using $A$1 absolute reference.<br><br>
+<strong>Activity 3 (10 min):</strong> Named ranges — Name cell B2 as "TaxRate" and use =B5*TaxRate in formula.
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> Absolute references ($A$1) are essential for copying formulas. In exams, check if the question asks for "absolute cell reference" explicitly — missing the $ signs loses marks.
+</div>
+
+<h2>Week 11 — Formulas &amp; Functions</h2>
+<div class="syllabus-ref">Syllabus: 11.2 Formulas and Functions</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> formula <span class="bilingual">公式 (gōngshì)</span>, function <span class="bilingual">函数 (hánshù)</span>, SUM <span class="bilingual">求和 (qiúhé)</span>, AVERAGE <span class="bilingual">平均值 (píngjūn zhí)</span>, MAX <span class="bilingual">最大值 (zuìdà zhí)</span>, MIN <span class="bilingual">最小值 (zuìxiǎo zhí)</span>, COUNT <span class="bilingual">计数 (jìshù)</span>, COUNTIF <span class="bilingual">条件计数 (tiáojiàn jìshù)</span>, IF <span class="bilingual">条件函数 (tiáojiàn hánshù)</span>, VLOOKUP <span class="bilingual">垂直查找 (chuízhí cházhǎo)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Gradebook functions — Use SUM, AVERAGE, MAX, MIN, COUNT for class scores.<br><br>
+<strong>Activity 2 (15 min):</strong> IF function — Grade calculator: =IF(B2>=80,"A",IF(B2>=70,"B",IF(B2>=60,"C","D")))<br><br>
+<strong>Activity 3 (10 min):</strong> VLOOKUP — Match student ID to name from a lookup table.
+</div>
+<div class="code-block">
+=VLOOKUP(A2, StudentTable, 2, FALSE)
+</div>
+
+<h2>Week 12 — Conditional Formatting &amp; Data Validation</h2>
+<div class="syllabus-ref">Syllabus: 11.3 Formatting and Validation</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Apply conditional formatting: highlight scores > 90 in green, < 60 in red.<br><br>
+<strong>Activity 2 (15 min):</strong> Data validation — Create dropdown list for "Subject" column. Add error message for invalid entry.<br><br>
+<strong>Activity 3 (10 min):</strong> Protection — Lock all cells except input cells. Test by trying to edit.
+</div>
+
+<h2>Week 13 — Charts &amp; Graphs</h2>
+<div class="syllabus-ref">Syllabus: 11.4 Charts</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> chart wizard <span class="bilingual">图表向导 (túbiǎo xiàngdǎo)</span>, axis <span class="bilingual">轴 (zhóu)</span>, legend <span class="bilingual">图例 (túlì)</span>, data label <span class="bilingual">数据标签 (shùjù biāoqiān)</span>, trend line <span class="bilingual">趋势线 (qūshì xiàn)</span>, secondary axis <span class="bilingual">次坐标轴 (cì zuòbiāo zhóu)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Create bar chart from sales data. Add title, axis labels, data labels.<br><br>
+<strong>Activity 2 (15 min):</strong> Combo chart — Bar for sales, line for profit on secondary axis.<br><br>
+<strong>Activity 3 (10 min):</strong> Chart formatting — Change colors, add trend line, modify legend position.
+</div>
+
+<h2>Week 14 — Pivot Tables &amp; Sorting</h2>
+<div class="syllabus-ref">Syllabus: 11.5 Pivot Tables</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> pivot table <span class="bilingual">数据透视表 (shùjù tòushì biǎo)</span>, row field <span class="bilingual">行字段 (háng zìduàn)</span>, column field <span class="bilingual">列字段 (liè zìduàn)</span>, data field <span class="bilingual">数据字段 (shùjù zìduàn)</span>, filter field <span class="bilingual">筛选字段 (shāixuǎn zìduàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (20 min):</strong> Create pivot table: summarize sales by region and product category.<br><br>
+<strong>Activity 2 (15 min):</strong> Add filter — Show only Q1 and Q2 data.<br><br>
+<strong>Activity 3 (5 min):</strong> "When is a pivot table better than a regular table?" Discussion.
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> Pivot tables frequently appear in Paper 2. Remember: drag fields to correct areas (Row, Column, Data, Filter). The data field usually needs SUM or AVERAGE function.
+</div>
+
+<h2>Week 15 — Presentation Basics</h2>
+<div class="syllabus-ref">Syllabus: 12.1 Presentation Software</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> slide <span class="bilingual">幻灯片 (huàndēngpiàn)</span>, master slide <span class="bilingual">母版幻灯片 (mǔbǎn huàndēngpiàn)</span>, layout <span class="bilingual">版式 (bǎnshì)</span>, placeholder <span class="bilingual">占位符 (zhàn wèi fú)</span>, slide show <span class="bilingual">幻灯片放映 (huàndēngpiàn fàngyìng)</span>, speaker notes <span class="bilingual">演讲者备注 (yǎnjiǎng zhě bèizhù)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Master slide setup — Create consistent title, footer, and logo on master slide.<br><br>
+<strong>Activity 2 (15 min):</strong> Apply layouts — Title slide, Title and Content, Two Content, Comparison.<br><br>
+<strong>Activity 3 (10 min):</strong> Slide size setup — 4:3 vs. 16:9. When to use each?
+</div>
+
+<h2>Week 16 — Animations, Transitions &amp; Multimedia</h2>
+<div class="syllabus-ref">Syllabus: 12.2–12.3 Animations and Multimedia</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> animation <span class="bilingual">动画 (dònghuà)</span>, transition <span class="bilingual">切换 (qiēhuàn)</span>, entrance <span class="bilingual">进入 (jìnrù)</span>, emphasis <span class="bilingual">强调 (qiángdiào)</span>, exit <span class="bilingual">退出 (tuìchū)</span>, motion path <span class="bilingual">动作路径 (dòngzuò lùjìng)</span>, trigger <span class="bilingual">触发器 (chùfāqì)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Add entrance animations to bullet points. Set to appear "On Click."<br><br>
+<strong>Activity 2 (15 min):</strong> Slide transitions — Apply subtle transition to all slides. Set automatic timing (5 seconds).<br><br>
+<strong>Activity 3 (10 min):</strong> Insert video and audio. Set to play automatically. Trim video to first 30 seconds.
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> For "automatic slide show" questions, you must set BOTH: 1) Slide transition timing (e.g., 5 seconds), AND 2) "Start After Previous" for animations. Missing either loses marks.
+</div>
+
+<h2>Week 17 — Advanced Presentation Features</h2>
+<div class="syllabus-ref">Syllabus: 12.4 Advanced Features</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Hyperlinks and action buttons — Create interactive quiz: click answer → jump to correct/incorrect slide.<br><br>
+<strong>Activity 2 (15 min):</strong> Custom slide show — Create two versions: full version (10 slides) and summary version (5 slides).<br><br>
+<strong>Activity 3 (10 min):</strong> Export to PDF and video. Compare file sizes and use cases.
+</div>
+
+<h2>Week 18 — End of Semester Assessment</h2>
+<div class="assessment-box">
+<strong>Mock Paper 2 Section B (40 min):</strong>
+<ol>
+<li>Open provided spreadsheet with raw data</li>
+<li>Add 3 calculated columns using formulas</li>
+<li>Create 2 charts (bar and pie) with titles and labels</li>
+<li>Create a pivot table summarizing data by category</li>
+<li>Apply conditional formatting to highlight top 10%</li>
+</ol>
+<p><strong>Presentation Task (40 min):</strong></p>
+<ol>
+<li>Create 8-slide presentation from given outline</li>
+<li>Apply master slide with logo and footer</li>
+<li>Insert 2 images and 1 chart from spreadsheet</li>
+<li>Add entrance animations and slide transitions</li>
+<li>Set up as automatic slide show (5 seconds per slide)</li>
+</ol>
+</div>
+
+<h2>Paper 2 Marking Checklist</h2>
+<div class="checklist">
+<p><strong>Data Manipulation (40 marks typical):</strong></p>
+<ul>
+<li>☐ Formulas correctly entered and copied</li>
+<li>☐ Absolute/relative references used appropriately</li>
+<li>☐ Functions (SUM, AVERAGE, IF, VLOOKUP, COUNTIF) correct</li>
+<li>☐ Conditional formatting applied correctly</li>
+<li>☐ Data validation with appropriate criteria</li>
+<li>☐ Charts have correct type, title, labeled axes</li>
+<li>☐ Pivot table configured correctly</li>
+<li>☐ Data sorted and/or filtered as requested</li>
+</ul>
+<p><strong>Presentations (20 marks typical):</strong></p>
+<ul>
+<li>☐ Master slide applied consistently</li>
+<li>☐ Correct layouts used for each slide</li>
+<li>☐ Animations and transitions applied</li>
+<li>☐ Multimedia inserted and configured</li>
+<li>☐ Automatic timings set correctly</li>
+</ul>
+</div>
+</body>
+</html>

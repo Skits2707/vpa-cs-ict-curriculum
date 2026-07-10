@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A2 Level CS — Semester 1 Weeks 10-18: Hardware, System Software &amp; AI | Victoria Park Academy</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #1a5276; margin-top: 30px; border-bottom: 2px solid #ddd; padding-bottom: 8px; }
+  h3 { color: #2874a6; margin-top: 25px; }
+  h4 { color: #555; margin-top: 20px; }
+  .bilingual { background: #f9f9f9; border-left: 4px solid #1a5276; padding: 8px 12px; margin: 8px 0; font-style: italic; }
+  .bronze { background: #fdf2e9; border-left: 4px solid #e67e22; padding: 10px; margin: 10px 0; }
+  .silver { background: #eaf2f8; border-left: 4px solid #3498db; padding: 10px; margin: 10px 0; }
+  .gold { background: #e8f8f5; border-left: 4px solid #1abc9c; padding: 10px; margin: 10px 0; }
+  .checklist { background: #fef9e7; border: 1px solid #f4d03f; padding: 12px; margin: 12px 0; border-radius: 4px; }
+  .checklist ul { list-style: none; padding-left: 0; }
+  .checklist li::before { content: "☐ "; color: #f4d03f; font-weight: bold; }
+  table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #1a5276; color: white; }
+  tr:nth-child(even) { background: #f9f9f9; }
+  .code-block { background: #2c3e50; color: #ecf0f1; padding: 12px; border-radius: 4px; font-family: 'Courier New', monospace; overflow-x: auto; margin: 10px 0; }
+  .vpa-header { background: #1a5276; color: white; padding: 15px; text-align: center; margin-bottom: 20px; border-radius: 6px; }
+  .vpa-header h1 { color: white; border: none; padding: 0; margin: 0; }
+  .section-divider { border: none; height: 3px; background: linear-gradient(to right, #1a5276, #3498db, #1a5276); margin: 30px 0; }
+  .week-box { background: #f8f9fa; border-left: 5px solid #1a5276; padding: 15px; margin: 15px 0; border-radius: 0 6px 6px 0; }
+  .week-title { color: #1a5276; font-size: 1.3em; font-weight: bold; margin-bottom: 10px; }
+  .objective { background: #eaf2f8; padding: 8px; margin: 8px 0; border-radius: 4px; }
+  .activity { background: #e8f8f5; padding: 8px; margin: 8px 0; border-radius: 4px; }
+  .assessment-point { background: #fdedec; padding: 8px; margin: 8px 0; border-radius: 4px; border-left: 4px solid #e74c3c; }
+  .resource { background: #fef9e7; padding: 8px; margin: 8px 0; border-radius: 4px; }
+  .warning-box { background: #fdedec; border-left: 4px solid #e74c3c; padding: 12px; margin: 12px 0; }
+  .success-box { background: #eafaf1; border-left: 4px solid #2ecc71; padding: 12px; margin: 12px 0; }
+</style>
+</head>
+<body>
+
+<div class="vpa-header">
+  <h1>Victoria Park Academy</h1>
+  <p>A2 Level Computer Science — Semester 1 Weeks 10–18</p>
+  <p>Hardware, System Software &amp; Artificial Intelligence</p>
+</div>
+
+<h1>Weeks 10–18: Hardware, System Software &amp; Artificial Intelligence</h1>
+
+<p><strong>Unit 3:</strong> Hardware (Weeks 10–13)<br>
+<strong>Unit 4:</strong> System Software (Weeks 14–16)<br>
+<strong>Unit 5:</strong> Artificial Intelligence (Weeks 17–18)</p>
+
+<div class="bilingual">
+  <strong>硬件、系统软件与人工智能 / Hardware, System Software &amp; Artificial Intelligence</strong><br>
+  本单元涵盖逻辑电路、加法器、触发器、微处理器、操作系统内存管理、调度算法、中断处理以及人工智能基础。This unit covers logic circuits, adders, flip-flops, microprocessors, OS memory management, scheduling algorithms, interrupt handling, and AI fundamentals.
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 10: Logic Circuits &amp; Boolean Implementation</h2>
+<div class="week-box">
+  <div class="week-title">Week 10: Logic Circuits &amp; Boolean Implementation</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Design combinational logic circuits from Boolean expressions</li>
+      <li>Construct truth tables for multi-gate circuits</li>
+      <li>Implement circuits using NAND and NOR universal gates</li>
+      <li>Explain the relationship between Boolean algebra and physical hardware</li>
+      <li>Use Logisim to simulate and verify circuit designs</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Recall Boolean laws from Week 1. "If I have the expression A·B + A·C, what circuit would I build?"</li>
+      <li><strong>Direct Instruction (25 min):</strong> From expression to circuit: AND gates for products, OR gates for sums, NOT gates for complements. Show how to read a Boolean expression and draw the corresponding circuit diagram. Introduce circuit conventions: inputs on left, outputs on right, flow left-to-right.</li>
+      <li><strong>Worked Example (20 min):</strong> Teacher designs circuit for F = A·B' + B·C. Step-by-step: identify AND terms, add NOT gates where needed, OR the results. Verify with truth table.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students design circuits for 3 expressions: Bronze (2-input), Silver (3-input with one NOT), Gold (4-input with multiple complements). Use Logisim on lab computers or paper templates.</li>
+      <li><strong>Plenary (10 min):</strong> One student presents Gold solution. Class identifies any errors.</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "Why do manufacturers prefer NAND gates over AND gates?" Discuss cost and universality.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Universal gates: NAND and NOR can implement any Boolean function. Demonstrate: NOT from NAND, AND from NAND, OR from NAND. Show De Morgan's equivalence: A·B = (A NAND B) NAND (A NAND B).</li>
+      <li><strong>Worked Example (15 min):</strong> Convert F = A·B + C' to all-NAND implementation. Teacher draws original circuit, then replaces each gate with NAND equivalents.</li>
+      <li><strong>Guided Practice (30 min):</strong> Students convert 3 circuits to all-NAND and all-NOR implementations. Verify using Logisim simulation.</li>
+      <li><strong>Independent Practice (25 min):</strong> Design challenge: "Build a 2-to-1 multiplexer using only NAND gates." Students work individually or in pairs.</li>
+      <li><strong>Plenary (10 min):</strong> Showcase multiplexer designs. Discuss why NAND is preferred in CMOS technology (fewer transistors).</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Logisim installed on all lab computers</li>
+      <li>Circuit diagram templates (printed)</li>
+      <li>Physical logic gate kits for demonstration (if available)</li>
+      <li>Video: "Why NAND and NOR are Universal Gates" (Neso Academy)</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> Circuit design worksheet (3 problems)</li>
+      <li><strong>Formative:</strong> Logisim simulation files submitted</li>
+      <li><strong>Homework:</strong> Design circuit for F = (A + B)·(C' + D) using only NAND gates; verify with truth table</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Draw circuits from simple 2-variable expressions; identify gate types.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Design multi-gate circuits from 3-variable expressions; convert to NAND/NOR implementations.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Design complex circuits from word problems; implement using only universal gates; explain CMOS advantages; design multiplexers.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 11: Half-Adders &amp; Full-Adders</h2>
+<div class="week-box">
+  <div class="week-title">Week 11: Half-Adders &amp; Full-Adders</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Construct truth tables for half-adders and full-adders</li>
+      <li>Derive Boolean expressions for sum and carry outputs</li>
+      <li>Design half-adder and full-adder circuits using logic gates</li>
+      <li>Explain how full-adders are chained to create multi-bit adders</li>
+      <li>Calculate propagation delay in ripple-carry adders</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Binary addition review: 101 + 110. What are the outputs at each bit position?</li>
+      <li><strong>Direct Instruction (25 min):</strong> Half-adder: adds two 1-bit numbers, produces sum and carry. Truth table, Boolean expressions (Sum = A ⊕ B, Carry = A·B). Circuit diagram with XOR and AND gates.</li>
+      <li><strong>Worked Example (15 min):</strong> Teacher builds half-adder in Logisim, tests all input combinations, verifies truth table.</li>
+      <li><strong>Guided Practice (20 min):</strong> Students construct half-adder truth table and circuit from scratch. Bronze: complete provided diagram; Silver: derive from truth table; Gold: implement using only NAND gates.</li>
+      <li><strong>Direct Instruction (15 min):</strong> Full-adder: adds three 1-bit numbers (A, B, Carry-in). Truth table with 8 rows. Derive Sum = A ⊕ B ⊕ Cin, Cout = A·B + (A ⊕ B)·Cin.</li>
+      <li><strong>Plenary (5 min):</strong> Exit ticket: "Why can't a half-adder be used for all bit positions in multi-bit addition?"</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Review full-adder expressions. "How do we add 4-bit numbers?"</li>
+      <li><strong>Direct Instruction (20 min):</strong> Ripple-carry adder: chain full-adders. Carry-out of stage n becomes carry-in of stage n+1. 4-bit adder requires 4 full-adders. Show block diagram.</li>
+      <li><strong>Worked Example (15 min):</strong> Trace 4-bit addition: 0110 + 0101. Show carry propagation through each stage. Calculate total propagation delay: 4 × gate delay.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students trace 2 additions on provided 4-bit adder diagram. Calculate propagation delay assuming 2ns per gate. Bronze: one addition; Silver: two additions with delay; Gold: identify worst-case delay path.</li>
+      <li><strong>Independent Practice (30 min):</strong> Research and explain: "What is a carry-lookahead adder? How does it improve on ripple-carry?" Students prepare a 3-minute explanation with diagram.</li>
+      <li><strong>Plenary (10 min):</strong> 2 students present carry-lookahead explanations. Class discussion: when is the extra complexity worth it?</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Logisim adder circuits (pre-built for demonstration)</li>
+      <li>Printed full-adder truth table templates</li>
+      <li>Ripple-carry adder diagram (A3 poster)</li>
+      <li>Article: "Carry-Lookahead Adders" (University notes)</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Summative:</strong> Quiz 3 (Week 11) — Hardware &amp; Adders (20 marks)</li>
+      <li><strong>Formative:</strong> Ripple-carry tracing worksheet</li>
+      <li><strong>Homework:</strong> Design a 4-bit ripple-carry adder in Logisim; test with 3 input pairs; calculate propagation delay</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Complete half-adder truth table; identify sum and carry expressions; follow provided ripple-carry diagram.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Derive full-adder expressions; design full-adder circuit; trace multi-bit addition with carry propagation.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Implement full-adder with universal gates; calculate and optimise propagation delay; research and explain carry-lookahead; evaluate speed vs complexity trade-offs.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 12: Flip-Flops &amp; Sequential Logic</h2>
+<div class="week-box">
+  <div class="week-title">Week 12: Flip-Flops &amp; Sequential Logic</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Explain the difference between combinational and sequential logic</li>
+      <li>Describe the operation of SR, D, and JK flip-flops</li>
+      <li>Construct truth tables (characteristic tables) for each flip-flop type</li>
+      <li>Explain the role of clock signals in synchronous circuits</li>
+      <li>Design simple sequential circuits: counters and shift registers</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "What's the difference between a light switch and a toggle switch?" Introduce concept of state.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Combinational vs sequential logic: combinational output depends only on current inputs; sequential output depends on current inputs AND previous state. Introduce flip-flop as 1-bit memory element. SR flip-flop: Set-Reset with NOR/NAND implementation. Characteristic table, forbidden state (S=R=1 for NOR, S=R=0 for NAND).</li>
+      <li><strong>Worked Example (15 min):</strong> Teacher traces SR flip-flop behaviour for input sequence: S=1,R=0 → S=0,R=0 → S=0,R=1 → S=0,R=0. Show how state is maintained.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students complete SR flip-flop timing diagram for given input sequence. Bronze: complete provided diagram; Silver: draw from scratch; Gold: identify and explain the forbidden state condition.</li>
+      <li><strong>Direct Instruction (15 min):</strong> D flip-flop: data input sampled on clock edge. Eliminates forbidden state. Positive-edge triggered vs negative-edge triggered. Show symbol with triangle (dynamic input).</li>
+      <li><strong>Plenary (10 min):</strong> Compare SR and D flip-flops. "When would you use each?"</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "How does a digital clock count seconds?" Introduce counters.</li>
+      <li><strong>Direct Instruction (25 min):</strong> JK flip-flop: versatile with J=K=1 toggle mode. Characteristic table. T flip-flop (toggle) as special case. Binary counter: chain T flip-flops, each toggling when previous stage transitions from 1 to 0. Show 2-bit and 3-bit counter diagrams.</li>
+      <li><strong>Worked Example (15 min):</strong> Teacher traces 3-bit binary counter through 8 clock cycles. Show output sequence: 000, 001, 010, 011, 100, 101, 110, 111, 000.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students design a 2-bit counter using D flip-flops. Derive next-state logic from state table. Bronze: complete provided design; Silver: design from state table; Gold: design modulo-5 counter (counts 0-4).</li>
+      <li><strong>Independent Practice (25 min):</strong> Research: "What is a shift register? Name two applications." Students find real-world examples (serial communication, multiplication).</li>
+      <li><strong>Plenary (10 min):</strong> Share shift register applications. Connect to USB, SATA, and other serial protocols.</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Logisim flip-flop library (D, T, JK, SR)</li>
+      <li>Flip-flop timing diagram templates</li>
+      <li>Counter simulation files</li>
+      <li>Video: "Flip-Flops and Registers" (Neso Academy)</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> Flip-flop timing diagram worksheet</li>
+      <li><strong>Formative:</strong> Counter design task (marked with rubric)</li>
+      <li><strong>Homework:</strong> Complete characteristic tables for SR, D, and JK flip-flops; draw timing diagram for given input sequence</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Complete provided timing diagrams; identify flip-flop types from symbols; follow counter sequences.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Draw timing diagrams from scratch; design simple counters; explain clock edge triggering; identify forbidden states.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Design non-standard counters (modulo-N); derive next-state logic from state tables; explain metastability; research and present on synchronous vs asynchronous counters.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 13: Microprocessors &amp; Assembly Language</h2>
+<div class="week-box">
+  <div class="week-title">Week 13: Microprocessors &amp; Assembly Language</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Describe the main components of a CPU: ALU, CU, registers, buses</li>
+      <li>Explain the von Neumann architecture and stored program concept</li>
+      <li>Trace the fetch-decode-execute cycle step-by-step</li>
+      <li>Interpret and write simple assembly language instructions</li>
+      <li>Explain the role of the program counter, instruction register, and accumulator</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "What happens inside your phone when you open an app?" Brainstorm CPU components.</li>
+      <li><strong>Direct Instruction (30 min):</strong> Von Neumann architecture: CPU, memory, I/O connected by buses (address, data, control). CPU components: ALU (arithmetic/logic), CU (control unit), registers (PC, IR, ACC, MDR, MAR). Stored program concept: instructions and data in same memory.</li>
+      <li><strong>Worked Example (20 min):</strong> Teacher traces fetch-decode-execute cycle for instruction LDA 5 (load accumulator with value at address 5). Show register contents at each step. Use diagram with arrows showing data flow.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students trace fetch-decode-execute for ADD 3 (add value at address 3 to accumulator). Bronze: follow provided template; Silver: trace independently; Gold: trace a 3-instruction sequence (LDA, ADD, STA).</li>
+      <li><strong>Plenary (5 min):</strong> "Why is the PC incremented during the fetch phase?"</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Review fetch-decode-execute. "How does the CPU know which operation to perform?"</li>
+      <li><strong>Direct Instruction (25 min):</strong> Assembly language: mnemonic instructions corresponding to machine code. AQA-style instruction set: LDM, STO, ADD, SUB, JMP, CMP, JPE, JPN, OUT, END. Addressing modes: immediate (#) and direct. Demonstrate with simple program: add two numbers and output result.</li>
+      <li><strong>Worked Example (15 min):</strong> Teacher writes and traces assembly program to calculate 15 + 7. Show memory contents, register values, and output at each step using AQA assembler simulator.</li>
+      <li><strong>Guided Practice (30 min):</strong> Students write assembly programs: Bronze — load two values, add, store; Silver — calculate average of three numbers; Gold — implement a loop that counts from 1 to 10.</li>
+      <li><strong>Independent Practice (25 min):</strong> Debug challenge: given a buggy assembly program, identify and fix errors. Program should multiply a number by 4 using repeated addition.</li>
+      <li><strong>Plenary (10 min):</strong> Discuss: "Why do we still learn assembly when high-level languages exist?" (embedded systems, performance, security)</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>AQA Assembly Language Simulator (https://www.peterhigginson.co.uk/AQA/)</li>
+      <li>CPU architecture diagram (A1 poster)</li>
+      <li>Fetch-decode-execute tracing template</li>
+      <li>Assembly language instruction reference card</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> Fetch-decode-execute tracing worksheet</li>
+      <li><strong>Formative:</strong> Assembly program marking (functionality and style)</li>
+      <li><strong>Homework:</strong> Write assembly program to find largest of three numbers; trace execution showing all register values</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Name CPU components; follow provided fetch-decode-execute traces; write simple 3-line assembly programs.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Trace fetch-decode-execute independently; write assembly programs with branching; explain register roles.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Write complex assembly with loops and conditionals; trace multi-instruction sequences; compare CISC vs RISC; explain pipelining concept.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 14: OS Memory Management</h2>
+<div class="week-box">
+  <div class="week-title">Week 14: Operating System Memory Management</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Explain the purpose of memory management in operating systems</li>
+      <li>Describe paging: fixed-size pages, page tables, logical to physical address translation</li>
+      <li>Describe segmentation: variable-sized segments, segment tables</li>
+      <li>Compare paging and segmentation advantages and disadvantages</li>
+      <li>Explain virtual memory and the role of page faults</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "Why can't we just load every program into RAM at once?" Discuss memory limitations.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Memory management goals: allocation, protection, sharing, virtualisation. Paging introduced: physical memory divided into frames, logical memory into pages. Page table maps page numbers to frame numbers. Address translation: split logical address into page number and offset.</li>
+      <li><strong>Worked Example (20 min):</strong> Teacher demonstrates address translation. Page size = 1024 bytes. Logical address 2050. Page number = 2, offset = 2. Page table: page 2 → frame 5. Physical address = 5 × 1024 + 2 = 5122.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students complete 5 address translation exercises. Bronze: provided page table and simple addresses; Silver: construct page table from given mapping; Gold: calculate page table size and overhead.</li>
+      <li><strong>Plenary (10 min):</strong> "What happens if a program tries to access a page not in memory?" Introduce page fault.</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "Is dividing memory into fixed-size chunks always ideal?" Introduce segmentation.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Segmentation: logical program structure (code, data, stack, heap) mapped to variable-sized segments. Segment table contains base address and limit. Address translation: segment number + offset, with bounds checking.</li>
+      <li><strong>Worked Example (15 min):</strong> Teacher demonstrates segmentation address translation with bounds checking. Show how segmentation prevents overflow (offset > limit → trap).</li>
+      <li><strong>Guided Practice (25 min):</strong> Comparison table: paging vs segmentation. Students complete across 8 criteria (fragmentation, sharing, protection, table size, hardware support, etc.).</li>
+      <li><strong>Independent Practice (30 min):</strong> Virtual memory research: "How does virtual memory allow a computer to run programs larger than physical RAM?" Students explain paging to disk (swap space), page fault handling, and thrashing.</li>
+      <li><strong>Plenary (10 min):</strong> Class discussion: "Why do modern OSes use paging rather than pure segmentation?" (Linux uses paging; x86 segmentation is legacy)</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Memory management diagram (A1 poster)</li>
+      <li>Address translation worksheets</li>
+      <li>Virtual memory animation (online)</li>
+      <li>Article: "Understanding the Linux Virtual Memory Manager"</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Summative:</strong> Quiz 4 (Week 14) — System Software (20 marks)</li>
+      <li><strong>Formative:</strong> Address translation worksheet</li>
+      <li><strong>Homework:</strong> Complete 8 address translations (4 paging, 4 segmentation); explain virtual memory with diagram</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Follow provided address translation steps; identify page number and offset; complete comparison table with guidance.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Perform address translation independently; construct page tables; explain internal vs external fragmentation; describe virtual memory operation.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Calculate page table overhead; analyse segmentation with multiple segments; explain page replacement algorithms (FIFO, LRU); discuss thrashing and working set model.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 15: Scheduling Algorithms</h2>
+<div class="week-box">
+  <div class="week-title">Week 15: CPU Scheduling Algorithms</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Explain why CPU scheduling is necessary in multiprogramming systems</li>
+      <li>Describe and apply First-Come First-Served (FCFS) scheduling</li>
+      <li>Describe and apply Shortest Job First (SJF) scheduling</li>
+      <li>Describe and apply Round Robin (RR) scheduling with time quantum</li>
+      <li>Describe and apply Priority scheduling</li>
+      <li>Calculate waiting time, turnaround time, and response time for each algorithm</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "If 5 students need to use one printer, how do you decide who goes first?" Analogies for scheduling.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Scheduling criteria: CPU utilisation, throughput, turnaround time, waiting time, response time. FCFS: simple queue, non-preemptive. SJF: minimises average waiting time, requires prediction. Preemptive vs non-preemptive.</li>
+      <li><strong>Worked Example (20 min):</strong> Teacher calculates FCFS and SJF for 4 processes with given burst times. Show Gantt chart construction. Calculate average waiting time for each.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students complete Gantt charts and waiting time calculations for 3 scenarios. Bronze: FCFS only; Silver: FCFS and SJF; Gold: preemptive SJF (shortest remaining time first).</li>
+      <li><strong>Plenary (10 min):</strong> "What are the disadvantages of SJF?" (starvation of long jobs, prediction difficulty)</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "What if a new urgent job arrives while another is running?" Introduce preemption and Round Robin.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Round Robin: cyclic execution with fixed time quantum. Priority scheduling: highest priority runs first (preemptive or non-preemptive). Priority inversion problem. Multi-level feedback queues introduced briefly.</li>
+      <li><strong>Worked Example (15 min):</strong> Teacher traces Round Robin with time quantum = 4 for 3 processes. Show context switches and partial execution.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students complete Round Robin and priority scheduling problems. Calculate turnaround time and response time. Bronze: Round Robin with 2 processes; Silver: Round Robin with 4 processes + priority; Gold: all algorithms with comparison of average metrics.</li>
+      <li><strong>Independent Practice (25 min):</strong> Evaluation task: "A real-time system controls a medical device. Which scheduling algorithm is most appropriate? Justify your answer with criteria."</li>
+      <li><strong>Plenary (10 min):</strong> Share evaluations. Discuss: no single algorithm is best for all scenarios.</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Scheduling algorithm worksheets with Gantt chart templates</li>
+      <li>Online scheduler simulator</li>
+      <li>Comparison table template</li>
+      <li>Video: "CPU Scheduling Algorithms" (Neso Academy)</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> Gantt chart and calculation worksheets</li>
+      <li><strong>Formative:</strong> Evaluation task rubric assessment</li>
+      <li><strong>Homework:</strong> Complete scheduling problems for all 4 algorithms; calculate average waiting time and turnaround time; recommend algorithm for given scenario</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Construct FCFS Gantt charts; calculate waiting time with guidance; identify basic scheduling criteria.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Apply all four algorithms; calculate waiting time, turnaround time, and response time; construct accurate Gantt charts.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Solve complex scheduling with arrival times and preemption; evaluate algorithms for specific scenarios; explain priority inversion and multi-level feedback queues; discuss real-time scheduling constraints.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 16: Interrupts &amp; System Security</h2>
+<div class="week-box">
+  <div class="week-title">Week 16: Interrupts, Privilege Levels &amp; System Security</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Explain the purpose and types of interrupts (hardware, software, timer)</li>
+      <li>Describe the interrupt handling process: detection, saving state, executing handler, restoring state</li>
+      <li>Explain the role of the interrupt vector table</li>
+      <li>Describe privilege levels (user mode vs kernel mode) and protection rings</li>
+      <li>Explain how privilege levels protect system resources</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "What happens when you press Ctrl+C while a program is running?" Introduce interrupts.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Interrupts: signals that pause normal execution. Types: hardware (I/O completion, keyboard), software (exceptions, system calls), timer (preemption). Interrupt handling: save PC and registers, load handler address, execute handler, restore state, return. Interrupt priority and masking.</li>
+      <li><strong>Worked Example (15 min):</strong> Teacher traces keyboard interrupt: user presses key, keyboard controller sends signal, CPU saves state, handler reads keycode, stores in buffer, restores state, resumes program.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students trace a timer interrupt in a multitasking system. Show how timer interrupt enables process switching. Bronze: follow provided trace; Silver: identify all saved/restored registers; Gold: explain interrupt nesting and priority.</li>
+      <li><strong>Plenary (5 min):</strong> "Why are interrupts essential for multitasking?"</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "Why can't a normal program directly access the hard disk?" Introduce privilege levels.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Protection rings: Ring 0 (kernel/supervisor mode) to Ring 3 (user mode). Privileged instructions only in Ring 0. System calls as controlled gateway from user to kernel mode. Memory protection: base and limit registers, page table protection bits.</li>
+      <li><strong>Worked Example (15 min):</strong> Teacher traces a system call: program requests file read → trap to kernel → kernel validates request → performs I/O → returns result to user program. Show mode switch on diagram.</li>
+      <li><strong>Guided Practice (25 min):</strong> Scenario analysis: "A virus tries to modify the page table directly." What prevents this? Students identify protection mechanisms at each level.</li>
+      <li><strong>Independent Practice (25 min):</strong> Research: "Meltdown and Spectre — how do hardware vulnerabilities bypass privilege levels?" Students summarise in 5 bullet points.</li>
+      <li><strong>Plenary (10 min):</strong> Discuss Meltdown/Spectre. Implications for system security and hardware design.</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Interrupt handling diagram (A1 poster)</li>
+      <li>Protection rings diagram</li>
+      <li>System call tracing worksheet</li>
+      <li>Article: "Meltdown and Spectre Explained" (Ars Technica)</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> Interrupt tracing worksheet</li>
+      <li><strong>Formative:</strong> Privilege level scenario analysis</li>
+      <li><strong>Homework:</strong> Draw interrupt handling sequence diagram; explain 3 ways privilege levels protect system resources</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Name interrupt types; follow provided interrupt handling sequence; identify user vs kernel mode.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Trace interrupt handling independently; explain interrupt vector table; describe system call mechanism; explain memory protection.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Explain interrupt nesting and priority; analyse protection ring architecture; discuss hardware vulnerabilities (Meltdown/Spectre); evaluate security implications of privilege level design.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 17: Expert Systems &amp; Neural Networks</h2>
+<div class="week-box">
+  <div class="week-title">Week 17: Expert Systems &amp; Neural Networks</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Describe the components of an expert system: knowledge base, inference engine, user interface</li>
+      <li>Explain forward chaining and backward chaining inference strategies</li>
+      <li>Evaluate the advantages and limitations of expert systems</li>
+      <li>Describe the structure and operation of a biological neuron</li>
+      <li>Explain the perceptron model and its learning rule</li>
+      <li>Describe multi-layer neural networks and the role of hidden layers</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "Can a computer diagnose an illness?" Show medical diagnosis app screenshot.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Expert system components: knowledge base (facts and rules), inference engine (applies rules), user interface (explanation facility). Rule format: IF condition THEN conclusion. Forward chaining: data-driven, starts with facts, derives conclusions. Backward chaining: goal-driven, starts with hypothesis, seeks supporting facts.</li>
+      <li><strong>Worked Example (15 min):</strong> Teacher demonstrates forward chaining on animal identification expert system. Given facts: "has feathers," "can fly" → conclude "bird." Then demonstrates backward chaining: "Is it a bird?" → check feathers, beak, etc.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students complete forward and backward chaining exercises on a simple expert system (diagnosing computer faults). Bronze: follow provided rule set; Silver: add one new rule; Gold: design a 5-rule expert system for a domain of choice.</li>
+      <li><strong>Plenary (5 min):</strong> "What are the limitations of expert systems?" (knowledge acquisition bottleneck, brittleness, no common sense)</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "How does your brain recognise a face?" Introduce neural networks.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Biological neuron: dendrites (inputs), soma (processing), axon (output), synapse (connection). Artificial neuron (perceptron): weighted inputs, summation, activation function (step, sigmoid, ReLU). Perceptron learning rule: adjust weights based on error.</li>
+      <li><strong>Worked Example (20 min):</strong> Teacher traces perceptron for AND gate. Initialise weights, calculate output for each input, adjust weights if error, repeat until converged.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students trace perceptron learning for OR gate. Bronze: provided weight update table; Silver: calculate updates independently; Gold: explain why XOR cannot be solved by single perceptron (linear separability).</li>
+      <li><strong>Independent Practice (20 min):</strong> Multi-layer networks: input layer, hidden layer(s), output layer. Backpropagation introduced conceptually. Students explore TensorFlow Playground (online) to visualise hidden layers solving XOR.</li>
+      <li><strong>Plenary (10 min):</strong> Discussion: "What can neural networks do that expert systems cannot?" (learning from data, generalisation, handling noise)</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Expert system rule sets (printed)</li>
+      <li>TensorFlow Playground (https://playground.tensorflow.org/)</li>
+      <li>Perceptron tracing worksheets</li>
+      <li>Video: "How Neural Networks Learn" (3Blue1Brown)</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Summative:</strong> Quiz 5 (Week 17) — AI &amp; Ethics (20 marks)</li>
+      <li><strong>Formative:</strong> Expert system chaining exercises</li>
+      <li><strong>Homework:</strong> Complete perceptron learning trace for AND gate; explain why multi-layer networks are needed for XOR; research one real-world expert system</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Identify expert system components; follow provided chaining examples; describe perceptron structure.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Apply forward and backward chaining independently; trace perceptron learning; explain activation functions; describe multi-layer networks.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Design original expert system; derive perceptron learning rule mathematically; explain backpropagation conceptually; evaluate expert systems vs neural networks for given problems.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 18: Machine Learning, Big Data &amp; Ethics</h2>
+<div class="week-box">
+  <div class="week-title">Week 18: Machine Learning, Big Data &amp; AI Ethics</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Distinguish between supervised, unsupervised, and reinforcement learning</li>
+      <li>Describe the characteristics of big data: volume, velocity, variety, veracity</li>
+      <li>Explain how machine learning algorithms process big data</li>
+      <li>Identify ethical issues in AI: bias, privacy, accountability, transparency</li>
+      <li>Evaluate the societal impact of AI and big data technologies</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "How does Netflix know what you want to watch?" Discuss recommendation systems.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Machine learning types: supervised (labelled data, classification/regression), unsupervised (unlabelled, clustering/association), reinforcement (agent, environment, rewards). Big data: 5 Vs — Volume (scale), Velocity (speed), Variety (types), Veracity (quality), Value (usefulness). Examples: social media, IoT sensors, financial transactions.</li>
+      <li><strong>Worked Example (15 min):</strong> Teacher classifies 5 scenarios into ML types: spam filter (supervised), customer segmentation (unsupervised), game playing AI (reinforcement).</li>
+      <li><strong>Guided Practice (25 min):</strong> Students classify 10 real-world applications into ML types and identify which "V" of big data is most relevant. Bronze: ML type only; Silver: ML type + relevant Vs; Gold: explain why a particular algorithm might be chosen.</li>
+      <li><strong>Plenary (5 min):</strong> "What makes big data 'big'? Is it just the size?"</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "Should an AI be allowed to decide who gets a loan?" Introduce ethics.</li>
+      <li><strong>Direct Instruction (20 min):</strong> Ethical issues: algorithmic bias (training data reflects historical bias), privacy (surveillance, data collection), accountability (who is responsible for AI decisions?), transparency (black box problem), job displacement, autonomous weapons. Framework for evaluation: utilitarian, deontological, virtue ethics.</li>
+      <li><strong>Guided Practice (25 min):</strong> Case study analysis: "Facial recognition in public spaces." Students evaluate using ethical framework in groups. Bronze: identify one ethical issue; Silver: analyse from two perspectives; Gold: propose policy recommendation with justification.</li>
+      <li><strong>Independent Practice (30 min):</strong> Students prepare a 2-minute position statement on one AI ethics topic of their choice. Use evidence from provided articles.</li>
+      <li><strong>Plenary (15 min):</strong> Mini-debate: 3 students present positions, class questions. Teacher summarises key ethical principles.</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Machine learning type classification cards</li>
+      <li>Big data case studies (Netflix, Amazon, healthcare)</li>
+      <li>AI ethics articles: "Weapons of Math Destruction" (O'Neil), EU AI Act summary</li>
+      <li>Video: "The Ethics of AI" (Royal Institution)</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> ML classification worksheet</li>
+      <li><strong>Formative:</strong> Ethics case study group analysis</li>
+      <li><strong>Homework:</strong> Write 500-word evaluation: "Evaluate the ethical implications of using AI for university admissions."</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Identify ML types from descriptions; name one ethical issue; express a personal opinion on AI use.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Classify applications accurately; explain big data characteristics; analyse ethical issues using structured framework; consider multiple perspectives.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Evaluate ML algorithm choices for specific data characteristics; synthesise ethical arguments from multiple philosophical positions; propose evidence-based policy recommendations; discuss regulatory frameworks (EU AI Act, etc.).
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Mock Examination — Week 18</h2>
+<div class="week-box">
+  <div class="week-title">End-of-Semester Mock Exam: Paper 1 Style</div>
+  
+  <div class="warning-box">
+    <strong>Examination Details:</strong><br>
+    Duration: 1 hour 45 minutes<br>
+    Total Marks: 75<br>
+    Format: Closed-book, bilingual glossary permitted<br>
+    Coverage: All Semester 1 topics (Weeks 1–18)
+  </div>
+
+  <p><strong>Paper Structure:</strong></p>
+  <table>
+    <tr><th>Section</th><th>Marks</th><th>Time Guide</th><th>Topics</th></tr>
+    <tr><td>A: Short Answer</td><td>25</td><td>35 min</td><td>Boolean algebra, K-maps, floating-point, protocols</td></tr>
+    <tr><td>B: Structured Problem Solving</td><td>30</td><td>45 min</td><td>Logic circuits, adders, memory management, scheduling</td></tr>
+    <tr><td>C: Extended Response</td><td>20</td><td>35 min</td><td>AI ethics, system evaluation, design challenges</td></tr>
+  </table>
+
+  <div class="checklist">
+    <h4>EAL Exam Support</h4>
+    <ul>
+      <li>Bilingual glossary provided (80+ terms)</li>
+      <li>Extra reading time: +15 minutes</li>
+      <li>Command words explained at start of each section</li>
+      <li>Diagrams provided for all hardware questions</li>
+      <li>Sentence starters for extended-response questions</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Cross-Curricular Links</h2>
+
+<table>
+  <tr><th>Subject</th><th>Connection</th><th>Activity</th></tr>
+  <tr><td>Mathematics</td><td>Boolean algebra, graph theory, binary arithmetic</td><td>Joint problem set on logic and proof</td></tr>
+  <tr><td>Physics</td><td>Electronics, semiconductor physics, signal propagation</td><td>Lab: measuring gate propagation delay</td></tr>
+  <tr><td>Philosophy</td><td>Ethics, consciousness, free will</td><td>Seminar: "Can machines think?" (Turing test discussion)</td></tr>
+  <tr><td>Business</td><td>Big data analytics, AI in marketing, automation</td><td>Case study: AI-driven business transformation</td></tr>
+  <tr><td>Politics</td><td>AI regulation, surveillance, digital rights</td><td>Debate: "Should facial recognition be banned in public?"</td></tr>
+</table>
+
+<hr class="section-divider">
+
+<h2>Homework Schedule (Weeks 10–18)</h2>
+
+<table>
+  <tr><th>Week</th><th>Homework Task</th><th>Estimated Time</th></tr>
+  <tr><td>10</td><td>Design NAND-only circuit for given expression; verify with Logisim</td><td>60 min</td></tr>
+  <tr><td>11</td><td>Build 4-bit adder in Logisim; test with 3 pairs; calculate delay</td><td>60 min</td></tr>
+  <tr><td>12</td><td>Complete flip-flop characteristic tables; draw timing diagram</td><td>45 min</td></tr>
+  <tr><td>13</td><td>Write assembly program to find largest of 3 numbers; trace execution</td><td>60 min</td></tr>
+  <tr><td>14</td><td>Address translation exercises (paging and segmentation); explain virtual memory</td><td>60 min</td></tr>
+  <tr><td>15</td><td>Scheduling problems for all 4 algorithms; recommend for scenario</td><td>60 min</td></tr>
+  <tr><td>16</td><td>Draw interrupt sequence diagram; explain 3 privilege protection mechanisms</td><td>45 min</td></tr>
+  <tr><td>17</td><td>Perceptron learning trace for AND; explain XOR limitation; research expert system</td><td>60 min</td></tr>
+  <tr><td>18</td><td>500-word ethics evaluation: AI in university admissions</td><td>90 min</td></tr>
+</table>
+
+<div class="bilingual">
+  <strong>关键术语复习 / Key Term Revision:</strong><br>
+  Logic gate = 逻辑门 | Half-adder = 半加器 | Full-adder = 全加器 | Flip-flop = 触发器 | Microprocessor = 微处理器 | Assembly language = 汇编语言 | Fetch-decode-execute = 取指-译码-执行 | Paging = 分页 | Segmentation = 分段 | Virtual memory = 虚拟内存 | Scheduling = 调度 | Interrupt = 中断 | Expert system = 专家系统 | Neural network = 神经网络 | Machine learning = 机器学习 | Big data = 大数据 | Ethics = 伦理
+</div>
+
+<footer style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #1a5276; text-align: center; color: #666;">
+  <p>Victoria Park Academy | A-Level Computer Science Department</p>
+  <p>Weeks 10–18 Scheme of Work v1.0 | Semester 1 2024–2025</p>
+</footer>
+
+</body>
+</html>

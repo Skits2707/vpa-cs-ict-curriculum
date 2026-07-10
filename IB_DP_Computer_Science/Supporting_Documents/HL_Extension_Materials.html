@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — HL Extension Materials</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+  .code { background: #f4f4f4; padding: 10px; border-left: 3px solid #666; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>HL Extension Materials <span class="bilingual">HL扩展材料 HL Kuòzhǎn Cáiliào</span></h1>
+<p><strong>For:</strong> Higher Level (HL) Students | <strong>Topics:</strong> 5, 6, 7 + Cross-Curricular Enrichment</p>
+
+<h2>Introduction</h2>
+<p>HL students study three additional topics (5, 6, 7) and sit Paper 3 (Case Study). This document provides extension reading, advanced problems, research prompts, and enrichment resources to support deeper understanding and potential exploration for the Extended Essay or university preparation.</p>
+
+<h2>1. Topic 5: Abstract Data Structures — Extension Materials</h2>
+
+<h3>Advanced Reading</h3>
+<ul>
+<li><strong>"Introduction to Algorithms"</strong> (CLRS) — Chapters 10 (Elementary Data Structures), 12 (Binary Search Trees), 22 (Graph Algorithms)</li>
+<li><strong>"Algorithms"</strong> by Robert Sedgewick & Kevin Wayne — Excellent for visual learners; includes Java implementations</li>
+<li><strong>VisuAlgo</strong> (visualgo.net) — Interactive visualisations of all data structures and algorithms</li>
+</ul>
+
+<h3>Extension Problems</h3>
+<table>
+<tr><th>Problem</th><th>Skill</th><th>Difficulty</th></tr>
+<tr><td>Implement a doubly linked list with sentinel nodes to eliminate edge cases</td><td>Linked list mastery</td><td>Medium</td></tr>
+<tr><td>Implement an AVL tree with automatic rebalancing after insertion</td><td>Tree balancing</td><td>Hard</td></tr>
+<tr><td>Solve the "Travelling Salesman Problem" using brute force and then compare with greedy approximation</td><td>Graph algorithms, complexity</td><td>Hard</td></tr>
+<tr><td>Implement Dijkstra's algorithm using a priority queue (min-heap)</td><td>Advanced graph algorithms</td><td>Hard</td></tr>
+<tr><td>Design a graph to model VPA's campus and find the shortest path between any two buildings</td><td>Real-world application</td><td>Medium</td></tr>
+</table>
+
+<h3>Research Prompts</h3>
+<ul>
+<li>Why do different programming languages implement data structures differently? Compare Python lists, Java ArrayLists, and C++ vectors.</li>
+<li>How does a database index use B-trees (a variant of binary search trees) to achieve fast lookups?</li>
+<li>What is the "memory hierarchy" effect on data structure choice? When is an array faster than a linked list in practice?</li>
+</ul>
+
+<h2>2. Topic 6: Resource Management — Extension Materials</h2>
+
+<h3>Advanced Reading</h3>
+<ul>
+<li><strong>"Operating Systems: Three Easy Pieces"</strong> (Remzi Arpaci-Dusseau) — Free online; excellent for scheduling and memory management</li>
+<li><strong>"Modern Operating Systems"</strong> (Tanenbaum) — Chapters on process management and memory</li>
+<li><strong>OSDev Wiki</strong> (wiki.osdev.org) — For students interested in building their own OS</li>
+</ul>
+
+<h3>Extension Problems</h3>
+<table>
+<tr><th>Problem</th><th>Skill</th><th>Difficulty</th></tr>
+<tr><td>Calculate turnaround and waiting times for 5 processes using FCFS, SJF, Round Robin (quantum=4), and Priority. Which is "fairest"?</td><td>Scheduling analysis</td><td>Medium</td></tr>
+<tr><td>Given a 32-bit system with 4KB pages, calculate the page table size. How does it change with 64-bit?</td><td>Memory calculations</td><td>Medium</td></tr>
+<tr><td>Simulate FIFO, LRU, and Optimal page replacement on a reference string. Compare page fault rates.</td><td>Virtual memory</td><td>Medium</td></tr>
+<tr><td>Design a semaphore solution for the "Dining Philosophers" problem</td><td>Concurrency classic</td><td>Hard</td></tr>
+<tr><td>Model a smart home thermostat as a control system with feedback loop</td><td>Control systems</td><td>Medium</td></tr>
+</table>
+
+<h3>Research Prompts</h3>
+<ul>
+<li>How does Linux's Completely Fair Scheduler (CFS) differ from traditional Round Robin?</li>
+<li>What are the security implications of memory paging (e.g., Meltdown and Spectre vulnerabilities)?</li>
+<li>How do real-time operating systems (RTOS) guarantee deadlines in automotive or aerospace applications?</li>
+</ul>
+
+<h2>3. Topic 7: Control — Extension Materials</h2>
+
+<h3>Advanced Reading</h3>
+<ul>
+<li><strong>"Distributed Systems"</strong> (Tanenbaum & Van Steen) — Chapters on architectures, communication, and consistency</li>
+<li><strong>"Designing Data-Intensive Applications"</strong> (Martin Kleppmann) — Excellent for distributed systems and CAP theorem</li>
+<li><strong>"Life 3.0"</strong> (Max Tegmark) — AI, autonomous systems, and future implications</li>
+</ul>
+
+<h3>Extension Problems</h3>
+<table>
+<tr><th>Problem</th><th>Skill</th><th>Difficulty</th></tr>
+<tr><td>Design a consensus algorithm for 3 nodes deciding on a shared value. What happens if one node fails?</td><td>Distributed consensus</td><td>Hard</td></tr>
+<tr><td>Compare CAP theorem trade-offs for a banking app vs a social media feed</td><td>System design</td><td>Medium</td></tr>
+<tr><td>Analyse Tesla's Autopilot as an autonomous agent using the sense-plan-act model</td><td>Autonomy analysis</td><td>Medium</td></tr>
+<tr><td>Debate: Should lethal autonomous weapons be banned? Prepare arguments for both sides</td><td>Ethics</td><td>Medium</td></tr>
+<tr><td>Design a distributed system for VPA's attendance tracking across multiple campuses</td><td>Real-world application</td><td>Hard</td></tr>
+</table>
+
+<h3>Research Prompts</h3>
+<ul>
+<li>How does Bitcoin's Proof of Work achieve distributed consensus without a central authority?</li>
+<li>What is the "alignment problem" in AI, and why do researchers consider it an existential risk?</li>
+<li>How do swarms of drones coordinate without a central controller? What emergent behaviours appear?</li>
+</ul>
+
+<h2>4. Paper 3 Case Study — Extension Resources</h2>
+<ul>
+<li><strong>IB Case Study (current year):</strong> Released by IB in September prior to exams</li>
+<li><strong>Harvard Business Review</strong> — Technology and strategy cases</li>
+<li><strong>MIT Sloan Management Review</strong> — Digital transformation articles</li>
+<li><strong>Wired, MIT Technology Review</strong> — Current technology trends</li>
+<li><strong>Journal of ACM / IEEE Computer</strong> — For deep technical background (optional)</li>
+</ul>
+
+<h2>5. Programming Enrichment</h2>
+
+<h3>Advanced Languages to Explore</h3>
+<table>
+<tr><th>Language</th><th>Why Explore</th><th>Resource</th></tr>
+<tr><td>C</td><td>Memory management, pointers, OS-level programming</td><td>"C Programming Language" (K&R)</td></tr>
+<tr><td>Java</td><td>OOP, enterprise systems, IB-friendly pseudocode similarity</td><td>Oracle Java Tutorials</td></tr>
+<tr><td>Haskell</td><td>Functional programming, recursion, type systems</td><td>"Learn You a Haskell for Great Good"</td></tr>
+<tr><td>Prolog</td><td>Logic programming, declarative paradigms</td><td>"Learn Prolog Now" (free online)</td></tr>
+</ul>
+
+<h3>Competitive Programming</h3>
+<ul>
+<li><strong>LeetCode</strong> — Algorithmic problem solving (start with "Easy", progress to "Medium")</li>
+<li><strong>Codeforces</strong> — Competitive programming contests</li>
+<li><strong>USACO Guide</strong> — Structured competitive programming curriculum</li>
+<li><strong>Project Euler</strong> — Mathematical/computational problems</li>
+</ul>
+
+<h2>6. University Preparation</h2>
+<ul>
+<li><strong>MOOCs:</strong> CS50 (Harvard), MIT 6.0001 (Python), Stanford Algorithms Specialization</li>
+<li><strong>Mathematics:</strong> Ensure strong calculus and discrete mathematics preparation</li>
+<li><strong>Reading:</strong> "The Pattern on the Stone" (Daniel Hillis) — elegant introduction to CS concepts</li>
+<li><strong>Research:</strong> Consider an Extended Essay in Computer Science; start exploring topics in Year 1</li>
+</ul>
+
+<h2>7. HL Student Checklist</h2>
+<div class="checklist">
+<ul>
+<li>☐ I have completed all extension problems for Topic 5</li>
+<li>☐ I have completed all extension problems for Topic 6</li>
+<li>☐ I have completed all extension problems for Topic 7</li>
+<li>☐ I have read at least one book from the advanced reading list</li>
+<li>☐ I have explored one new programming language beyond Python</li>
+<li>☐ I have solved at least 20 LeetCode problems</li>
+<li>☐ I have researched my Paper 3 case study using at least 3 external sources</li>
+<li>☐ I have considered a topic for my Extended Essay</li>
+</ul>
+</div>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | HL Extension Materials</p>
+
+</body>
+</html>

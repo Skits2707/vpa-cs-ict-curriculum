@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA ICT — Year 8: Cybersecurity, Robotics & Media</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .vocab-box { background: #eaf2f8; padding: 10px; border-radius: 5px; margin: 10px 0; }
+  .activity-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f39c12; margin: 15px 0; }
+  .assessment-box { background: #fdebd0; padding: 15px; border-left: 4px solid #e67e22; margin: 15px 0; }
+  .week-header { background-color: #d6eaf8; padding: 10px; margin-top: 20px; border-radius: 5px; }
+  .code-block { background: #f4f4f4; padding: 10px; border-left: 3px solid #3498db; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>Year 8: Cybersecurity, Robotics &amp; Digital Media</h1>
+<p><strong>Duration:</strong> 36 weeks | <strong>Hardware:</strong> micro:bit v2, Arduino starter kits | <strong>Software:</strong> Python, MakeCode, OpenShot/Clipchamp</p>
+
+<h2>Unit 1: Cybersecurity Awareness (Weeks 1–9)</h2>
+
+<div class="week-header"><h3>Week 1 — Introduction to Cybersecurity</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> cybersecurity <span class="bilingual">网络安全 (wǎngluò ānquán)</span>, threat <span class="bilingual">威胁 (wēixié)</span>, vulnerability <span class="bilingual">漏洞 (lòudòng)</span>, attack <span class="bilingual">攻击 (gōngjī)</span>, defense <span class="bilingual">防御 (fángyù)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Hacker vs. Defender" role-play. Students draw cards: phishing email, strong password, malware, firewall.<br><br>
+<strong>Activity 2 (15 min):</strong> Case studies — Real news stories about data breaches (simplified). Discuss: What went wrong?<br><br>
+<strong>Activity 3 (10 min):</strong> Class brainstorming — "What devices in your home connect to the internet?" (IoT awareness)
+</div>
+
+<div class="week-header"><h3>Week 2 — Password Security</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> password <span class="bilingual">密码 (mìmǎ)</span>, encryption <span class="bilingual">加密 (jiāmì)</span>, brute force <span class="bilingual">暴力破解 (bàolì pòjiě)</span>, two-factor authentication <span class="bilingual">双因素认证 (shuāng yīnsù rènzhèng)</span>, passphrase <span class="bilingual">密码短语 (mìmǎ duǎnyǔ)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Password strength tester — Students test passwords on howsecureismypassword.net (safe demo).<br><br>
+<strong>Activity 2 (15 min):</strong> Create a strong passphrase — "CorrectHorseBatteryStaple" concept. Memorable but long.<br><br>
+<strong>Activity 3 (10 min):</strong> Password manager introduction — Why reuse is dangerous.
+</div>
+
+<div class="week-header"><h3>Week 3 — Phishing &amp; Social Engineering</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> phishing <span class="bilingual">网络钓鱼 (wǎngluò diàoyú)</span>, spoofing <span class="bilingual">欺骗 (qīpiàn)</span>, social engineering <span class="bilingual">社会工程学 (shèhuì gōngchéngxué)</span>, suspicious <span class="bilingual">可疑的 (kěyí de)</span>, verify <span class="bilingual">核实 (héshí)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Spot the Phish" — Show 5 emails. Which are real? Which are phishing? Red flags: urgency, weird links, spelling errors.<br><br>
+<strong>Activity 2 (15 min):</strong> URL analysis — Compare amazon.com vs. amazon-security-verify.com<br><br>
+<strong>Activity 3 (10 min):</strong> Create a "Phishing Warning" poster with 5 red flags.
+</div>
+
+<div class="week-header"><h3>Week 4 — Malware &amp; Viruses</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> malware <span class="bilingual">恶意软件 (èyì ruǎnjiàn)</span>, virus <span class="bilingual">病毒 (bìngdú)</span>, trojan <span class="bilingual">木马 (mùmǎ)</span>, ransomware <span class="bilingual">勒索软件 (lèsuǒ ruǎnjiàn)</span>, antivirus <span class="bilingual">杀毒软件 (shādú ruǎnjiàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Malware types matching game — Match type to description and example.<br><br>
+<strong>Activity 2 (15 min):</strong> "How do I protect myself?" — Install updates, use antivirus, don't download from unknown sources.<br><br>
+<strong>Activity 3 (10 min):</strong> Discussion — "Can phones get viruses too?"
+</div>
+
+<div class="week-header"><h3>Week 5 — Network Security Basics</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> firewall <span class="bilingual">防火墙 (fánghuǒqiáng)</span>, router <span class="bilingual">路由器 (lùyóuqì)</span>, WPA3 <span class="bilingual">WPA3加密协议 (WPA3 jiāmì xiéyì)</span>, SSID <span class="bilingual">网络名称 (wǎngluò míngchēng)</span>, encryption <span class="bilingual">加密 (jiāmì)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Diagram a home network — Router connects to phone, laptop, smart TV. Where are the vulnerabilities?<br><br>
+<strong>Activity 2 (15 min):</strong> "Secure Your Home WiFi" — Change default password, hide SSID, enable WPA3.<br><br>
+<strong>Activity 3 (10 min):</strong> Public WiFi dangers — Why is free airport WiFi risky?
+</div>
+
+<div class="week-header"><h3>Week 6 — Cryptography Introduction</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> cryptography <span class="bilingual">密码学 (mìmǎ xué)</span>, cipher <span class="bilingual">密码 (mìmǎ)</span>, Caesar cipher <span class="bilingual">凯撒密码 (kǎisā mìmǎ)</span>, encryption key <span class="bilingual">加密密钥 (jiāmì mìyuè)</span>, plaintext <span class="bilingual">明文 (míngwén)</span>, ciphertext <span class="bilingual">密文 (mìwén)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (20 min):</strong> Caesar cipher workshop — Shift each letter by 3. Encode and decode messages.<br><br>
+<strong>Activity 2 (15 min):</strong> Python cipher — Write a simple encryption program.
+<div class="code-block">
+message = "HELLO"<br>
+key = 3<br>
+encrypted = ""<br>
+for char in message:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;encrypted += chr(ord(char) + key)<br>
+print(encrypted)
+</div>
+<strong>Activity 3 (5 min):</strong> Discussion — Why is Caesar cipher not secure today?
+</div>
+
+<div class="week-header"><h3>Week 7 — Ethical Hacking &amp; Penetration Testing</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> ethical hacker <span class="bilingual">白帽黑客 (báimào hēikè)</span>, penetration test <span class="bilingual">渗透测试 (shèntòu cèshì)</span>, white hat <span class="bilingual">白帽 (báimào)</span>, black hat <span class="bilingual">黑帽 (hēimào)</span>, gray hat <span class="bilingual">灰帽 (huīmào)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Ethical discussion — "Is it ever OK to hack?" White hat vs. black hat scenarios.<br><br>
+<strong>Activity 2 (15 min):</strong> "Bug Bounty" concept — Companies pay hackers to find vulnerabilities.<br><br>
+<strong>Activity 3 (10 min):</strong> Research one famous ethical hacker (e.g., Kevin Mitnick's rehabilitation).
+</div>
+
+<div class="week-header"><h3>Week 8 — Digital Privacy &amp; Laws</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> privacy <span class="bilingual">隐私 (yǐnsī)</span>, GDPR <span class="bilingual">通用数据保护条例 (tōngyòng shùjù bǎohù tiáolì)</span>, consent <span class="bilingual">同意 (tóngyì)</span>, data protection <span class="bilingual">数据保护 (shùjù bǎohù)</span>, cookie <span class="bilingual">Cookie (网站追踪数据)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "What do websites know about you?" Check browser cookies and permissions.<br><br>
+<strong>Activity 2 (15 min):</strong> Create a "Privacy Checklist" for students: review app permissions, turn off location, read privacy policies (simplified).<br><br>
+<strong>Activity 3 (10 min):</strong> Debate — "Should schools be allowed to monitor student internet use?"
+</div>
+
+<div class="week-header"><h3>Week 9 — Cybersecurity Assessment</h3></div>
+<div class="assessment-box">
+<strong>Project (40 min):</strong> Create a "Student Cybersecurity Guide" (1-page infographic or 3-slide presentation) covering:
+<ul>
+<li>3 types of cyber threats</li>
+<li>5 ways to stay safe online</li>
+<li>What to do if hacked</li>
+<li>One real case study</li>
+</ul>
+</div>
+
+<h2>Unit 2: Robotics &amp; Physical Computing (Weeks 10–18)</h2>
+
+<div class="week-header"><h3>Week 10 — Introduction to micro:bit</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> micro:bit <span class="bilingual">micro:bit (微型电脑板)</span>, LED matrix <span class="bilingual">LED点阵 (LED diǎnzhèn)</span>, sensor <span class="bilingual">传感器 (chuángǎnqì)</span>, GPIO <span class="bilingual">通用输入输出 (tōngyòng shūrù shūchū)</span>, emulator <span class="bilingual">模拟器 (mónǐqì)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> micro:bit hardware tour — Identify buttons, LED grid, pins, USB, battery connector.<br><br>
+<strong>Activity 2 (15 min):</strong> First program on MakeCode — Display name scrolling across LED matrix.<br><br>
+<strong>Activity 3 (10 min):</strong> Download to physical micro:bit (if available) or test in emulator.
+</div>
+
+<div class="week-header"><h3>Week 11 — Buttons &amp; Inputs</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Rock Paper Scissors" — Press A for rock, B for paper, A+B for scissors. micro:bit randomly chooses.<br><br>
+<strong>Activity 2 (15 min):</strong> Counter program — A button adds 1, B button subtracts 1. Display count.<br><br>
+<strong>Activity 3 (10 min):</strong> "Reaction Game" — micro:bit shows icon; first to press button wins.
+</div>
+
+<div class="week-header"><h3>Week 12 — Sensors: Accelerometer &amp; Compass</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> accelerometer <span class="bilingual">加速度计 (jiāsùdùjì)</span>, compass <span class="bilingual">指南针 (zhǐnánzhēn)</span>, tilt <span class="bilingual">倾斜 (qīngxié)</span>, gesture <span class="bilingual">手势 (shǒushì)</span>, shake <span class="bilingual">摇晃 (yáohuàng)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Magic 8-Ball" — Shake micro:bit to get random answer.<br><br>
+<strong>Activity 2 (15 min):</strong> "Step Counter" — Use shake detection to count steps.<br><br>
+<strong>Activity 3 (10 min):</strong> Compass app — micro:bit points to North when button pressed.
+</div>
+
+<div class="week-header"><h3>Week 13 — Sensors: Temperature &amp; Light</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Room temperature monitor — Display current temperature in °C.<br><br>
+<strong>Activity 2 (15 min):</strong> "Night Light" — LED brightness adjusts based on ambient light level.<br><br>
+<strong>Activity 3 (10 min):</strong> Data logging — Record temperature every minute for 10 minutes; analyze trend.
+</div>
+
+<div class="week-header"><h3>Week 14 — Radio Communication</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> radio <span class="bilingual">无线电 (wúxiàn diàn)</span>, broadcast <span class="bilingual">广播 (guǎngbō)</span>, receive <span class="bilingual">接收 (jiēshōu)</span>, group <span class="bilingual">组 (zǔ)</span>, signal <span class="bilingual">信号 (xìnhào)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Send a Message" — Program two micro:bits to send text messages to each other.<br><br>
+<strong>Activity 2 (15 min):</strong> "Fire Alarm Network" — One micro:bit detects heat (simulated with button); sends alert to all others.<br><br>
+<strong>Activity 3 (10 min):</strong> Discussion — How does this relate to real IoT networks?
+</div>
+
+<div class="week-header"><h3>Week 15 — Introduction to Arduino</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> Arduino <span class="bilingual">Arduino (开源电子平台)</span>, breadboard <span class="bilingual">面包板 (miànbāo bǎn)</span>, resistor <span class="bilingual">电阻 (diànzǔ)</span>, LED <span class="bilingual">发光二极管 (fāguāng èrjíguǎn)</span>, jumper wire <span class="bilingual">跳线 (tiàoxiàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Arduino hardware identification — Uno board, digital pins, analog pins, power, ground.<br><br>
+<strong>Activity 2 (20 min):</strong> "Blink" sketch — Upload the classic LED blink program. Change blink speed.<br><br>
+<strong>Activity 3 (5 min):</strong> Circuit safety — Never connect 5V directly to ground!
+</div>
+<div class="code-block">
+void setup() {<br>
+&nbsp;&nbsp;pinMode(LED_BUILTIN, OUTPUT);<br>
+}<br>
+void loop() {<br>
+&nbsp;&nbsp;digitalWrite(LED_BUILTIN, HIGH);<br>
+&nbsp;&nbsp;delay(1000);<br>
+&nbsp;&nbsp;digitalWrite(LED_BUILTIN, LOW);<br>
+&nbsp;&nbsp;delay(1000);<br>
+}
+</div>
+
+<div class="week-header"><h3>Week 16 — Arduino: Inputs &amp; Outputs</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (20 min):</strong> "Traffic Light" — Connect 3 LEDs (red, yellow, green) with resistors. Program traffic light sequence.<br><br>
+<strong>Activity 2 (15 min):</strong> Add a button — Pedestrian crossing: press button, lights change.<br><br>
+<strong>Activity 3 (5 min):</strong> Debugging — "My LED won't light up!" Checklist: resistor? correct pin? power?
+</div>
+
+<div class="week-header"><h3>Week 17 — Arduino: Analog &amp; PWM</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> analog <span class="bilingual">模拟 (mónǐ)</span>, digital <span class="bilingual">数字 (shùzì)</span>, PWM <span class="bilingual">脉宽调制 (màikuān tiáozhì)</span>, potentiometer <span class="bilingual">电位器 (diànwèiqì)</span>, fade <span class="bilingual">渐变 (jiànbiàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> LED fading — Use PWM to make LED slowly brighten and dim.<br><br>
+<strong>Activity 2 (15 min):</strong> Potentiometer control — Turn knob to control LED brightness.<br><br>
+<strong>Activity 3 (10 min):</strong> Analog read — Display potentiometer value on Serial Monitor.
+</div>
+
+<div class="week-header"><h3>Week 18 — Robotics Assessment</h3></div>
+<div class="assessment-box">
+<strong>Project (40 min):</strong> Build and program one of the following:
+<ol>
+<li><strong>Alarm System:</strong> micro:bit with motion sensor triggers LED and radio alert</li>
+<li><strong>Mood Lamp:</strong> Arduino with RGB LED changes color based on button presses</li>
+<li><strong>Digital Dice:</strong> micro:bit displays random number 1-6 when shaken</li>
+</ol>
+<p>Submit: working prototype + 1-paragraph explanation of how it works.</p>
+</div>
+
+<h2>Unit 3: Digital Media &amp; Data Visualization (Weeks 19–27)</h2>
+
+<div class="week-header"><h3>Week 19 — Video Editing Basics</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> timeline <span class="bilingual">时间线 (shíjiān xiàn)</span>, clip <span class="bilingual">片段 (piànduàn)</span>, trim <span class="bilingual">修剪 (xiūjiǎn)</span>, split <span class="bilingual">分割 (fēngē)</span>, transition <span class="bilingual">转场 (zhuǎnchǎng)</span>, export <span class="bilingual">导出 (dǎochū)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> OpenShot/Clipchamp interface tour — Timeline, preview, media library.<br><br>
+<strong>Activity 2 (15 min):</strong> Import 3 video clips. Arrange on timeline. Trim beginning and end.<br><br>
+<strong>Activity 3 (10 min):</strong> Add a simple crossfade transition between clips.
+</div>
+
+<div class="week-header"><h3>Week 20 — Titles, Captions &amp; Effects</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Add animated title at start of video. Add credits at end.<br><br>
+<strong>Activity 2 (15 min):</strong> Add subtitles/captions to a 30-second clip.<br><br>
+<strong>Activity 3 (10 min):</strong> Green screen chroma key — Replace green background with image.
+</div>
+
+<div class="week-header"><h3>Week 21 — Audio Editing</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Add background music. Adjust volume so voice is clear.<br><br>
+<strong>Activity 2 (15 min):</strong> Remove background noise using audio filters.<br><br>
+<strong>Activity 3 (10 min):</strong> Record voiceover narration for a video.
+</div>
+
+<div class="week-header"><h3>Week 22 — Data Visualization Principles</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> data visualization <span class="bilingual">数据可视化 (shùjù kěshìhuà)</span>, infographic <span class="bilingual">信息图 (xìnxī tú)</span>, dashboard <span class="bilingual">仪表盘 (yíbiǎopán)</span>, misleading graph <span class="bilingual">误导性图表 (wùdǎo xìng túbiǎo)</span>, trend <span class="bilingual">趋势 (qūshì)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Good vs. Bad Charts" analysis — Show examples. Discuss: truncated y-axis, pie charts with too many slices, 3D distortions.<br><br>
+<strong>Activity 2 (15 min):</strong> Redesign a misleading chart to be honest and clear.<br><br>
+<strong>Activity 3 (10 min):</strong> Choose the right chart type: bar for comparison, line for trend, pie for proportion.
+</div>
+
+<div class="week-header"><h3>Week 23 — Python Data Visualization</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (20 min):</strong> Introduction to matplotlib. Create a simple bar chart:
+<div class="code-block">
+import matplotlib.pyplot as plt<br>
+months = ["Jan", "Feb", "Mar", "Apr"]<br>
+sales = [120, 150, 180, 170]<br>
+plt.bar(months, sales)<br>
+plt.title("Monthly Sales")<br>
+plt.show()
+</div>
+<strong>Activity 2 (15 min):</strong> Create line chart, pie chart, and scatter plot from class survey data.<br><br>
+<strong>Activity 3 (5 min):</strong> Save charts as PNG files for use in presentations.
+</div>
+
+<div class="week-header"><h3>Week 24 — Infographic Design</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (30 min):</strong> Design an infographic about a school topic (recycling, healthy eating, digital safety) using Canva or PowerPoint.<br><br>
+<strong>Requirements:</strong> Title, 3 data visualizations, icons, color scheme, sources cited.<br><br>
+<strong>Activity 2 (10 min):</strong> Peer review using design principles checklist.
+</div>
+
+<div class="week-header"><h3>Week 25 — Cloud Computing &amp; Collaboration</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> cloud <span class="bilingual">云 (yún)</span>, collaboration <span class="bilingual">协作 (xiézuò)</span>, sync <span class="bilingual">同步 (tóngbù)</span>, version control <span class="bilingual">版本控制 (bǎnběn kòngzhì)</span>, Google Workspace <span class="bilingual">Google工作空间 (Google gōngzuò kōngjiān)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Google Workspace collaboration — Simultaneous editing of a document. Watch cursors move!<br><br>
+<strong>Activity 2 (15 min):</strong> Version history — Show how to restore previous versions. "Undo" for entire document.<br><br>
+<strong>Activity 3 (10 min):</strong> Cloud storage comparison — Google Drive vs. OneDrive vs. iCloud.
+</div>
+
+<div class="week-header"><h3>Week 26 — Review &amp; IGCSE Prep Introduction</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (20 min):</strong> Mixed skills challenge — Document, spreadsheet, and presentation tasks in one lesson.<br><br>
+<strong>Activity 2 (15 min):</strong> IGCSE ICT (0417) overview — What to expect in Grades 9–10.<br><br>
+<strong>Activity 3 (5 min):</strong> Self-assessment: "Am I ready for IGCSE ICT?"
+</div>
+
+<div class="week-header"><h3>Week 27 — End of Year Assessment</h3></div>
+<div class="assessment-box">
+<strong>Portfolio Review + Practical (40 min):</strong>
+<ol>
+<li>Cybersecurity guide (submitted earlier)</li>
+<li>Robotics project demo (3 min per student)</li>
+<li>Video editing project (1-minute edited video)</li>
+<li>Data visualization (Python chart or infographic)</li>
+</ol>
+<p><strong>Reflection:</strong> "How has ICT helped me become a better learner?" (written, 100 words)</p>
+</div>
+
+<h2>Standards Mapping</h2>
+<table>
+<tr><th>Unit</th><th>Standard</th><th>Description</th></tr>
+<tr><td>Cybersecurity</td><td>CSTA 2-IC-22</td><td>Explain how physical and digital security measures protect electronic information</td></tr>
+<tr><td>Robotics</td><td>CSTA 2-AP-12</td><td>Design and iteratively develop programs for practical intent</td></tr>
+<tr><td>Media</td><td>ISTE 1.6</td><td>Communicate clearly and express themselves creatively using digital media</td></tr>
+<tr><td>Data Viz</td><td>CCSS.MATH.8.SP.A.1</td><td>Construct and interpret scatter plots for bivariate measurement data</td></tr>
+</table>
+</body>
+</html>

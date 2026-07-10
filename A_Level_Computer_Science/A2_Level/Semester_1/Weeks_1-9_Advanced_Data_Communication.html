@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A2 Level CS — Semester 1 Weeks 1-9: Advanced Data Representation &amp; Communication | Victoria Park Academy</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #1a5276; margin-top: 30px; border-bottom: 2px solid #ddd; padding-bottom: 8px; }
+  h3 { color: #2874a6; margin-top: 25px; }
+  h4 { color: #555; margin-top: 20px; }
+  .bilingual { background: #f9f9f9; border-left: 4px solid #1a5276; padding: 8px 12px; margin: 8px 0; font-style: italic; }
+  .bronze { background: #fdf2e9; border-left: 4px solid #e67e22; padding: 10px; margin: 10px 0; }
+  .silver { background: #eaf2f8; border-left: 4px solid #3498db; padding: 10px; margin: 10px 0; }
+  .gold { background: #e8f8f5; border-left: 4px solid #1abc9c; padding: 10px; margin: 10px 0; }
+  .checklist { background: #fef9e7; border: 1px solid #f4d03f; padding: 12px; margin: 12px 0; border-radius: 4px; }
+  .checklist ul { list-style: none; padding-left: 0; }
+  .checklist li::before { content: "☐ "; color: #f4d03f; font-weight: bold; }
+  table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #1a5276; color: white; }
+  tr:nth-child(even) { background: #f9f9f9; }
+  .code-block { background: #2c3e50; color: #ecf0f1; padding: 12px; border-radius: 4px; font-family: 'Courier New', monospace; overflow-x: auto; margin: 10px 0; }
+  .vpa-header { background: #1a5276; color: white; padding: 15px; text-align: center; margin-bottom: 20px; border-radius: 6px; }
+  .vpa-header h1 { color: white; border: none; padding: 0; margin: 0; }
+  .section-divider { border: none; height: 3px; background: linear-gradient(to right, #1a5276, #3498db, #1a5276); margin: 30px 0; }
+  .week-box { background: #f8f9fa; border-left: 5px solid #1a5276; padding: 15px; margin: 15px 0; border-radius: 0 6px 6px 0; }
+  .week-title { color: #1a5276; font-size: 1.3em; font-weight: bold; margin-bottom: 10px; }
+  .objective { background: #eaf2f8; padding: 8px; margin: 8px 0; border-radius: 4px; }
+  .activity { background: #e8f8f5; padding: 8px; margin: 8px 0; border-radius: 4px; }
+  .assessment-point { background: #fdedec; padding: 8px; margin: 8px 0; border-radius: 4px; border-left: 4px solid #e74c3c; }
+  .resource { background: #fef9e7; padding: 8px; margin: 8px 0; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<div class="vpa-header">
+  <h1>Victoria Park Academy</h1>
+  <p>A2 Level Computer Science — Semester 1 Weeks 1–9</p>
+  <p>Advanced Data Representation &amp; Advanced Communication</p>
+</div>
+
+<h1>Weeks 1–9: Advanced Data Representation &amp; Advanced Communication</h1>
+
+<p><strong>Unit 1:</strong> Advanced Data Representation (Weeks 1–4)<br>
+<strong>Unit 2:</strong> Advanced Communication (Weeks 5–8)<br>
+<strong>Week 9:</strong> Consolidation &amp; Formative Assessment</p>
+
+<div class="bilingual">
+  <strong>高级数据表示与通信 / Advanced Data Representation &amp; Communication</strong><br>
+  本单元涵盖布尔代数、卡诺图、浮点数表示、TCP/IP协议栈、路由算法和DNS。This unit covers Boolean algebra, Karnaugh maps, floating-point representation, TCP/IP stack, routing algorithms, and DNS.
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 1: Boolean Algebra — Laws and Theorems</h2>
+<div class="week-box">
+  <div class="week-title">Week 1: Boolean Algebra Foundations</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Recall and apply the fundamental laws of Boolean algebra (identity, null, idempotent, inverse, commutative, associative, distributive, absorption)</li>
+      <li>Apply De Morgan's laws to simplify expressions involving complements of sums and products</li>
+      <li>Simplify Boolean expressions using algebraic manipulation</li>
+      <li>Prove equivalence of two Boolean expressions using truth tables and algebraic methods</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Quick-fire truth table completion for AND, OR, NOT gates. Students use mini-whiteboards.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Teacher presents each Boolean law with a numerical analogy (e.g., distributive law: 3 × (4 + 5) = 3×4 + 3×5). Each law demonstrated with a truth table proof.</li>
+      <li><strong>Worked Example (15 min):</strong> Simplify A · (A + B) using absorption law. Verify with truth table.</li>
+      <li><strong>Guided Practice (25 min):</strong> Pairs complete scaffolded worksheet with 8 expressions to simplify. Bronze: 2-variable; Silver: 3-variable; Gold: expressions requiring multiple laws.</li>
+      <li><strong>Plenary (5 min):</strong> Exit ticket: Simplify X + X' · Y without assistance.</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Recall quiz on laws from previous lesson.</li>
+      <li><strong>Direct Instruction (20 min):</strong> De Morgan's laws introduced with Venn diagram visualisation. Emphasise "break the bar, change the sign" mnemonic.</li>
+      <li><strong>Worked Example (15 min):</strong> Simplify (A + B + C)' step-by-step using De Morgan's.</li>
+      <li><strong>Guided Practice (30 min):</strong> Students work in groups of 4. Each group assigned one complex expression to simplify, then present solution to class using visualiser.</li>
+      <li><strong>Independent Practice (35 min):</strong> Past paper question set (A-Level Paper 1, Q3–5 from 2018–2023). Students select bronze (3 questions), silver (5 questions), or gold (7 questions + extension proof).</li>
+      <li><strong>Plenary (10 min):</strong> Class discussion: "Why is Boolean algebra essential for computer hardware design?"</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Worksheet: Boolean Algebra Laws — Scaffolded Practice (PDF)</li>
+      <li>Interactive truth table generator: https://web.stanford.edu/class/cs103/tools/truth-table-tool/</li>
+      <li>Physical logic gate kits for demonstration (if available)</li>
+      <li>Past paper compilation: Boolean simplification questions 2018–2023</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> Exit ticket (Lesson 1) — teacher reviews before Lesson 2</li>
+      <li><strong>Formative:</strong> Group presentation rubric (Lesson 2) — peer and teacher assessment</li>
+      <li><strong>Homework:</strong> Simplify 5 expressions; prove equivalence using both truth table and algebraic methods</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Simplify expressions using single laws; complete truth tables with guidance.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Apply multiple laws in sequence; verify results independently.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Prove complex equivalences; derive simplified forms from word problems; explain why particular laws apply.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 2: Karnaugh Maps</h2>
+<div class="week-box">
+  <div class="week-title">Week 2: Karnaugh Maps (K-Maps)</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Construct 3-variable and 4-variable Karnaugh maps from truth tables or Boolean expressions</li>
+      <li>Identify and group adjacent cells following grouping rules (groups of 1, 2, 4, 8, 16)</li>
+      <li>Derive minimal Sum-of-Products (SOP) and Product-of-Sums (POS) expressions</li>
+      <li>Recognise and handle "don't care" conditions in K-map simplification</li>
+      <li>Compare K-map method with algebraic simplification for efficiency and accuracy</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Review simplified expression from Week 1 exit ticket. Ask: "Could we find this answer without algebra?"</li>
+      <li><strong>Direct Instruction (30 min):</strong> Introduce K-map grid structure. Explain Gray code ordering (00, 01, 11, 10). Show why adjacency matters. Demonstrate 3-variable K-map construction from truth table.</li>
+      <li><strong>Worked Example (20 min):</strong> Teacher completes a 3-variable K-map step-by-step: populate cells, identify groups, derive minimal expression. Show both SOP and POS approaches.</li>
+      <li><strong>Guided Practice (30 min):</strong> Students receive K-map templates and work in pairs on 3 problems. Teacher circulates with targeted questions: "Why did you group those cells?" "Is there a larger group possible?"</li>
+      <li><strong>Plenary (10 min):</strong> Whole-class check of solutions. Common errors addressed (wrapping around edges, diagonal grouping).</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Quick K-map completion from expression: F(A,B,C) = Σ(0,2,4,6)</li>
+      <li><strong>Direct Instruction (20 min):</strong> 4-variable K-maps introduced. Emphasise wrap-around grouping (top-bottom, left-right, corners). Show "don't care" notation (X) and how it expands grouping possibilities.</li>
+      <li><strong>Worked Example (15 min):</strong> 4-variable K-map with don't cares. Teacher thinks aloud: "This X lets me make a group of 8 instead of two groups of 4."</li>
+      <li><strong>Guided Practice (35 min):</strong> Carousel activity — 6 stations around room, each with a different K-map problem. Students rotate every 6 minutes, building speed and confidence.</li>
+      <li><strong>Independent Practice (30 min):</strong> Bronze: 3 three-variable problems; Silver: 2 four-variable problems; Gold: 1 four-variable with don't cares + design challenge: "A security system has 4 sensors. Use a K-map to minimise the alarm logic."</li>
+      <li><strong>Plenary (10 min):</strong> Student reflection: "When would I prefer K-maps over algebra? When would algebra be faster?"</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Printed K-map templates (3-variable and 4-variable) — one per student</li>
+      <li>Online K-map solver for verification: https://www.charlie-coleman.com/kmaps/</li>
+      <li>Logisim circuit files for verifying simplified expressions</li>
+      <li>Video: "Karnaugh Maps — Introduction" (Neso Academy, 15 min)</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> Carousel station answers checked by teacher during rotation</li>
+      <li><strong>Formative:</strong> Exit ticket — 4-variable K-map with one don't care</li>
+      <li><strong>Homework:</strong> Complete 5 K-map problems; verify one using Logisim</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Complete 3-variable K-maps with teacher guidance; identify obvious groups.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Complete 4-variable K-maps independently; handle simple don't care conditions.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Solve complex 4-variable problems with multiple don't cares; design K-map from word problem; explain grouping choices rigorously.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 3: Floating-Point Representation</h2>
+<div class="week-box">
+  <div class="week-title">Week 3: Floating-Point Representation</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Explain the structure of floating-point numbers: sign bit, exponent, mantissa (significand)</li>
+      <li>Convert denary numbers to IEEE 754 single-precision binary representation</li>
+      <li>Convert IEEE 754 single-precision binary back to denary</li>
+      <li>Explain the trade-off between precision and range in floating-point representation</li>
+      <li>Identify special values: zero, infinity, NaN (Not a Number)</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "How would you store 0.1 in binary?" Discussion of the limitations of fixed-point representation.</li>
+      <li><strong>Direct Instruction (30 min):</strong> Introduce scientific notation as analogy (e.g., 6.022 × 10²³). Extend to binary: 1.101 × 2³. Break down IEEE 754 single-precision format: 1 sign bit, 8 exponent bits (with bias 127), 23 mantissa bits. Explain hidden bit convention.</li>
+      <li><strong>Worked Example (25 min):</strong> Convert +6.625 to IEEE 754 single-precision. Step-by-step: convert integer part, convert fractional part, normalise, determine exponent with bias, assemble bits.</li>
+      <li><strong>Guided Practice (25 min):</strong> Pairs work on converting +9.25 and -3.5. Teacher provides conversion checklist: (1) Integer to binary, (2) Fraction to binary, (3) Normalise, (4) Apply bias, (5) Assemble.</li>
+      <li><strong>Plenary (10 min):</strong> Whole-class verification using online converter. Discuss any discrepancies.</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Reverse conversion starter: given binary pattern, what is the denary value?</li>
+      <li><strong>Direct Instruction (20 min):</strong> Reverse conversion process: extract sign, exponent (subtract bias), mantissa (add hidden bit), calculate value. Special cases: exponent all zeros (denormalised), all ones (infinity/NaN).</li>
+      <li><strong>Worked Example (15 min):</strong> Convert IEEE 754 pattern 0x40400000 to denary. Teacher demonstrates hex-to-binary breakdown.</li>
+      <li><strong>Guided Practice (30 min):</strong> Students complete reverse conversion worksheet with 6 problems. Bronze: positive numbers only; Silver: include negative numbers; Gold: include special cases (infinity, zero).</li>
+      <li><strong>Independent Practice (30 min):</strong> Past paper questions on floating-point from 2019–2023. Students self-select difficulty level.</li>
+      <li><strong>Plenary (15 min):</strong> Discussion: "Why can't computers store 0.1 exactly? What are the implications for financial software?"</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>IEEE 754 conversion worksheets (printed)</li>
+      <li>Online converter for verification: https://www.h-schmidt.net/FloatConverter/IEEE754.html</li>
+      <li>Python demonstration: <code>struct.pack('!f', 0.1)</code> to show binary representation</li>
+      <li>Video: "How floating-point works" (Computerphile)</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Summative:</strong> Quiz 1 (Week 3) — Boolean &amp; Floating-Point (20 marks)</li>
+      <li><strong>Formative:</strong> Reverse conversion worksheet marked and returned next lesson</li>
+      <li><strong>Homework:</strong> Convert 5 denary numbers to IEEE 754; explain why 0.1 + 0.2 ≠ 0.3 in floating-point</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Convert simple positive denary numbers to floating-point with structured worksheet.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Convert positive and negative numbers; perform reverse conversion accurately.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Handle special cases; explain precision limitations; discuss real-world implications (financial computing, scientific simulation).
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 4: Normalisation &amp; Errors</h2>
+<div class="week-box">
+  <div class="week-title">Week 4: Normalisation &amp; Truncation Errors</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Normalise floating-point numbers to maximise precision</li>
+      <li>Calculate absolute and relative error in floating-point representation</li>
+      <li>Explain truncation error and rounding error with examples</li>
+      <li>Discuss underflow and overflow conditions</li>
+      <li>Evaluate the suitability of floating-point for different applications</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Compare two representations of the same number: 0.011 × 2⁴ vs 1.1 × 2². Which is better? Why?</li>
+      <li><strong>Direct Instruction (25 min):</strong> Define normalisation: adjusting mantissa and exponent so the mantissa starts with 1 (for positive) or 0.1 (for signed). Show how normalisation maximises significant digits. Demonstrate normalising both positive and negative numbers.</li>
+      <li><strong>Worked Example (15 min):</strong> Normalise 0.001101 × 2⁵ → 1.101 × 2². Show the effect on precision.</li>
+      <li><strong>Guided Practice (30 min):</strong> Students normalise 8 numbers (mix of positive, negative, already normalised, and denormalised). Checklist approach: "Is the mantissa in the correct range? Did I adjust the exponent correctly?"</li>
+      <li><strong>Plenary (10 min):</strong> Exit ticket: Normalise 0.000111 × 2³ and explain why this form is preferred.</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Recall normalisation from previous lesson. Quick practice: is 1.01 × 2³ normalised? Is 0.11 × 2³?</li>
+      <li><strong>Direct Instruction (25 min):</strong> Types of error: absolute error = |exact − approximate|; relative error = absolute error / |exact|. Truncation error: discarding less significant bits. Rounding error: adjusting last kept bit. Work through numerical examples.</li>
+      <li><strong>Worked Example (15 min):</strong> Represent 1/3 in 4-bit mantissa. Calculate absolute and relative error. Discuss how error accumulates in iterative calculations.</li>
+      <li><strong>Guided Practice (25 min):</strong> Problem set: calculate errors for given representations. Bronze: absolute error only; Silver: absolute and relative; Gold: error propagation in multi-step calculation.</li>
+      <li><strong>Independent Practice (25 min):</strong> Research task: "Find a real-world example where floating-point error caused a significant problem." (e.g., Ariane 5, Patriot missile, Vancouver stock exchange). Students prepare 2-minute presentation.</li>
+      <li><strong>Plenary (10 min):</strong> Mini-presentations (3 students). Class discussion: how could these errors have been prevented?</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Normalisation practice worksheets</li>
+      <li>Error calculation problem sets</li>
+      <li>Case study articles: Ariane 5 explosion, Patriot missile failure</li>
+      <li>Python script demonstrating floating-point accumulation errors</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> Exit ticket (Lesson 1) — normalisation</li>
+      <li><strong>Formative:</strong> Error calculation worksheet (Lesson 2)</li>
+      <li><strong>Homework:</strong> Normalise 6 numbers; calculate absolute and relative error for 4 representations; research one real-world floating-point error case</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Normalise simple positive numbers; calculate absolute error with guidance.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Normalise positive and negative numbers; calculate both absolute and relative error; explain underflow/overflow.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Handle complex normalisation; analyse error propagation; evaluate floating-point suitability for specific applications; present real-world case study.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 5: TCP/IP Protocol Stack</h2>
+<div class="week-box">
+  <div class="week-title">Week 5: TCP/IP Protocol Stack</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Describe the four layers of the TCP/IP model: Application, Transport, Internet, Link</li>
+      <li>Explain the function of each layer and the protocols associated with it</li>
+      <li>Describe the encapsulation process as data moves down the stack</li>
+      <li>Compare TCP/IP with the OSI seven-layer model</li>
+      <li>Explain the role of ports in the transport layer</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "How does an email get from your phone to a server in another country?" Brainstorm on whiteboard.</li>
+      <li><strong>Direct Instruction (30 min):</strong> Present TCP/IP stack as a layered cake or postal system analogy. Each layer: Application (HTTP, FTP, SMTP, DNS), Transport (TCP, UDP), Internet (IP, ICMP), Link (Ethernet, Wi-Fi). Explain how each layer adds/removes headers.</li>
+      <li><strong>Worked Example (15 min):</strong> Trace a web request through all four layers. Show headers added at each stage.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students complete a blank TCP/IP stack diagram, filling in layer names, protocols, and header information. Pairs check each other's work.</li>
+      <li><strong>Plenary (10 min):</strong> Quick quiz: "Which layer handles IP addresses? Which handles reliability?"</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Compare TCP/IP 4-layer model with OSI 7-layer model. Which layers correspond?</li>
+      <li><strong>Direct Instruction (20 min):</strong> Deep dive into Transport layer: TCP vs UDP. TCP: connection-oriented, reliable, ordered, flow control, congestion control. UDP: connectionless, fast, no guarantees. Use cases for each.</li>
+      <li><strong>Worked Example (15 min):</strong> Three-way handshake (SYN, SYN-ACK, ACK) diagrammed and explained. Sequence numbers and acknowledgements.</li>
+      <li><strong>Guided Practice (25 min):</strong> Scenario cards: "Live video streaming" — TCP or UDP? Why? "Bank transaction" — TCP or UDP? Why? Students justify choices in pairs.</li>
+      <li><strong>Independent Practice (30 min):</strong> Research and create a comparison table: TCP vs UDP across 8 criteria (connection, reliability, ordering, speed, overhead, use cases, header size, examples).</li>
+      <li><strong>Plenary (10 min):</strong> Share comparison tables. Class vote on most surprising difference.</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>TCP/IP stack diagram posters for classroom walls</li>
+      <li>Wireshark packet capture demonstrations (sanitised)</li>
+      <li>OSI vs TCP/IP comparison handout</li>
+      <li>Video: "How the Internet Works in 5 Minutes" (Code.org)</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> TCP/UDP scenario card justifications</li>
+      <li><strong>Formative:</strong> Comparison table quality check</li>
+      <li><strong>Homework:</strong> Draw complete encapsulation diagram for a DNS query; label all headers</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Name the four layers and one protocol per layer; identify TCP vs UDP for given scenarios.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Explain encapsulation process; compare TCP and UDP across multiple criteria; map TCP/IP to OSI.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Analyse packet capture data; explain three-way handshake in detail; evaluate when UDP might be preferable despite lack of reliability.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 6: Routing Algorithms</h2>
+<div class="week-box">
+  <div class="week-title">Week 6: Routing Algorithms</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Explain the purpose of routing in packet-switched networks</li>
+      <li>Describe distance-vector routing (RIP) and its limitations (count-to-infinity)</li>
+      <li>Describe link-state routing (OSPF) and its advantages</li>
+      <li>Trace Dijkstra's shortest-path algorithm on a network graph</li>
+      <li>Compare static and dynamic routing approaches</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "What's the shortest route from school to the city centre?" Map discussion introduces graph concepts.</li>
+      <li><strong>Direct Instruction (25 min):</strong> Routing as finding optimal paths in a graph. Introduce distance-vector: each router shares its entire routing table with neighbours. Bellman-Ford equation. Demonstrate with 4-router network.</li>
+      <li><strong>Worked Example (20 min):</strong> Teacher traces routing table updates across 3 iterations. Show how count-to-infinity problem arises when a link fails.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students given a 5-router network. Calculate initial routing tables, then update after one link failure. Identify the count-to-infinity problem.</li>
+      <li><strong>Plenary (10 min):</strong> Solutions reviewed. Split-ring horizon and poison reverse introduced as solutions.</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Review distance-vector limitations. "Is there a better way?"</li>
+      <li><strong>Direct Instruction (25 min):</strong> Link-state routing: each router knows entire network topology. Dijkstra's algorithm introduced step-by-step. Priority queue, tentative/permanent labels.</li>
+      <li><strong>Worked Example (25 min):</strong> Teacher traces Dijkstra's algorithm on a 6-node network. Table format: node, shortest distance, previous node. Students follow on identical worksheet.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students apply Dijkstra's to a new 7-node network. Bronze: first 3 steps provided; Silver: first step provided; Gold: complete from scratch.</li>
+      <li><strong>Independent Practice (20 min):</strong> Comparison essay plan: "Compare distance-vector and link-state routing for a university campus network." Bullet points only.</li>
+      <li><strong>Plenary (15 min):</strong> Class discussion of comparison points. Teacher models structured comparison paragraph.</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Network topology worksheets (printed A3)</li>
+      <li>Dijkstra's algorithm step-by-step template</li>
+      <li>Cisco Packet Tracer simulation files (if available)</li>
+      <li>Video: "Distance Vector vs Link State Routing" (NetworkChuck)</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Summative:</strong> Quiz 2 (Week 6) — Networks &amp; Routing (20 marks)</li>
+      <li><strong>Formative:</strong> Dijkstra's algorithm tracing worksheet</li>
+      <li><strong>Homework:</strong> Complete Dijkstra's on a given network; write 3 comparison points between distance-vector and link-state</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Identify routing table entries; follow provided Dijkstra's steps; name one limitation of distance-vector.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Calculate routing tables for small networks; complete Dijkstra's algorithm with partial guidance; explain count-to-infinity.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Solve complex network routing problems; trace Dijkstra's from scratch; evaluate routing protocol choice for given scenarios; explain split-horizon and poison reverse.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 7: DNS Deep Dive</h2>
+<div class="week-box">
+  <div class="week-title">Week 7: Domain Name System (DNS)</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Explain the hierarchical structure of DNS (root, TLD, authoritative, subdomain)</li>
+      <li>Describe the DNS resolution process: recursive and iterative queries</li>
+      <li>Identify common DNS record types: A, AAAA, CNAME, MX, NS, TXT, SOA</li>
+      <li>Explain the role of caching in DNS performance</li>
+      <li>Discuss DNS security concerns and DNSSEC</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "What happens when you type www.google.com?" Collect initial ideas.</li>
+      <li><strong>Direct Instruction (30 min):</strong> DNS as the "phonebook of the Internet." Hierarchical tree structure: root servers (.), TLD servers (.com, .org, .uk), authoritative servers (example.com). Recursive resolver role.</li>
+      <li><strong>Worked Example (20 min):</strong> Teacher traces complete DNS resolution for www.example.com. Show recursive query from client to resolver, then iterative queries from resolver to root, TLD, and authoritative servers.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students trace resolution for mail.vpa.edu.cn on provided diagram. Label each query and response. Pairs compare traces.</li>
+      <li><strong>Plenary (5 min):</strong> Exit ticket: "Why is DNS hierarchical rather than flat?"</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> Review DNS hierarchy. "What information does each server actually store?"</li>
+      <li><strong>Direct Instruction (25 min):</strong> DNS record types: A (IPv4 address), AAAA (IPv6), CNAME (alias), MX (mail server), NS (name server), TXT (text), SOA (start of authority). Show real dig/nslookup output.</li>
+      <li><strong>Worked Example (15 min):</strong> Interpret a zone file snippet. Identify record types and their purposes.</li>
+      <li><strong>Guided Practice (25 min):</strong> Students given 5 scenarios ("A company wants email at mail.example.com" — which record?"). Match scenarios to record types.</li>
+      <li><strong>Independent Practice (25 min):</strong> Research task: "What is DNSSEC? How does it prevent DNS spoofing?" Students read provided article and summarise in 5 bullet points.</li>
+      <li><strong>Plenary (10 min):</strong> Share DNSSEC summaries. Discuss: "Why isn't DNSSEC universally deployed?"</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>DNS hierarchy diagram (A1 poster)</li>
+      <li>Real dig command output samples</li>
+      <li>Article: "DNSSEC: What It Is and Why It Matters" (ICANN)</li>
+      <li>Online tool: https://dns.google/ for live queries</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> DNS trace diagram (Lesson 1)</li>
+      <li><strong>Formative:</strong> Record type matching exercise</li>
+      <li><strong>Homework:</strong> Use nslookup/dig to query 3 domains; record and interpret A, MX, and NS records</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Name the levels of DNS hierarchy; identify A and MX records.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Trace complete DNS resolution; identify all common record types; explain caching benefits.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Analyse real DNS data; explain DNSSEC operation; evaluate security trade-offs; discuss CDN implications for DNS.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 8: Email Protocols &amp; Web Technologies</h2>
+<div class="week-box">
+  <div class="week-title">Week 8: Email Protocols, HTML &amp; CSS Basics</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Compare SMTP, POP3, and IMAP protocols for email transmission and retrieval</li>
+      <li>Explain the role of MIME in supporting non-ASCII email content</li>
+      <li>Describe HTTP request methods (GET, POST, PUT, DELETE) and response codes</li>
+      <li>Construct basic HTML documents using semantic tags</li>
+      <li>Apply CSS selectors and properties to style HTML elements</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "How many emails did you send yesterday? What happened behind the scenes?"</li>
+      <li><strong>Direct Instruction (25 min):</strong> Email architecture: MUA (Mail User Agent) → MSA → MTA → MDA → MUA. SMTP for sending (port 25/587). POP3 (port 110) vs IMAP (port 143) for retrieval. Compare: POP3 downloads and deletes; IMAP syncs across devices.</li>
+      <li><strong>Worked Example (15 min):</strong> Trace an email from Alice@example.com to Bob@sample.org. Show SMTP handshake, envelope vs header, MIME for attachments.</li>
+      <li><strong>Guided Practice (25 min):</strong> Comparison table: SMTP vs POP3 vs IMAP across 6 criteria (direction, port, persistence, sync, offline access, security). Pairs complete, then class verifies.</li>
+      <li><strong>Plenary (5 min):</strong> Quick-fire: "Which protocol would you use on a phone? On a shared library computer?"</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "What happens when you click a link?" Review HTTP from Week 5.</li>
+      <li><strong>Direct Instruction (20 min):</strong> HTTP methods: GET (retrieve), POST (submit), PUT (update), DELETE (remove). Status codes: 1xx informational, 2xx success, 3xx redirect, 4xx client error, 5xx server error. Common codes: 200, 301, 404, 500.</li>
+      <li><strong>Worked Example (10 min):</strong> Teacher live-codes a basic HTML page: &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, semantic tags (&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;).</li>
+      <li><strong>Guided Practice (30 min):</strong> Students create a personal profile page in HTML. Bronze: basic structure with headings and paragraphs; Silver: add lists, links, and an image; Gold: add a table and form elements.</li>
+      <li><strong>Independent Practice (30 min):</strong> Add CSS styling. Bronze: change colours and fonts; Silver: add class selectors, box model properties; Gold: responsive design with media queries, flexbox layout.</li>
+      <li><strong>Plenary (10 min):</strong> Showcase 3 student pages. Peer feedback using rubric: structure, semantics, styling, creativity.</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Email protocol comparison handout</li>
+      <li>HTTP status code reference card</li>
+      <li>CodePen.io accounts for HTML/CSS practice</li>
+      <li>MDN Web Docs: HTML and CSS references</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> Protocol comparison table</li>
+      <li><strong>Formative:</strong> HTML/CSS practical task marked against rubric</li>
+      <li><strong>Homework:</strong> Create a 3-page website about a topic of choice; include navigation, styled with CSS</li>
+    </ul>
+  </div>
+
+  <div class="bronze">
+    <strong>Bronze:</strong> Identify SMTP, POP3, IMAP purposes; create basic HTML page with headings and paragraphs.
+  </div>
+  <div class="silver">
+    <strong>Silver:</strong> Compare email protocols across criteria; create structured HTML with semantic tags and basic CSS styling.
+  </div>
+  <div class="gold">
+    <strong>Gold:</strong> Explain MIME and SMTP authentication; create responsive multi-page website with advanced CSS; explain HTTP caching and security headers.
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Week 9: Consolidation &amp; Formative Assessment</h2>
+<div class="week-box">
+  <div class="week-title">Week 9: Review, Practice &amp; Formative Test</div>
+  
+  <div class="objective">
+    <h4>Learning Objectives</h4>
+    <ul>
+      <li>Consolidate understanding of Weeks 1–8 topics</li>
+      <li>Identify personal strengths and areas for improvement</li>
+      <li>Apply examination techniques to structured questions</li>
+      <li>Peer-teach challenging concepts to reinforce understanding</li>
+    </ul>
+  </div>
+
+  <div class="activity">
+    <h4>Lesson Activities</h4>
+    <p><strong>Lesson 1 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Starter (10 min):</strong> "One thing I understand well / One thing I need help with" — sticky note activity.</li>
+      <li><strong>Direct Instruction (15 min):</strong> Teacher addresses top 3 areas of confusion from sticky notes (typically: K-map grouping, Dijkstra's algorithm, DNS resolution).</li>
+      <li><strong>Guided Practice (45 min):</strong> Rotating revision stations: (1) Boolean algebra &amp; K-maps, (2) Floating-point &amp; normalisation, (3) TCP/IP &amp; routing, (4) DNS &amp; email. Students spend 10 minutes at each station with differentiated problem sets.</li>
+      <li><strong>Peer Teaching (30 min):</strong> Students paired across ability levels. Each explains one concept to their partner. Teacher circulates with assessment checklist.</li>
+      <li><strong>Plenary (10 min):</strong> "What will you revise tonight?" Personal revision plan written.</li>
+    </ul>
+    
+    <p><strong>Lesson 2 (2 hours):</strong></p>
+    <ul>
+      <li><strong>Formative Test (90 min):</strong> 40-mark paper covering Weeks 1–8. Mix of short answer, calculation, and extended response. Bilingual glossary provided.</li>
+      <li><strong>Self-Assessment (15 min):</strong> Students mark their own work using provided mark scheme. Identify errors and misconceptions. Complete reflection sheet.</li>
+      <li><strong>Target Setting (15 min):</strong> Students set 3 specific targets for improvement before mock exam. Teacher reviews and signs off.</li>
+    </ul>
+  </div>
+
+  <div class="resource">
+    <h4>Resources</h4>
+    <ul>
+      <li>Revision station problem sets (4 levels per station)</li>
+      <li>Formative test paper (40 marks, 90 minutes)</li>
+      <li>Mark scheme and reflection sheet</li>
+      <li>Personal revision plan template</li>
+    </ul>
+  </div>
+
+  <div class="assessment-point">
+    <h4>Assessment Points</h4>
+    <ul>
+      <li><strong>Formative:</strong> 40-mark test (Weeks 1–8) — diagnostic, not graded</li>
+      <li><strong>Formative:</strong> Self-assessment and reflection sheet</li>
+      <li><strong>Formative:</strong> Personal target-setting document</li>
+    </ul>
+  </div>
+
+  <div class="checklist">
+    <h4>EAL Support — Week 9</h4>
+    <ul>
+      <li>Bilingual glossary for all technical terms used in test</li>
+      <li>Extra reading time (+10 minutes for 90-minute test)</li>
+      <li>Visual diagrams provided for all network questions</li>
+      <li>Sentence starters for extended-response questions</li>
+      <li>One-to-one review of targets with EAL coordinator</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h2>Cross-Curricular Links</h2>
+
+<table>
+  <tr><th>Subject</th><th>Connection</th><th>Activity</th></tr>
+  <tr><td>Mathematics</td><td>Binary arithmetic, graph theory, error calculation</td><td>Joint lesson on Dijkstra's algorithm with Maths department</td></tr>
+  <tr><td>Physics</td><td>Electrical signals, logic gates, circuit design</td><td>Lab session building simple logic circuits</td></tr>
+  <tr><td>English</td><td>Technical writing, structured arguments</td><td>Essay practice: "Evaluate the security of DNS"</td></tr>
+  <tr><td>Business</td><td>Network infrastructure, e-commerce protocols</td><td>Case study: Amazon's global network architecture</td></tr>
+</table>
+
+<hr class="section-divider">
+
+<h2>Homework Schedule (Weeks 1–9)</h2>
+
+<table>
+  <tr><th>Week</th><th>Homework Task</th><th>Estimated Time</th></tr>
+  <tr><td>1</td><td>Simplify 5 Boolean expressions; prove 2 using truth tables</td><td>45 min</td></tr>
+  <tr><td>2</td><td>Complete 5 K-map problems; verify one using Logisim</td><td>45 min</td></tr>
+  <tr><td>3</td><td>Convert 5 denary to IEEE 754; explain 0.1 + 0.2 problem</td><td>60 min</td></tr>
+  <tr><td>4</td><td>Normalise 6 numbers; calculate errors; research case study</td><td>60 min</td></tr>
+  <tr><td>5</td><td>Draw encapsulation diagram for DNS query; label headers</td><td>45 min</td></tr>
+  <tr><td>6</td><td>Complete Dijkstra's algorithm; write 3 comparison points</td><td>60 min</td></tr>
+  <tr><td>7</td><td>Use dig/nslookup on 3 domains; interpret A, MX, NS records</td><td>45 min</td></tr>
+  <tr><td>8</td><td>Create 3-page website with HTML/CSS</td><td>90 min</td></tr>
+  <tr><td>9</td><td>Personal revision: weakest topic from formative test</td><td>60 min</td></tr>
+</table>
+
+<div class="bilingual">
+  <strong>关键术语复习 / Key Term Revision:</strong><br>
+  Boolean algebra = 布尔代数 | Karnaugh map = 卡诺图 | Floating-point = 浮点数 | Normalisation = 规范化 | TCP/IP = 传输控制协议/网际协议 | Routing = 路由 | DNS = 域名系统 | SMTP = 简单邮件传输协议 | HTML = 超文本标记语言 | CSS = 层叠样式表
+</div>
+
+<footer style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #1a5276; text-align: center; color: #666;">
+  <p>Victoria Park Academy | A-Level Computer Science Department</p>
+  <p>Weeks 1–9 Scheme of Work v1.0 | Semester 1 2024–2025</p>
+</footer>
+
+</body>
+</html>

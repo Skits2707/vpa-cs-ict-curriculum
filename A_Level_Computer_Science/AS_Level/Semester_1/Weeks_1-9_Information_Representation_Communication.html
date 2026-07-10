@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA A-Level CS — Weeks 1-9: Information Representation &amp; Communication</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .warning { background: #fdf2e9; padding: 15px; border-left: 4px solid #e67e22; }
+  .info { background: #eaf2f8; padding: 15px; border-left: 4px solid #3498db; }
+  .week-box { border: 2px solid #1a5276; padding: 15px; margin: 20px 0; border-radius: 8px; }
+  .lesson { background: #f8f9fa; padding: 10px; margin: 8px 0; border-left: 4px solid #3498db; }
+  .assess { background: #fff3cd; padding: 10px; margin: 8px 0; border-left: 4px solid #f39c12; }
+</style>
+</head>
+<body>
+
+<h1>AS Level Semester 1 — Weeks 1–9</h1>
+<h2>Information Representation &amp; Communication <span class="bilingual">信息表示与通信 (Xìnxī biǎoshì yǔ tōngxìn)</span></h2>
+
+<div class="info">
+<strong>Syllabus Coverage:</strong> 1.1 Information Representation, 1.2 Communication<br>
+<strong>Paper:</strong> Paper 1 (Theory Fundamentals)<br>
+<strong>Duration:</strong> 9 weeks (Weeks 1–9)<br>
+<strong>Assessment:</strong> Diagnostic (W1), Quiz (W3), Mid-Unit Test (W6), Half-Term Exam (W9)
+</div>
+
+<h2>Week-by-Week Scheme of Work</h2>
+
+<!-- WEEK 1 -->
+<div class="week-box">
+<h3>Week 1: Number Systems — Binary, Denary, Hexadecimal <span class="bilingual">数字系统 (Shùzì xìtǒng)</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Introduction to A-Level CS &amp; Number Systems Review</strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Recall binary and denary conversion from IGCSE <span class="bilingual">复习IGCSE二进制和十进制转换</span><br>
+• Understand why computers use binary <span class="bilingual">理解计算机为何使用二进制</span><br>
+• Convert between binary, denary, and hexadecimal <span class="bilingual">二进制、十进制和十六进制之间的转换</span><br><br>
+
+<strong>Starter (5 min):</strong> "Do Now" — Convert 10101100 to denary. Convert 187 to binary. Self-mark using provided answers.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Teacher models: binary → denary (place value method); denary → binary (division method)<br>
+• <span class="highlight">Hexadecimal introduction:</span> Why use hex? Compact representation of binary. Show relationship: 1 hex digit = 4 binary digits (nibble).<br>
+• Guided practice: Convert 11010111 to hex (split into nibbles: 1101 0111 = D7). Convert B4F to binary.<br>
+• Students complete conversion worksheet (Bronze/Silver/Gold)<br><br>
+
+<strong>Plenary (10 min):</strong> Mini-whiteboard challenge — teacher calls out numbers, students convert.<br><br>
+
+<strong>Homework:</strong> 10 conversion problems + vocabulary flashcards (binary, denary, hexadecimal, nibble, byte)<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> 8-bit conversions only; conversion tables provided<br>
+<span class="silver">Silver:</span> 16-bit conversions; explain WHY hex is used<br>
+<span class="gold">Gold:</span> 32-bit conversions; research octal system and compare with hex<br><br>
+
+<strong>EAL Support:</strong><br>
+• Visual place-value grid (128, 64, 32, 16, 8, 4, 2, 1) displayed permanently<br>
+• Colour-code: binary (blue), denary (green), hex (red)<br>
+• Cognates: "binary" → 二进制 (èr jìnzhì), "decimal" → 十进制 (shí jìnzhì)<br>
+• Sentence starter: "To convert binary to denary, I multiply each digit by its place value and add the results." <span class="bilingual">将二进制转换为十进制时，我将每个数字乘以其位权然后相加。</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Two's Complement &amp; Negative Numbers <span class="bilingual">补码与负数 (Bǔmǎ yǔ fùshù)</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Represent negative integers using two's complement <span class="bilingual">使用补码表示负整数</span><br>
+• Perform binary addition and subtraction <span class="bilingual">进行二进制加减法</span><br>
+• Understand range limitations of fixed-bit representations <span class="bilingual">理解固定位数表示的范围限制</span><br><br>
+
+<strong>Starter (5 min):</strong> How would you represent -5 in binary? Discuss in pairs.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Sign-magnitude: leftmost bit = sign (0 positive, 1 negative). Problem: two representations of zero. <span class="bilingual">原码表示法：最高位为符号位，但存在正零和负零的问题。</span><br>
+• Two's complement method: Invert all bits, add 1. Demonstrate with 8-bit: +5 = 00000101, -5 = 11111011.<br>
+• Range of 8-bit two's complement: -128 to +127. <span class="bilingual">8位补码范围：-128到+127</span><br>
+• Binary addition demo: 7 + (-3) = 4. Show that subtraction = addition of two's complement.<br>
+• Overflow: What happens when 127 + 1 in 8-bit? <span class="highlight">Wraps to -128!</span><br><br>
+
+<strong>Plenary (10 min):</strong> Complete truth table: show +5, -5, +127, -128 in sign-magnitude and two's complement.<br><br>
+
+<strong>Homework:</strong> Two's complement worksheet (15 problems) + write explanation of overflow in own words<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "The leftmost bit is just a sign bit" — In two's complement, it has negative place value (-128 for 8-bit)<br>
+• ❌ "Two's complement and sign-magnitude are the same" — Clarify both methods and why two's complement is preferred<br>
+• ❌ "You can represent any number in 8 bits" — Emphasise range limits; introduce concept of overflow<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> 4-bit two's complement only; step-by-step guide provided<br>
+<span class="silver">Silver:</span> 8-bit; identify overflow conditions<br>
+<span class="gold">Gold:</span> 16-bit; prove mathematically why two's complement works (modular arithmetic)
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Binary Coded Decimal (BCD) &amp; Real-World Applications <span class="bilingual">BCD编码与实际应用</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Convert denary to BCD and vice versa <span class="bilingual">十进制与BCD码互相转换</span><br>
+• Compare BCD with pure binary for specific applications <span class="bilingual">比较BCD与纯二进制在特定应用中的优劣</span><br>
+• Understand when each representation is appropriate <span class="bilingual">理解每种表示法的适用场景</span><br><br>
+
+<strong>Starter (5 min):</strong> Why do digital clocks display digits directly rather than calculating from binary?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• BCD: Each decimal digit = 4 bits. 59 = 0101 1001. <span class="bilingual">BCD：每个十进制数字用4位二进制表示。</span><br>
+• Applications: Digital clocks, calculators, financial systems (avoids rounding errors), embedded displays.<br>
+• Comparison: BCD is human-readable but inefficient (wastes bit patterns 1010–1111). Pure binary is compact but requires conversion for display.<br>
+• Group task: Design a digital clock display circuit using BCD. Sketch 7-segment display connection.<br><br>
+
+<strong>Plenary (10 min):</strong> Exam-style question: "A cash register stores prices. Explain why BCD might be preferred over pure binary." (2 marks)<br><br>
+
+<strong>Homework:</strong> Research: Find 3 real devices that use BCD. Explain why.<br><br>
+
+<strong>Assessment:</strong> Exit ticket — Convert 947 to BCD. Compare storage needed for 947 in BCD vs 16-bit binary.
+</div>
+
+<div class="assess">
+<strong>Week 1 Assessment: Baseline Diagnostic (30 minutes)</strong><br>
+• 10 MCQs: Binary/hex/denary conversions (IGCSE level)<br>
+• 3 short-answer: Explain why computers use binary; Convert with working; BCD application<br>
+• Total: 30 marks<br>
+• Purpose: Identify students needing intervention; group for differentiation<br>
+• <span class="bilingual">诊断测试目的：识别需要干预的学生，进行分层分组</span>
+</div>
+</div>
+
+<!-- WEEK 2 -->
+<div class="week-box">
+<h3>Week 2: Text, Images, and Sound Representation <span class="bilingual">文本、图像和声音表示 (Wénběn, túxiàng hé shēngyīn biǎoshì)</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Text Encoding — ASCII &amp; Unicode <span class="bilingual">文本编码：ASCII与Unicode</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain how characters are encoded as binary <span class="bilingual">解释字符如何编码为二进制</span><br>
+• Compare ASCII and Unicode <span class="bilingual">比较ASCII和Unicode</span><br>
+• Calculate storage requirements for text files <span class="bilingual">计算文本文件的存储需求</span><br><br>
+
+<strong>Starter (5 min):</strong> Type your name in Notepad. Save as different encodings. Compare file sizes.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• ASCII: 7 bits, 128 characters. Extended ASCII: 8 bits, 256 characters. Show ASCII table.<br>
+• Problem: ASCII cannot represent Chinese characters. <span class="bilingual">ASCII无法表示中文字符。</span> Enter Unicode.<br>
+• Unicode: UTF-8 (variable width, 1–4 bytes), UTF-16 (2 or 4 bytes), UTF-32 (fixed 4 bytes).<br>
+• Storage calculation: "HELLO" in ASCII = 5 bytes. "你好" in UTF-8 = 6 bytes (3 bytes per CJK character).<br>
+• <span class="highlight">Exam tip:</span> CIE expects knowledge of Unicode but not detailed UTF encoding rules.<br><br>
+
+<strong>Activity:</strong> Students encode their full name in ASCII (English letters) and discuss how Unicode enables their Chinese name.<br><br>
+
+<strong>Plenary (10 min):</strong> "Why is UTF-8 dominant on the web?" Discuss in pairs. Answer: Backward compatible with ASCII, efficient for English, supports all languages.<br><br>
+
+<strong>Homework:</strong> Calculate storage for: (a) 500-character English essay in ASCII, (b) Same essay with 50 Chinese characters in UTF-8.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "ASCII and Unicode are the same thing" — Clarify ASCII is subset of Unicode<br>
+• ❌ "One character always = one byte" — Emphasise variable-width encoding<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Character encoding <span class="bilingual">字符编码 (zìfú biānmǎ)</span><br>
+• Code point <span class="bilingual">码点 (mǎdiǎn)</span><br>
+• Character set <span class="bilingual">字符集 (zìfú jí)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Image Representation — Bitmap vs Vector <span class="bilingual">图像表示：位图与矢量图</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain how bitmap images are stored <span class="bilingual">解释位图图像的存储方式</span><br>
+• Calculate bitmap file size from dimensions and colour depth <span class="bilingual">根据尺寸和色深计算位图文件大小</span><br>
+• Compare bitmap and vector graphics <span class="bilingual">比较位图和矢量图</span><br><br>
+
+<strong>Starter (5 min):</strong> Display two identical-looking images: one 5MB bitmap, one 50KB vector. Ask: Why the difference?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Bitmap = grid of pixels. Each pixel = colour value.<br>
+• Colour depth: 1-bit (black/white), 8-bit (256 colours), 24-bit (16.7 million colours = true colour)<br>
+• <span class="highlight">File size formula:</span> Width × Height × Colour depth (in bits), then convert to bytes/KB/MB<br>
+• Worked example: 1024 × 768 image at 24-bit colour = 1024 × 768 × 24 = 18,874,368 bits = 2.25 MB<br>
+• Metadata: Resolution, colour depth, dimensions all affect file size.<br>
+• Vector: Mathematical descriptions of shapes (lines, curves, polygons). Scalable without quality loss.<br>
+• Comparison table: File size, scalability, editing, best use cases.<br><br>
+
+<strong>Practical Activity (10 min):</strong> Students zoom into bitmap and vector versions of same logo. Observe pixelation vs smooth scaling.<br><br>
+
+<strong>Plenary (5 min):</strong> Exam-style: "A photographer stores images. Justify bitmap over vector." (2 marks)<br><br>
+
+<strong>Homework:</strong> Calculate file sizes for: (a) 1920×1080 at 32-bit, (b) 4000×3000 at 24-bit. Research: When would a graphic designer use SVG?<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> Fill-in file size formula; calculate with given dimensions<br>
+<span class="silver">Silver:</span> Calculate from scratch; explain resolution vs file size relationship<br>
+<span class="gold">Gold:</span> Calculate for 4K video frame (3840×2160 at 24-bit, 60fps); discuss bandwidth requirements
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Sound Representation — Sampling &amp; Bit Depth <span class="bilingual">声音表示：采样与位深度</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain how analogue sound is digitised <span class="bilingual">解释模拟声音如何数字化</span><br>
+• Define sample rate and bit depth <span class="bilingual">定义采样率和位深度</span><br>
+• Calculate audio file sizes <span class="bilingual">计算音频文件大小</span><br>
+• Discuss trade-offs in audio quality vs file size <span class="bilingual">讨论音质与文件大小的权衡</span><br><br>
+
+<strong>Starter (5 min):</strong> Listen to same song: 64 kbps MP3 vs 320 kbps MP3 vs WAV. Can you tell the difference?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• ADC process: Sample → Quantise → Encode. Show waveform diagram.<br>
+• Sample rate: Samples per second (Hz). CD quality = 44.1 kHz. Nyquist theorem: Sample at 2× maximum frequency.<br>
+• Bit depth: Bits per sample. CD = 16-bit. Studio = 24-bit. Higher = more dynamic range.<br>
+• <span class="highlight">File size formula:</span> Sample rate × Bit depth × Channels × Duration (seconds)<br>
+• Worked example: 44,100 Hz × 16-bit × 2 channels × 180 seconds = 31,752,000 bytes ≈ 30.3 MB<br>
+• Compression: Lossy (MP3, AAC — psychoacoustic models) vs Lossless (FLAC, ALAC)<br><br>
+
+<strong>Activity (10 min):</strong> Calculate file sizes for: (a) 3-minute mono speech at 22 kHz, 8-bit, (b) 5-minute stereo music at 96 kHz, 24-bit.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why do streaming services use lossy compression?" Discuss quality vs bandwidth trade-off.<br><br>
+
+<strong>Homework:</strong> Research: What sample rate and bit depth does your phone use for voice calls? Why?<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Sample rate <span class="bilingual">采样率 (cǎiyàng lǜ)</span><br>
+• Bit depth <span class="bilingual">位深度 (wèi shēndù)</span><br>
+• Analogue-to-digital converter <span class="bilingual">模数转换器 (mó-shù zhuǎnhuàn qì)</span><br>
+• Quantisation <span class="bilingual">量化 (liànghuà)</span><br>
+• Nyquist theorem <span class="bilingual">奈奎斯特定理 (Nài kuí sī tè dìnglǐ)</span>
+</div>
+</div>
+
+<!-- WEEK 3 -->
+<div class="week-box">
+<h3>Week 3: Compression <span class="bilingual">数据压缩 (Shùjù yāsuō)</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Lossy vs Lossless Compression <span class="bilingual">有损与无损压缩</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Distinguish between lossy and lossless compression <span class="bilingual">区分有损和无损压缩</span><br>
+• Give examples of each type <span class="bilingual">举例说明每种类型</span><br>
+• Explain when each type is appropriate <span class="bilingual">解释何时使用每种类型</span><br><br>
+
+<strong>Starter (5 min):</strong> Show identical image saved as BMP, PNG, JPEG. File sizes: 2.25 MB, 850 KB, 120 KB. Why different?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Lossless: No data lost. Original can be perfectly reconstructed. Examples: PNG, GIF, ZIP, FLAC, RLE.<br>
+• Lossy: Data permanently removed. Smaller files but quality loss. Examples: JPEG, MP3, MPEG.<br>
+• <span class="highlight">Key distinction:</span> Lossy uses perceptual models (human eye less sensitive to colour detail than brightness; ear less sensitive to quiet sounds masked by loud ones).<br>
+• Use cases: Text/docs = always lossless. Photos = lossy acceptable. Medical images = lossless. Music archiving = lossless; streaming = lossy.<br>
+• Group discussion: "Should NASA use lossy compression for Mars rover images?" <span class="bilingual">NASA应该对火星车图像使用有损压缩吗？</span><br><br>
+
+<strong>Plenary (10 min):</strong> Categorise: BMP, MP3, FLAC, PNG, JPEG, ZIP, GIF, MPEG. Lossy or lossless?<br><br>
+
+<strong>Homework:</strong> Create decision tree: "Which compression should I use?" with 5+ scenarios.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "Lossy compression damages the original file" — Clarify: compressed copy is separate; original remains<br>
+• ❌ "ZIP is lossy" — Emphasise ZIP is always lossless
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Run-Length Encoding (RLE) <span class="bilingual">行程长度编码</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Encode data using RLE <span class="bilingual">使用RLE编码数据</span><br>
+• Decode RLE data <span class="bilingual">解码RLE数据</span><br>
+• Evaluate effectiveness of RLE for different data types <span class="bilingual">评估RLE对不同数据类型的有效性</span><br><br>
+
+<strong>Starter (5 min):</strong> String: AAAAABBBCCDAAAA. How would you compress this?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• RLE principle: Replace consecutive identical symbols with count + symbol.<br>
+• Example: AAAAABBBCCDAAAA → 5A3B2C1D4A<br>
+• Worked examples with binary: 000011111000001111 → 0405105040 (using delimiter) or 4 0 5 1 5 0 4 1<br>
+• Limitations: What if data has no runs? ABCABCABC → 1A1B1C1A1B1C1A1B1C (expands!) <span class="bilingual">如果数据没有连续重复，RLE会膨胀！</span><br>
+• Best for: Simple graphics, black-and-white images, fax transmissions.<br>
+• Students practise encoding/decoding with worksheet.<br><br>
+
+<strong>Plenary (10 min):</strong> "RLE reduced a file from 1000 bytes to 400 bytes. The original was mostly black space. Explain why RLE worked well." (3 marks)<br><br>
+
+<strong>Homework:</strong> Create your own RLE encoding for a simple 10×10 pixel black-and-white image.<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> RLE on text strings with clear runs<br>
+<span class="silver">Silver:</span> RLE on binary image data; identify when RLE fails<br>
+<span class="gold">Gold:</span> Design improved RLE variant with escape codes for raw data
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Dictionary-Based Compression (Huffman Coding Introduction) <span class="bilingual">字典压缩与霍夫曼编码</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain dictionary-based compression principles <span class="bilingual">解释字典压缩原理</span><br>
+• Understand basic Huffman coding concept <span class="bilingual">理解霍夫曼编码基本概念</span><br>
+• Compare RLE and dictionary methods <span class="bilingual">比较RLE和字典方法</span><br><br>
+
+<strong>Starter (5 min):</strong> Text: "the quick brown fox jumps over the lazy dog the quick brown fox..." Notice repetition?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Dictionary compression: Build table of recurring patterns; replace with shorter codes. LZ77/LZ78 family (ZIP uses this).<br>
+• Huffman coding: Variable-length codes. Frequent symbols = shorter codes. <span class="bilingual">频率高的符号用更短的编码。</span><br>
+• Example: Text with many 'e's and few 'z's. 'e' = 01, 'z' = 11110.<br>
+• Prefix-free property: No code is prefix of another. Ensures unambiguous decoding.<br>
+• Show Huffman tree construction (simplified — CIE requires understanding, not full construction).<br>
+• Comparison: RLE (simple, fast, limited use) vs Huffman (complex, general-purpose, better ratios).<br><br>
+
+<strong>Activity (10 min):</strong> Given frequency table, assign Huffman codes. Calculate compression ratio.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why can't Huffman coding use fixed-length codes for all symbols?"<br><br>
+
+<strong>Homework:</strong> Research: How does JPEG combine lossy and lossless compression? (DCT + Huffman)<br><br>
+
+<div class="assess">
+<strong>Week 3 Assessment: Information Representation Quiz (20 minutes)</strong><br>
+• Q1–3: Number conversions (9 marks)<br>
+• Q4: Two's complement (4 marks)<br>
+• Q5: Text encoding comparison (4 marks)<br>
+• Q6: Image file size calculation (6 marks)<br>
+• Q7: Audio file size calculation (6 marks)<br>
+• Q8: Compression method selection (6 marks)<br>
+• Total: 35 marks — Formative, self-marked with teacher review
+</div>
+</div>
+</div>
+
+<!-- WEEK 4 -->
+<div class="week-box">
+<h3>Week 4: Communication — Networks &amp; Client-Server <span class="bilingual">通信：网络与客户端-服务器 (Tōngxìn: Wǎngluò yǔ kèhùduān-fúwùqì)</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Network Types &amp; Topologies <span class="bilingual">网络类型与拓扑结构</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Define LAN, WAN, PAN, MAN <span class="bilingual">定义局域网、广域网、个人网、城域网</span><br>
+• Describe client-server and peer-to-peer models <span class="bilingual">描述客户端-服务器和对等网络模型</span><br>
+• Explain advantages and disadvantages of each model <span class="bilingual">解释每种模型的优缺点</span><br><br>
+
+<strong>Starter (5 min):</strong> How do you share files with friends? WeChat? Baidu Netdisk? School server? What's the difference?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• LAN: Local Area Network — school, home, office. High speed, private, limited range. <span class="bilingual">局域网：学校、家庭、办公室</span><br>
+• WAN: Wide Area Network — spans cities/countries. Internet is largest WAN. Uses leased lines, satellites, fibre.<br>
+• PAN: Personal Area Network — Bluetooth devices around one person.<br>
+• MAN: Metropolitan Area Network — city-wide (e.g., municipal WiFi).<br>
+• Client-server: Central server provides services; clients request. Examples: school file server, web server, email server.<br>
+  — Advantages: Centralised security, backups, administration<br>
+  — Disadvantages: Single point of failure, expensive server hardware<br>
+• Peer-to-peer (P2P): No central server; all nodes equal. Examples: BitTorrent, blockchain, early Skype.<br>
+  — Advantages: No single point of failure, scalable, low cost<br>
+  — Disadvantages: Security harder, no central backup, inconsistent performance<br><br>
+
+<strong>Activity (10 min):</strong> Scenario cards: "Design network for..." (a) small office, (b) multinational corporation, (c) gaming tournament. Students justify choices.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why does your school use client-server for files but P2P might be better for video calls?"<br><br>
+
+<strong>Homework:</strong> Draw network diagram for your home. Label LAN/WAN boundaries, identify client-server vs P2P examples.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Network topology <span class="bilingual">网络拓扑 (wǎngluò tuòpū)</span><br>
+• Node <span class="bilingual">节点 (jiédiǎn)</span><br>
+• Bandwidth <span class="bilingual">带宽 (dàikuān)</span><br>
+• Latency <span class="bilingual">延迟 (yánchí)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Network Hardware <span class="bilingual">网络硬件设备</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Identify and explain functions of network hardware <span class="bilingual">识别并解释网络硬件的功能</span><br>
+• Describe how data flows through network devices <span class="bilingual">描述数据如何流经网络设备</span><br>
+• Compare switches, routers, and hubs <span class="bilingual">比较交换机、路由器和集线器</span><br><br>
+
+<strong>Starter (5 min):</strong> Show images of hub, switch, router. Can students identify? What's the difference?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• <span class="highlight">Hub (集线器 jíxiànqì):</span> Layer 1 device. Broadcasts all data to all ports. Cheap but inefficient. Obsolete.<br>
+• <span class="highlight">Switch (交换机 jiāohuànjī):</span> Layer 2 device. Learns MAC addresses, sends data only to correct port. Efficient, used in LANs.<br>
+• <span class="highlight">Router (路由器 lùyóuqì):</span> Layer 3 device. Connects networks, uses IP addresses, makes forwarding decisions. Gateway to Internet.<br>
+• <span class="highlight">NIC (网卡 wǎngkǎ):</span> Network Interface Card — connects device to network. Has unique MAC address.<br>
+• <span class="highlight">Access Point (接入点 jiērù diǎn):</span> Wireless connection point for WiFi devices.<br>
+• <span class="highlight">Modem (调制解调器 tiáozhì jiětiáo qì):</span> Modulates/demodulates signals for transmission over telephone lines/cable.<br>
+• Data flow exercise: Trace path from your phone to www.google.com. Phone → WiFi AP → Switch → Router → ISP → Google server.<br><br>
+
+<strong>Plenary (10 min):</strong> Exam question: "Explain why a switch is more efficient than a hub in a school LAN." (3 marks)<br><br>
+
+<strong>Homework:</strong> Label blank network diagram with correct devices. Write function of each in English + Chinese.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "Router and switch are the same" — Clarify layer difference (2 vs 3) and addressing (MAC vs IP)<br>
+• ❌ "WiFi and Internet are the same" — WiFi = wireless LAN access; Internet = global WAN
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Protocols &amp; Packet Switching <span class="bilingual">协议与分组交换</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Define protocol and explain why protocols are needed <span class="bilingual">定义协议并解释为何需要协议</span><br>
+• Describe the packet switching process <span class="bilingual">描述分组交换过程</span><br>
+• Explain advantages of packet switching over circuit switching <span class="bilingual">解释分组交换相对电路交换的优势</span><br><br>
+
+<strong>Starter (5 min):</strong> "If I shout 'HELLO' in this room, everyone hears. If I send a letter, only recipient gets it. How does the Internet decide?"<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Protocol: Set of rules governing data communication. Without protocols, devices couldn't understand each other. <span class="bilingual">协议是数据通信的规则集。</span><br>
+• Packet switching: Data split into packets; each packet travels independently; reassembled at destination.<br>
+• Packet structure: Header (source IP, destination IP, sequence number, error checking) + Payload (data) + Trailer.<br>
+• Analogy: Sending a book by tearing pages into envelopes, each addressed and numbered. Recipient reassembles by page numbers.<br>
+• Advantages: Efficient bandwidth use, resilient (packets can reroute), multiple users share lines.<br>
+• Circuit switching: Dedicated path (old telephone system). Reliable but wastes bandwidth when silent.<br>
+• <span class="highlight">Exam tip:</span> Always mention "packets can take different routes" and "resilience/reliability" for packet switching questions.<br><br>
+
+<strong>Activity (10 min):</strong> Simulation — Students = routers. Teacher sends "packets" (index cards with numbers) through classroom network. Some cards take different paths. Reassemble message at destination.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is packet switching essential for video streaming?" Discuss: shared bandwidth, error recovery, scalability.<br><br>
+
+<strong>Homework:</strong> Explain packet switching to a family member. Write their questions and your answers.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Packet <span class="bilingual">分组/数据包 (fēnzǔ/shùjùbāo)</span><br>
+• Header <span class="bilingual">首部/头部 (shǒubù/tóubù)</span><br>
+• Payload <span class="bilingual">有效载荷 (yǒuxiào zàihè)</span><br>
+• Circuit switching <span class="bilingual">电路交换 (diànlù jiāohuàn)</span><br>
+• Packet switching <span class="bilingual">分组交换 (fēnzǔ jiāohuàn)</span>
+</div>
+</div>
+
+<!-- WEEK 5 -->
+<div class="week-box">
+<h3>Week 5: Internet Technologies — WWW, Email, FTP <span class="bilingual">互联网技术：万维网、电子邮件、文件传输 (Hùliánwǎng jìshù)</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): World Wide Web &amp; URLs <span class="bilingual">万维网与URL</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Distinguish between Internet and WWW <span class="bilingual">区分互联网和万维网</span><br>
+• Explain how URLs work <span class="bilingual">解释URL的工作原理</span><br>
+• Describe roles of web browser and web server <span class="bilingual">描述浏览器和服务器的作用</span><br><br>
+
+<strong>Starter (5 min):</strong> "The Internet and the World Wide Web are the same thing." True or false? Vote with hands.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Internet = global network of interconnected networks (infrastructure). <span class="bilingual">互联网是全球互联网络的基础设施。</span><br>
+• WWW = service running ON the Internet (information system using HTTP). <span class="bilingual">万维网是运行在互联网上的信息服务。</span><br>
+• Other Internet services: Email, FTP, VoIP, streaming — none of these are "the WWW."<br>
+• URL structure: <code>protocol://domain:port/path?query#fragment</code><br>
+  — Example: <code>https://www.vpa.edu.cn:443/admissions?year=2024#fees</code><br>
+  — Protocol (https), domain (www.vpa.edu.cn), port (443 default for HTTPS), path (/admissions), query (?year=2024), fragment (#fees)<br>
+• Web browser: Requests resources using HTTP, renders HTML/CSS/JavaScript.<br>
+• Web server: Listens for requests, serves files, processes dynamic content (PHP, Python, etc.).<br>
+• HTTP request/response cycle: Browser sends GET request → Server responds with status code (200 OK, 404 Not Found, 500 Server Error) + HTML.<br><br>
+
+<strong>Activity (10 min):</strong> Students dissect 5 real URLs. Identify protocol, domain, path, query parameters.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why might a URL contain a query string? Give two examples." (2 marks)<br><br>
+
+<strong>Homework:</strong> Research status codes. List 5 common codes and what they mean. <span class="bilingual">研究HTTP状态码</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Email &amp; FTP <span class="bilingual">电子邮件与文件传输</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain how email is sent and received <span class="bilingual">解释电子邮件的发送和接收</span><br>
+• Describe protocols: SMTP, POP3, IMAP <span class="bilingual">描述SMTP、POP3、IMAP协议</span><br>
+• Explain FTP and its purpose <span class="bilingual">解释FTP及其用途</span><br><br>
+
+<strong>Starter (5 min):</strong> When you send an email from VPA to a friend in UK, what happens? Brainstorm in pairs.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Email architecture: MUA (Mail User Agent) → MSA → MTA → MDA → MUA. Show diagram.<br>
+• <span class="highlight">SMTP (Simple Mail Transfer Protocol):</span> Sends email FROM client TO server, server TO server. Port 25/587. <span class="bilingual">SMTP用于发送邮件。</span><br>
+• <span class="highlight">POP3 (Post Office Protocol v3):</span> Downloads emails to single device; deletes from server. Port 110. <span class="bilingual">POP3下载邮件到单一设备。</span><br>
+• <span class="highlight">IMAP (Internet Message Access Protocol):</span> Synchronises across devices; leaves copy on server. Port 143. <span class="bilingual">IMAP跨设备同步。</span><br>
+• Comparison: POP3 good for single device, limited storage. IMAP good for multiple devices, cloud access.<br>
+• <span class="highlight">FTP (File Transfer Protocol):</span> Transfers files between client and server. Uses separate control (port 21) and data (port 20) connections. <span class="bilingual">FTP用于客户端和服务器之间传输文件。</span><br>
+• FTP vs HTTP: FTP designed for file transfer, supports upload/download/resume. HTTP designed for web pages.<br>
+• Security: FTP sends passwords in plaintext. SFTP (SSH File Transfer Protocol) encrypts. <span class="bilingual">FTP明文传输密码，SFTP加密传输。</span><br><br>
+
+<strong>Activity (10 min):</strong> Scenario: Design email setup for VPA staff. Should they use POP3 or IMAP? Justify.<br><br>
+
+<strong>Plenary (5 min):</strong> Exam question: "Explain why IMAP is preferred over POP3 for users with multiple devices." (3 marks)<br><br>
+
+<strong>Homework:</strong> Create comparison table: SMTP, POP3, IMAP, FTP — protocol, port, purpose, advantages, disadvantages.<br><br>
+
+<strong>Bilingual Keywords:</span></strong><br>
+• SMTP <span class="bilingual">简单邮件传输协议 (jiǎndān yóujiàn chuánshū xiéyì)</span><br>
+• POP3 <span class="bilingual">邮局协议第三版 (yóujú xiéyì dì sān bǎn)</span><br>
+• IMAP <span class="bilingual">互联网消息访问协议 (hùliánwǎng xiāoxī fǎngwèn xiéyì)</span><br>
+• FTP <span class="bilingual">文件传输协议 (wénjiàn chuánshū xiéyì)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): HTML &amp; CSS Basics (CIE Context) <span class="bilingual">HTML与CSS基础</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Understand purpose of HTML and CSS <span class="bilingual">理解HTML和CSS的用途</span><br>
+• Identify basic HTML tags <span class="bilingual">识别基本HTML标签</span><br>
+• Explain relationship between HTML, CSS, and browser rendering <span class="bilingual">解释HTML、CSS与浏览器渲染的关系</span><br><br>
+
+<strong>Starter (5 min):</strong> Right-click any webpage → "View page source." What do you see?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• HTML (HyperText Markup Language): Structures content. Tags define elements: &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;h1&gt;–&lt;h6&gt;, &lt;p&gt;, &lt;a&gt;, &lt;img&gt;, &lt;table&gt;, &lt;div&gt;, &lt;span&gt;.<br>
+• CSS (Cascading Style Sheets): Controls presentation. Colours, fonts, layout, responsiveness.<br>
+• Separation of concerns: HTML = structure, CSS = style, JavaScript = behaviour.<br>
+• Browser rendering: Parse HTML → Build DOM → Parse CSS → Build CSSOM → Combine → Render tree → Layout → Paint.<br>
+• <span class="highlight">CIE requirement:</span> Students need to recognise HTML/CSS, not write complex pages. Focus on understanding role, not syntax mastery.<br>
+• Practical: Students modify a simple HTML file (change title, add paragraph, change colour via CSS).<br><br>
+
+<strong>Plenary (10 min):</strong> "Why is separating HTML and CSS considered good practice?" Discuss maintainability, accessibility, responsive design.<br><br>
+
+<strong>Homework:</strong> Create a simple HTML page about yourself with at least 5 different tags. Add CSS to change background colour.<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> Modify existing HTML file; identify 5 tags<br>
+<span class="silver">Silver">Create HTML page from scratch; add inline CSS<br>
+<span class="gold">Gold:</span> Create page with external CSS file; add class selectors
+</div>
+</div>
+
+<!-- WEEK 6 -->
+<div class="week-box">
+<h3>Week 6: TCP/IP Stack, IP Addressing &amp; DNS <span class="bilingual">TCP/IP协议栈、IP地址与DNS</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): The TCP/IP Protocol Stack <span class="bilingual">TCP/IP协议栈</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Describe the four layers of TCP/IP <span class="bilingual">描述TCP/IP的四层结构</span><br>
+• Explain function of each layer <span class="bilingual">解释每层的功能</span><br>
+• Compare TCP/IP with OSI model <span class="bilingual">比较TCP/IP与OSI模型</span><br><br>
+
+<strong>Starter (5 min):</strong> Sending a letter: write letter → put in envelope → add address → post office sorts → delivery. How is this like Internet communication?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• TCP/IP = suite of protocols organised in layers. Each layer has specific function.<br>
+• <span class="highlight">Application Layer:</span> User-facing protocols (HTTP, FTP, SMTP, POP3, DNS). <span class="bilingual">应用层：用户直接使用的协议。</span><br>
+• <span class="highlight">Transport Layer:</span> TCP (reliable, connection-oriented, error checking) vs UDP (fast, connectionless, no error checking). <span class="bilingual">传输层：TCP可靠传输，UDP快速传输。</span><br>
+• <span class="highlight">Internet/Network Layer:</span> IP addressing, routing, packet forwarding. <span class="bilingual">网络层：IP地址和路由。</span><br>
+• <span class="highlight">Link/Network Access Layer:</span> Physical transmission (Ethernet, WiFi, fibre). MAC addressing. <span class="bilingual">链路层：物理传输。</span><br>
+• Encapsulation: Data passes down stack; each layer adds header. At destination, headers stripped (decapsulation).<br>
+• OSI model: 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application). TCP/IP merged some OSI layers.<br>
+• <span class="highlight">Exam mnemonic:</span> "All People Seem To Need Data Processing" (OSI, bottom-up)<br><br>
+
+<strong>Activity (10 min):</span> Students label blank diagram of TCP/IP stack. Add example protocols to each layer.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why does the Internet use layered protocols?" Discuss: modularity, interoperability, troubleshooting, standardisation.<br><br>
+
+<strong>Homework:</strong> Create TCP/IP stack poster with protocols, functions, and analogies.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "TCP/IP is one protocol" — It's a suite of protocols<br>
+• ❌ "TCP and IP are the same thing" — TCP = transport layer (reliability); IP = network layer (addressing/routing)
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): IP Addressing — IPv4 &amp; IPv6 <span class="bilingual">IP地址：IPv4与IPv6</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain structure of IPv4 address <span class="bilingual">解释IPv4地址结构</span><br>
+• Understand subnet mask and private IP ranges <span class="bilingual">理解子网掩码和私有IP范围</span><br>
+• Explain need for IPv6 <span class="bilingual">解释IPv6的必要性</span><br><br>
+
+<strong>Starter (5 min):</strong> How many devices in your home connect to Internet? Each needs unique address. Is that a problem?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• IPv4: 32-bit address, dotted decimal notation (e.g., 192.168.1.1). <span class="bilingual">IPv4：32位地址，点分十进制表示。</span><br>
+• Each octet = 8 bits, range 0–255. Total addresses: 2^32 ≈ 4.3 billion.<br>
+• Problem: 4.3 billion < world population + IoT devices. IPv4 exhaustion! <span class="bilingual">IPv4地址耗尽！</span><br>
+• Private IP ranges (RFC 1918): 10.0.0.0–10.255.255.255, 172.16.0.0–172.31.255.255, 192.168.0.0–192.168.255.255<br>
+• NAT (Network Address Translation): Multiple devices share one public IP. Router translates.<br>
+• IPv6: 128-bit address, hexadecimal notation (e.g., 2001:0db8:85a3::8a2e:0370:7334). <span class="bilingual">IPv6：128位地址，十六进制表示。</span><br>
+• Total IPv6 addresses: 2^128 ≈ 340 undecillion. Enough for every atom on Earth to have an IP!<br>
+• Transition challenges: IPv4 and IPv6 coexist. Dual-stack, tunneling, translation.<br><br>
+
+<strong>Activity (10 min):</strong> Convert IPv4 address to binary: 172.16.254.1 → ? Calculate: How many /24 subnets in 10.0.0.0/8?<br><br>
+
+<strong>Plenary (5 min):</strong> "Why has IPv6 adoption been slow despite IPv4 exhaustion?" Discuss: cost, compatibility, NAT workaround.<br><br>
+
+<strong>Homework:</strong> Find your device's IP address (ipconfig / ifconfig). Is it public or private? Explain.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• IP address <span class="bilingual">IP地址 (IP dìzhǐ)</span><br>
+• Subnet mask <span class="bilingual">子网掩码 (zǐwǎng yǎnmǎ)</span><br>
+• NAT <span class="bilingual">网络地址转换 (wǎngluò dìzhǐ zhuǎnhuàn)</span><br>
+• IPv6 <span class="bilingual">互联网协议第六版 (hùliánwǎng xiéyì dì liù bǎn)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): DNS &amp; Mid-Unit Review <span class="bilingual">域名系统与单元复习</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain purpose and operation of DNS <span class="bilingual">解释DNS的目的和运作方式</span><br>
+• Describe DNS hierarchy <span class="bilingual">描述DNS层次结构</span><br>
+• Review Weeks 4–6 content <span class="bilingual">复习第4-6周内容</span><br><br>
+
+<strong>Starter (5 min):</strong> How does typing "google.com" take you to Google's servers? There are millions of servers!<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• DNS (Domain Name System): Translates human-readable domain names to IP addresses. <span class="bilingual">DNS将域名转换为IP地址。</span><br>
+• Hierarchical structure: Root (.) → TLD (.com, .org, .cn, .edu) → Domain (google) → Subdomain (www).<br>
+• DNS resolution process:<br>
+  1. Browser checks cache<br>
+  2. OS checks hosts file and cache<br>
+  3. Query recursive DNS resolver (ISP's DNS server)<br>
+  4. Resolver queries root server → TLD server → authoritative nameserver<br>
+  5. IP address returned, cached for TTL (Time To Live)<br>
+• Record types: A (IPv4), AAAA (IPv6), MX (mail), CNAME (alias), NS (nameserver)<br>
+• <span class="highlight">Exam tip:</span> DNS operates at Application Layer of TCP/IP.<br><br>
+
+<strong>Review Activity (10 min):</strong> Speed dating — Students rotate, asking each other questions from Weeks 4–6.<br><br>
+
+<strong>Plenary (5 min):</strong> "What would happen if all DNS servers stopped working?" Discuss: Internet still works with IP addresses, but usability collapses.<br><br>
+
+<div class="assess">
+<strong>Week 6 Assessment: Mid-Unit Test — Communication (45 minutes)</strong><br>
+• Q1: Network types and models (8 marks)<br>
+• Q2: Network hardware comparison (6 marks)<br>
+• Q3: Packet switching explanation (6 marks)<br>
+• Q4: Protocol identification (5 marks)<br>
+• Q5: TCP/IP stack layers (8 marks)<br>
+• Q6: IP addressing and DNS (7 marks)<br>
+• Total: 40 marks — 10% of semester grade
+</div>
+</div>
+</div>
+
+<!-- WEEKS 7-8 -->
+<div class="week-box">
+<h3>Week 7: CPU Architecture &amp; the Fetch-Decode-Execute Cycle <span class="bilingual">CPU架构与取指-译码-执行周期</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Von Neumann Architecture &amp; CPU Components <span class="bilingual">冯·诺依曼架构与CPU组件</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Describe Von Neumann architecture <span class="bilingual">描述冯·诺依曼架构</span><br>
+• Identify and explain CPU components <span class="bilingual">识别并解释CPU组件</span><br>
+• Explain role of buses <span class="bilingual">解释总线的作用</span><br><br>
+
+<strong>Starter (5 min):</strong> What does a CPU look like? Show images. What's inside that small chip?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Von Neumann architecture (1945): Stored program concept — instructions and data in same memory. <span class="bilingual">冯·诺依曼架构：存储程序概念。</span><br>
+• Key components:<br>
+  — <span class="highlight">ALU (Arithmetic Logic Unit):</span> Performs calculations and logical operations. <span class="bilingual">算术逻辑单元：执行计算和逻辑运算。</span><br>
+  — <span class="highlight">CU (Control Unit):</span> Coordinates CPU operations, decodes instructions, sends control signals. <span class="bilingual">控制单元：协调CPU操作，解码指令。</span><br>
+  — <span class="highlight">Registers:</span> Ultra-fast storage locations inside CPU. <span class="bilingual">寄存器：CPU内部的超高速存储位置。</span><br>
+• Buses (data pathways):<br>
+  — <span class="highlight">Data bus:</span> Carries data between components. Bidirectional. Width affects performance (32-bit vs 64-bit). <span class="bilingual">数据总线：在组件之间传输数据。</span><br>
+  — <span class="highlight">Address bus:</span> Carries memory addresses. Unidirectional (CPU to memory). Width determines max memory (32-bit = 4GB). <span class="bilingual">地址总线：传输内存地址。</span><br>
+  — <span class="highlight">Control bus:</span> Carries control signals (read, write, clock, interrupt). <span class="bilingual">控制总线：传输控制信号。</span><br>
+• Clock: Synchronises operations. Clock speed measured in GHz. Higher = more instructions per second (but also more heat).<br><br>
+
+<strong>Activity (10 min):</strong> Label blank CPU diagram. Add function of each component in English + Chinese.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is a 64-bit processor faster than 32-bit for large calculations?" Discuss wider data bus, larger address space.<br><br>
+
+<strong>Homework:</strong> Research: What is clock speed of your phone's CPU? Your laptop's? Why do they differ?<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Architecture <span class="bilingual">架构 (jiàgòu)</span><br>
+• Bus <span class="bilingual">总线 (zǒngxiàn)</span><br>
+• Clock speed <span class="bilingual">时钟速度 (shízhōng sùdù)</span><br>
+• Register <span class="bilingual">寄存器 (jìcúnqì)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): The Fetch-Decode-Execute Cycle <span class="bilingual">取指-译码-执行周期</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain each stage of FDE cycle <span class="bilingual">解释FDE周期的每个阶段</span><br>
+• Trace register contents through FDE cycle <span class="bilingual">追踪FDE周期中的寄存器内容</span><br>
+• Calculate execution time given clock speed <span class="bilingual">根据时钟速度计算执行时间</span><br><br>
+
+<strong>Starter (5 min):</strong> CPU executes billions of instructions per second. How does it know WHAT to do and WHERE to find it?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• FDE cycle = how CPU executes one instruction. Repeats continuously while computer is on.<br>
+• <span class="highlight">Fetch:</span><br>
+  — PC (Program Counter) holds address of next instruction<br>
+  — Address copied to MAR (Memory Address Register)<br>
+  — Address placed on address bus<br>
+  — Control bus sends "read" signal<br>
+  — Instruction copied from memory to MDR (Memory Data Register)<br>
+  — Instruction copied to CIR (Current Instruction Register)<br>
+  — PC incremented by 1 (or instruction length)<br>
+• <span class="highlight">Decode:</span><br>
+  — CU decodes instruction in CIR<br>
+  — Determines operation (ADD, LOAD, STORE, JUMP, etc.)<br>
+  — Determines operands (registers, memory addresses, immediate values)<br>
+• <span class="highlight">Execute:</span><br>
+  — ALU performs calculation, or data moved between registers/memory<br>
+  — Result stored in accumulator or designated register<br>
+  — Status flags updated (zero, negative, overflow, carry)<br>
+• Worked example: Trace "ADD 5" through FDE cycle. Show register contents at each stage.<br>
+• Clock cycles: Fetch (1), Decode (1), Execute (1–3+). Total = 3–5 clock cycles per instruction.<br>
+• At 3 GHz, one cycle = 0.33 nanoseconds. 3 billion+ cycles per second.<br><br>
+
+<strong>Activity (10 min):</strong> Students trace "LOAD 10", "ADD 15", "STORE 20" through FDE cycle. Fill trace table.<br><br>
+
+<strong>Plenary (5 min):</strong> Exam question: "Describe the role of the Program Counter in the fetch stage." (2 marks)<br><br>
+
+<strong>Homework:</strong> Trace table for 3 instructions. Show PC, MAR, MDR, CIR, Acc contents after each stage.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "PC increments at the end of Execute" — It increments at end of Fetch<br>
+• ❌ "MDR and CIR are the same" — MDR holds data from memory; CIR holds current instruction being decoded<br>
+• ❌ "All instructions take same time" — Complex instructions (division) take more cycles than simple (addition)
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Memory Hierarchy &amp; Cache <span class="bilingual">存储层次结构与缓存</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Describe memory hierarchy <span class="bilingual">描述存储层次结构</span><br>
+• Explain role of cache memory <span class="bilingual">解释高速缓存的作用</span><br>
+• Compare RAM, ROM, cache, secondary storage <span class="bilingual">比较RAM、ROM、缓存和二级存储</span><br><br>
+
+<strong>Starter (5 min):</strong> Why does your computer have RAM, SSD, AND cache? Why not just one big fast memory?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Memory hierarchy triangle: Fast/small/expensive at top; slow/large/cheap at bottom.<br>
+  — Level 1 (L1) Cache: On CPU, 32–64 KB, fastest (1–3 ns), stores most frequently used data.<br>
+  — Level 2 (L2) Cache: On/ near CPU, 256 KB–1 MB, slightly slower.<br>
+  — Level 3 (L3) Cache: Shared across cores, 4–32 MB.<br>
+  — RAM (DRAM): 8–64 GB, slower (100 ns), volatile.<br>
+  — Secondary Storage (SSD/HDD): 256 GB–4 TB+, slowest (microseconds–milliseconds), non-volatile.<br>
+• <span class="highlight">Principle of locality:</span> Programs tend to access same data/ nearby data repeatedly. Cache exploits this.<br>
+• <span class="highlight">Cache hit:</span> Data found in cache (fast). <span class="highlight">Cache miss:</span> Data not in cache (slow, must fetch from RAM).<br>
+• RAM vs ROM:<br>
+  — RAM: Volatile, read/write, stores running programs/data. DRAM (cheap, needs refresh), SRAM (fast, expensive, used in cache).<br>
+  — ROM: Non-volatile, read-only (mostly), stores BIOS/firmware. PROM, EPROM, EEPROM.<br>
+• Virtual memory: Uses HDD/SSD as extension of RAM when RAM full. Slower but prevents crashes.<br><br>
+
+<strong>Activity (10 min):</strong> Design optimal computer for: (a) gaming, (b) server, (c) budget laptop. Justify memory choices.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why does adding more RAM often speed up a computer more than upgrading CPU?" Discuss: reduces virtual memory swapping.<br><br>
+
+<strong>Homework:</strong> Research: What are L1/L2/L3 cache sizes in Apple M3 chip? Intel i9? Why does Apple use "unified memory"?<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Cache <span class="bilingual">高速缓存 (gāosù huǎncún)</span><br>
+• Volatile <span class="bilingual">易失性 (yìshī xìng)</span><br>
+• Non-volatile <span class="bilingual">非易失性 (fēi yìshī xìng)</span><br>
+• Virtual memory <span class="bilingual">虚拟内存 (xūnǐ nèicún)</span>
+</div>
+</div>
+
+<!-- WEEK 8 -->
+<div class="week-box">
+<h3>Week 8: Secondary Storage &amp; I/O Devices <span class="bilingual">二级存储与输入输出设备</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Secondary Storage Types <span class="bilingual">二级存储类型</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Compare magnetic, optical, and solid-state storage <span class="bilingual">比较磁存储、光存储和固态存储</span><br>
+• Explain how each storage technology works <span class="bilingual">解释每种存储技术的工作原理</span><br>
+• Select appropriate storage for given scenarios <span class="bilingual">为特定场景选择合适的存储</span><br><br>
+
+<strong>Starter (5 min):</strong> Show HDD, SSD, USB drive, DVD, SD card. What's inside each? How do they store data?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• <span class="highlight">Magnetic storage:</span> HDD. Platters spin, read/write head magnetises sectors. High capacity, low cost, mechanical failure risk. <span class="bilingual">磁存储：硬盘驱动器，盘片旋转，磁头读写。</span><br>
+• <span class="highlight">Optical storage:</span> CD/DVD/Blu-ray. Pits and lands read by laser. Removable, durable, but lower capacity. Becoming obsolete.<br>
+• <span class="highlight">Solid-state storage:</span> SSD, USB flash, SD cards. NAND flash memory (no moving parts). Fast, durable, expensive per GB. <span class="bilingual">固态存储：无移动部件，速度快，耐用。</span><br>
+• Emerging: M.2 NVMe (PCIe interface, very fast), Intel Optane (persistent memory), DNA storage (research).<br>
+• Comparison table: Speed, capacity, durability, cost, portability, power consumption.<br>
+• <span class="highlight">Exam scenario:</span> "A photographer needs to store 10,000 RAW images. Recommend storage." Answer: SSD for active work, HDD for archive, cloud for backup.<br><br>
+
+<strong>Activity (10 min):</strong> Group decision task: Choose storage for (a) gaming PC, (b) space probe, (c) hospital records, (d) movie distribution.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why are SSDs replacing HDDs in laptops but not in data centres?" Discuss cost/GB, capacity needs, write endurance.<br><br>
+
+<strong>Homework:</strong> Calculate cost per GB for HDD vs SSD using current prices. Project 5-year trend.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "SSD and USB flash are completely different" — Both use NAND flash; form factor and controller differ<br>
+• ❌ "Optical discs are dead" — Still used for archival, distribution, regions without broadband
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Input &amp; Output Devices <span class="bilingual">输入与输出设备</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Categorise input and output devices <span class="bilingual">分类输入和输出设备</span><br>
+• Explain how sensors and actuators work <span class="bilingual">解释传感器和执行器的工作原理</span><br>
+• Discuss role of I/O in embedded systems <span class="bilingual">讨论输入输出在嵌入式系统中的作用</span><br><br>
+
+<strong>Starter (5 min):</strong> Your smartphone: List 10 input methods and 5 output methods. Compare with desktop computer.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Input devices: Keyboard, mouse, touchscreen, microphone, scanner, barcode reader, NFC, biometric sensors, camera, GPS, accelerometer.<br>
+• Output devices: Monitor (LCD, OLED), printer (laser, inkjet, 3D), speakers, projector, haptic feedback, LED indicators.<br>
+• <span class="highlight">Sensors:</span> Detect physical conditions and convert to electrical signals. Temperature, pressure, light, proximity, gyroscope.<br>
+• <span class="highlight">Actuators:</span> Convert electrical signals to physical action. Motors, valves, relays, solenoids.<br>
+• Embedded systems: Dedicated computer within larger system. Examples: Washing machine, smart thermostat, car ECU, medical monitor.<br>
+  — Inputs: Sensors detect load, temperature, water level<br>
+  — Processing: Microcontroller runs control program<br>
+  — Outputs: Actuators control motor, heater, valves<br>
+• I/O interfaces: USB, HDMI, Bluetooth, SPI, I2C (embedded).<br><br>
+
+<strong>Activity (10 min):</strong> Design embedded system for smart greenhouse. List all sensors, actuators, processing, I/O.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why do embedded systems often use microcontrollers instead of full CPUs?" Discuss: cost, power, size, dedicated function.<br><br>
+
+<strong>Homework:</strong> Research IoT device (smartwatch, fitness tracker). List all sensors, explain what each measures.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Sensor <span class="bilingual">传感器 (chuángǎnqì)</span><br>
+• Actuator <span class="bilingual">执行器 (zhíxíngqì)</span><br>
+• Embedded system <span class="bilingual">嵌入式系统 (qiànrù shì xìtǒng)</span><br>
+• Interface <span class="bilingual">接口 (jiēkǒu)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): IGCSE Bridge &amp; Consolidation <span class="bilingual">IGCSE衔接与巩固</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Review all Weeks 1–8 content <span class="bilingual">复习第1-8周全部内容</span><br>
+• Identify links between IGCSE and A-Level depth <span class="bilingual">识别IGCSE与A-Level深度之间的联系</span><br>
+• Practise exam-style questions <span class="bilingual">练习考试风格题目</span><br><br>
+
+<strong>Starter (5 min):</strong> "What did you learn in IGCSE about binary? How is A-Level different?" Brainstorm in groups.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• <span class="highlight">IGCSE → A-Level progression:</span><br>
+  — IGCSE: Convert binary to denary, basic file sizes<br>
+  — A-Level: Two's complement, hex conversions, audio calculations, compression algorithms, detailed FDE cycle<br>
+  — IGCSE: Know what CPU, RAM, ROM are<br>
+  — A-Level: FDE cycle with registers, cache hierarchy, bus widths, memory management<br>
+  — IGCSE: Basic network types<br>
+  — A-Level: TCP/IP stack, packet switching, DNS resolution, IPv4/IPv6<br>
+• Exam question practice: 6 questions from past papers (2 marks each). Peer marking with mark scheme.<br>
+• Error analysis: Common mistakes from diagnostic test reviewed.<br><br>
+
+<strong>Plenary (10 min):</strong> Student-led: Each student shares one thing they understand better now and one thing still confusing.<br><br>
+
+<strong>Homework:</strong> Create personal revision notes for Weeks 1–8. Include bilingual glossary, key formulas, common misconceptions.<br><br>
+
+<strong>EAL Support:</strong><br>
+• Provide sentence frames for explaining concepts: "____ is important because ____"<br>
+• Word bank for exam answers: "converts, represents, stores, calculates, compares, explains"<br>
+• Allow Chinese annotations in revision notes (not in exam, but aids understanding)
+</div>
+</div>
+
+<!-- WEEK 9 -->
+<div class="week-box">
+<h3>Week 9: Half-Term Assessment &amp; Review <span class="bilingual">期中评估与复习</span></h3>
+
+<div class="assess">
+<strong>Half-Term Examination (Week 9)</strong><br><br>
+<strong>Format:</strong> Paper 1 Section A style — 1 hour, 35 marks<br><br>
+<strong>Section A: Short Answer (20 marks)</strong><br>
+• Q1: Number conversions (binary ↔ denary ↔ hex) (4 marks)<br>
+• Q2: Two's complement representation (3 marks)<br>
+• Q3: File size calculations (image + audio) (5 marks)<br>
+• Q4: Compression method selection and justification (4 marks)<br>
+• Q5: Network hardware identification (4 marks)<br><br>
+<strong>Section B: Structured Questions (15 marks)</strong><br>
+• Q6: Packet switching explanation with diagram (5 marks)<br>
+• Q7: TCP/IP layers — match protocols and explain functions (5 marks)<br>
+• Q8: FDE cycle trace table (5 marks)<br><br>
+<strong>Marking:</strong> Teacher-marked with detailed feedback. Students complete reflection sheet identifying 3 strengths and 3 areas for improvement.<br><br>
+<strong>Post-Assessment:</strong><br>
+• W9 L2: Review lesson — Go through each question, address common errors<br>
+• W9 L3: Targeted intervention — Students grouped by weakness area for focused support<br>
+• <span class="bilingual">考后反思：学生完成反思表，识别优势和改进领域。</span>
+</div>
+
+<div class="info">
+<strong>Week 9 Lesson Plan: Assessment Review &amp; Intervention</strong><br><br>
+<strong>Lesson 1 (40 min): Examination</strong><br>
+• Formal exam conditions<br>
+• Seating plan by register<br>
+• Equipment: Pen, pencil, ruler, calculator (non-programmable)<br><br>
+<strong>Lesson 2 (40 min): Whole-Class Review</strong><br>
+• Display mark scheme<br>
+• Students self-assess using green pen<br>
+• Teacher highlights common errors:<br>
+  — Forgetting to convert bits to bytes<br>
+  — Confusing MAR and MDR<br>
+  — Missing "packets can take different routes" in packet switching<br>
+  — Not justifying compression choice with context<br>
+• Model answers for 5-mark questions<br><br>
+<strong>Lesson 3 (40 min): Differentiated Intervention</strong><br>
+• <span class="bronze">Group A (below 50%):</span> Reteach core concepts with visual aids, simplified language, extra practice<br>
+• <span class="silver">Group B (50–75%):</span> Targeted practice on weak areas, exam technique focus<br>
+• <span class="gold">Group C (above 75%):</span> Extension work — A2 preview topics, complex problem solving<br>
+• <span class="bilingual">分层干预：根据成绩分组进行针对性辅导</span>
+</div>
+</div>
+
+<div class="checklist">
+<strong>Weeks 1–9 Common Misconceptions Summary</strong><br><br>
+1. <strong>Binary conversions:</strong> Students forget place values or confuse 2^7 with 2^8. Use place-value grid.<br>
+2. <strong>Two's complement:</strong> "Leftmost bit is just sign" — No, it has negative weight. Use number line visual.<br>
+3. <strong>File size calculations:</strong> Mixing bits and bytes. Emphasise: 8 bits = 1 byte. Always check units.<br>
+4. <strong>Compression:</strong> "Lossy damages the original" — Compressed copy is separate. Original untouched.<br>
+5. <strong>TCP/IP:</strong> "TCP and IP are the same" — TCP = transport (reliability); IP = network (addressing).<br>
+6. <strong>FDE cycle:</strong> PC increments after Fetch, not after Execute. Use timeline diagram.<br>
+7. <strong>Cache:</strong> "More cache always better" — Diminishing returns, cost, power consumption matter.<br>
+8. <strong>DNS:</strong> Confusing domain names with IP addresses. DNS translates between them.<br><br>
+<strong>Address each misconception explicitly in lessons with counter-examples and visual models.</strong>
+</div>
+
+<p style="margin-top:40px; text-align:center; color:#7f8c8d;"><em>Victoria Park Academy Shenzhen — A-Level Computer Science Curriculum 2024–2026</em></p>
+
+</body>
+</html>

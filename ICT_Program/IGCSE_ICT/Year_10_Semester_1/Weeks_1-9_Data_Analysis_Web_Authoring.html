@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA ICT — IGCSE Y10S1 Weeks 1-9: Data Analysis & Web Authoring</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .vocab-box { background: #eaf2f8; padding: 10px; border-radius: 5px; margin: 10px 0; }
+  .activity-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f39c12; margin: 15px 0; }
+  .assessment-box { background: #fdebd0; padding: 15px; border-left: 4px solid #e67e22; margin: 15px 0; }
+  .week-header { background-color: #d6eaf8; padding: 10px; margin-top: 20px; border-radius: 5px; }
+  .syllabus-ref { background: #e8daef; padding: 8px; border-radius: 5px; margin: 10px 0; font-weight: bold; }
+  .exam-tip { background: #d5f5e3; padding: 10px; border-left: 4px solid #27ae60; margin: 10px 0; }
+  .code-block { background: #f4f4f4; padding: 10px; border-left: 3px solid #3498db; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>Weeks 1–9: Data Analysis &amp; Web Authoring</h1>
+<p><strong>Syllabus:</strong> CIE IGCSE ICT (0417) Topics 13 &amp; 14 | <strong>Software:</strong> Excel/Calc + Text Editor + Browser</p>
+
+<h2>Week 1 — Advanced Spreadsheet Formulas</h2>
+<div class="syllabus-ref">Syllabus: 13.1 Advanced Data Analysis</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> nested IF <span class="bilingual">嵌套IF (qiàntào IF)</span>, VLOOKUP <span class="bilingual">垂直查找 (chuízhí cházhǎo)</span>, HLOOKUP <span class="bilingual">水平查找 (shuǐpíng cházhǎo)</span>, INDEX/MATCH <span class="bilingual">索引匹配 (suǒyǐn pǐpèi)</span>, array formula <span class="bilingual">数组公式 (shùzǔ gōngshì)</span>, named range <span class="bilingual">命名区域 (mìngmíng qūyù)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Nested IF challenge — Create a shipping cost calculator with 4 tiers: &lt;1kg ($5), 1-5kg ($10), 5-10kg ($15), &gt;10kg ($20).<br><br>
+<strong>Activity 2 (15 min):</strong> VLOOKUP mastery — Create a product lookup: input ProductID, auto-fill Name, Price, Category from table.<br><br>
+<strong>Activity 3 (10 min):</strong> INDEX/MATCH — Why is it better than VLOOKUP? (Can look left! No column number issues!)
+</div>
+<div class="code-block">
+=IF(B2<1, 5, IF(B2<=5, 10, IF(B2<=10, 15, 20)))
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> For lookup questions, always use FALSE/0 for exact match. TRUE/1 for approximate match (e.g., grade boundaries). The exam usually requires exact match.
+</div>
+
+<h2>Week 2 — What-If Analysis</h2>
+<div class="syllabus-ref">Syllabus: 13.2 What-If Analysis</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> what-if <span class="bilingual">假设分析 (jiǎshè fēnxī)</span>, scenario manager <span class="bilingual">方案管理器 (fāng'àn guǎnlǐqì)</span>, goal seek <span class="bilingual">单变量求解 (dān biànliàng qiújiě)</span>, data table <span class="bilingual">模拟运算表 (mónǐ yùnsuàn biǎo)</span>, sensitivity analysis <span class="bilingual">敏感性分析 (mǐngǎnxìng fēnxī)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Goal Seek — "I want profit to be $10,000. What should the price be?"<br><br>
+<strong>Activity 2 (15 min):</strong> Scenario Manager — Create 3 scenarios for a business: Best Case, Expected Case, Worst Case. Compare side-by-side.<br><br>
+<strong>Activity 3 (10 min):</strong> One-variable data table — Show how monthly payment changes with interest rates from 2% to 10%.
+</div>
+
+<h2>Week 3 — Advanced Charts &amp; Pivot Tables</h2>
+<div class="syllabus-ref">Syllabus: 13.3 Charts and Pivot Tables</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Create a combo chart with secondary axis — Sales (bars) vs. Profit Margin (line, %).<br><br>
+<strong>Activity 2 (15 min):</strong> Pivot table with slicers — Sales by Region and Product, filterable by Quarter.<br><br>
+<strong>Activity 3 (10 min):</strong> Pivot chart — Dynamic chart linked to pivot table. When pivot changes, chart updates automatically.
+</div>
+
+<h2>Week 4 — Data Import, Export &amp; Integration</h2>
+<div class="syllabus-ref">Syllabus: 13.4 Data Import/Export</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> CSV <span class="bilingual">逗号分隔值 (dòuhào fēngé zhí)</span>, import <span class="bilingual">导入 (dǎorù)</span>, export <span class="bilingual">导出 (dǎochū)</span>, delimited <span class="bilingual">分隔符 (fēngé fú)</span>, text to columns <span class="bilingual">分列 (fēnliè)</span>, query <span class="bilingual">查询 (cháxún)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Import CSV file into Excel. Clean data: fix dates, split full name into first/last, remove duplicates.<br><br>
+<strong>Activity 2 (15 min):</strong> Export Excel data as CSV and HTML. Compare file formats.<br><br>
+<strong>Activity 3 (10 min):</strong> Link Excel to external data — Refresh data from a CSV when it changes.
+</div>
+
+<h2>Week 5 — Web Authoring: HTML Structure</h2>
+<div class="syllabus-ref">Syllabus: 14.1 Web Page Basics</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> HTML <span class="bilingual">超文本标记语言 (chāo wénběn biāojì yǔyán)</span>, tag <span class="bilingual">标签 (biāoqiān)</span>, element <span class="bilingual">元素 (yuánsù)</span>, attribute <span class="bilingual">属性 (shǔxìng)</span>, DOCTYPE <span class="bilingual">文档类型 (wéndàng lèixíng)</span>, head <span class="bilingual">头部 (tóubù)</span>, body <span class="bilingual">主体 (zhǔtǐ)</span>, title <span class="bilingual">标题 (biāotí)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Perfect HTML Skeleton" — Write a complete, valid HTML5 document from memory:
+<div class="code-block">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html lang="en"&gt;<br>
+&lt;head&gt;<br>
+&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+&nbsp;&nbsp;&lt;title&gt;My Page&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&nbsp;&nbsp;&lt;h1&gt;Welcome&lt;/h1&gt;<br>
+&nbsp;&nbsp;&lt;p&gt;This is my first paragraph.&lt;/p&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</div>
+<strong>Activity 2 (15 min):</strong> Validate HTML using validator.w3.org. Fix any errors.<br><br>
+<strong>Activity 3 (10 min):</strong> Semantic HTML — Use header, nav, main, article, footer instead of generic divs.
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> HTML questions in Paper 3 often show code with errors. Check for: missing closing tags, wrong nesting, missing DOCTYPE, missing alt attributes on images, missing charset.
+</div>
+
+<h2>Week 6 — CSS Styling</h2>
+<div class="syllabus-ref">Syllabus: 14.2 Cascading Style Sheets</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> CSS <span class="bilingual">层叠样式表 (céngdié yàngshì biǎo)</span>, selector <span class="bilingual">选择器 (xuǎnzéqì)</span>, class <span class="bilingual">类 (lèi)</span>, id <span class="bilingual">标识符 (biāoshí fú)</span>, property <span class="bilingual">属性 (shǔxìng)</span>, value <span class="bilingual">值 (zhí)</span>, external CSS <span class="bilingual">外部样式表 (wàibù yàngshì biǎo)</span>, box model <span class="bilingual">盒模型 (hé móxíng)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Create external stylesheet (style.css). Link to HTML. Style h1, p, body.<br><br>
+<strong>Activity 2 (15 min):</strong> Box model practice — Create a div with: width 300px, padding 20px, border 5px, margin 10px. Calculate total width.<br><br>
+<strong>Activity 3 (10 min):</strong> Class vs. ID — When to use each? (class for repeating styles, id for unique elements)
+</div>
+<div class="code-block">
+/* External CSS */<br>
+body { font-family: Arial; background-color: #f0f0f0; }<br>
+.highlight { color: red; font-weight: bold; }<br>
+#header { width: 100%; height: 100px; background: navy; }
+</div>
+
+<h2>Week 7 — Web Page Layout: Tables &amp; Lists</h2>
+<div class="syllabus-ref">Syllabus: 14.3 Tables, Lists, and Images</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> table <span class="bilingual">表格 (biǎogé)</span>, tr <span class="bilingual">表格行 (biǎogé háng)</span>, td <span class="bilingual">表格单元格 (biǎogé dānyuán gé)</span>, th <span class="bilingual">表头单元格 (biǎotóu dānyuán gé)</span>, colspan <span class="bilingual">跨列 (kuà liè)</span>, rowspan <span class="bilingual">跨行 (kuà háng)</span>, ul/ol/li <span class="bilingual">无序/有序列表 (wúxù/yǒuxù lièbiǎo)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Create a timetable using HTML table with colspan and rowspan for merged cells.<br><br>
+<strong>Activity 2 (15 min):</strong> Nested lists — Create a multi-level navigation menu using ul and li.<br><br>
+<strong>Activity 3 (10 min):</strong> Image optimization — Save same image as JPG (quality 80, 60, 40) and PNG. Compare file sizes and visual quality.
+</div>
+
+<h2>Week 8 — Hyperlinks, Navigation &amp; Forms</h2>
+<div class="syllabus-ref">Syllabus: 14.4 Hyperlinks and Navigation</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> hyperlink <span class="bilingual">超链接 (chāo liànjiē)</span>, anchor <span class="bilingual">锚点 (máodiǎn)</span>, href <span class="bilingual">链接地址 (liànjiē dìzhǐ)</span>, target <span class="bilingual">目标 (mùbiāo)</span>, form <span class="bilingual">表单 (biǎodān)</span>, input <span class="bilingual">输入框 (shūrù kuàng)</span>, textarea <span class="bilingual">文本域 (wénběn yù)</span>, button <span class="bilingual">按钮 (ànniǔ)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Create navigation bar — 5 links to other pages in the site. Test all links work.<br><br>
+<strong>Activity 2 (15 min):</strong> Contact form — Create form with: name (text), email (email), message (textarea), submit (button).<br><br>
+<strong>Activity 3 (10 min):</strong> Internal links — Create "Back to Top" links and anchor links to sections on the same page.
+</div>
+<div class="code-block">
+&lt;form action="submit.php" method="post"&gt;<br>
+&nbsp;&nbsp;Name: &lt;input type="text" name="name" required&gt;&lt;br&gt;<br>
+&nbsp;&nbsp;Email: &lt;input type="email" name="email"&gt;&lt;br&gt;<br>
+&nbsp;&nbsp;&lt;textarea name="message" rows="4" cols="50"&gt;&lt;/textarea&gt;&lt;br&gt;<br>
+&nbsp;&nbsp;&lt;input type="submit" value="Send"&gt;<br>
+&lt;/form&gt;
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> For form questions, check: 1) correct input types (text, email, password, radio, checkbox), 2) name attributes present, 3) method (GET vs POST), 4) submit button included. Missing any loses marks.
+</div>
+
+<h2>Week 9 — Web Design Project &amp; Assessment</h2>
+<div class="syllabus-ref">Syllabus: 14.5 Web Design Project</div>
+<div class="activity-box">
+<strong>Project (40 min):</strong> Create a 4-page website for a school club or local business:
+<ul>
+<li>index.html — Homepage with navigation, welcome message, image</li>
+<li>about.html — About page with styled text and list</li>
+<li>products.html — Products/services with HTML table and images</li>
+<li>contact.html — Contact form with at least 4 different input types</li>
+</ul>
+<strong>Requirements:</strong>
+<ul>
+<li>External CSS file linked to all pages</li>
+<li>Consistent navigation on every page</li>
+<li>At least one table with merged cells</li>
+<li>Form with text, email, textarea, and submit</li>
+<li>All images have alt attributes</li>
+<li>Valid HTML5 (test with validator)</li>
+</ul>
+</div>
+<div class="assessment-box">
+<strong>Marking:</strong>
+<ul>
+<li><span class="bronze">Bronze</span>: 3 pages, basic HTML, some CSS, working links</li>
+<li><span class="silver">Silver</span>: 4 pages, external CSS, table, form, consistent design</li>
+<li><span class="gold">Gold</span>: All above + semantic HTML, optimized images, responsive elements, validated code</li>
+</ul>
+</div>
+
+<h2>Integration Focus: Data → Web</h2>
+<div class="activity-box">
+<strong>Challenge:</strong> Export spreadsheet data as HTML table. Insert that table into your website. Update spreadsheet → re-export → update website. This mirrors Paper 3 integration tasks.
+</div>
+</body>
+</html>

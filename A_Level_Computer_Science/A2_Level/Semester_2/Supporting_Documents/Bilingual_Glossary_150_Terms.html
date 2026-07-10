@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPA A-Level Computer Science Bilingual Glossary — 150+ Terms</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  .bilingual { background: #f8f9fa; padding: 2px 6px; border-radius: 3px; font-style: italic; color: #555; }
+  .bronze { background: #cd7f32; color: white; padding: 2px 8px; border-radius: 3px; font-size: 0.85em; }
+  .silver { background: #c0c0c0; color: #333; padding: 2px 8px; border-radius: 3px; font-size: 0.85em; }
+  .gold { background: #ffd700; color: #333; padding: 2px 8px; border-radius: 3px; font-size: 0.85em; }
+  .checklist { background: #e8f6f3; border-left: 4px solid #1abc9c; padding: 10px 15px; margin: 10px 0; }
+  .checklist ul { list-style: none; padding-left: 0; }
+  .checklist li:before { content: "☐ "; color: #1abc9c; font-weight: bold; }
+  table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #1a5276; color: white; }
+  tr:nth-child(even) { background: #f2f2f2; }
+  .highlight-box { background: #fef9e7; border: 1px solid #f4d03f; padding: 15px; border-radius: 5px; margin: 15px 0; }
+  .warning-box { background: #fdedec; border: 1px solid #e74c3c; padding: 15px; border-radius: 5px; margin: 15px 0; }
+  .success-box { background: #e8f8f5; border: 1px solid #1abc9c; padding: 15px; border-radius: 5px; margin: 15px 0; }
+  .unit-header { background: #d6eaf8; padding: 12px 15px; border-radius: 5px; margin: 25px 0 10px 0; font-weight: bold; color: #1a5276; font-size: 1.1em; }
+</style>
+</head>
+<body>
+
+<h1>Victoria Park Academy — A-Level Computer Science</h1>
+<h2>Bilingual Glossary: 150+ Terms</h2>
+
+<div class="highlight-box">
+<strong>Academic Year:</strong> 2025–2026 &nbsp;|&nbsp; <strong>Level:</strong> A-Level (AS + A2)<br>
+<strong>Exam Board:</strong> Cambridge International Computer Science (9618)<br>
+<strong>Format:</strong> English | 中文 | Pinyin | Definition<br>
+<strong>Note:</strong> Terms marked with ⭐ are A-Level specific (not typically covered at IGCSE level).
+</div>
+
+<div class="unit-header">Unit 1: Data Representation</div>
+<table>
+  <tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+  <tr><td>Binary</td><td><span class="bilingual">二进制</span></td><td>Èrjìnzhì</td><td>A number system using base 2, with digits 0 and 1.</td></tr>
+  <tr><td>Denary / Decimal</td><td><span class="bilingual">十进制</span></td><td>Shíjìnzhì</td><td>A number system using base 10, with digits 0–9.</td></tr>
+  <tr><td>Hexadecimal</td><td><span class="bilingual">十六进制</span></td><td>Shíliù jìnzhì</td><td>A number system using base 16, with digits 0–9 and A–F.</td></tr>
+  <tr><td>Bit</td><td><span class="bilingual">位</span></td><td>Wèi</td><td>The smallest unit of data, representing 0 or 1.</td></tr>
+  <tr><td>Byte</td><td><span class="bilingual">字节</span></td><td>Zìjié</td><td>A group of 8 bits, the standard unit of storage.</td></tr>
+  <tr><td>Nibble</td><td><span class="bilingual">半字节</span></td><td>Bàn zìjié</td><td>A group of 4 bits, half of a byte.</td></tr>
+  <tr><td>Two's Complement</td><td><span class="bilingual">补码</span></td><td>Bǔmǎ</td><td>A method for representing signed integers in binary, allowing subtraction by addition.</td></tr>
+  <tr><td>Sign and Magnitude</td><td><span class="bilingual">符号幅度</span></td><td>Fúhào fúdù</td><td>A method for representing signed integers where the first bit is the sign and the rest represent the magnitude.</td></tr>
+  <tr><td>Overflow</td><td><span class="bilingual">溢出</span></td><td>Yìchū</td><td>An error that occurs when a calculation produces a result too large to be stored.</td></tr>
+  <tr><td>Underflow</td><td><span class="bilingual">下溢</span></td><td>Xià yì</td><td>An error when a number is too small (close to zero) to be represented.</td></tr>
+  <tr><td>⭐ Floating-Point</td><td><span class="bilingual">浮点数</span></td><td>Fúdiǎn shù</td><td>A representation of real numbers using a mantissa and an exponent, allowing a wide range of values.</td></tr>
+  <tr><td>⭐ Mantissa</td><td><span class="bilingual">尾数</span></td><td>Wěishù</td><td>The fractional part of a floating-point number, representing the significant digits.</td></tr>
+  <tr><td>⭐ Exponent</td><td><span class="bilingual">指数</span></td><td>Zhǐshù</td><td>The power to which the base is raised in a floating-point number.</td></tr>
+  <tr><td>⭐ Normalisation</td><td><span class="bilingual">规范化</span></td><td>Guīfàn huà</td><td>The process of adjusting a floating-point number so the mantissa is within a standard range (e.g., 0.5 ≤ mantissa < 1).</td></tr>
+  <tr><td>ASCII</td><td><span class="bilingual">美国信息交换标准代码</span></td><td>Měiguó xìnxī jiāohuàn biāozhǔn dàimǎ</td><td>A 7-bit character encoding standard representing 128 characters.</td></tr>
+  <tr><td>Unicode</td><td><span class="bilingual">统一码</span></td><td>Tǒngyī mǎ</td><td>A universal character encoding standard supporting multiple writing systems, including Chinese.</td></tr>
+  <tr><td>Binary-Coded Decimal (BCD)</td><td><span class="bilingual">二进制编码的十进制</span></td><td>Èrjìnzhì biānmǎ de shíjìnzhì</td><td>A representation where each decimal digit is stored as a 4-bit binary number.</td></tr>
+  <tr><td>Gray Code</td><td><span class="bilingual">格雷码</span></td><td>Géléi mǎ</td><td>A binary code where consecutive values differ by only one bit, reducing errors in digital systems.</td></tr>
+  <tr><td>Resolution</td><td><span class="bilingual">分辨率</span></td><td>Fēnbiàn lǜ</td><td>The number of pixels per unit of length in an image, or the number of bits used to represent a sample in sound.</td></tr>
+  <tr><td>Colour Depth</td><td><span class="bilingual">色深</span></td><td>Sè shēn</td><td>The number of bits used to represent the colour of a single pixel.</td></tr>
+  <tr><td>Metadata</td><td><span class="bilingual">元数据</span></td><td>Yuán shùjù</td><td>Data that describes other data, such as image dimensions, file type, or creation date.</td></tr>
+  <tr><td>Sampling Rate</td><td><span class="bilingual">采样率</span></td><td>Cǎiyàng lǜ</td><td>The number of samples taken per second when digitising sound.</td></tr>
+  <tr><td>Sampling Resolution</td><td><span class="bilingual">采样分辨率</span></td><td>Cǎiyàng fēnbiàn lǜ</td><td>The number of bits used to represent each sample of sound.</td></tr>
+  <tr><td>⭐ Nyquist Theorem</td><td><span class="bilingual">奈奎斯特定理</span></td><td>Nài kuí sī tè dìnglǐ</td><td>States that the sampling rate must be at least twice the highest frequency in the signal to avoid loss.</td></tr>
+  <tr><td>Bit Rate</td><td><span class="bilingual">比特率</span></td><td>Bǐtè lǜ</td><td>The number of bits processed per unit of time, typically bits per second (bps).</td></tr>
+  <tr><td>Lossless Compression</td><td><span class="bilingual">无损压缩</span></td><td>Wúsǔn yāsuō</td><td>Compression that reduces file size without losing any data, allowing perfect reconstruction.</td></tr>
+  <tr><td>Lossy Compression</td><td><span class="bilingual">有损压缩</span></td><td>Yǒusǔn yāsuō</td><td>Compression that reduces file size by permanently removing some data, sacrificing quality.</td></tr>
+  <tr><td>Run-Length Encoding (RLE)</td><td><span class="bilingual">行程长度编码</span></td><td>Xíngchéng chángdù biānmǎ</td><td>A simple lossless compression method replacing repeated values with a count and value.</td></tr>
+</table>
+
+<div class="unit-header">Unit 2: Communication</div>
+<table>
+  <tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+  <tr><td>Protocol</td><td><span class="bilingual">协议</span></td><td>Xiéyì</td><td>A set of rules governing data communication between devices.</td></tr>
+  <tr><td>TCP/IP</td><td><span class="bilingual">传输控制协议/网际协议</span></td><td>Chuánshū kòngzhì xiéyì / Wǎngjì xiéyì</td><td>The fundamental suite of protocols for internet communication.</td></tr>
+  <tr><td>HTTP</td><td><span class="bilingual">超文本传输协议</span></td><td>Chāo wénběn chuánshū xiéyì</td><td>The protocol used for transferring web pages on the internet.</td></tr>
+  <tr><td>HTTPS</td><td><span class="bilingual">安全超文本传输协议</span></td><td>Ānquán chāo wénběn chuánshū xiéyì</td><td>HTTP with encryption (TLS/SSL) for secure communication.</td></tr>
+  <tr><td>FTP</td><td><span class="bilingual">文件传输协议</span></td><td>Wénjiàn chuánshū xiéyì</td><td>A protocol for transferring files between computers on a network.</td></tr>
+  <tr><td>SMTP</td><td><span class="bilingual">简单邮件传输协议</span></td><td>Jiǎndān yóujiàn chuánshū xiéyì</td><td>The protocol for sending email messages between servers.</td></tr>
+  <tr><td>Packet Switching</td><td><span class="bilingual">分组交换</span></td><td>Fēnzǔ jiāohuàn</td><td>A method where data is broken into packets that travel independently and are reassembled at the destination.</td></tr>
+  <tr><td>Circuit Switching</td><td><span class="bilingual">电路交换</span></td><td>Diànlù jiāohuàn</td><td>A method where a dedicated communication path is established before data transfer.</td></tr>
+  <tr><td>Router</td><td><span class="bilingual">路由器</span></td><td>Lùyóu qì</td><td>A device that forwards data packets between networks based on IP addresses.</td></tr>
+  <tr><td>Switch</td><td><span class="bilingual">交换机</span></td><td>Jiāohuàn jī</td><td>A device that connects devices within a local network and forwards data based on MAC addresses.</td></tr>
+  <tr><td>Bandwidth</td><td><span class="bilingual">带宽</span></td><td>Dàikuān</td><td>The maximum rate of data transfer across a network path, measured in bits per second.</td></tr>
+  <tr><td>Latency</td><td><span class="bilingual">延迟</span></td><td>Yánchí</td><td>The time delay between sending and receiving data across a network.</td></tr>
+  <tr><td>Client-Server</td><td><span class="bilingual">客户端-服务器</span></td><td>Kèhù duān - Fúwù qì</td><td>A network architecture where clients request services from central servers.</td></tr>
+  <tr><td>Peer-to-Peer (P2P)</td><td><span class="bilingual">点对点</span></td><td>Diǎn duì diǎn</td><td>A network architecture where all devices have equal status and can act as both client and server.</td></tr>
+  <tr><td>Thin Client</td><td><span class="bilingual">瘦客户端</span></td><td>Shòu kèhù duān</td><td>A low-specification device that relies on a server for processing and storage.</td></tr>
+  <tr><td>Thick Client</td><td><span class="bilingual">胖客户端</span></td><td>Pàng kèhù duān</td><td>A device with significant local processing and storage capability.</td></tr>
+  <tr><td>⭐ Routing Algorithm</td><td><span class="bilingual">路由算法</span></td><td>Lùyóu suànfǎ</td><td>An algorithm that determines the best path for data to travel across a network.</td></tr>
+  <tr><td>⭐ Dijkstra's Algorithm</td><td><span class="bilingual">迪杰斯特拉算法</span></td><td>Dí jié sī tè lā suànfǎ</td><td>A shortest-path algorithm used in network routing to find the most efficient route.</td></tr>
+</table>
+
+<div class="unit-header">Unit 3: Hardware</div>
+<table>
+  <tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+  <tr><td>Von Neumann Architecture</td><td><span class="bilingual">冯·诺依曼架构</span></td><td>Féng nuò yī màn jiàgòu</td><td>A computer design where instructions and data are stored in the same memory and processed sequentially.</td></tr>
+  <tr><td>Fetch-Decode-Execute Cycle</td><td><span class="bilingual">取指-译码-执行周期</span></td><td>Qǔ zhǐ - Yì mǎ - Zhíxíng zhōuqī</td><td>The fundamental cycle of a CPU: fetch instruction from memory, decode it, execute it.</td></tr>
+  <tr><td>Program Counter (PC)</td><td><span class="bilingual">程序计数器</span></td><td>Chéngxù jìshù qì</td><td>A register that holds the address of the next instruction to be fetched.</td></tr>
+  <tr><td>Memory Address Register (MAR)</td><td><span class="bilingual">存储器地址寄存器</span></td><td>Cúnchǔ qì dìzhǐ jìcún qì</td><td>A register that holds the address of the memory location to be accessed.</td></tr>
+  <tr><td>Memory Data Register (MDR)</td><td><span class="bilingual">存储器数据寄存器</span></td><td>Cúnchǔ qì shùjù jìcún qì</td><td>A register that holds data being transferred to or from memory.</td></tr>
+  <tr><td>Accumulator (ACC)</td><td><span class="bilingual">累加器</span></td><td>Lěijiā qì</td><td>A register that stores intermediate results of arithmetic and logical operations.</td></tr>
+  <tr><td>Current Instruction Register (CIR)</td><td><span class="bilingual">当前指令寄存器</span></td><td>Dāngqián zhǐlìng jìcún qì</td><td>A register that holds the instruction currently being decoded and executed.</td></tr>
+  <tr><td>Assembly Language</td><td><span class="bilingual">汇编语言</span></td><td>Huìbiān yǔyán</td><td>A low-level programming language with a one-to-one correspondence with machine code instructions.</td></tr>
+  <tr><td>Machine Code</td><td><span class="bilingual">机器码</span></td><td>Jīqì mǎ</td><td>Binary instructions that a CPU can execute directly without translation.</td></tr>
+  <tr><td>Addressing Mode</td><td><span class="bilingual">寻址模式</span></td><td>Xúnzhǐ móshì</td><td>The way in which the operand of an instruction is specified (e.g., immediate, direct, indirect).</td></tr>
+  <tr><td>Clock Speed</td><td><span class="bilingual">时钟速度</span></td><td>Shízhōng sùdù</td><td>The number of cycles a CPU completes per second, measured in Hertz (Hz).</td></tr>
+  <tr><td>Word Length</td><td><span class="bilingual">字长</span></td><td>Zì cháng</td><td>The number of bits processed by a CPU in a single operation.</td></tr>
+  <tr><td>Cache Memory</td><td><span class="bilingual">高速缓存</span></td><td>Gāosù huǎncún</td><td>Small, fast memory located close to the CPU that stores frequently accessed data.</td></tr>
+  <tr><td>Pipelining</td><td><span class="bilingual">流水线</span></td><td>Liúshuǐ xiàn</td><td>A technique where multiple instructions are overlapped in execution to improve CPU efficiency.</td></tr>
+  <tr><td>Multicore Processor</td><td><span class="bilingual">多核处理器</span></td><td>Duō hé chǔlǐ qì</td><td>A CPU with multiple processing cores, allowing parallel execution of tasks.</td></tr>
+  <tr><td>⭐ Paging</td><td><span class="bilingual">分页</span></td><td>Fēn yè</td><td>A memory management scheme that divides physical memory into fixed-size blocks called pages.</td></tr>
+  <tr><td>⭐ Segmentation</td><td><span class="bilingual">分段</span></td><td>Fēn duàn</td><td>A memory management scheme that divides memory into variable-sized segments based on logical divisions.</td></tr>
+  <tr><td>⭐ Virtual Memory</td><td><span class="bilingual">虚拟内存</span></td><td>Xūnǐ nèicún</td><td>A technique that uses secondary storage to extend the apparent capacity of main memory.</td></tr>
+  <tr><td>⭐ Thrashing</td><td><span class="bilingual">抖动</span></td><td>Dǒudòng</td><td>A condition where excessive paging causes the system to spend more time swapping than executing.</td></tr>
+  <tr><td>Input Device</td><td><span class="bilingual">输入设备</span></td><td>Shūrù shèbèi</td><td>A hardware device used to enter data into a computer system.</td></tr>
+  <tr><td>Output Device</td><td><span class="bilingual">输出设备</span></td><td>Shūchū shèbèi</td><td>A hardware device used to present data from a computer system to the user.</td></tr>
+  <tr><td>Storage Device</td><td><span class="bilingual">存储设备</span></td><td>Cúnchǔ shèbèi</td><td>A hardware device used to store data persistently.</td></tr>
+  <tr><td>SSD</td><td><span class="bilingual">固态硬盘</span></td><td>Gùtài yìngpán</td><td>A storage device using flash memory with no moving parts, faster than traditional hard drives.</td></tr>
+  <tr><td>HDD</td><td><span class="bilingual">机械硬盘</span></td><td>Jīxiè yìngpán</td><td>A storage device using spinning magnetic platters to store data.</td></tr>
+  <tr><td>RAID</td><td><span class="bilingual">独立磁盘冗余阵列</span></td><td>Dúlì cípán rǒngyú zhènliè</td><td>A technology that combines multiple disk drives for performance, redundancy, or both.</td></tr>
+</table>
+
+<div class="unit-header">Unit 4: Software</div>
+<table>
+  <tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+  <tr><td>Operating System</td><td><span class="bilingual">操作系统</span></td><td>Cāozuò xìtǒng</td><td>System software that manages hardware resources and provides services for applications.</td></tr>
+  <tr><td>Memory Management</td><td><span class="bilingual">内存管理</span></td><td>Nèicún guǎnlǐ</td><td>The function of an OS that controls and coordinates the use of main memory.</td></tr>
+  <tr><td>Scheduling Algorithm</td><td><span class="bilingual">调度算法</span></td><td>Diàodù suànfǎ</td><td>An algorithm that determines the order in which processes are executed by the CPU.</td></tr>
+  <tr><td>Round Robin</td><td><span class="bilingual">时间片轮转</span></td><td>Shíjiān piàn lúnzhuǎn</td><td>A scheduling algorithm where each process gets a fixed time slice in turn.</td></tr>
+  <tr><td>First-Come First-Served (FCFS)</td><td><span class="bilingual">先来先服务</span></td><td>Xiān lái xiān fúwù</td><td>A scheduling algorithm that processes jobs in the order they arrive.</td></tr>
+  <tr><td>Shortest Job First (SJF)</td><td><span class="bilingual">短作业优先</span></td><td>Duǎn zuòyè yōuxiān</td><td>A scheduling algorithm that prioritises the job with the shortest execution time.</td></tr>
+  <tr><td>Compiler</td><td><span class="bilingual">编译器</span></td><td>Biānyì qì</td><td>A program that translates high-level source code into machine code in one go.</td></tr>
+  <tr><td>Interpreter</td><td><span class="bilingual">解释器</span></td><td>Jiěshì qì</td><td>A program that translates and executes high-level code line by line.</td></tr>
+  <tr><td>Assembler</td><td><span class="bilingual">汇编器</span></td><td>Huìbiān qì</td><td>A program that translates assembly language into machine code.</td></tr>
+  <tr><td>Lexical Analysis</td><td><span class="bilingual">词法分析</span></td><td>Cífǎ fēnxī</td><td>The first stage of compilation, breaking source code into tokens.</td></tr>
+  <tr><td>Syntax Analysis</td><td><span class="bilingual">语法分析</span></td><td>Yǔfǎ fēnxī</td><td>The second stage of compilation, checking tokens against grammar rules and building a parse tree.</td></tr>
+  <tr><td>Code Generation</td><td><span class="bilingual">代码生成</span></td><td>Dàimǎ shēngchéng</td><td>The stage of compilation where intermediate code is translated into target machine code.</td></tr>
+  <tr><td>Optimisation</td><td><span class="bilingual">优化</span></td><td>Yōuhuà</td><td>The stage of compilation that improves code efficiency without changing its behaviour.</td></tr>
+  <tr><td>Utility Program</td><td><span class="bilingual">实用程序</span></td><td>Shíyòng chéngxù</td><td>System software that performs maintenance tasks (backup, defragmentation, compression).</td></tr>
+  <tr><td>Defragmentation</td><td><span class="bilingual">碎片整理</span></td><td>Suìpiàn zhěnglǐ</td><td>Reorganising data on a disk so files are stored in contiguous blocks, improving access speed.</td></tr>
+  <tr><td>Backup</td><td><span class="bilingual">备份</span></td><td>Bèifèn</td><td>Copying data to a secondary location to protect against loss.</td></tr>
+  <tr><td>Compression</td><td><span class="bilingual">压缩</span></td><td>Yāsuō</td><td>Reducing file size by encoding data more efficiently.</td></tr>
+  <tr><td>Library Program</td><td><span class="bilingual">库程序</span></td><td>Kù chéngxù</td><td>A collection of pre-written code modules that can be reused in different programs.</td></tr>
+  <tr><td>Linker</td><td><span class="bilingual">链接器</span></td><td>Liànjiē qì</td><td>A program that combines object code and library code to create an executable file.</td></tr>
+  <tr><td>Loader</td><td><span class="bilingual">加载器</span></td><td>Jiāzài qì</td><td>A program that loads an executable into memory and prepares it for execution.</td></tr>
+</table>
+
+<div class="unit-header">Unit 5: Security</div>
+<table>
+  <tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+  <tr><td>Malware</td><td><span class="bilingual">恶意软件</span></td><td>Èyì ruǎnjiàn</td><td>Software designed to harm or exploit computer systems.</td></tr>
+  <tr><td>Virus</td><td><span class="bilingual">病毒</span></td><td>Bìngdú</td><td>Malware that attaches itself to legitimate programs and spreads when executed.</td></tr>
+  <tr><td>Worm</td><td><span class="bilingual">蠕虫</span></td><td>Rúchóng</td><td>Self-replicating malware that spreads across networks without user action.</td></tr>
+  <tr><td>Trojan</td><td><span class="bilingual">木马</span></td><td>Mùmǎ</td><td>Malware disguised as legitimate software that tricks users into installing it.</td></tr>
+  <tr><td>Spyware</td><td><span class="bilingual">间谍软件</span></td><td>Jiàndié ruǎnjiàn</td><td>Malware that secretly monitors user activity and collects personal information.</td></tr>
+  <tr><td>Ransomware</td><td><span class="bilingual">勒索软件</span></td><td>Lèsuǒ ruǎnjiàn</td><td>Malware that encrypts user data and demands payment for its release.</td></tr>
+  <tr><td>Phishing</td><td><span class="bilingual">网络钓鱼</span></td><td>Wǎngluò diàoyú</td><td>A social engineering attack that tricks users into revealing sensitive information via fraudulent communications.</td></tr>
+  <tr><td>Firewall</td><td><span class="bilingual">防火墙</span></td><td>Fánghuǒ qiáng</td><td>A security system that monitors and controls network traffic based on predetermined rules.</td></tr>
+  <tr><td>Proxy Server</td><td><span class="bilingual">代理服务器</span></td><td>Dàilǐ fúwù qì</td><td>An intermediary server that forwards requests and can filter, cache, or monitor traffic.</td></tr>
+  <tr><td>Encryption</td><td><span class="bilingual">加密</span></td><td>Jiāmì</td><td>The process of converting data into a coded form to prevent unauthorised access.</td></tr>
+  <tr><td>Decryption</td><td><span class="bilingual">解密</span></td><td>Jiěmì</td><td>The process of converting encrypted data back into its original form.</td></tr>
+  <tr><td>Symmetric Encryption</td><td><span class="bilingual">对称加密</span></td><td>Duìchèn jiāmì</td><td>Encryption using the same key for both encryption and decryption.</td></tr>
+  <tr><td>Asymmetric Encryption</td><td><span class="bilingual">非对称加密</span></td><td>Fēi duìchèn jiāmì</td><td>Encryption using a pair of keys: a public key for encryption and a private key for decryption.</td></tr>
+  <tr><td>Public Key</td><td><span class="bilingual">公钥</span></td><td>Gōng yào</td><td>A key that can be freely distributed and is used to encrypt data or verify signatures.</td></tr>
+  <tr><td>Private Key</td><td><span class="bilingual">私钥</span></td><td>Sī yào</td><td>A key that must be kept secret and is used to decrypt data or create signatures.</td></tr>
+  <tr><td>Digital Signature</td><td><span class="bilingual">数字签名</span></td><td>Shùzì qiānmíng</td><td>A cryptographic mechanism that verifies the authenticity and integrity of a message.</td></tr>
+  <tr><td>Digital Certificate</td><td><span class="bilingual">数字证书</span></td><td>Shùzì zhèngshū</td><td>An electronic document that binds a public key to an identity, issued by a Certificate Authority.</td></tr>
+  <tr><td>Certificate Authority (CA)</td><td><span class="bilingual">证书颁发机构</span></td><td>Zhèngshū bānfā jīgòu</td><td>A trusted organisation that issues and verifies digital certificates.</td></tr>
+  <tr><td>PKI</td><td><span class="bilingual">公钥基础设施</span></td><td>Gōng yào jīchǔ shèshī</td><td>Public Key Infrastructure: the framework for managing digital keys and certificates.</td></tr>
+  <tr><td>Authentication</td><td><span class="bilingual">认证</span></td><td>Rènzhèng</td><td>The process of verifying the identity of a user or device.</td></tr>
+  <tr><td>Authorisation</td><td><span class="bilingual">授权</span></td><td>Shòuquán</td><td>The process of granting permissions to an authenticated user.</td></tr>
+  <tr><td>Biometrics</td><td><span class="bilingual">生物识别</span></td><td>Shēngwù shíbié</td><td>Authentication using physical characteristics (fingerprint, iris, face, voice).</td></tr>
+  <tr><td>Two-Factor Authentication (2FA)</td><td><span class="bilingual">双因素认证</span></td><td>Shuāng yīnsù rènzhèng</td><td>Authentication requiring two different types of evidence (e.g., password + phone code).</td></tr>
+  <tr><td>CAPTCHA</td><td><span class="bilingual">验证码</span></td><td>Yànzhèng mǎ</td><td>A test to distinguish humans from automated systems, often using distorted text or images.</td></tr>
+  <tr><td>GDPR</td><td><span class="bilingual">通用数据保护条例</span></td><td>Tōngyòng shùjù bǎohù tiáolì</td><td>The EU General Data Protection Regulation governing data privacy and protection.</td></tr>
+  <tr><td>Data Subject</td><td><span class="bilingual">数据主体</span></td><td>Shùjù zhǔtǐ</td><td>An individual whose personal data is being processed.</td></tr>
+  <tr><td>Data Controller</td><td><span class="bilingual">数据控制者</span></td><td>Shùjù kòngzhì zhě</td><td>The entity that determines the purposes and means of processing personal data.</td></tr>
+  <tr><td>Data Processor</td><td><span class="bilingual">数据处理者</span></td><td>Shùjù chǔlǐ zhě</td><td>The entity that processes personal data on behalf of the data controller.</td></tr>
+</table>
+
+<div class="unit-header">Unit 6: Programming</div>
+<table>
+  <tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+  <tr><td>Variable</td><td><span class="bilingual">变量</span></td><td>Biànliàng</td><td>A named storage location in memory whose value can change during program execution.</td></tr>
+  <tr><td>Constant</td><td><span class="bilingual">常量</span></td><td>Chángliàng</td><td>A named value that cannot change during program execution.</td></tr>
+  <tr><td>Data Type</td><td><span class="bilingual">数据类型</span></td><td>Shùjù lèixíng</td><td>A classification that specifies the kind of data a variable can hold.</td></tr>
+  <tr><td>Integer</td><td><span class="bilingual">整数</span></td><td>Zhěngshù</td><td>A whole number without a fractional component.</td></tr>
+  <tr><td>Real / Float</td><td><span class="bilingual">实数/浮点数</span></td><td>Shíshù / Fúdiǎn shù</td><td>A number with a fractional component.</td></tr>
+  <tr><td>Boolean</td><td><span class="bilingual">布尔值</span></td><td>Bù'ěr zhí</td><td>A data type with two possible values: True or False.</td></tr>
+  <tr><td>Character</td><td><span class="bilingual">字符</span></td><td>Zìfú</td><td>A single letter, digit, or symbol.</td></tr>
+  <tr><td>String</td><td><span class="bilingual">字符串</span></td><td>Zìfú chuàn</td><td>A sequence of characters.</td></tr>
+  <tr><td>Array</td><td><span class="bilingual">数组</span></td><td>Shùzǔ</td><td>A data structure that stores multiple values of the same type in a contiguous block of memory.</td></tr>
+  <tr><td>Record</td><td><span class="bilingual">记录</span></td><td>Jìlù</td><td>A composite data type that groups related fields of different types.</td></tr>
+  <tr><td>Selection</td><td><span class="bilingual">选择</span></td><td>Xuǎnzé</td><td>A control structure that chooses between alternative paths (IF, CASE).</td></tr>
+  <tr><td>Iteration</td><td><span class="bilingual">迭代</span></td><td>Diédài</td><td>A control structure that repeats a block of code (FOR, WHILE, REPEAT).</td></tr>
+  <tr><td>Procedure</td><td><span class="bilingual">过程</span></td><td>Guòchéng</td><td>A subroutine that performs a task but does not return a value.</td></tr>
+  <tr><td>Function</td><td><span class="bilingual">函数</span></td><td>Hánshù</td><td>A subroutine that performs a task and returns a value.</td></tr>
+  <tr><td>Parameter</td><td><span class="bilingual">参数</span></td><td>Cānshù</td><td>A variable used to pass data into a subroutine.</td></tr>
+  <tr><td>Return Value</td><td><span class="bilingual">返回值</span></td><td>Fǎnhuí zhí</td><td>The value sent back by a function to the calling code.</td></tr>
+  <tr><td>Local Variable</td><td><span class="bilingual">局部变量</span></td><td>Júbù biànliàng</td><td>A variable declared inside a subroutine, accessible only within that subroutine.</td></tr>
+  <tr><td>Global Variable</td><td><span class="bilingual">全局变量</span></td><td>Quánjú biànliàng</td><td>A variable declared outside all subroutines, accessible from anywhere in the program.</td></tr>
+  <tr><td>Pass by Value</td><td><span class="bilingual">值传递</span></td><td>Zhí chuándì</td><td>Passing a copy of the data to a subroutine; changes do not affect the original.</td></tr>
+  <tr><td>Pass by Reference</td><td><span class="bilingual">引用传递</span></td><td>Yǐnyòng chuándì</td><td>Passing the memory address of data to a subroutine; changes affect the original.</td></tr>
+  <tr><td>Recursion</td><td><span class="bilingual">递归</span></td><td>Dìguī</td><td>A programming technique where a function calls itself to solve a problem by breaking it into smaller instances.</td></tr>
+  <tr><td>Base Case</td><td><span class="bilingual">基准情形</span></td><td>Jīzhǔn qíngxing</td><td>The condition in a recursive function that stops the recursion.</td></tr>
+  <tr><td>Stack Frame</td><td><span class="bilingual">栈帧</span></td><td>Zhàn zhèng</td><td>A block of memory allocated on the call stack for a subroutine's local variables and parameters.</td></tr>
+  <tr><td>File Handling</td><td><span class="bilingual">文件处理</span></td><td>Wénjiàn chǔlǐ</td><td>Operations to read from and write to files (open, read, write, append, close).</td></tr>
+  <tr><td>CSV</td><td><span class="bilingual">逗号分隔值</span></td><td>Dòuhào fēngé zhí</td><td>A file format where data is separated by commas, commonly used for tabular data.</td></tr>
+  <tr><td>JSON</td><td><span class="bilingual">JavaScript对象表示法</span></td><td>JavaScript duìxiàng biǎoshì fǎ</td><td>A lightweight data interchange format using human-readable text.</td></tr>
+  <tr><td>Exception Handling</td><td><span class="bilingual">异常处理</span></td><td>Yìcháng chǔlǐ</td><td>A mechanism to handle runtime errors gracefully (try-except, try-catch).</td></tr>
+  <tr><td>Validation</td><td><span class="bilingual">验证</span></td><td>Yànzhèng</td><td>Checking that data meets specific criteria before processing (range, type, presence, format).</td></tr>
+  <tr><td>Verification</td><td><span class="bilingual">校验</span></td><td>Jiàoyàn</td><td>Checking that data has been entered correctly (double entry, visual check).</td></tr>
+</table>
+
+<div class="unit-header">Unit 7: Algorithms</div>
+<table>
+  <tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+  <tr><td>Algorithm</td><td><span class="bilingual">算法</span></td><td>Suànfǎ</td><td>A step-by-step procedure for solving a problem or accomplishing a task.</td></tr>
+  <tr><td>Pseudocode</td><td><span class="bilingual">伪代码</span></td><td>Wěi dàimǎ</td><td>A high-level description of an algorithm using a mixture of natural language and programming constructs.</td></tr>
+  <tr><td>Flowchart</td><td><span class="bilingual">流程图</span></td><td>Liúchéng tú</td><td>A visual representation of an algorithm using standard symbols (start, process, decision, input/output).</td></tr>
+  <tr><td>Decomposition</td><td><span class="bilingual">分解</span></td><td>Fēnjiě</td><td>Breaking a complex problem into smaller, more manageable sub-problems.</td></tr>
+  <tr><td>Pattern Recognition</td><td><span class="bilingual">模式识别</span></td><td>Móshì shíbié</td><td>Identifying similarities, trends, or patterns in data or problems.</td></tr>
+  <tr><td>Abstraction</td><td><span class="bilingual">抽象</span></td><td>Chōuxiàng</td><td>Hiding unnecessary detail to focus on relevant features of a problem.</td></tr>
+  <tr><td>Linear Search</td><td><span class="bilingual">线性搜索</span></td><td>Xiànxìng sōusuǒ</td><td>A search algorithm that checks each element in turn until the target is found.</td></tr>
+  <tr><td>Binary Search</td><td><span class="bilingual">二分搜索</span></td><td>Èrfēn sōusuǒ</td><td>A search algorithm that repeatedly divides a sorted list in half to find the target.</td></tr>
+  <tr><td>Bubble Sort</td><td><span class="bilingual">冒泡排序</span></td><td>Màopào páixù</td><td>A sorting algorithm that repeatedly swaps adjacent elements if they are in the wrong order.</td></tr>
+  <tr><td>Insertion Sort</td><td><span class="bilingual">插入排序</span></td><td>Chārù páixù</td><td>A sorting algorithm that builds a sorted list one element at a time by inserting each new element into its correct position.</td></tr>
+  <tr><td>Quicksort</td><td><span class="bilingual">快速排序</span></td><td>Kuàisù páixù</td><td>A divide-and-conquer sorting algorithm that selects a pivot and partitions the list around it.</td></tr>
+  <tr><td>Merge Sort</td><td><span class="bilingual">归并排序</span></td><td>Guībìng páixù</td><td>A divide-and-conquer sorting algorithm that splits the list, sorts the halves, and merges them.</td></tr>
+  <tr><td>Big-O Notation</td><td><span class="bilingual">大O符号</span></td><td>Dà O fúhào</td><td>A notation describing the upper bound of an algorithm's time or space complexity as input size grows.</td></tr>
+  <tr><td>Time Complexity</td><td><span class="bilingual">时间复杂度</span></td><td>Shíjiān fùzá dù</td><td>A measure of the computational time an algorithm takes relative to input size.</td></tr>
+  <tr><td>Space Complexity</td><td><span class="bilingual">空间复杂度</span></td><td>Kōngjiān fùzá dù</td><td>A measure of the memory an algorithm requires relative to input size.</td></tr>
+  <tr><td>⭐ Karnaugh Map</td><td><span class="bilingual">卡诺图</span></td><td>Kǎ nuò tú</td><td>A graphical method for simplifying Boolean expressions by grouping adjacent cells.</td></tr>
+  <tr><td>⭐ De Morgan's Laws</td><td><span class="bilingual">德摩根定律</span></td><td>Dé mógēn dìnglǜ</td><td>Boolean algebra rules for converting AND to OR (and vice versa) with negation: NOT(A AND B) = (NOT A) OR (NOT B).</td></tr>
+  <tr><td>⭐ Truth Table</td><td><span class="bilingual">真值表</span></td><td>Zhēnzhí biǎo</td><td>A table showing all possible input combinations and their corresponding outputs for a logic circuit.</td></tr>
+  <tr><td>⭐ Logic Gate</td><td><span class="bilingual">逻辑门</span></td><td>Luójí mén</td><td>A physical device implementing a Boolean function (AND, OR, NOT, NAND, NOR, XOR).</td></tr>
+  <tr><td>⭐ Flip-Flop</td><td><span class="bilingual">触发器</span></td><td>Chùfā qì</td><td>A bistable circuit that stores one bit of data, used in registers and memory.</td></tr>
+  <tr><td>⭐ Register</td><td><span class="bilingual">寄存器</span></td><td>Jìcún qì</td><td>A small, fast storage location within the CPU used to hold data temporarily.</td></tr>
+  <tr><td>⭐ Counter</td><td><span class="bilingual">计数器</span></td><td>Jìshù qì</td><td>A sequential circuit that counts pulses and stores the current count.</td></tr>
+  <tr><td>Combinational Logic</td><td><span class="bilingual">组合逻辑</span></td><td>Zǔhé luójí</td><td>Logic circuits where the output depends only on the current inputs.</td></tr>
+  <tr><td>Sequential Logic</td><td><span class="bilingual">时序逻辑</span></td><td>Shíxù luójí</td><td>Logic circuits where the output depends on current inputs and previous states (memory).</td></tr>
+</table>
+
+<div class="unit-header">Unit 8: Data Structures</div>
+<table>
+  <tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+  <tr><td>Stack</td><td><span class="bilingual">栈</span></td><td>Zhàn</td><td>A linear data structure following Last-In-First-Out (LIFO): push and pop operations.</td></tr>
+  <tr><td>Queue</td><td><span class="bilingual">队列</span></td><td>Duìliè</td><td>A linear data structure following First-In-First-Out (FIFO): enqueue and dequeue operations.</td></tr>
+  <tr><td>Linked List</td><td><span class="bilingual">链表</span></td><td>Liànbiǎo</td><td>A data structure where each element contains data and a pointer to the next element.</td></tr>
+  <tr><td>Pointer</td><td><span class="bilingual">指针</span></td><td>Zhǐzhēn</td><td>A variable that stores the memory address of another variable.</td></tr>
+  <tr><td>Node</td><td><span class="bilingual">节点</span></td><td>Jiédiǎn</td><td>An element in a linked list or tree containing data and references to other nodes.</td></tr>
+  <tr><td>Tree</td><td><span class="bilingual">树</span></td><td>Shù</td><td>A hierarchical data structure with a root node and child nodes.</td></tr>
+  <tr><td>Binary Tree</td><td><span class="bilingual">二叉树</span></td><td>Èr chā shù</td><td>A tree where each node has at most two children (left and right).</td></tr>
+  <tr><td>Binary Search Tree (BST)</td><td><span class="bilingual">二叉搜索树</span></td><td>Èr chā sōusuǒ shù</td><td>A binary tree where left children are smaller and right children are larger than their parent.</td></tr>
+  <tr><td>Traversal</td><td><span class="bilingual">遍历</span></td><td>Biànlì</td><td>The process of visiting all nodes in a tree or graph in a specific order (pre-order, in-order, post-order).</td></tr>
+  <tr><td>Graph</td><td><span class="bilingual">图</span></td><td>Tú</td><td>A data structure consisting of vertices (nodes) connected by edges.</td></tr>
+  <tr><td>Adjacency Matrix</td><td><span class="bilingual">邻接矩阵</span></td><td>Línjiē jǔzhèn</td><td>A 2D array representing a graph where cells indicate whether edges exist between vertices.</td></tr>
+  <tr><td>Adjacency List</td><td><span class="bilingual">邻接表</span></td><td>Línjiē biǎo</td><td>A representation of a graph where each vertex stores a list of its neighbouring vertices.</td></tr>
+  <tr><td>Hash Table</td><td><span class="bilingual">哈希表</span></td><td>Hāxī biǎo</td><td>A data structure that maps keys to values using a hash function for fast lookup.</td></tr>
+  <tr><td>Hash Function</td><td><span class="bilingual">哈希函数</span></td><td>Hāxī hánshù</td><td>A function that converts a key into an index for storing data in a hash table.</td></tr>
+  <tr><td>Collision</td><td><span class="bilingual">冲突</span></td><td>Chōngtú</td><td>When two keys produce the same hash value, requiring a resolution strategy.</td></tr>
+  <tr><td>⭐ Object-Oriented Programming (OOP)</td><td><span class="bilingual">面向对象编程</span></td><td>Miànxiàng duìxiàng biānchéng</td><td>A programming paradigm based on objects that contain data (attributes) and code (methods).</td></tr>
+  <tr><td>⭐ Class</td><td><span class="bilingual">类</span></td><td>Lèi</td><td>A blueprint for creating objects, defining attributes and methods.</td></tr>
+  <tr><td>⭐ Object</td><td><span class="bilingual">对象</span></td><td>Duìxiàng</td><td>An instance of a class with its own data and behaviour.</td></tr>
+  <tr><td>⭐ Encapsulation</td><td><span class="bilingual">封装</span></td><td>Fēngzhuāng</td><td>Hiding internal data and providing public methods to access it.</td></tr>
+  <tr><td>⭐ Inheritance</td><td><span class="bilingual">继承</span></td><td>Jìchéng</td><td>A mechanism where a new class derives properties and methods from an existing class.</td></tr>
+  <tr><td>⭐ Polymorphism</td><td><span class="bilingual">多态</span></td><td>Duōtài</td><td>The ability of different objects to respond to the same method call in different ways.</td></tr>
+  <tr><td>⭐ Method Overriding</td><td><span class="bilingual">方法重写</span></td><td>Fāngfǎ chóngxiě</td><td>Redefining a method in a derived class that already exists in the base class.</td></tr>
+  <tr><td>⭐ Getter</td><td><span class="bilingual">获取器</span></td><td>Huòqǔ qì</td><td>A method that returns the value of a private attribute.</td></tr>
+  <tr><td>⭐ Setter</td><td><span class="bilingual">设置器</span></td><td>Shèzhì qì</td><td>A method that sets the value of a private attribute, often with validation.</td></tr>
+</table>
+
+<div class="unit-header">Unit 9: Artificial Intelligence</div>
+<table>
+  <tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+  <tr><td>Artificial Intelligence (AI)</td><td><span class="bilingual">人工智能</span></td><td>Rén gōng zhìnéng</td><td>The simulation of human intelligence processes by computer systems.</td></tr>
+  <tr><td>Machine Learning</td><td><span class="bilingual">机器学习</span></td><td>Jīqì xuéxí</td><td>A subset of AI where systems learn from data without being explicitly programmed.</td></tr>
+  <tr><td>Supervised Learning</td><td><span class="bilingual">监督学习</span></td><td>Jiāndū xuéxí</td><td>Training a model on labelled data (input-output pairs) to make predictions.</td></tr>
+  <tr><td>Unsupervised Learning</td><td><span class="bilingual">无监督学习</span></td><td>Wú jiāndū xuéxí</td><td>Training a model on unlabelled data to find hidden patterns or structures.</td></tr>
+  <tr><td>Reinforcement Learning</td><td><span class="bilingual">强化学习</span></td><td>Qiánghuà xuéxí</td><td>Training a model through trial and error, receiving rewards or penalties for actions.</td></tr>
+  <tr><td>⭐ Neural Network</td><td><span class="bilingual">神经网络</span></td><td>Shénjīng wǎngluò</td><td>A computing system inspired by biological neurons, consisting of interconnected nodes organised in layers.</td></tr>
+  <tr><td>⭐ Perceptron</td><td><span class="bilingual">感知器</span></td><td>Gǎnzhī qì</td><td>The simplest neural network unit, a binary classifier that makes decisions based on weighted inputs.</td></tr>
+  <tr><td>⭐ Deep Learning</td><td><span class="bilingual">深度学习</span></td><td>Shēndù xuéxí</td><td>Machine learning using neural networks with many layers to model complex patterns.</td></tr>
+  <tr><td>⭐ Backpropagation</td><td><span class="bilingual">反向传播</span></td><td>Fǎnxiàng chuánbō</td><td>An algorithm for training neural networks by adjusting weights based on the error of the output.</td></tr>
+  <tr><td>⭐ Training Set</td><td><span class="bilingual">训练集</span></td><td>Xùnliàn jí</td><td>The data used to train a machine learning model.</td></tr>
+  <tr><td>⭐ Validation Set</td><td><span class="bilingual">验证集</span></td><td>Yànzhèng jí</td><td>The data used to tune model parameters and prevent overfitting during training.</td></tr>
+  <tr><td>⭐ Test Set</td><td><span class="bilingual">测试集</span></td><td>Cèshì jí</td><td>The data used to evaluate the final performance of a trained model.</td></tr>
+  <tr><td>⭐ Overfitting</td><td><span class="bilingual">过拟合</span></td><td>Guò nǐhé</td><td>When a model learns the training data too well, including noise, and performs poorly on new data.</td></tr>
+  <tr><td>⭐ Underfitting</td><td><span class="bilingual">欠拟合</span></td><td>Qiàn nǐhé</td><td>When a model is too simple to capture the underlying pattern in the data.</td></tr>
+  <tr><td>⭐ Feature Extraction</td><td><span class="bilingual">特征提取</span></td><td>Tèzhēng tíqǔ</td><td>The process of selecting or transforming raw data into features that improve model performance.</td></tr>
+  <tr><td>Natural Language Processing (NLP)</td><td><span class="bilingual">自然语言处理</span></td><td>Zìrán yǔyán chǔlǐ</td><td>AI techniques for understanding and generating human language.</td></tr>
+  <tr><td>Computer Vision</td><td><span class="bilingual">计算机视觉</span></td><td>Jìsuànjī shìjué</td><td>AI techniques for interpreting and understanding visual information from images or video.</td></tr>
+  <tr><td>Expert System</td><td><span class="bilingual">专家系统</span></td><td>Zhuānjiā xìtǒng</td><td>An AI system that emulates the decision-making ability of a human expert using rules and knowledge bases.</td></tr>
+  <tr><td>Knowledge Base</td><td><span class="bilingual">知识库</span></td><td>Zhīshì kù</td><td>A structured collection of facts and rules used by an expert system.</td></tr>
+  <tr><td>Inference Engine</td><td><span class="bilingual">推理引擎</span></td><td>Tuīlǐ yǐnqíng</td><td>The component of an expert system that applies logical rules to the knowledge base to derive conclusions.</td></tr>
+  <tr><td>Robotics</td><td><span class="bilingual">机器人学</span></td><td>Jīqìrén xué</td><td>The branch of technology dealing with the design, construction, and operation of robots.</td></tr>
+  <tr><td>Sensor</td><td><span class="bilingual">传感器</span></td><td>Chuángǎn qì</td><td>A device that detects physical input (light, heat, motion) and converts it into electrical signals.</td></tr>
+  <tr><td>Actuator</td><td><span class="bilingual">执行器</span></td><td>Zhíxíng qì</td><td>A device that converts electrical signals into physical action (movement, sound).</td></tr>
+  <tr><td>Feedback Loop</td><td><span class="bilingual">反馈回路</span></td><td>Fǎnkuì huílù</td><td>A system where output is fed back as input to regulate behaviour (e.g., thermostat control).</td></tr>
+  <tr><td>Autonomous System</td><td><span class="bilingual">自主系统</span></td><td>Zìzhǔ xìtǒng</td><td>A system capable of operating independently without human intervention.</td></tr>
+  <tr><td>⭐ Big Data</td><td><span class="bilingual">大数据</span></td><td>Dà shùjù</td><td>Extremely large datasets that require specialised tools and techniques to store, process, and analyse.</td></tr>
+  <tr><td>⭐ Volume (Big Data)</td><td><span class="bilingual">体量</span></td><td>Tǐliàng</td><td>The sheer amount of data generated and stored.</td></tr>
+  <tr><td>⭐ Velocity (Big Data)</td><td><span class="bilingual">速度</span></td><td>Sùdù</td><td>The speed at which data is generated and must be processed.</td></tr>
+  <tr><td>⭐ Variety (Big Data)</td><td><span class="bilingual">多样性</span></td><td>Duōyàng xìng</td><td>The different types of data (structured, semi-structured, unstructured).</td></tr>
+  <tr><td>⭐ Veracity (Big Data)</td><td><span class="bilingual">真实性</span></td><td>Zhēnshí xìng</td><td>The quality and accuracy of data.</td></tr>
+  <tr><td>⭐ Hadoop</td><td><span class="bilingual">Hadoop</span></td><td>Hadoop</td><td>An open-source framework for distributed storage and processing of big data across clusters.</td></tr>
+  <tr><td>⭐ Spark</td><td><span class="bilingual">Spark</span></td><td>Spark</td><td>An open-source big data processing engine designed for speed and ease of use.</td></tr>
+</table>
+
+<div class="unit-header">Unit 10: Boolean Logic &amp; Advanced Theory</div>
+<table>
+  <tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+  <tr><td>Boolean Algebra</td><td><span class="bilingual">布尔代数</span></td><td>Bù'ěr dàishù</td><td>A branch of algebra dealing with binary variables and logical operations (AND, OR, NOT).</td></tr>
+  <tr><td>AND Gate</td><td><span class="bilingual">与门</span></td><td>Yǔ mén</td><td>A logic gate that outputs 1 only if all inputs are 1.</td></tr>
+  <tr><td>OR Gate</td><td><span class="bilingual">或门</span></td><td>Huò mén</td><td>A logic gate that outputs 1 if at least one input is 1.</td></tr>
+  <tr><td>NOT Gate</td><td><span class="bilingual">非门</span></td><td>Fēi mén</td><td>A logic gate that inverts the input: outputs 1 if input is 0, and vice versa.</td></tr>
+  <tr><td>NAND Gate</td><td><span class="bilingual">与非门</span></td><td>Yǔ fēi mén</td><td>A logic gate that outputs 0 only if all inputs are 1 (NOT AND).</td></tr>
+  <tr><td>NOR Gate</td><td><span class="bilingual">或非门</span></td><td>Huò fēi mén</td><td>A logic gate that outputs 1 only if all inputs are 0 (NOT OR).</td></tr>
+  <tr><td>XOR Gate</td><td><span class="bilingual">异或门</span></td><td>Yì huò mén</td><td>A logic gate that outputs 1 if the inputs are different.</td></tr>
+  <tr><td>Logic Circuit</td><td><span class="bilingual">逻辑电路</span></td><td>Luójí diànlù</td><td>A physical arrangement of logic gates that performs a Boolean function.</td></tr>
+  <tr><td>Half Adder</td><td><span class="bilingual">半加器</span></td><td>Bàn jiā qì</td><td>A circuit that adds two single bits, producing a sum and a carry.</td></tr>
+  <tr><td>Full Adder</td><td><span class="bilingual">全加器</span></td><td>Quán jiā qì</td><td>A circuit that adds three bits (two inputs and a carry-in), producing a sum and a carry-out.</td></tr>
+  <tr><td>⭐ Simplification</td><td><span class="bilingual">简化</span></td><td>Jiǎnhuà</td><td>The process of reducing a Boolean expression to its simplest form using algebraic rules or Karnaugh maps.</td></tr>
+  <tr><td>⭐ Minimisation</td><td><span class="bilingual">最小化</span></td><td>Zuì xiǎo huà</td><td>Finding the simplest logic circuit that implements a given Boolean function, reducing cost and delay.</td></tr>
+  <tr><td>⭐ Don't Care Condition</td><td><span class="bilingual">无关条件</span></td><td>Wúguān tiáojiàn</td><td>An input combination that will never occur, which can be treated as 0 or 1 to simplify the expression.</td></tr>
+</table>
+
+<h2>Additional A-Level Specific Terms</h2>
+<table>
+  <tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+  <tr><td>⭐ Systems Development Life Cycle (SDLC)</td><td><span class="bilingual">系统开发生命周期</span></td><td>Xìtǒng kāifā shēngmìng zhōuqī</td><td>The structured process of developing an information system: analysis, design, development, testing, implementation, maintenance.</td></tr>
+  <tr><td>⭐ Feasibility Study</td><td><span class="bilingual">可行性研究</span></td><td>Kěxíngxìng yánjiū</td><td>An assessment of whether a proposed project is technically, economically, and operationally viable.</td></tr>
+  <tr><td>⭐ Data Dictionary</td><td><span class="bilingual">数据字典</span></td><td>Shùjù zìdiǎn</td><td>A centralised repository of information about data: names, types, sizes, descriptions, and relationships.</td></tr>
+  <tr><td>⭐ Normalisation (Database)</td><td><span class="bilingual">数据库规范化</span></td><td>Shùjùkù guīfàn huà</td><td>The process of organising database tables to reduce redundancy and improve data integrity.</td></tr>
+  <tr><td>⭐ First Normal Form (1NF)</td><td><span class="bilingual">第一范式</span></td><td>Dì yī fànshì</td><td>A database table with no repeating groups and a primary key defined.</td></tr>
+  <tr><td>⭐ Second Normal Form (2NF)</td><td><span class="bilingual">第二范式</span></td><td>Dì èr fànshì</td><td>A table in 1NF where all non-key attributes are fully dependent on the primary key.</td></tr>
+  <tr><td>⭐ Third Normal Form (3NF)</td><td><span class="bilingual">第三范式</span></td><td>Dì sān fànshì</td><td>A table in 2NF with no transitive dependencies (non-key attributes depend only on the key).</td></tr>
+  <tr><td>⭐ Test Plan</td><td><span class="bilingual">测试计划</span></td><td>Cèshì jìhuà</td><td>A document describing the scope, approach, resources, and schedule of testing activities.</td></tr>
+  <tr><td>⭐ Normal Data</td><td><span class="bilingual">正常数据</span></td><td>Zhèngcháng shùjù</td><td>Test data that is valid and within the expected range.</td></tr>
+  <tr><td>⭐ Boundary Data</td><td><span class="bilingual">边界数据</span></td><td>Biānjiè shùjù</td><td>Test data at the extreme limits of valid ranges (e.g., minimum, maximum, just inside, just outside).</td></tr>
+  <tr><td>⭐ Erroneous Data</td><td><span class="bilingual">错误数据</span></td><td>Cuòwù shùjù</td><td>Test data that is invalid or outside the expected range to test error handling.</td></tr>
+  <tr><td>⭐ Black-box Testing</td><td><span class="bilingual">黑盒测试</span></td><td>Hēi hé cèshì</td><td>Testing without knowledge of internal code; focuses on inputs and outputs.</td></tr>
+  <tr><td>⭐ White-box Testing</td><td><span class="bilingual">白盒测试</span></td><td>Bái hé cèshì</td><td>Testing with knowledge of internal code; focuses on path coverage and logic.</td></tr>
+  <tr><td>⭐ Technical Documentation</td><td><span class="bilingual">技术文档</span></td><td>Jìshù wéndàng</td><td>Documentation for developers or maintainers: system architecture, code comments, data structures.</td></tr>
+  <tr><td>⭐ User Guide</td><td><span class="bilingual">用户指南</span></td><td>Yònghù zhǐnán</td><td>Documentation for end users explaining how to operate the system.</td></tr>
+  <tr><td>⭐ Evaluation</td><td><span class="bilingual">评估</span></td><td>Pínggū</td><td>A critical review of the project against objectives, including strengths, limitations, and improvements.</td></tr>
+  <tr><td>⭐ Maintenance</td><td><span class="bilingual">维护</span></td><td>Wéihù</td><td>The process of modifying a system after deployment to correct faults, improve performance, or adapt to changes.</td></tr>
+  <tr><td>⭐ Iterative Development</td><td><span class="bilingual">迭代开发</span></td><td>Diédài kāifā</td><td>A development approach where the system is built in repeated cycles, refining with each iteration.</td></tr>
+  <tr><td>⭐ Agile Methodology</td><td><span class="bilingual">敏捷方法</span></td><td>Mǐnjié fāngfǎ</td><td>A flexible approach to development emphasising collaboration, customer feedback, and rapid iteration.</td></tr>
+  <tr><td>⭐ Version Control</td><td><span class="bilingual">版本控制</span></td><td>Bǎnběn kòngzhì</td><td>Tracking and managing changes to code over time (e.g., Git).</td></tr>
+  <tr><td>⭐ Debugging</td><td><span class="bilingual">调试</span></td><td>Tiáoshì</td><td>The process of identifying, locating, and removing errors (bugs) from code.</td></tr>
+  <tr><td>⭐ Trace Table</td><td><span class="bilingual">追踪表</span></td><td>Zhuīzōng biǎo</td><td>A table used to manually trace the values of variables through each step of an algorithm.</td></tr>
+  <tr><td>⭐ Stub</td><td><span class="bilingual">存根</span></td><td>Cúngēn</td><td>A simplified piece of code used to stand in for a more complex component during testing.</td></tr>
+  <tr><td>⭐ Driver</td><td><span class="bilingual">驱动程序</span></td><td>Qūdòng chéngxù</td><td>A test harness that calls a module and passes test data to it.</td></tr>
+  <tr><td>⭐ Computational Thinking</td><td><span class="bilingual">计算思维</span></td><td>Jìsuàn sīwéi</td><td>A problem-solving approach using decomposition, pattern recognition, abstraction, and algorithm design.</td></tr>
+  <tr><td>⭐ Abstraction (Data)</td><td><span class="bilingual">数据抽象</span></td><td>Shùjù chōuxiàng</td><td>Simplifying complex data by modelling only the relevant attributes and behaviours.</td></tr>
+  <tr><td>⭐ Heuristic</td><td><span class="bilingual">启发式</span></td><td>Qǐfā shì</td><td>A problem-solving approach that uses practical rules or educated guesses rather than guaranteed methods.</td></tr>
+  <tr><td>⭐ Turing Test</td><td><span class="bilingual">图灵测试</span></td><td>Túlíng cèshì</td><td>A test of a machine's ability to exhibit intelligent behaviour indistinguishable from a human.</td></tr>
+  <tr><td>⭐ Chinese Room Argument</td><td><span class="bilingual">中文房间论证</span></td><td>Zhōngwén fángjiān lùnzhèng</td><td>A thought experiment by Searle arguing that syntax (symbol manipulation) is not sufficient for semantics (understanding).</td></tr>
+  <tr><td>⭐ Ethics of AI</td><td><span class="bilingual">人工智能伦理</span></td><td>Rén gōng zhìnéng lúnlǐ</td><td>The moral principles governing the development and use of artificial intelligence systems.</td></tr>
+  <tr><td>⭐ Bias in AI</td><td><span class="bilingual">人工智能偏见</span></td><td>Rén gōng zhìnéng piānjiàn</td><td>Systematic and unfair prejudice in AI systems, often stemming from biased training data.</td></tr>
+  <tr><td>⭐ Accountability</td><td><span class="bilingual">问责制</span></td><td>Wèn zé zhì</td><td>The obligation to explain and justify decisions, especially important for AI systems.</td></tr>
+  <tr><td>⭐ Transparency</td><td><span class="bilingual">透明度</span></td><td>Tòumíng dù</td><td>The quality of being open and understandable, especially regarding how AI systems make decisions.</td></tr>
+  <tr><td>⭐ Green Computing</td><td><span class="bilingual">绿色计算</span></td><td>Lǜsè jìsuàn</td><td>Environmentally sustainable computing practices to reduce energy consumption and e-waste.</td></tr>
+  <tr><td>⭐ E-Waste</td><td><span class="bilingual">电子垃圾</span></td><td>Diànzǐ lājī</td><td>Discarded electronic devices and components, a growing environmental concern.</td></tr>
+  <tr><td>⭐ Intellectual Property</td><td><span class="bilingual">知识产权</span></td><td>Zhīshì chǎnquán</td><td>Legal rights protecting creations of the mind, including software, patents, and copyrights.</td></tr>
+  <tr><td>⭐ Open Source</td><td><span class="bilingual">开源</span></td><td>Kāi yuán</td><td>Software with source code available for anyone to view, modify, and distribute.</td></tr>
+  <tr><td>⭐ Proprietary Software</td><td><span class="bilingual">专有软件</span></td><td>Zhuānyǒu ruǎnjiàn</td><td>Software owned by an individual or company, with restricted access to source code.</td></tr>
+  <tr><td>⭐ GNU General Public License (GPL)</td><td><span class="bilingual">GNU通用公共许可证</span></td><td>GNU tōngyòng gōnggòng xǔkě zhèng</td><td>A widely used free software license ensuring users can run, study, share, and modify software.</td></tr>
+  <tr><td>⭐ Computer Misuse Act</td><td><span class="bilingual">计算机滥用法</span></td><td>Jìsuànjī lànyòng fǎ</td><td>UK legislation criminalising unauthorised access to computer systems and data.</td></tr>
+  <tr><td>⭐ Copyright</td><td><span class="bilingual">版权</span></td><td>Bǎnquán</td><td>Legal protection granting creators exclusive rights to reproduce, distribute, and display their work.</td></tr>
+  <tr><td>⭐ Patent</td><td><span class="bilingual">专利</span></td><td>Zhuānlì</td><td>A legal right granting exclusive use of an invention for a limited period in exchange for public disclosure.</td></tr>
+  <tr><td>⭐ Trademark</td><td><span class="bilingual">商标</span></td><td>Shāngbiāo</td><td>A recognisable sign, design, or expression identifying products or services of a particular source.</td></tr>
+  <tr><td>⭐ Software License</td><td><span class="bilingual">软件许可证</span></td><td>Ruǎnjiàn xǔkě zhèng</td><td>A legal agreement defining how software can be used, distributed, and modified.</td></tr>
+  <tr><td>⭐ End-User License Agreement (EULA)</td><td><span class="bilingual">最终用户许可协议</span></td><td>Zuìzhōng yònghù xǔkě xiéyì</td><td>A legal contract between software provider and user, often agreed to by clicking "I accept."</td></tr>
+  <tr><td>⭐ Consequentialism</td><td><span class="bilingual">结果主义</span></td><td>Jiéguǒ zhǔyì</td><td>An ethical theory judging actions by their outcomes or consequences.</td></tr>
+  <tr><td>⭐ Deontology</td><td><span class="bilingual">义务论</span></td><td>Yìwù lùn</td><td>An ethical theory judging actions by adherence to rules or duties, regardless of consequences.</td></tr>
+  <tr><td>⭐ Virtue Ethics</td><td><span class="bilingual">美德伦理学</span></td><td>Měidé lúnlǐ xué</td><td>An ethical theory focusing on the character and virtues of the moral agent rather than rules or consequences.</td></tr>
+</table>
+
+<h2>How to Use This Glossary</h2>
+<div class="success-box">
+<strong>For Students:</strong><br>
+• Use the glossary to check understanding before and after each lesson.<br>
+• Create flashcards (English front, Chinese back) for spaced repetition.<br>
+• Practice writing definitions from memory, then check against the glossary.<br>
+• Use Pinyin to ensure correct pronunciation when discussing terms with peers or teachers.<br><br>
+<strong>For Teachers:</strong><br>
+• Display key terms with Chinese translations at the start of each topic.<br>
+• Use bilingual terms in worksheets and assessments to support EAL students.<br>
+• Test students on term definitions in both English and Chinese.<br>
+• Encourage students to add their own terms to a personal glossary.
+</div>
+
+<h2>Resources</h2>
+<ul>
+  <li>Cambridge International A-Level Computer Science (9618) Syllabus (2024–2026)</li>
+  <li>Cambridge IGCSE Computer Science (0478) Syllabus — for comparison of IGCSE vs. A-Level terms</li>
+  <li>Python 3.12 Documentation</li>
+  <li>VS Code Editor</li>
+  <li>VPA A2 Semester 2 Course Overview</li>
+  <li>VPA A2 Semester 2 Assessment Pack</li>
+</ul>
+
+<div class="highlight-box">
+<strong>Document Control:</strong> Version 1.0 | Created: January 2026 | Owner: VPA Computer Science Department<br>
+<strong>Total Terms:</strong> 150+ | <strong>Next Review:</strong> June 2026 (post-exam analysis)<br>
+<strong>Note:</strong> Terms marked with ⭐ are A-Level specific and not typically covered at IGCSE level.
+</div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — Topic 7: Control (HL Only, Weeks 1–9)</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+</style>
+</head>
+<body>
+
+<h1>Topic 7: Control <span class="bilingual">控制 Kòngzhì</span> <span class="hl-only">HL ONLY</span></h1>
+<p><strong>IB Syllabus:</strong> Topic 7 (7.1–7.3) | <strong>Level:</strong> HL ONLY | <strong>Duration:</strong> 9 weeks (30 hours)</p>
+
+<h2>Topic 7.1: Centralized Control Systems <span class="bilingual">集中式控制系统 Jízhōngshì Kòngzhì Xìtǒng</span></h2>
+
+<h3>Week 1 — Introduction to Control Systems <span class="bilingual">控制系统简介</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th><th>Differentiation</th></tr>
+<tr><td>1</td><td>Review of control systems from Topic 6: sensors, actuators, feedback <span class="bilingual">(复习传感器、执行器、反馈)</span></td><td>Concept map linking Topics 6 and 7</td><td>All: Contribute; Gold: Identify abstractions across both topics</td></tr>
+<tr><td>2</td><td>Centralized control: single controller, all decisions made centrally; examples (traffic control centre, factory SCADA)</td><td>Case study: city traffic management centre</td><td>Bronze: Identify components; Silver: Explain flow; Gold: Analyse single point of failure</td></tr>
+<tr><td>3</td><td>Communication in centralized systems: polling, master-slave, request-response protocols</td><td>Diagram communication patterns; compare efficiencies</td><td>All: Diagram; Gold: Calculate communication overhead</td></tr>
+<tr><td>4</td><td>Advantages and disadvantages of centralized control; bottleneck, latency, reliability concerns</td><td>Debate: centralized vs emerging alternatives</td><td>All: Participate; Gold: Reference CAP theorem conceptually</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> Centralized control concentrates power (and knowledge) in one place. Is this an epistemic advantage (one clear picture) or a vulnerability (one point of failure)?</td><td>Discussion; written argument</td><td>All: Contribute; Gold: Link to political philosophy</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> A centralized controller has a "God's eye view" of the system it controls. Is complete information always possible, or do centralised systems necessarily operate with simplified models? What are the epistemic limits of centralized control?
+</div>
+
+<h3>Week 2 — Centralized System Design and Reliability</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>System modelling for centralized control: state machines, decision tables</td><td>Design state machine for elevator control</td></tr>
+<tr><td>2</td><td>Redundancy in centralized systems: hot standby, cold standby; failover mechanisms</td><td>Design failover for hospital life support</td></tr>
+<tr><td>3</td><td>Latency and real-time constraints: hard vs soft deadlines; jitter</td><td>Calculate worst-case response times</td></tr>
+<tr><td>4</td><td>Case study: air traffic control — centralized coordination of aircraft</td><td>Analyse ATC as centralized system; identify constraints</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Centralized control system analysis (20 marks)</td><td>Case study response</td></tr>
+</table>
+
+<h2>Topic 7.2: Distributed Systems <span class="bilingual">分布式系统 Fēnbùshì Xìtǒng</span></h2>
+
+<h3>Week 3 — Distributed Control Fundamentals <span class="bilingual">分布式控制基础</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Distributed systems: multiple autonomous nodes cooperating; no single point of control <span class="bilingual">(分布式系统, 节点, 自治)</span></td><td>Compare to centralized using Venn diagram</td></tr>
+<tr><td>2</td><td>Communication in distributed systems: message passing, shared memory, RPC, publish-subscribe</td><td>Diagram each pattern; match to use case</td></tr>
+<tr><td>3</td><td>Consensus problems: agreement, validity, termination; Byzantine generals problem (conceptual)</td><td>Simulation: reaching consensus with faulty nodes</td></tr>
+<tr><td>4</td><td>Distributed algorithms: leader election, mutual exclusion (Ricart-Agrawala conceptual)</td><td>Trace leader election on small network</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> In a distributed system, no single node has complete knowledge. Can the system as a whole be said to "know" things that no individual node knows?</td><td>Discussion; connection to emergent properties</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> Distributed systems exhibit emergent behaviour that no single node is aware of. Is this emergence a form of collective knowledge, or merely the appearance of knowledge? Can a system "know" something without any part of it knowing it?
+</div>
+
+<h3>Week 4 — Distributed System Challenges</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>CAP theorem: consistency, availability, partition tolerance; trade-offs</td><td>Analyse systems: which two does each choose?</td></tr>
+<tr><td>2</td><td>Fault tolerance: replication, checksums, heartbeat, gossip protocols</td><td>Design fault-tolerant key-value store conceptually</td></tr>
+<tr><td>3</td><td>Clock synchronisation: logical clocks, Lamport timestamps (conceptual), physical clock challenges</td><td>Why does order matter in distributed transactions?</td></tr>
+<tr><td>4</td><td>Case study: blockchain as distributed consensus mechanism</td><td>Analyse blockchain through CAP lens</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Distributed system design scenario (25 marks)</td><td>Design + justify distributed solution</td></tr>
+</table>
+
+<h3>Week 5 — Cloud and Edge Computing <span class="bilingual">云计算与边缘计算 Yún Jìsuàn yǔ Biānyuán Jìsuàn</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Cloud computing as distributed system: service models, deployment models revisited</td><td>Analyse VPA's cloud dependencies</td></tr>
+<tr><td>2</td><td>Edge computing: processing near data source; latency reduction; bandwidth saving</td><td>Compare cloud vs edge for IoT, autonomous vehicles</td></tr>
+<tr><td>3</td><td>Microservices architecture: decomposition, inter-service communication, containers</td><td>Diagram microservice architecture for e-commerce</td></tr>
+<tr><td>4</td><td>Load balancing: round-robin, least connections, geographic; CDN</td><td>Design CDN for global video streaming</td></tr>
+<tr><td>5</td><td><strong>Consolidation:</strong> Centralized vs distributed comparison essay</td><td>8-mark timed response</td></tr>
+</table>
+
+<h2>Topic 7.3: Autonomous Agents <span class="bilingual">自主代理 Zìzhǔ Dàilǐ</span></h2>
+
+<h3>Week 6 — Autonomous Systems <span class="bilingual">自主系统 Zìzhǔ Xìtǒng</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Autonomous agents: perception, decision-making, action; sense-plan-act cycle <span class="bilingual">(感知-规划-执行)</span></td><td>Map sense-plan-act to robot vacuum cleaner</td></tr>
+<tr><td>2</td><td>Reactive vs deliberative architectures: Braitenberg vehicles, subsumption architecture</td><td>Simulate reactive behaviours; compare to planned</td></tr>
+<tr><td>3</td><td>Multi-agent systems: cooperation, competition, emergent behaviour, swarm intelligence</td><td>Watch swarm robotics videos; model simple rules</td></tr>
+<tr><td>4</td><td>Machine learning in autonomy: supervised, unsupervised, reinforcement learning (conceptual)</td><td>Discuss: can an agent learn without being programmed?</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> An autonomous agent makes decisions without human intervention. Who is responsible when it makes a mistake? Is the agent a moral agent, or merely a tool?</td><td>Structured debate; prepare arguments</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> If an autonomous vehicle must choose between hitting a pedestrian or swerving into a wall (harming its passenger), how should it decide? Is this a question of programming, ethics, or both? Can there be a "correct" answer, or is any choice merely a programmed preference?
+</div>
+
+<h3>Week 7 — Ethical and Social Implications</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Autonomous weapons: lethal autonomous weapons systems (LAWS); international law</td><td>Research UN positions; prepare position statement</td></tr>
+<tr><td>2</td><td>Surveillance and privacy: facial recognition, predictive policing, mass data collection</td><td>Case study: smart city surveillance in Shenzhen</td></tr>
+<tr><td>3</td><td>Algorithmic bias: training data bias, feedback loops, fairness definitions</td><td>Analyse bias in given datasets; discuss mitigation</td></tr>
+<tr><td>4</td><td>Employment and economic impact: automation, job displacement, universal basic income debate</td><td>Policy proposal: manage transition to automation</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Ethical evaluation of autonomous system (20 marks)</td><td>Written response with balanced argument</td></tr>
+</table>
+
+<h3>Week 8 — Case Study Integration (Paper 3 Preparation)</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Case study methodology: how to approach Paper 3</td><td>Review past case studies; identify question types</td></tr>
+<tr><td>2</td><td>Case study deep reading: annotating, question generation, concept linking</td><td>Annotate case study; generate 5 exam questions</td></tr>
+<tr><td>3</td><td>Connecting case study to syllabus: where do Topics 1–7 apply?</td><td>Concept map: case study → syllabus links</td></tr>
+<tr><td>4</td><td>Research skills for case study: evaluating sources, citing evidence</td><td>Source evaluation exercise; bibliography practice</td></tr>
+<tr><td>5</td><td>Mock Paper 3 question practice</td><td>Timed response; peer assessment</td></tr>
+</table>
+
+<h3>Week 9 — Topic 7 Assessment and Consolidation</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Revision: Centralized, distributed, autonomous — comparison framework</td><td>Framework construction; rote vs understanding</td></tr>
+<tr><td>2</td><td>Revision: Ethical implications across all three system types</td><td>Ethical scenario cards</td></tr>
+<tr><td>3</td><td><strong>Assessment:</strong> Topic 7 End-of-Topic Test (1 hour, 50 marks)</td><td>Formal conditions</td></tr>
+<tr><td>4</td><td>Test feedback; DIRT</td><td>Markscheme analysis</td></tr>
+<tr><td>5</td><td>Case study progress check; IA final submission reminder</td><td>Individual tutorials</td></tr>
+</table>
+
+<h2>Key Vocabulary (Topic 7)</h2>
+<table>
+<tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+<tr><td>Centralized control</td><td>集中式控制</td><td>jízhōngshì kòngzhì</td><td>A system where all decisions are made by a single controller</td></tr>
+<tr><td>Distributed system</td><td>分布式系统</td><td>fēnbùshì xìtǒng</td><td>A system with multiple autonomous nodes cooperating</td></tr>
+<tr><td>Consensus</td><td>共识</td><td>gòngshí</td><td>Agreement among distributed nodes on a single value</td></tr>
+<tr><td>Autonomous agent</td><td>自主代理</td><td>zìzhǔ dàilǐ</td><td>An entity that perceives its environment and acts independently</td></tr>
+<tr><td>Emergent behaviour</td><td>涌现行为</td><td>yǒngxiàn xíngwéi</td><td>Complex behaviour arising from simple interactions</td></tr>
+<tr><td>CAP theorem</td><td>CAP定理</td><td>CAP dìnglǐ</td><td>A distributed system can guarantee at most two of: consistency, availability, partition tolerance</td></tr>
+<tr><td>Failover</td><td>故障转移</td><td>gùzhàng zhuǎnyí</td><td>Automatic switching to a redundant system upon failure</td></tr>
+<tr><td>Swarm intelligence</td><td>群体智能</td><td>qúntǐ zhìnéng</td><td>Collective behaviour of decentralized, self-organized systems</td></tr>
+<tr><td>Edge computing</td><td>边缘计算</td><td>biānyuán jìsuàn</td><td>Processing data near the source rather than in a central cloud</td></tr>
+<tr><td>Algorithmic bias</td><td>算法偏见</td><td>suànfǎ piānjiàn</td><td>Systematic errors in algorithmic outcomes due to biased data or design</td></tr>
+</table>
+
+<div class="checklist">
+<strong>Teacher Checklist — End of Topic 7:</strong>
+<ul>
+<li>☐ All IB 7.1–7.3 syllabus points covered</li>
+<li>☐ Students can compare centralized, distributed, and autonomous systems</li>
+<li>☐ Students can evaluate ethical implications of autonomy</li>
+<li>☐ Case study annotations completed by all HL students</li>
+<li>☐ IA final submission uploaded to IBIS</li>
+<li>☐ TOK discussions documented</li>
+</ul>
+</div>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | Topic 7 Scheme of Work</p>
+
+</body>
+</html>

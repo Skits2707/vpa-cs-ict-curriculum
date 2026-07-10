@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA A-Level CS — Weeks 10-18: Hardware, System Software &amp; Security</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .warning { background: #fdf2e9; padding: 15px; border-left: 4px solid #e67e22; }
+  .info { background: #eaf2f8; padding: 15px; border-left: 4px solid #3498db; }
+  .week-box { border: 2px solid #1a5276; padding: 15px; margin: 20px 0; border-radius: 8px; }
+  .lesson { background: #f8f9fa; padding: 10px; margin: 8px 0; border-left: 4px solid #3498db; }
+  .assess { background: #fff3cd; padding: 10px; margin: 8px 0; border-left: 4px solid #f39c12; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<h1>AS Level Semester 1 — Weeks 10–18</h1>
+<h2>Hardware, System Software &amp; Security <span class="bilingual">硬件、系统软件与安全 (Yìngjiàn, xìtǒng ruǎnjiàn yǔ ānquán)</span></h2>
+
+<div class="info">
+<strong>Syllabus Coverage:</strong> 1.4 Processor Fundamentals, 1.5 System Software, 1.6 Security, 1.7 Ethics<br>
+<strong>Paper:</strong> Paper 1 (Theory Fundamentals)<br>
+<strong>Duration:</strong> 9 weeks (Weeks 10–18)<br>
+<strong>Assessment:</strong> System Software Essay (W12), Security Case Study (W15), End-of-Semester Mock (W18)
+</div>
+
+<h2>Week-by-Week Scheme of Work</h2>
+
+<!-- WEEK 10 -->
+<div class="week-box">
+<h3>Week 10: Processor Fundamentals — Machine Architecture <span class="bilingual">处理器基础：机器架构</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Machine Architecture &amp; Instruction Sets <span class="bilingual">机器架构与指令集</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Describe basic machine architecture <span class="bilingual">描述基本机器架构</span><br>
+• Explain register functions <span class="bilingual">解释寄存器功能</span><br>
+• Understand instruction set categories <span class="bilingual">理解指令集类别</span><br><br>
+
+<strong>Starter (5 min):</strong> CPU speaks "machine code" — only 0s and 1s. How does it know what each binary pattern means?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Machine code: Binary instructions executed directly by CPU. Architecture-specific. <span class="bilingual">机器码：CPU直接执行的二进制指令。</span><br>
+• Instruction set: Complete set of commands a CPU understands. Examples: x86, ARM, RISC-V, MIPS.<br>
+• CISC (Complex Instruction Set Computer): Many complex instructions. x86. Variable length. Powerful but harder to optimise.<br>
+• RISC (Reduced Instruction Set Computer): Few simple instructions. ARM, RISC-V. Fixed length. Faster per instruction, better pipelining. <span class="bilingual">精简指令集：指令少而简单，执行更快。</span><br>
+• <span class="highlight">Registers:</span> Fast storage inside CPU. CIE requires:<br>
+  — PC (Program Counter): Address of next instruction<br>
+  — CIR (Current Instruction Register): Current instruction being executed<br>
+  — MAR (Memory Address Register): Address being accessed<br>
+  — MDR (Memory Data Register): Data being transferred<br>
+  — Acc (Accumulator): Stores results of ALU operations<br>
+  — IX (Index Register): Used for indexed addressing<br>
+  — SR (Status Register): Flags (Zero, Negative, Overflow, Carry)<br>
+• Instruction categories: Data movement (LOAD, STORE), Arithmetic (ADD, SUB), Logical (AND, OR, NOT), Control (JUMP, HALT, COMPARE)<br><br>
+
+<strong>Activity (10 min):</strong> Given register table, identify which register changes during each FDE stage.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why does Apple use ARM instead of x86 for Macs now?" Discuss: power efficiency, RISC advantages, custom silicon.<br><br>
+
+<strong>Homework:</strong> Research: Find instruction set of a smartphone CPU. Is it RISC or CISC?<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Instruction set <span class="bilingual">指令集 (zhǐlìng jí)</span><br>
+• Register <span class="bilingual">寄存器 (jìcúnqì)</span><br>
+• Accumulator <span class="bilingual">累加器 (lěijiā qì)</span><br>
+• Status register <span class="bilingual">状态寄存器 (zhuàngtài jìcúnqì)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Addressing Modes <span class="bilingual">寻址方式</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain immediate, direct, indirect, and indexed addressing <span class="bilingual">解释立即、直接、间接和变址寻址</span><br>
+• Identify addressing mode from assembly code <span class="bilingual">从汇编代码中识别寻址方式</span><br>
+• Compare efficiency of different modes <span class="bilingual">比较不同寻址方式的效率</span><br><br>
+
+<strong>Starter (5 min):</strong> "ADD 5" vs "ADD [5]" vs "ADD [R1]" — what's the difference in what gets added?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• <span class="highlight">Immediate addressing:</span> Operand is the value itself. <code>ADD #5</code> → Add 5 to Acc. Fast, no memory access. <span class="bilingual">立即寻址：操作数就是数值本身。</span><br>
+• <span class="highlight">Direct addressing:</span> Operand is memory address. <code>ADD 100</code> → Add contents of memory location 100. One memory access. <span class="bilingual">直接寻址：操作数是内存地址。</span><br>
+• <span class="highlight">Indirect addressing:</span> Operand is address of address. <code>ADD [100]</code> → Memory 100 contains address; fetch data from that address. Two memory accesses. <span class="bilingual">间接寻址：操作数是地址的地址。</span><br>
+• <span class="highlight">Indexed addressing:</span> Address = base + index register. <code>LOAD 200, IX</code> → Load from memory 200 + IX. Used for arrays. <span class="bilingual">变址寻址：地址=基址+变址寄存器。</span><br>
+• Comparison table: Speed, flexibility, use cases.<br>
+• Worked examples: For each instruction, identify addressing mode and number of memory accesses.<br><br>
+
+<strong>Activity (10 min):</strong> Worksheet: 8 instructions, identify addressing mode, trace data flow.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is indexed addressing essential for array processing?" Discuss: loops, sequential access, pointer arithmetic.<br><br>
+
+<strong>Homework:</strong> Write 4 instructions using different addressing modes. Explain what each does.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "Direct and immediate are the same" — Immediate: value IS the data. Direct: value IS the address.<br>
+• ❌ "Indirect addressing is too slow to be useful" — Used for pointers, linked lists, dynamic memory.
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Assembly Language Introduction <span class="bilingual">汇编语言入门</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Convert between machine code and assembly <span class="bilingual">在机器码和汇编之间转换</span><br>
+• Write simple assembly programs <span class="bilingual">编写简单汇编程序</span><br>
+• Trace assembly program execution <span class="bilingual">追踪汇编程序执行</span><br><br>
+
+<strong>Starter (5 min):</strong> Show binary: 11010011. What does it mean? Without knowing instruction set, it's meaningless. Assembly gives meaning.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Assembly: Human-readable mnemonics for machine code. One-to-one correspondence (usually). <span class="bilingual">汇编语言：机器码的人类可读助记符。</span><br>
+• CIE pseudocode assembly style:<br>
+  <code>LDM #5</code> — Load immediate 5 into Acc<br>
+  <code>LDD 100</code> — Load direct from address 100<br>
+  <code>ADD #3</code> — Add immediate 3<br>
+  <code>SUB 200</code> — Subtract contents of address 200<br>
+  <code>STO 300</code> — Store Acc to address 300<br>
+  <code>JMP 50</code> — Jump to address 50<br>
+  <code>CMP #0</code> — Compare Acc with 0 (set flags)<br>
+  <code>JPE 80</code> — Jump if equal to 80<br>
+  <code>AND #15</code> — Logical AND<br>
+  <code>OR #8</code> — Logical OR<br>
+  <code>XOR #255</code> — Exclusive OR<br>
+  <code>LSL #2</code> — Logical shift left by 2<br>
+  <code>LSR #1</code> — Logical shift right by 1<br>
+  <code>IN</code> / <code>OUT</code> — Input/Output<br>
+  <code>END</code> — Halt<br>
+• Simple program: Input number, double it, output result.<br>
+  <code>IN → STO 100 → LDM #2 → MUL 100 → OUT → END</code><br>
+• Trace table: Track PC, Acc, memory contents through execution.<br><br>
+
+<strong>Practical (10 min):</strong> Use online simulator (e.g., CIE Assembly Simulator or Little Man Computer equivalent). Students run simple program.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why do programmers rarely write assembly today?" Discuss: compilers, productivity, portability.<br><br>
+
+<strong>Homework:</strong> Write assembly program to calculate 3×(input + 5). Produce trace table.<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> Complete trace table for given program<br>
+<span class="silver">Silver:</span> Write program from pseudocode description<br>
+<span class="gold">Gold:</span> Write program with conditional logic (if input > 10, output "BIG"; else "SMALL")
+</div>
+</div>
+
+<!-- WEEK 11 -->
+<div class="week-box">
+<h3>Week 11: Assembly Language — Programs &amp; Trace Tables <span class="bilingual">汇编语言：程序与追踪表</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Control Structures in Assembly <span class="bilingual">汇编中的控制结构</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Implement selection in assembly <span class="bilingual">在汇编中实现选择结构</span><br>
+• Implement iteration in assembly <span class="bilingual">在汇编中实现循环结构</span><br>
+• Use flags and conditional jumps <span class="bilingual">使用标志和条件跳转</span><br><br>
+
+<strong>Starter (5 min):</strong> In Python: "if x > 0: print('positive')". How would CPU do this with only jumps and comparisons?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Selection (IF): Compare → Set flags → Conditional jump<br>
+  <pre><code>IN          // Input to Acc
+CMP #0      // Compare with 0
+JPE ZERO    // Jump if equal to ZERO
+JPG POS     // Jump if positive to POS
+JPL NEG     // Jump if negative to NEG
+ZERO: LDM #0 → JMP END
+POS:  LDM #1 → JMP END
+NEG:  LDM #-1
+END:  OUT → END</code></pre><br>
+• Iteration (WHILE/FOR): Jump back to start if condition met<br>
+  <pre><code>LDM #1      // Counter = 1
+LOOP: CMP #10
+JPG END     // If counter > 10, exit
+OUT         // Output counter
+ADD #1      // Increment
+JMP LOOP    // Repeat
+END: END</code></pre><br>
+• Flags: Zero (Z), Negative (N), Overflow (V), Carry (C). Set by CMP, ADD, SUB, etc.<br>
+• <span class="highlight">Exam tip:</span> Trace tables MUST show Acc, IX, PC, and memory for each instruction.<br><br>
+
+<strong>Activity (10 min):</strong> Complete trace table for counting program. Identify where loop occurs.<br><br>
+
+<strong>Plenary (5 min):</strong> "What's the difference between JPE, JPG, JPL, JPN?" Mnemonic: E=Equal, G=Greater, L=Less, N=Not equal.<br><br>
+
+<strong>Homework:</strong> Write assembly program to sum numbers 1 to N (input N). Provide trace table for N=3.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Jump <span class="bilingual">跳转 (tiàozhuǎn)</span><br>
+• Conditional <span class="bilingual">条件的 (tiáojiàn de)</span><br>
+• Flag <span class="bilingual">标志 (biāozhì)</span><br>
+• Loop <span class="bilingual">循环 (xúnhuán)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Subroutines &amp; the Stack <span class="bilingual">子程序与栈</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain subroutine purpose and implementation <span class="bilingual">解释子程序的目的和实现</span><br>
+• Describe stack operations (push, pop) <span class="bilingual">描述栈操作（压入、弹出）</span><br>
+• Trace subroutine execution with stack <span class="bilingual">用栈追踪子程序执行</span><br><br>
+
+<strong>Starter (5 min):</strong> In Python, you use functions. In assembly, how do you "call" a block of code and return?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Subroutine: Reusable block of code. CALL to enter, RETURN to exit. <span class="bilingual">子程序：可重用的代码块。</span><br>
+• Problem: When subroutine calls another subroutine, how does CPU know where to return? → Stack.<br>
+• Stack: LIFO (Last In, First Out) data structure. Push adds to top, pop removes from top. <span class="bilingual">栈：后进先出数据结构。</span><br>
+• CALL instruction: Push return address to stack, jump to subroutine.<br>
+• RETURN instruction: Pop address from stack, jump back.<br>
+• Stack overflow: Stack exceeds allocated memory. Caused by infinite recursion or deep calls. <span class="bilingual">栈溢出：栈超出分配内存。</span><br>
+• Worked example: Main calls Sub1, Sub1 calls Sub2. Trace stack contents.<br>
+  Stack: [Main return] → push [Sub1 return] → push [Sub2 return]<br>
+  Return: pop → Sub2 returns to Sub1 → pop → Sub1 returns to Main<br><br>
+
+<strong>Activity (10 min):</strong> Given nested subroutine calls, draw stack at each point.<br><br>
+
+<strong>Plenary (5 min):</strong> "What happens if RETURN is called without matching CALL?" Discuss: stack underflow, program crash.<br><br>
+
+<strong>Homework:</strong> Explain why recursion needs a stack. Draw stack for factorial(3) with recursive calls.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "Stack and queue are the same" — Stack = LIFO, Queue = FIFO<br>
+• ❌ "Stack is stored in RAM" — Yes, but managed specially. Stack pointer register tracks top.
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Assembly Practice &amp; Exam Technique <span class="bilingual">汇编练习与考试技巧</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Complete assembly programming tasks under timed conditions <span class="bilingual">在限时条件下完成汇编编程任务</span><br>
+• Identify common trace table errors <span class="bilingual">识别常见追踪表错误</span><br>
+• Apply mark schemes to maximise marks <span class="bilingual">应用评分标准以获取最高分数</span><br><br>
+
+<strong>Starter (5 min):</strong> Quick fire: "What does LDD 50 do?" "What does JPE mean?" "What flag does CMP set?"<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Exam-style question (6 marks): Write assembly program to find maximum of 3 numbers.<br>
+• Students attempt individually (10 min).<br>
+• Peer review using mark scheme:<br>
+  — Correct input (1 mark)<br>
+  — Comparison logic (2 marks)<br>
+  — Correct output (1 mark)<br>
+  — Program halts (1 mark)<br>
+  — Appropriate use of labels/comments (1 mark)<br>
+• Common errors from teacher experience:<br>
+  — Forgetting to store intermediate results<br>
+  — Wrong conditional jump (JPE instead of JPG)<br>
+  — Not initialising accumulator<br>
+  — Infinite loops (missing exit condition)<br>
+  — Trace tables missing PC values<br><br>
+
+<strong>Activity (10 min):</strong> Given incorrect trace table, identify and correct 5 errors.<br><br>
+
+<strong>Plenary (5 min):</strong> Assembly programming checklist: Before submitting, check... (students generate list)<br><br>
+
+<strong>Homework:</strong> Past paper question: 9618/11 ON22 Q3. Complete in timed conditions (15 min). Self-mark.<br><br>
+
+<strong>EAL Support:</strong><br>
+• Provide bilingual instruction glossary for assembly terms<br>
+• Allow extra reading time for exam questions<br>
+• Visual flowchart of program before writing assembly
+</div>
+</div>
+
+<!-- WEEK 12 -->
+<div class="week-box">
+<h3>Week 12: System Software — Operating Systems <span class="bilingual">系统软件：操作系统</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): OS Functions &amp; Types <span class="bilingual">操作系统功能与类型</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Define operating system and list its functions <span class="bilingual">定义操作系统并列出其功能</span><br>
+• Compare batch, interactive, real-time, and distributed OS <span class="bilingual">比较批处理、交互式、实时和分布式操作系统</span><br>
+• Explain role of OS in resource management <span class="bilingual">解释操作系统在资源管理中的作用</span><br><br>
+
+<strong>Starter (5 min):</strong> What happens when you turn on your computer before you see the desktop? What runs first?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Operating System: System software managing hardware resources and providing services. <span class="bilingual">操作系统：管理系统硬件资源并提供服务的系统软件。</span><br>
+• Core functions:<br>
+  1. <span class="highlight">Memory management:</span> Allocates RAM to processes, handles virtual memory, paging, segmentation. <span class="bilingual">内存管理：分配RAM，处理虚拟内存。</span><br>
+  2. <span class="highlight">Processor scheduling:</span> Decides which process runs when. Prevents one program monopolising CPU. <span class="bilingual">处理器调度：决定哪个进程何时运行。</span><br>
+  3. <span class="highlight">Peripheral management:</span> Controls I/O devices via drivers. <span class="bilingual">外设管理：通过驱动程序控制输入输出设备。</span><br>
+  4. <span class="highlight">File management:</span> Organises storage, maintains directory structure, handles permissions. <span class="bilingual">文件管理：组织存储，维护目录结构。</span><br>
+  5. <span class="highlight">Security:</span> User authentication, access control, encryption. <span class="bilingual">安全：用户认证，访问控制。</span><br>
+  6. <span class="highlight">User interface:</span> GUI, CLI, voice, touch. <span class="bilingual">用户界面：图形界面、命令行界面。</span><br>
+• OS types:<br>
+  — Batch: Jobs collected, processed without user interaction. Payroll systems. <span class="bilingual">批处理：作业批量处理，无需用户交互。</span><br>
+  — Interactive: User interacts directly. Desktop OS, mobile OS. <span class="bilingual">交互式：用户直接交互。</span><br>
+  — Real-time: Guaranteed response time. Industrial control, medical devices, avionics. Hard vs soft real-time. <span class="bilingual">实时：保证响应时间。</span><br>
+  — Distributed: Multiple computers work as single system. Cloud computing, blockchain. <span class="bilingual">分布式：多台计算机协同工作。</span><br><br>
+
+<strong>Activity (10 min):</strong> Match OS type to scenario: (a) air traffic control, (b) monthly payroll, (c) iPhone, (d) Google search.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why can't a batch OS be used for a self-driving car?" Discuss: need immediate response, safety-critical.<br><br>
+
+<strong>Homework:</strong> Research: What OS runs on your phone? Your smartwatch? Your school's servers? Classify each.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Operating system <span class="bilingual">操作系统 (cāozuò xìtǒng)</span><br>
+• Kernel <span class="bilingual">内核 (nèihé)</span><br>
+• Process <span class="bilingual">进程 (jìnchéng)</span><br>
+• Driver <span class="bilingual">驱动程序 (qūdòng chéngxù)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Memory Management <span class="bilingual">内存管理</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain paging and segmentation <span class="bilingual">解释分页和分段</span><br>
+• Describe virtual memory <span class="bilingual">描述虚拟内存</span><br>
+• Discuss memory allocation strategies <span class="bilingual">讨论内存分配策略</span><br><br>
+
+<strong>Starter (5 min):</strong> Your phone has 8GB RAM but runs 20 apps. How? Are they all in RAM at once?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Paging: Memory divided into fixed-size pages. Programs allocated page frames. OS maintains page table. <span class="bilingual">分页：内存划分为固定大小的页。</span><br>
+  — Advantages: No external fragmentation, easy to manage<br>
+  — Disadvantages: Internal fragmentation (last page may not be full)<br>
+• Segmentation: Memory divided by logical units (code, data, stack). Variable sizes. <span class="bilingual">分段：按逻辑单元划分内存。</span><br>
+  — Advantages: Matches program structure, shared segments<br>
+  — Disadvantages: External fragmentation (gaps between segments)<br>
+• Virtual memory: Uses disk space as extension of RAM. Pages swapped in/out. <span class="bilingual">虚拟内存：使用磁盘空间扩展RAM。</span><br>
+  — Page fault: Required page not in RAM. OS fetches from disk (slow!).<br>
+  — Thrashing: Excessive page swapping. System becomes unusable.<br>
+• Comparison: Paging vs Segmentation table (size, fragmentation, complexity, protection).<br><br>
+
+<strong>Activity (10 min):</strong> Given memory layout diagram, identify pages/segments, calculate fragmentation.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why do gaming PCs need lots of RAM to avoid lag?" Discuss: reduces page faults, virtual memory too slow.<br><br>
+
+<strong>Homework:</strong> Explain paging to a Year 7 student using analogy. <span class="bilingual">用类比向初中生解释分页。</span><br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "Virtual memory is as fast as RAM" — Disk is 100,000× slower. Virtual memory prevents crashes but causes slowdown.<br>
+• ❌ "Paging and segmentation are the same" — Paging: fixed size, invisible to programmer. Segmentation: variable size, logical units.
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Scheduling Algorithms <span class="bilingual">调度算法</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain purpose of CPU scheduling <span class="bilingual">解释CPU调度的目的</span><br>
+• Describe FCFS, SJF, Round Robin, Priority scheduling <span class="bilingual">描述先来先服务、短作业优先、时间片轮转、优先级调度</span><br>
+• Compare scheduling algorithms <span class="bilingual">比较调度算法</span><br><br>
+
+<strong>Starter (5 min):</strong> 5 students at canteen. One orders complex meal, others simple. How should server prioritise?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Scheduling: OS decides which ready process gets CPU. Affects response time, throughput, fairness. <span class="bilingual">调度：操作系统决定哪个就绪进程获得CPU。</span><br>
+• <span class="highlight">FCFS (First Come First Served):</span> Simple queue. Fair but convoy effect (long job delays short jobs). <span class="bilingual">先来先服务：简单队列。</span><br>
+• <span class="highlight">SJF (Shortest Job First):</span> Minimises average waiting time. Requires knowing job length. Risk of starvation for long jobs. <span class="bilingual">短作业优先：最小化平均等待时间。</span><br>
+• <span class="highlight">Round Robin:</span> Fixed time quantum. Each process gets equal share. Good for time-sharing. Quantum too small = overhead; too large = FCFS. <span class="bilingual">时间片轮转：固定时间片，轮流执行。</span><br>
+• <span class="highlight">Priority Scheduling:</span> Higher priority processes first. Can preempt lower priority. Risk of starvation. <span class="bilingual">优先级调度：高优先级进程先执行。</span><br>
+• Worked examples: Calculate waiting time and turnaround time for each algorithm with same job set.<br><br>
+
+<strong>Activity (10 min):</strong> Given 4 processes with burst times, calculate average waiting time for FCFS, SJF, Round Robin.<br><br>
+
+<strong>Plenary (5 min):</strong> "Which algorithm is best for a hospital emergency room system?" Discuss: priority with aging to prevent starvation.<br><br>
+
+<strong>Homework:</strong> Create decision tree: "Which scheduling algorithm for...?" (a) supercomputer, (b) smartphone, (c) stock trading.<br><br>
+
+<div class="assess">
+<strong>Week 12 Assessment: System Software Essay (20 minutes)</strong><br>
+• "Compare paging and segmentation as memory management techniques. Discuss advantages and disadvantages of each." (9 marks)<br>
+• OR<br>
+• "Explain why a real-time operating system is necessary for an autonomous vehicle." (6 marks)<br>
+• Marked with CIE mark scheme. Focus: structure, technical accuracy, comparison, conclusion.
+</div>
+</div>
+</div>
+
+<!-- WEEK 13 -->
+<div class="week-box">
+<h3>Week 13: Translators — Compilers, Interpreters, Assemblers <span class="bilingual">翻译器：编译器、解释器、汇编器</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Translators Overview &amp; Assemblers <span class="bilingual">翻译器概述与汇编器</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Define translator and identify types <span class="bilingual">定义翻译器并识别类型</span><br>
+• Explain assembler function <span class="bilingual">解释汇编器的功能</span><br>
+• Compare one-pass and two-pass assemblers <span class="bilingual">比较单遍和双遍汇编器</span><br><br>
+
+<strong>Starter (5 min):</strong> You write Python code. CPU doesn't understand Python. What happens in between?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Translator: Converts source code to another form. <span class="bilingual">翻译器：将源代码转换为其他形式。</span><br>
+• Types:<br>
+  — <span class="highlight">Assembler:</span> Assembly → Machine code. One-to-one (mostly). <span class="bilingual">汇编器：汇编语言→机器码。</span><br>
+  — <span class="highlight">Compiler:</span> High-level language → Machine code (all at once). Produces executable. <span class="bilingual">编译器：高级语言→机器码（一次性）。</span><br>
+  — <span class="highlight">Interpreter:</span> High-level language → Executed line by line. No separate executable. <span class="bilingual">解释器：高级语言→逐行执行。</span><br>
+• Assembler operation:<br>
+  — Symbol table: Maps labels to memory addresses.<br>
+  — Opcode table: Maps mnemonics to binary opcodes.<br>
+  — One-pass: Single scan. Forward references problematic.<br>
+  — Two-pass: First pass builds symbol table, second pass generates code. Handles forward references.<br>
+• Example: <code>LOOP: ADD #1</code> → Assembler looks up ADD opcode, assigns address to LOOP, outputs machine code.<br><br>
+
+<strong>Activity (10 min):</strong> Manual assembly: Convert 3 assembly instructions to machine code using provided opcode table.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why do assemblers need two passes?" Discuss: forward references, label resolution.<br><br>
+
+<strong>Homework:</strong> Research: What's the difference between assembler and linker? What does linker do?<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Assembler <span class="bilingual">汇编器 (huìbiān qì)</span><br>
+• Compiler <span class="bilingual">编译器 (biānyì qì)</span><br>
+• Interpreter <span class="bilingual">解释器 (jiěshì qì)</span><br>
+• Source code <span class="bilingual">源代码 (yuándài mǎ)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Compilers — Lexical &amp; Syntax Analysis <span class="bilingual">编译器：词法分析与语法分析</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain compilation stages <span class="bilingual">解释编译阶段</span><br>
+• Describe lexical analysis <span class="bilingual">描述词法分析</span><br>
+• Describe syntax analysis <span class="bilingual">描述语法分析</span><br><br>
+
+<strong>Starter (5 min):</strong> Compiler error: "SyntaxError: invalid syntax". What did the compiler check? What stage failed?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Compilation stages: Lexical analysis → Syntax analysis → Semantic analysis → Code generation → Optimisation. <span class="bilingual">编译阶段：词法分析→语法分析→语义分析→代码生成→优化。</span><br>
+• <span class="highlight">Lexical Analysis:</span><br>
+  — Source code → Tokens. Removes whitespace/comments.<br>
+  — Example: <code>x = 5 + 3</code> → [IDENTIFIER:x], [ASSIGN], [NUMBER:5], [PLUS], [NUMBER:3]<br>
+  — Symbol table created for identifiers.<br>
+  — Error example: <code>x$ = 5</code> → "$" not valid token → lexical error.<br>
+• <span class="highlight">Syntax Analysis:</span><br>
+  — Tokens checked against grammar rules. Builds parse tree/AST.<br>
+  — Grammar rules define valid language structure.<br>
+  — Example: <code>if x &gt; 5 then</code> → Valid. <code>if x &gt; 5</code> → Missing THEN → syntax error.<br>
+  — Parse tree shows hierarchical structure of statement.<br>
+• Error types: Lexical (unrecognised symbols), Syntax (invalid structure), Semantic (valid syntax but meaningless, e.g., type mismatch).<br><br>
+
+<strong>Activity (10 min):</strong> Given code snippets, identify lexical vs syntax vs semantic errors.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why must lexical analysis happen before syntax analysis?" Discuss: tokens are input to parser.<br><br>
+
+<strong>Homework:</strong> Draw parse tree for: <code>y = (a + b) * c</code>. Identify tokens first.<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> Identify token types in simple statements<br>
+<span class="silver">Silver:</span> Explain why code produces syntax error<br>
+<span class="gold">Gold:</span> Design simple grammar for calculator expressions (BNF notation)
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Compilers vs Interpreters <span class="bilingual">编译器与解释器对比</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Compare compilers and interpreters <span class="bilingual">比较编译器和解释器</span><br>
+• Give advantages and disadvantages of each <span class="bilingual">给出各自的优缺点</span><br>
+• Explain when each is appropriate <span class="bilingual">解释何时使用每种方式</span><br><br>
+
+<strong>Starter (5 min):</strong> Python (interpreted) vs C++ (compiled). When would you choose each? Speed? Ease?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• <span class="highlight">Compiler:</span><br>
+  — Translates entire program before execution<br>
+  — Produces standalone executable<br>
+  — Advantages: Faster execution, error detection before running, optimised code<br>
+  — Disadvantages: Slower development cycle, platform-specific executable, harder debugging<br>
+  — Examples: C, C++, Rust, Go, Fortran<br>
+• <span class="highlight">Interpreter:</span><br>
+  — Translates and executes line by line<br>
+  — No separate executable<br>
+  — Advantages: Faster development, easier debugging, platform-independent<br>
+  — Disadvantages: Slower execution, errors found at runtime, source code needed<br>
+  — Examples: Python, JavaScript, Ruby, PHP<br>
+• <span class="highlight">Hybrid:</span> Java compiles to bytecode, interpreted by JVM. Combines benefits. C# similar with CLR.<br>
+• Comparison table: Speed, debugging, portability, security, memory use.<br><br>
+
+<strong>Activity (10 min):</strong> Scenario cards: Choose translator for (a) spacecraft control, (b) web app, (c) OS kernel, (d) teaching beginners.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is Java called 'platform independent' if it needs JVM?" Discuss: bytecode runs on any JVM, not machine code.<br><br>
+
+<strong>Homework:</strong> Create Venn diagram: Compiler vs Interpreter. Include hybrid approaches in intersection.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "Compiled languages are always faster" — Modern JIT compilation (JavaScript V8) narrows gap<br>
+• ❌ "Python is interpreted so it can't be used for serious applications" — Instagram, YouTube use Python extensively
+</div>
+</div>
+
+<!-- WEEK 14 -->
+<div class="week-box">
+<h3>Week 14: Security — Threats &amp; Malware <span class="bilingual">安全：威胁与恶意软件</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Types of Malware <span class="bilingual">恶意软件类型</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Define malware and identify types <span class="bilingual">定义恶意软件并识别类型</span><br>
+• Explain how each malware type operates <span class="bilingual">解释每种恶意软件的运作方式</span><br>
+• Describe social engineering attacks <span class="bilingual">描述社会工程学攻击</span><br><br>
+
+<strong>Starter (5 min):</strong> News headline: "Major hospital hit by ransomware." What's ransomware? How does it work?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Malware = Malicious software. Designed to damage, disrupt, or gain unauthorised access. <span class="bilingual">恶意软件：旨在破坏、干扰或非法访问的软件。</span><br>
+• <span class="highlight">Virus:</span> Attaches to legitimate program. Requires user action to spread. <span class="bilingual">病毒：依附于合法程序，需用户操作传播。</span><br>
+• <span class="highlight">Worm:</span> Self-replicating, spreads through networks. No user action needed. <span class="bilingual">蠕虫：自我复制，通过网络传播。</span><br>
+• <span class="highlight">Trojan:</span> Disguised as legitimate software. Creates backdoor. <span class="bilingual">木马：伪装成合法软件，创建后门。</span><br>
+• <span class="highlight">Ransomware:</span> Encrypts files, demands payment for key. <span class="bilingual">勒索软件：加密文件，要求支付赎金。</span><br>
+• <span class="highlight">Spyware:</span> Secretly monitors activity, steals data. <span class="bilingual">间谍软件：秘密监控活动，窃取数据。</span><br>
+• <span class="highlight">Adware:</span> Unwanted advertisements, often bundled. <span class="bilingual">广告软件：不需要的广告。</span><br>
+• <span class="highlight">Rootkit:</span> Hides presence of malware, deep system access. <span class="bilingual">Rootkit：隐藏恶意软件，深层系统访问。</span><br>
+• Social engineering: Manipulating people into revealing information. <span class="bilingual">社会工程学：操纵人们泄露信息。</span><br>
+  — Phishing: Fake emails/websites. Spear phishing targets specific person.<br>
+  — Pretexting: Creating false scenario to gain trust.<br>
+  — Baiting: Offering something enticing (free USB drive).<br>
+  — Quid pro quo: Offering service in exchange for information.<br><br>
+
+<strong>Activity (10 min):</strong> Case studies: Identify malware type and social engineering technique in 3 scenarios.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is social engineering often more effective than technical hacking?" Discuss: humans are weakest link.<br><br>
+
+<strong>Homework:</strong> Create infographic: 5 malware types with icons, symptoms, prevention tips. Bilingual.<br><br>
+
+<strong>Bilingual Keywords:</span></strong><br>
+• Malware <span class="bilingual">恶意软件 (èyì ruǎnjiàn)</span><br>
+• Ransomware <span class="bilingual">勒索软件 (lèsuǒ ruǎnjiàn)</span><br>
+• Phishing <span class="bilingual">网络钓鱼 (wǎngluò diàoyú)</span><br>
+• Firewall <span class="bilingual">防火墙 (fánghuǒqiáng)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Security Measures <span class="bilingual">安全措施</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain technical security measures <span class="bilingual">解释技术安全措施</span><br>
+• Describe physical security measures <span class="bilingual">描述物理安全措施</span><br>
+• Evaluate effectiveness of security strategies <span class="bilingual">评估安全策略的有效性</span><br><br>
+
+<strong>Starter (5 min):</strong> Your school has valuable data (grades, personal info). How is it protected? Brainstorm in groups.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• <span class="highlight">Technical measures:</span><br>
+  — Anti-malware software: Real-time scanning, heuristic detection, signature database. <span class="bilingual">反恶意软件：实时扫描，启发式检测。</span><br>
+  — Firewalls: Packet filtering, stateful inspection, application layer filtering. Hardware vs software. <span class="bilingual">防火墙：包过滤，状态检测。</span><br>
+  — Intrusion Detection Systems (IDS): Monitors network for suspicious activity. <span class="bilingual">入侵检测系统：监控网络可疑活动。</span><br>
+  — Intrusion Prevention Systems (IPS): Active blocking. <span class="bilingual">入侵防御系统：主动阻止。</span><br>
+  — Access control: Authentication (who you are) + Authorisation (what you can do). <span class="bilingual">访问控制：认证+授权。</span><br>
+  — Encryption: SSL/TLS for data in transit, full-disk encryption for data at rest.<br>
+• <span class="highlight">Physical measures:</span><br>
+  — Biometric access (fingerprint, retina). <span class="bilingual">生物识别访问。</span><br>
+  — CCTV, security guards, locked server rooms.<br>
+  — Secure disposal (shredding, degaussing).<br>
+• <span class="highlight">Human/Procedural measures:</span><br>
+  — Password policies, MFA, regular training, incident response plans.<br>
+  — Backup strategy: 3-2-1 rule (3 copies, 2 media, 1 offsite).<br><br>
+
+<strong>Activity (10 min):</strong> Security audit: Evaluate VPA's security. Identify 3 strengths, 3 weaknesses, 3 improvements.<br><br>
+
+<strong>Plenary (5 min):</strong> "Can perfect security exist?" Discuss: security vs usability trade-off, zero-day exploits, human factor.<br><br>
+
+<strong>Homework:</strong> Write security policy for a small business. Include technical, physical, and procedural measures.<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> List 5 security measures with brief descriptions<br>
+<span class="silver">Silver:</span> Categorise measures and explain one in detail<br>
+<span class="gold">Gold:</span> Evaluate layered security (defence in depth) approach with real example
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Encryption Fundamentals <span class="bilingual">加密基础</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain purpose of encryption <span class="bilingual">解释加密的目的</span><br>
+• Describe symmetric and asymmetric encryption <span class="bilingual">描述对称和非对称加密</span><br>
+• Explain Caesar cipher and Vernam cipher <span class="bilingual">解释凯撒密码和弗纳姆密码</span><br><br>
+
+<strong>Starter (5 min):</strong> Send secret message to friend in class. How do you prevent others reading it?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Encryption: Scrambling data so only authorised parties can read. Plain text → Cipher text → Plain text. <span class="bilingual">加密：打乱数据，只有授权方可以读取。</span><br>
+• <span class="highlight">Symmetric encryption:</span> Same key for encryption and decryption. Fast, but key distribution problem. <span class="bilingual">对称加密：加密和解密使用相同密钥。</span><br>
+• <span class="highlight">Asymmetric encryption:</span> Public key (encrypt) + Private key (decrypt). Solves key distribution. Slower. <span class="bilingual">非对称加密：公钥加密，私钥解密。</span><br>
+• <span class="highlight">Caesar cipher:</span> Shift alphabet by fixed amount. Key = shift value. Weak (only 25 possibilities).<br>
+  — Example: Shift 3. A→D, B→E, HELLO→KHOOR<br>
+  — Frequency analysis breaks it easily.<br>
+• <span class="highlight">Vernam cipher (One-time pad):</span> Plain text XOR key (random, same length). Unbreakable if key truly random, used once, kept secret. <span class="bilingual">弗纳姆密码：明文与随机密钥异或。</span><br>
+  — Example: Plain = 0110, Key = 1011, Cipher = 1101<br>
+  — Problems: Key distribution, key length, true randomness.<br><br>
+
+<strong>Activity (10 min):</strong> Encode message using Caesar cipher (shift 5). Partner decodes. Discuss how easy it was to break.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is Vernam cipher theoretically unbreakable?" Discuss: no pattern, all possibilities equally likely.<br><br>
+
+<strong>Homework:</strong> Research: How does modern AES encryption work? (Brief overview — CIE doesn't require detail). Compare with Caesar cipher.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Encryption <span class="bilingual">加密 (jiāmì)</span><br>
+• Decryption <span class="bilingual">解密 (jiěmì)</span><br>
+• Cipher <span class="bilingual">密码 (mìmǎ)</span><br>
+• Key <span class="bilingual">密钥 (mìyuè)</span><br>
+• Plain text <span class="bilingual">明文 (míngwén)</span><br>
+• Cipher text <span class="bilingual">密文 (mìwén)</span>
+</div>
+</div>
+
+<!-- WEEK 15 -->
+<div class="week-box">
+<h3>Week 15: Security Protocols &amp; Digital Signatures <span class="bilingual">安全协议与数字签名</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): SSL/TLS, Digital Certificates &amp; Firewalls <span class="bilingual">SSL/TLS、数字证书与防火墙</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain SSL/TLS purpose and operation <span class="bilingual">解释SSL/TLS的目的和运作</span><br>
+• Describe digital certificates <span class="bilingual">描述数字证书</span><br>
+• Explain firewall types and operation <span class="bilingual">解释防火墙类型和运作</span><br><br>
+
+<strong>Starter (5 min):</strong> Green padlock in browser. What does it mean? What happens if it's red/missing?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• SSL/TLS (Secure Sockets Layer / Transport Layer Security): Encrypts data between browser and server. <span class="bilingual">SSL/TLS：加密浏览器与服务器之间的数据。</span><br>
+  — HTTPS = HTTP + SSL/TLS<br>
+  — Handshake: Browser and server agree encryption method, exchange keys, verify identity.<br>
+  — Protects against eavesdropping, tampering, man-in-the-middle attacks.<br>
+• Digital certificates: Verify identity of website/server. Issued by Certificate Authority (CA). <span class="bilingual">数字证书：验证网站身份，由证书颁发机构签发。</span><br>
+  — Contains: Public key, owner identity, CA signature, validity period.<br>
+  — Chain of trust: Root CA → Intermediate CA → Server certificate.<br>
+  — Self-signed certificates: Not trusted by browsers (no CA verification).<br>
+• Firewalls:<br>
+  — Packet filtering: Checks source/destination IP, port, protocol. Fast but limited.<br>
+  — Stateful inspection: Tracks connection state. More secure.<br>
+  — Application layer: Inspects actual data content. Most secure but slowest.<br>
+  — Next-gen: Integrated IDS/IPS, deep packet inspection, AI-based detection.<br><br>
+
+<strong>Activity (10 min):</strong> Analyse certificate details of 3 websites (vpa.edu.cn, google.com, government site). Compare issuers, validity, encryption strength.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why do some sites use HTTP instead of HTTPS?" Discuss: cost, legacy systems, lack of awareness.<br><br>
+
+<strong>Homework:</strong> Explain to parent why HTTPS matters. Write their likely questions and your answers.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• SSL/TLS <span class="bilingual">安全套接层/传输层安全 (ānquán tàojiē céng/chuánshū céng ānquán)</span><br>
+• Certificate <span class="bilingual">证书 (zhèngshū)</span><br>
+• Certificate Authority <span class="bilingual">证书颁发机构 (zhèngshū bānfā jīgòu)</span><br>
+• HTTPS <span class="bilingual">超文本传输安全协议 (chāo wénběn chuánshū ānquán xiéyì)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Digital Signatures &amp; Authentication <span class="bilingual">数字签名与认证</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain digital signature purpose and process <span class="bilingual">解释数字签名的目的和过程</span><br>
+• Describe password policies and MFA <span class="bilingual">描述密码策略和多因素认证</span><br>
+• Discuss biometric authentication <span class="bilingual">讨论生物识别认证</span><br><br>
+
+<strong>Starter (5 min):</strong> You sign a document to prove it's from you. How do you "sign" a digital document?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Digital signature: Proves authenticity, integrity, non-repudiation. <span class="bilingual">数字签名：证明真实性、完整性和不可否认性。</span><br>
+• Process:<br>
+  1. Hash document (SHA-256) → fixed-length digest<br>
+  2. Encrypt digest with sender's PRIVATE key → signature<br>
+  3. Send document + signature<br>
+  4. Receiver decrypts signature with sender's PUBLIC key → gets digest<br>
+  5. Receiver hashes received document → gets digest<br>
+  6. If digests match → document authentic and unmodified<br>
+• Non-repudiation: Sender cannot deny sending. Only they have private key. <span class="bilingual">不可否认性：发送者不能否认发送。</span><br>
+• Password policies:<br>
+  — Minimum length (12+ characters)<br>
+  — Complexity (upper, lower, number, symbol)<br>
+  — No dictionary words<br>
+  — Regular changes (debated — NIST now recommends long memorable phrases)<br>
+  — No reuse across sites<br>
+• Multi-Factor Authentication (MFA): Something you know (password) + something you have (phone) + something you are (fingerprint). <span class="bilingual">多因素认证：所知+所有+所是。</span><br>
+• Biometrics: Fingerprint, face recognition, iris scan, voice. Convenient but irrevocable if compromised. <span class="bilingual">生物识别：方便但泄露后不可更改。</span><br><br>
+
+<strong>Activity (10 min):</strong> Role-play: Bank security consultant. Recommend authentication for (a) online banking, (b) ATM, (c) phone banking.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is biometric authentication problematic if breached?" Discuss: can't change fingerprint like password.<br><br>
+
+<strong>Homework:</strong> Evaluate your own digital security. Score password strength, check MFA usage, list improvements.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "Digital signature encrypts the whole document" — It encrypts the HASH, not the document<br>
+• ❌ "Biometrics are more secure than passwords" — Convenient but permanent; breach is catastrophic
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Security Case Study &amp; Review <span class="bilingual">安全案例研究与复习</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Analyse real-world security incidents <span class="bilingual">分析真实安全事件</span><br>
+• Apply security knowledge to scenarios <span class="bilingual">将安全知识应用于场景</span><br>
+• Review Weeks 14–15 content <span class="bilingual">复习第14-15周内容</span><br><br>
+
+<strong>Starter (5 min):</strong> 2017 WannaCry ransomware. 200,000 computers in 150 countries. NHS hospitals affected. How? Why?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Case study: WannaCry<br>
+  — Exploit: EternalBlue (NSA tool leaked by Shadow Brokers)<br>
+  — Spread: Worm, no user interaction needed<br>
+  — Impact: Encrypted files, $300 Bitcoin ransom, hospitals cancelled operations<br>
+  — Prevention: Patch management, network segmentation, backups, updated OS<br>
+  — Lesson: Unpatched systems = vulnerability. Backups essential.<br>
+• Group analysis: Each group analyses different breach (Equifax 2017, Target 2013, SolarWinds 2020).<br>
+  — What type of attack?<br>
+  — What vulnerabilities existed?<br>
+  — What prevention measures failed?<br>
+  — What lessons learned?<br><br>
+
+<strong>Review (10 min):</strong> Security concept map: Link threats → vulnerabilities → impacts → countermeasures.<br><br>
+
+<strong>Plenary (5 min):</strong> "Is cybersecurity a technical problem or a human problem?" Structured debate (2 min each side).<br><br>
+
+<div class="assess">
+<strong>Week 15 Assessment: Security Case Study Test (30 minutes)</strong><br>
+• Scenario: "A school discovers ransomware on its file server. Student records are encrypted."<br>
+• Q1: Identify 3 types of malware that could cause this. (3 marks)<br>
+• Q2: Explain how the ransomware likely entered the system. (4 marks)<br>
+• Q3: Recommend technical, physical, and procedural measures to prevent future attacks. (9 marks)<br>
+• Q4: Explain why regular backups are essential. (4 marks)<br>
+• Q5: Describe how SSL/TLS would protect the school's online portal. (5 marks)<br>
+• Total: 25 marks — 10% of semester grade
+</div>
+</div>
+</div>
+
+<!-- WEEK 16 -->
+<div class="week-box">
+<h3>Week 16: Ethics, Ownership &amp; AI Ethics <span class="bilingual">伦理、所有权与人工智能伦理</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Software Licensing &amp; Intellectual Property <span class="bilingual">软件许可与知识产权</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Compare software license types <span class="bilingual">比较软件许可类型</span><br>
+• Explain copyright, patents, trademarks <span class="bilingual">解释版权、专利和商标</span><br>
+• Discuss implications of software piracy <span class="bilingual">讨论软件盗版的 implications</span><br><br>
+
+<strong>Starter (5 min):</strong> You download cracked Photoshop. Is this wrong? Why? Who is harmed?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• <span class="highlight">Proprietary/Commercial:</span> Closed source, paid license. Examples: Microsoft Office, Adobe. <span class="bilingual">专有/商业软件：闭源，付费许可。</span><br>
+• <span class="highlight">Open Source:</span> Source code available, free to use/modify/distribute. Examples: Linux, Firefox, Python. <span class="bilingual">开源软件：源代码可用，免费使用修改。</span><br>
+  — GPL: Must share modifications. <span class="bilingual">GPL：必须分享修改。</span><br>
+  — MIT: More permissive. <span class="bilingual">MIT：更宽松。</span><br>
+  — Apache: Patent protection included. <span class="bilingual">Apache：包含专利保护。</span><br>
+• <span class="highlight">Freeware:</span> Free to use, closed source. Examples: Zoom (basic), Skype.<br>
+• <span class="highlight">Shareware:</span> Try before buy. Examples: WinRAR.<br>
+• <span class="highlight">Public Domain:</span> No restrictions.<br>
+• Intellectual Property:<br>
+  — Copyright: Protects original works (software, music, writing). Automatic. Life + 70 years.<br>
+  — Patent: Protects inventions. Must apply. 20 years. Software patents controversial.<br>
+  — Trademark: Protects brand names/logos.<br>
+• Software piracy: Illegal copying/distribution. Consequences: fines, imprisonment, malware risk, harm to industry.<br><br>
+
+<strong>Activity (10 min):</strong> Licence matching: Given 6 software descriptions, identify licence type and justify.<br><br>
+
+<strong>Plenary (5 min):</strong> "Should all software be free and open source?" Structured debate.<br><br>
+
+<strong>Homework:</strong> Investigate: What licence is your favourite app/game under? What can/cannot you do with it?<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• License <span class="bilingual">许可证 (xǔkězhèng)</span><br>
+• Copyright <span class="bilingual">版权 (bǎnquán)</span><br>
+• Open source <span class="bilingual">开源 (kāiyuán)</span><br>
+• Proprietary <span class="bilingual">专有的 (zhuānyǒu de)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): AI Ethics &amp; Environmental Issues <span class="bilingual">人工智能伦理与环境问题</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Discuss ethical implications of AI <span class="bilingual">讨论人工智能的伦理影响</span><br>
+• Explain bias in AI systems <span class="bilingual">解释AI系统中的偏见</span><br>
+• Discuss environmental impact of computing <span class="bilingual">讨论计算对环境的影响</span><br><br>
+
+<strong>Starter (5 min):</strong> AI hires job candidates. It rejects more women. Is this the AI's fault? Who is responsible?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• AI Ethics issues:<br>
+  — <span class="highlight">Bias:</span> Training data reflects human biases. Amazon AI recruiting tool penalised women's resumes (trained on male-dominated data). <span class="bilingual">偏见：训练数据反映人类偏见。</span><br>
+  — <span class="highlight">Privacy:</span> Facial recognition, data harvesting, surveillance capitalism. <span class="bilingual">隐私：人脸识别，数据收集。</span><br>
+  — <span class="highlight">Accountability:</span> Who is responsible when AI causes harm? Developer? Company? User? <span class="bilingual">责任：AI造成伤害时谁负责？</span><br>
+  — <span class="highlight">Transparency:</span> "Black box" AI decisions hard to explain. Need explainable AI (XAI). <span class="bilingual">透明度：黑箱AI难以解释。</span><br>
+  — <span class="highlight">Job displacement:</span> Automation replaces workers. Need reskilling, UBI debates. <span class="bilingual">就业替代：自动化取代工人。</span><br>
+  — <span class="highlight">Autonomous weapons:</span> Should AI decide to kill? International debates. <span class="bilingual">自主武器：AI应该决定是否杀戮吗？</span><br>
+• Environmental impact:<br>
+  — Data centres consume 1% global electricity. <span class="bilingual">数据中心消耗全球1%电力。</span><br>
+  — Bitcoin mining: Energy equivalent of small countries.<br>
+  — E-waste: Toxic materials, recycling challenges.<br>
+  — Carbon footprint of AI training: GPT-3 training = 5 cars' lifetime emissions.<br>
+  — Solutions: Renewable energy, efficient algorithms, longer device lifespans, right to repair.<br><br>
+
+<strong>Activity (10 min):</strong> Structured debate: "AI development should be paused until ethical frameworks are established."<br><br>
+
+<strong>Plenary (5 min):</strong> "What can YOU do as a CS student to promote ethical technology?" Individual pledges.<br><br>
+
+<strong>Homework:</strong> Research one AI ethics case study. Prepare 2-minute presentation.<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> Identify 3 AI ethics issues from provided list<br>
+<span class="silver">Silver:</span> Explain one issue with real example<br>
+<span class="gold">Gold:</span> Propose policy solution for chosen issue; evaluate feasibility
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Data Protection Act &amp; Global Regulations <span class="bilingual">数据保护法与全球法规</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain principles of data protection legislation <span class="bilingual">解释数据保护法规原则</span><br>
+• Compare GDPR, PIPL (China), and other frameworks <span class="bilingual">比较GDPR、中国《个人信息保护法》等框架</span><br>
+• Discuss implications for organisations <span class="bilingual">讨论对组织的影响</span><br><br>
+
+<strong>Starter (5 min):</strong> Your school has your name, photo, grades, health info. Who can see it? What if it's leaked?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Data Protection principles (common across frameworks):<br>
+  1. Lawful, fair, transparent processing <span class="bilingual">合法、公正、透明处理</span><br>
+  2. Purpose limitation (collect for specified purpose only) <span class="bilingual">目的限制</span><br>
+  3. Data minimisation (collect only what's necessary) <span class="bilingual">数据最小化</span><br>
+  4. Accuracy (keep up to date) <span class="bilingual">准确性</span><br>
+  5. Storage limitation (don't keep forever) <span class="bilingual">存储限制</span><br>
+  6. Integrity and confidentiality (security) <span class="bilingual">完整性和保密性</span><br>
+  7. Accountability (organisation responsible) <span class="bilingual">问责制</span><br>
+• GDPR (EU): Strictest. Fines up to 4% global revenue. Right to be forgotten. Data portability. <span class="bilingual">GDPR：最严格，最高罚款全球收入4%。</span><br>
+• PIPL (China): Personal Information Protection Law. Consent required. Cross-border transfer restrictions. <span class="bilingual">《个人信息保护法》：需同意，跨境传输限制。</span><br>
+• Implications for organisations:<br>
+  — Data Protection Officer required for large organisations<br>
+  — Privacy Impact Assessments<br>
+  — Breach notification (72 hours under GDPR)<br>
+  — Consent management systems<br><br>
+
+<strong>Activity (10 min):</strong> Case study: VPA wants to use facial recognition for attendance. Apply data protection principles. Is this lawful? What safeguards needed?<br><br>
+
+<strong>Plenary (5 min):</strong> "Does strong data protection harm innovation?" Discuss: compliance costs vs trust, long-term benefits.<br><br>
+
+<strong>Homework:</strong> Write data protection policy for a student app. Include: what data collected, why, how stored, how long kept, user rights.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• GDPR <span class="bilingual">通用数据保护条例 (tōngyòng shùjù bǎohù tiáolì)</span><br>
+• PIPL <span class="bilingual">个人信息保护法 (gèrén xìnxī bǎohù fǎ)</span><br>
+• Consent <span class="bilingual">同意 (tóngyì)</span><br>
+• Data subject <span class="bilingual">数据主体 (shùjù zhǔtǐ)</span>
+</div>
+</div>
+
+<!-- WEEK 17 -->
+<div class="week-box">
+<h3>Week 17: Programming Introduction — Pseudocode &amp; Flowcharts <span class="bilingual">编程入门：伪代码与流程图</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Algorithm Design &amp; Pseudocode <span class="bilingual">算法设计与伪代码</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Write algorithms using pseudocode <span class="bilingual">使用伪代码编写算法</span><br>
+• Apply stepwise refinement <span class="bilingual">应用逐步求精</span><br>
+• Use IPO charts <span class="bilingual">使用输入-处理-输出表</span><br><br>
+
+<strong>Starter (5 min):</strong> How do you make instant noodles? Write step-by-step instructions. Someone else follows them literally. What goes wrong?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Algorithm: Step-by-step solution to problem. Must be unambiguous, finite, effective. <span class="bilingual">算法：解决问题的逐步方案。</span><br>
+• Pseudocode: Language-neutral description of algorithm. CIE has specific conventions.<br>
+• CIE Pseudocode essentials:<br>
+  <code>DECLARE Counter : INTEGER</code><br>
+  <code>CONSTANT Pi = 3.14159</code><br>
+  <code>INPUT Temperature</code><br>
+  <code>OUTPUT "Hello"</code><br>
+  <code>IF Temperature &gt; 30 THEN</code><br>
+  <code>&nbsp;&nbsp;OUTPUT "Hot"</code><br>
+  <code>ELSE</code><br>
+  <code>&nbsp;&nbsp;OUTPUT "Cold"</code><br>
+  <code>ENDIF</code><br>
+• Stepwise refinement: Break complex problem into smaller sub-problems.<br>
+  Example: Calculate class average<br>
+  — Level 1: Get marks → Calculate average → Display result<br>
+  — Level 2: Initialise total → For each student, input mark, add to total → Divide by count<br>
+• IPO Chart: Input | Process | Output table for planning.<br><br>
+
+<strong>Activity (10 min):</strong> Write pseudocode for: "Find largest of 3 numbers." Peer review for clarity.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why use pseudocode instead of Python?" Discuss: language-independent, exam requirement, focus on logic.<br><br>
+
+<strong>Homework:</strong> IPO chart + pseudocode for: "Calculate total price including 8% tax."<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Algorithm <span class="bilingual">算法 (suànfǎ)</span><br>
+• Pseudocode <span class="bilingual">伪代码 (wěi dàimǎ)</span><br>
+• Stepwise refinement <span class="bilingual">逐步求精 (zhúbù qiújīng)</span><br>
+• IPO chart <span class="bilingual">输入-处理-输出表 (shūrù-chǔlǐ-shūchū biǎo)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Flowcharts &amp; Structure Diagrams <span class="bilingual">流程图与结构图</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Draw flowcharts using standard symbols <span class="bilingual">使用标准符号绘制流程图</span><br>
+• Convert between pseudocode and flowcharts <span class="bilingual">在伪代码和流程图之间转换</span><br>
+• Use structure diagrams for modular design <span class="bilingual">使用结构图进行模块化设计</span><br><br>
+
+<strong>Starter (5 min):</strong> Show flowchart symbols. Match: oval, rectangle, diamond, parallelogram. What does each mean?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Flowchart symbols (CIE standard):<br>
+  — Oval: Start/End <span class="bilingual">椭圆：开始/结束</span><br>
+  — Rectangle: Process <span class="bilingual">矩形：处理</span><br>
+  — Diamond: Decision <span class="bilingual">菱形：判断</span><br>
+  — Parallelogram: Input/Output <span class="bilingual">平行四边形：输入/输出</span><br>
+  — Rectangle with bars: Predefined process (subroutine) <span class="bilingual">双边矩形：预定义过程</span><br>
+• Flowchart for: "Input number, check if positive or negative, output result."<br>
+• Structure diagrams: Tree showing hierarchy of modules. Top = main program, branches = subroutines.<br>
+  Example: Payroll system → Input data → Calculate pay → Calculate deductions → Output payslip<br><br>
+
+<strong>Activity (10 min):</strong> Convert pseudocode (from Lesson 1) to flowchart. Swap with partner for verification.<br><br>
+
+<strong>Plenary (5 min):</strong> "When is a flowchart better than pseudocode? When worse?" Discuss: visual clarity vs space, complex logic.<br><br>
+
+<strong>Homework:</strong> Draw structure diagram for "School Report Generator." Include at least 4 sub-modules.<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> Complete partially drawn flowchart<br>
+<span class="silver">Silver:</span> Draw flowchart from written description<br>
+<span class="gold">Gold:</span> Draw flowchart with nested decisions and loops; justify symbol choices
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Programming Constructs Review <span class="bilingual">编程结构复习</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Review variables, operators, selection, iteration <span class="bilingual">复习变量、运算符、选择、循环</span><br>
+• Write simple programs in pseudocode <span class="bilingual">用伪代码编写简单程序</span><br>
+• Identify constructs in given code <span class="bilingual">识别给定代码中的结构</span><br><br>
+
+<strong>Starter (5 min):</strong> Quick recall: "What are the 3 basic programming constructs?" Sequence, Selection, Iteration.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Variables: Named storage locations. DECLARE Name : STRING. <span class="bilingual">变量：命名的存储位置。</span><br>
+• Data types: INTEGER, REAL, STRING, CHAR, BOOLEAN, DATE.<br>
+• Operators: +, -, *, /, DIV, MOD, &, AND, OR, NOT, =, &lt;&gt;, &lt;, &gt;, &lt;=, &gt;=<br>
+• Selection: IF...THEN...ELSE...ENDIF, CASE...OF...ENDCASE<br>
+• Iteration: FOR...TO...STEP...ENDFOR, WHILE...DO...ENDWHILE, REPEAT...UNTIL<br>
+• Practical: Write pseudocode for:<br>
+  — Countdown from 10 to 1 (FOR loop)<br>
+  — Keep asking password until correct (REPEAT...UNTIL)<br>
+  — Menu system with 4 options (CASE...OF)<br><br>
+
+<strong>Activity (10 min):</strong> Code tracing: Given pseudocode, trace variable values. Identify final output.<br><br>
+
+<strong>Plenary (5 min):</strong> "What's the difference between WHILE and REPEAT...UNTIL?" Discuss: pre-test vs post-test, minimum iterations.<br><br>
+
+<strong>Homework:</strong> Complete 5 pseudocode tracing exercises. Check answers with partner.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "= means equals in programming" — In pseudocode, = is assignment, not comparison (use == or describe context)<br>
+• ❌ "FOR loops can only count up" — Can count down with negative STEP<br>
+• ❌ "REPEAT...UNTIL continues while condition true" — It continues UNTIL condition is true (stops when true)
+</div>
+</div>
+
+<!-- WEEK 18 -->
+<div class="week-box">
+<h3>Week 18: End-of-Semester Assessment &amp; Review <span class="bilingual">学期末评估与复习</span></h3>
+
+<div class="assess">
+<strong>End-of-Semester Mock Examination (Week 18)</strong><br><br>
+<strong>Format:</strong> Full Paper 1 (1 hour 30 minutes, 75 marks)<br><br>
+<strong>Section A: Short Answer (25 marks)</strong><br>
+• Q1: Number systems and conversions (5 marks)<br>
+• Q2: File size calculations (image, sound) (5 marks)<br>
+• Q3: Compression methods (4 marks)<br>
+• Q4: Network hardware identification (4 marks)<br>
+• Q5: TCP/IP layer matching (4 marks)<br>
+• Q6: Assembly instruction identification (3 marks)<br><br>
+<strong>Section B: Structured Questions (50 marks)</strong><br>
+• Q7: Packet switching explanation with diagram (6 marks)<br>
+• Q8: FDE cycle trace table (8 marks)<br>
+• Q9: Memory management — paging vs segmentation (8 marks)<br>
+• Q10: Compiler stages — lexical and syntax analysis (8 marks)<br>
+• Q11: Security scenario — recommend measures (10 marks)<br>
+• Q12: Ethics essay — AI and employment (10 marks)<br><br>
+<strong>Conditions:</strong> Formal exam conditions, CIE-style paper, externally sourced questions where possible.<br><br>
+<strong>Post-Assessment:</strong><br>
+• W18 L2: Review with mark scheme. Students identify own errors.<br>
+• W18 L3: Intervention planning for Semester 2. Set targets.<br>
+• <span class="bilingual">考后设置下学期目标，制定干预计划。</span>
+</div>
+
+<div class="info">
+<strong>Semester 1 Completion Checklist</strong><br><br>
+<strong>For Students:</strong><br>
+☐ I can convert between binary, denary, and hex<br>
+☐ I can perform two's complement calculations<br>
+☐ I can calculate file sizes for images and sound<br>
+☐ I can explain lossy and lossless compression with examples<br>
+☐ I can describe client-server and P2P networks<br>
+☐ I can explain packet switching and the TCP/IP stack<br>
+☐ I can trace the FDE cycle with registers<br>
+☐ I can explain memory hierarchy and cache<br>
+☐ I can write and trace simple assembly programs<br>
+☐ I can explain OS functions and memory management<br>
+☐ I can compare compilers and interpreters<br>
+☐ I can identify malware types and prevention measures<br>
+☐ I can explain encryption, digital signatures, and certificates<br>
+☐ I can discuss software licensing and AI ethics<br>
+☐ I can write algorithms in pseudocode and flowcharts<br><br>
+<strong>For Teachers:</strong><br>
+☐ All assessments marked and recorded<br>
+☐ Intervention groups identified<br>
+☐ Parent reports written<br>
+☐ Semester 2 preparation completed
+</div>
+</div>
+
+<p style="margin-top:40px; text-align:center; color:#7f8c8d;"><em>Victoria Park Academy Shenzhen — A-Level Computer Science Curriculum 2024–2026</em></p>
+
+</body>
+</html>

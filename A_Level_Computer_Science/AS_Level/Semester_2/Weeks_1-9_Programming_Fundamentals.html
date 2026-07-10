@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA A-Level CS — Weeks 1-9: Programming Fundamentals</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .warning { background: #fdf2e9; padding: 15px; border-left: 4px solid #e67e22; }
+  .info { background: #eaf2f8; padding: 15px; border-left: 4px solid #3498db; }
+  .week-box { border: 2px solid #1a5276; padding: 15px; margin: 20px 0; border-radius: 8px; }
+  .lesson { background: #f8f9fa; padding: 10px; margin: 8px 0; border-left: 4px solid #3498db; }
+  .assess { background: #fff3cd; padding: 10px; margin: 8px 0; border-left: 4px solid #f39c12; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+  pre { background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+</style>
+</head>
+<body>
+
+<h1>AS Level Semester 2 — Weeks 1–9</h1>
+<h2>Programming Fundamentals <span class="bilingual">编程基础 (Biānchéng jīchǔ)</span></h2>
+
+<div class="info">
+<strong>Syllabus Coverage:</strong> 2.1 Algorithm Design, 2.2 Data Structures (1D/2D arrays, records), 2.3 Programming (variables, operators, selection, iteration, subroutines, recursion)<br>
+<strong>Paper:</strong> Paper 2 (Fundamental Problem-solving &amp; Programming)<br>
+<strong>Duration:</strong> 9 weeks (Weeks 1–9)<br>
+<strong>Assessment:</strong> Baseline test (W1), Quiz (W2), Practical test (W4), Recursion worksheet (W5), Mid-unit test (W6), Array tasks (W7-8), Half-Term Exam (W9)
+</div>
+
+<h2>Week-by-Week Scheme of Work</h2>
+
+<!-- WEEK 1 -->
+<div class="week-box">
+<h3>Week 1: Pseudocode Mastery — Variables, Constants, I/O, Expressions <span class="bilingual">伪代码精通：变量、常量、输入输出、表达式</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Variables, Constants &amp; Data Types <span class="bilingual">变量、常量与数据类型</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Declare variables with correct data types <span class="bilingual">用正确的数据类型声明变量</span><br>
+• Distinguish between variables and constants <span class="bilingual">区分变量和常量</span><br>
+• Select appropriate data types for given data <span class="bilingual">为给定数据选择合适的数据类型</span><br><br>
+
+<strong>Starter (5 min):</strong> "Do Now" — Given: age=16, price=19.99, name="Alice", isStudent=TRUE. What types are these?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Variable: Named memory location whose value can change. <span class="bilingual">变量：命名的内存位置，值可以改变。</span><br>
+• Constant: Named value that does not change during execution. <span class="bilingual">常量：执行期间不改变的命名值。</span><br>
+• CIE data types:<br>
+  — INTEGER: Whole numbers (-3, 0, 42). 4 bytes typically.<br>
+  — REAL: Decimal numbers (3.14, -0.5). Floating-point representation.<br>
+  — STRING: Text ("Hello", "123"). Sequence of characters.<br>
+  — CHAR: Single character ('A', '7').<br>
+  — BOOLEAN: TRUE or FALSE. 1 byte.<br>
+  — DATE: Calendar dates.<br>
+• Declaration syntax: <code>DECLARE Age : INTEGER</code><br>
+• Constant syntax: <code>CONSTANT Pi = 3.14159</code><br>
+• Assignment: <code>Age ← 16</code> (the arrow shows direction of data flow)<br>
+• Naming conventions: Meaningful names, no spaces, CamelCase or underscores.<br>
+• Type errors: <code>Age ← "Hello"</code> → Type mismatch!<br><br>
+
+<strong>Activity (10 min):</strong> Given scenario (student registration), students declare 8 variables with correct types.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why use constants instead of hard-coding values?" Discuss: maintainability, readability, single point of change.<br><br>
+
+<strong>Homework:</strong> Declare variables for a library book system: title, author, ISBN, pages, available, dueDate, fineRate.<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> Given type, fill in declaration; match variable to type<br>
+<span class="silver">Silver:</span> Choose appropriate types for 10 data items; explain choices<br>
+<span class="gold">Gold:</span> Discuss memory implications of type choices; when to use INTEGER vs REAL; precision issues
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Input, Output &amp; Expressions <span class="bilingual">输入、输出与表达式</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Write pseudocode for input and output operations <span class="bilingual">编写输入和输出操作的伪代码</span><br>
+• Construct arithmetic and logical expressions <span class="bilingual">构建算术和逻辑表达式</span><br>
+• Apply operator precedence <span class="bilingual">应用运算符优先级</span><br><br>
+
+<strong>Starter (5 min):</strong> What is 3 + 4 × 5? Is it 35 or 23? Why? Introduce precedence.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Input: <code>INPUT Name</code> — prompts user, stores response in variable.<br>
+• Output: <code>OUTPUT "Hello, ", Name</code> — displays text and variables.<br>
+• Concatenation: <code>OUTPUT "Your score is: ", Score</code><br>
+• Arithmetic operators: +, -, *, /, DIV (integer division), MOD (remainder)<br>
+  — <code>17 DIV 5 = 3</code> (how many 5s in 17)<br>
+  — <code>17 MOD 5 = 2</code> (what's left over)<br>
+  — Practical use: MOD for checking even/odd, DIV for splitting digits.<br>
+• Logical operators: AND, OR, NOT<br>
+  — <code>TRUE AND TRUE = TRUE</code><br>
+  — <code>TRUE AND FALSE = FALSE</code><br>
+  — <code>TRUE OR FALSE = TRUE</code><br>
+  — <code>NOT TRUE = FALSE</code><br>
+• Comparison operators: =, &lt;&gt;, &lt;, &gt;, &lt;=, &gt;=<br>
+• Operator precedence (highest to lowest):<br>
+  1. Parentheses ()<br>
+  2. NOT<br>
+  3. *, /, DIV, MOD, AND<br>
+  4. +, -, OR<br>
+  5. Comparison operators<br>
+• Example: <code>3 + 4 * 5 = 23</code> (not 35). <code>(3 + 4) * 5 = 35</code>.<br><br>
+
+<strong>Activity (10 min):</strong> Calculate expressions with precedence. Identify correct answers.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why does MOD help determine if a year is a leap year?" <code>Year MOD 4 = 0</code> and additional rules.<br><br>
+
+<strong>Homework:</strong> Write pseudocode to input 3 numbers, calculate average, output result with message.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Input <span class="bilingual">输入 (shūrù)</span><br>
+• Output <span class="bilingual">输出 (shūchū)</span><br>
+• Expression <span class="bilingual">表达式 (biǎodá shì)</span><br>
+• Precedence <span class="bilingual">优先级 (yōuxiān jí)</span><br>
+• Concatenation <span class="bilingual">连接 (liánjiē)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Programming Practice &amp; Baseline Test <span class="bilingual">编程练习与基线测试</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Combine variables, I/O, and expressions in complete programs <span class="bilingual">在完整程序中组合变量、输入输出和表达式</span><br>
+• Write pseudocode to solve simple problems <span class="bilingual">编写伪代码解决简单问题</span><br>
+• Trace simple programs by hand <span class="bilingual">手工追踪简单程序</span><br><br>
+
+<strong>Starter (5 min):</strong> "Predict the output" — Given pseudocode with 3 lines, what displays?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Worked example: Rectangle area calculator<br>
+<pre><code>DECLARE Length : REAL
+DECLARE Width : REAL
+DECLARE Area : REAL
+OUTPUT "Enter length:"
+INPUT Length
+OUTPUT "Enter width:"
+INPUT Width
+Area ← Length * Width
+OUTPUT "Area = ", Area</code></pre><br>
+• Students write: Circle circumference and area (using CONSTANT Pi)<br>
+• Students write: Currency converter (input GBP, output CNY at fixed rate)<br>
+• Trace table practice: Track variable values line by line.<br><br>
+
+<strong>Activity (10 min):</strong> Peer review — Swap pseudocode, partner traces and verifies.<br><br>
+
+<strong>Plenary (5 min):</strong> Common errors from class work: Missing declarations, wrong arrows, type mismatches.<br><br>
+
+<div class="assess">
+<strong>Week 1 Assessment: Baseline Programming Test (30 minutes)</strong><br>
+• Q1: Declare 5 variables for a given scenario (5 marks)<br>
+• Q2: Write pseudocode to calculate and output BMI from height and weight (8 marks)<br>
+• Q3: Trace table for given 5-line program (7 marks)<br>
+• Q4: Evaluate expressions with precedence (5 marks)<br>
+• Q5: Identify errors in given pseudocode (5 marks)<br>
+• Total: 30 marks — Formative, diagnostic grouping
+</div>
+</div>
+</div>
+
+<!-- WEEK 2 -->
+<div class="week-box">
+<h3>Week 2: Selection &amp; Iteration <span class="bilingual">选择与循环</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Selection — IF, ELSE, Nested IF, CASE <span class="bilingual">选择结构：IF、ELSE、嵌套IF、CASE</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Write pseudocode using IF...THEN...ELSE <span class="bilingual">使用IF...THEN...ELSE编写伪代码</span><br>
+• Use nested IF for multiple conditions <span class="bilingual">使用嵌套IF处理多个条件</span><br>
+• Apply CASE for multiple discrete options <span class="bilingual">应用CASE处理多个离散选项</span><br><br>
+
+<strong>Starter (5 min):</strong> "Should I bring an umbrella?" Flowchart decision: Is it raining? Is it cloudy? Will it rain?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• IF...THEN: Single condition, single action.<br>
+<pre><code>IF Score &gt;= 50 THEN
+    OUTPUT "Pass"
+ENDIF</code></pre><br>
+• IF...THEN...ELSE: Two paths.<br>
+<pre><code>IF Score &gt;= 50 THEN
+    OUTPUT "Pass"
+ELSE
+    OUTPUT "Fail"
+ENDIF</code></pre><br>
+• Nested IF: Multiple conditions.<br>
+<pre><code>IF Score &gt;= 80 THEN
+    OUTPUT "A"
+ELSE
+    IF Score &gt;= 70 THEN
+        OUTPUT "B"
+    ELSE
+        IF Score &gt;= 60 THEN
+            OUTPUT "C"
+        ELSE
+            OUTPUT "D"
+        ENDIF
+    ENDIF
+ENDIF</code></pre><br>
+• CASE: Cleaner for multiple discrete values.<br>
+<pre><code>CASE Grade OF
+    "A" : OUTPUT "Excellent"
+    "B" : OUTPUT "Good"
+    "C" : OUTPUT "Satisfactory"
+    "D" : OUTPUT "Pass"
+    OTHERWISE OUTPUT "Fail"
+ENDCASE</code></pre><br>
+• Comparison: When to use IF vs CASE? CASE for discrete values (menu choices, grades, days). IF for ranges and complex conditions.<br>
+• <span class="highlight">Common error:</span> Missing ENDIF. Every IF needs matching ENDIF. CIE is strict about this.<br><br>
+
+<strong>Activity (10 min):</strong> Write pseudocode for: "Input month number (1-12), output season." First with nested IF, then with CASE. Compare readability.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is CASE better than 12 nested IFs for menu selection?" Discuss readability, maintainability, efficiency.<br><br>
+
+<strong>Homework:</strong> Write pseudocode for a simple calculator: input two numbers and operator (+, -, *, /), output result. Use CASE for operator selection.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "ELSE is optional" — Technically yes, but omitting it when needed causes logic errors<br>
+• ❌ "You can use CASE with ranges like CASE Score OF 0-59" — CIE CASE uses discrete values, not ranges. Use IF for ranges.
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Iteration — FOR, WHILE, REPEAT <span class="bilingual">循环结构：FOR、WHILE、REPEAT</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Write programs using FOR loops <span class="bilingual">使用FOR循环编写程序</span><br>
+• Write programs using WHILE loops <span class="bilingual">使用WHILE循环编写程序</span><br>
+• Write programs using REPEAT...UNTIL loops <span class="bilingual">使用REPEAT...UNTIL循环编写程序</span><br>
+• Select appropriate loop type for given problem <span class="bilingual">为给定问题选择合适的循环类型</span><br><br>
+
+<strong>Starter (5 min):</strong> "I want to print numbers 1 to 10." Could use 10 OUTPUT statements. Better way? Introduce loops.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• FOR loop: Definite iteration (known number of repetitions).<br>
+<pre><code>FOR Count = 1 TO 10
+    OUTPUT Count
+ENDFOR</code></pre><br>
+  — Can count down: <code>FOR Count = 10 TO 1 STEP -1</code><br>
+  — Can step by other amounts: <code>FOR Count = 0 TO 100 STEP 5</code><br>
+• WHILE loop: Indefinite iteration (condition checked BEFORE each iteration).<br>
+<pre><code>DECLARE Password : STRING
+Password ← ""
+WHILE Password &lt;&gt; "secret" DO
+    OUTPUT "Enter password:"
+    INPUT Password
+ENDWHILE
+OUTPUT "Access granted"</code></pre><br>
+  — May execute zero times if condition initially false.<br>
+• REPEAT...UNTIL loop: Indefinite iteration (condition checked AFTER each iteration).<br>
+<pre><code>DECLARE Choice : STRING
+REPEAT
+    OUTPUT "Menu: A-Add, D-Delete, Q-Quit"
+    INPUT Choice
+UNTIL Choice = "Q"</code></pre><br>
+  — Always executes at least once.<br>
+• Comparison table:<br>
+<table>
+<tr><th>Loop</th><th>When to Use</th><th>Check</th><th>Min Executions</th></tr>
+<tr><td>FOR</td><td>Known count</td><td>Automatic</td><td>0 (if start > end)</td></tr>
+<tr><td>WHILE</td><td>Unknown count, may be zero</td><td>Before</td><td>0</td></tr>
+<tr><td>REPEAT</td><td>Unknown count, at least once</td><td>After</td><td>1</td></tr>
+</table><br>
+
+<strong>Activity (10 min):</strong> For each scenario, choose loop type and write pseudocode: (a) Print 5 times table, (b) Guess number game, (c) Input valid date.<br><br>
+
+<strong>Plenary (5 min):</strong> "What happens if you forget to update the condition in a WHILE loop?" Infinite loop! Demo with <code>WHILE TRUE DO...</code><br><br>
+
+<strong>Homework:</strong> Write 3 programs: (1) FOR loop — sum of first 100 integers, (2) WHILE loop — keep doubling until > 1000, (3) REPEAT loop — menu system.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Loop <span class="bilingual">循环 (xúnhuán)</span><br>
+• Iteration <span class="bilingual">迭代 (diédài)</span><br>
+• Condition <span class="bilingual">条件 (tiáojiàn)</span><br>
+• Infinite loop <span class="bilingual">无限循环 (wúxiàn xúnhuán)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Nested Loops &amp; Complex Patterns <span class="bilingual">嵌套循环与复杂模式</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Write nested loop structures <span class="bilingual">编写嵌套循环结构</span><br>
+• Use loops to process patterns and tables <span class="bilingual">使用循环处理模式和表格</span><br>
+• Trace nested loops with trace tables <span class="bilingual">用追踪表追踪嵌套循环</span><br><br>
+
+<strong>Starter (5 min):</strong> How would you print a 5×5 grid of asterisks? One loop for rows, one for columns.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Nested FOR loops: Outer loop controls rows, inner loop controls columns.<br>
+<pre><code>FOR Row = 1 TO 5
+    FOR Col = 1 TO 5
+        OUTPUT "*"  // Without newline
+    ENDFOR
+    OUTPUT ""     // Newline
+ENDFOR</code></pre><br>
+• Triangle patterns:<br>
+<pre><code>FOR Row = 1 TO 5
+    FOR Col = 1 TO Row
+        OUTPUT "*"
+    ENDFOR
+    OUTPUT ""
+ENDFOR</code></pre><br>
+• Times table grid:<br>
+<pre><code>FOR i = 1 TO 12
+    FOR j = 1 TO 12
+        OUTPUT i * j, " "
+    ENDFOR
+    OUTPUT ""
+ENDFOR</code></pre><br>
+• Trace table for nested loops: Track outer loop variable, inner loop variable, output.<br>
+• <span class="highlight">Common error:</span> Forgetting to reset inner loop variables or using same variable name for both loops.<br><br>
+
+<strong>Activity (10 min):</strong> Write pseudocode for multiplication table (1-12). Trace for first 3 rows.<br><br>
+
+<strong>Plenary (5 min):</strong> "How many times does the inner loop body execute in a 10×10 nested loop?" 100 times. Time complexity O(n²).<br><br>
+
+<strong>Homework:</strong> Write pseudocode to print: (a) Hollow square, (b) Number pyramid, (c) Chessboard pattern (alternating X and O).<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> Complete trace table for given nested loop; identify pattern<br>
+<span class="silver">Silver:</span> Write nested loop for simple pattern (solid rectangle)<br>
+<span class="gold">Gold:</span> Write nested loop for complex pattern (diamond, Pascal's triangle) with efficient logic
+</div>
+</div>
+
+<!-- WEEK 3 -->
+<div class="week-box">
+<h3>Week 3: Nested Structures, Compound Conditions &amp; Flags <span class="bilingual">嵌套结构、复合条件与标志</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Compound Conditions &amp; Logical Operators <span class="bilingual">复合条件与逻辑运算符</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Combine conditions using AND, OR, NOT <span class="bilingual">使用AND、OR、NOT组合条件</span><br>
+• Construct truth tables for complex conditions <span class="bilingual">为复杂条件构建真值表</span><br>
+• Apply De Morgan's laws <span class="bilingual">应用德摩根定律</span><br><br>
+
+<strong>Starter (5 min):</strong> "You can go to the party if you finish homework AND clean your room." Is going with just homework done? No. Need BOTH.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Compound conditions: Multiple conditions combined.<br>
+• AND: Both must be true. <code>IF Age &gt;= 18 AND HasLicense = TRUE THEN</code><br>
+• OR: At least one must be true. <code>IF Day = "Saturday" OR Day = "Sunday" THEN</code><br>
+• NOT: Reverses condition. <code>IF NOT IsMember THEN</code> (same as <code>IF IsMember = FALSE THEN</code>)<br>
+• Truth tables for AND, OR, NOT:<br>
+<table>
+<tr><th>A</th><th>B</th><th>A AND B</th><th>A OR B</th><th>NOT A</th></tr>
+<tr><td>T</td><td>T</td><td>T</td><td>T</td><td>F</td></tr>
+<tr><td>T</td><td>F</td><td>F</td><td>T</td><td>F</td></tr>
+<tr><td>F</td><td>T</td><td>F</td><td>T</td><td>T</td></tr>
+<tr><td>F</td><td>F</td><td>F</td><td>F</td><td>T</td></tr>
+</table><br>
+• De Morgan's Laws:<br>
+  — <code>NOT (A AND B)</code> = <code>(NOT A) OR (NOT B)</code><br>
+  — <code>NOT (A OR B)</code> = <code>(NOT A) AND (NOT B)</code><br>
+  — Example: <code>NOT (Age &gt; 18 AND HasLicense)</code> = <code>Age &lt;= 18 OR NOT HasLicense</code><br>
+• Short-circuit evaluation: In <code>A AND B</code>, if A is false, B is not evaluated. In <code>A OR B</code>, if A is true, B is not evaluated.<br><br>
+
+<strong>Activity (10 min):</strong> Simplify conditions using De Morgan's laws. Evaluate compound conditions.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is short-circuit evaluation useful?" Discuss: efficiency, preventing errors (e.g., <code>x &lt;&gt; 0 AND (10/x &gt; 2)</code>).<br><br>
+
+<strong>Homework:</strong> Create truth table for <code>(A AND B) OR (NOT C)</code> with 8 rows. Write pseudocode using compound conditions for login validation (username AND password AND NOT locked).<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "A AND B means either A or B is true" — No, BOTH must be true<br>
+• ❌ "NOT (A AND B) = NOT A AND NOT B" — Wrong! It's NOT A OR NOT B (De Morgan's)
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Flag Variables &amp; State Tracking <span class="bilingual">标志变量与状态跟踪</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Use Boolean flags to control program flow <span class="bilingual">使用布尔标志控制程序流程</span><br>
+• Implement search algorithms with flags <span class="bilingual">使用标志实现搜索算法</span><br>
+• Design state-based solutions <span class="bilingual">设计基于状态的解决方案</span><br><br>
+
+<strong>Starter (5 min):</strong> "Find the word 'apple' in a list of 100 fruits." How do you know if you found it or not? Introduce flag.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Flag variable: Boolean variable tracking whether something has occurred. <span class="bilingual">标志变量：跟踪某事是否发生的布尔变量。</span><br>
+• Search example:<br>
+<pre><code>DECLARE Found : BOOLEAN
+Found ← FALSE
+FOR i = 1 TO 100
+    IF Fruits[i] = "Apple" THEN
+        Found ← TRUE
+    ENDIF
+ENDFOR
+IF Found = TRUE THEN
+    OUTPUT "Apple is in the list"
+ELSE
+    OUTPUT "Apple not found"
+ENDIF</code></pre><br>
+• Optimised search (exit early when found):<br>
+<pre><code>Found ← FALSE
+i ← 1
+WHILE i &lt;= 100 AND Found = FALSE DO
+    IF Fruits[i] = "Apple" THEN
+        Found ← TRUE
+    ELSE
+        i ← i + 1
+    ENDIF
+ENDWHILE</code></pre><br>
+• State tracking: Using flags for multi-stage processes.<br>
+  — Example: Password validation — needs uppercase, lowercase, digit, special char.<br>
+  — Four flags, all must be true for valid password.<br><br>
+
+<strong>Activity (10 min):</strong> Write pseudocode to check if a number is prime using flag. Test with 17 and 18.<br><br>
+
+<strong>Plenary (5 min):</strong> "When is a flag better than a direct condition?" Discuss: multiple checks, early exit, complex state tracking.<br><br>
+
+<strong>Homework:</strong> Write pseudocode for password validator with 4 flags (upper, lower, digit, length).<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Flag <span class="bilingual">标志 (biāozhì)</span><br>
+• State <span class="bilingual">状态 (zhuàngtài)</span><br>
+• Search <span class="bilingual">搜索 (sōusuǒ)</span><br>
+• Valid <span class="bilingual">有效 (yǒuxiào)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Problem Solving with Pseudocode <span class="bilingual">用伪代码解决问题</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Apply stepwise refinement to problems <span class="bilingual">对问题应用逐步求精</span><br>
+• Write complete pseudocode solutions <span class="bilingual">编写完整的伪代码解决方案</span><br>
+• Trace and debug pseudocode <span class="bilingual">追踪和调试伪代码</span><br><br>
+
+<strong>Starter (5 min):</strong> Problem: "Calculate total price including 8% tax and 5% discount for VIP." Break it down.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Stepwise refinement:<br>
+  Level 1: Input → Calculate → Output<br>
+  Level 2: Get price, get VIP status → Calculate discount → Calculate tax → Calculate total → Display result<br>
+  Level 3: Pseudocode implementation<br>
+• Complete example:<br>
+<pre><code>DECLARE Price, DiscountRate, TaxRate, Total : REAL
+DECLARE IsVIP : BOOLEAN
+Price ← 0
+DiscountRate ← 0.05
+TaxRate ← 0.08
+OUTPUT "Enter price:"
+INPUT Price
+OUTPUT "Is VIP? (TRUE/FALSE):"
+INPUT IsVIP
+IF IsVIP = TRUE THEN
+    Price ← Price * (1 - DiscountRate)
+ENDIF
+Total ← Price * (1 + TaxRate)
+OUTPUT "Total: $", Total</code></pre><br>
+• Debugging exercise: Given buggy code with 5 errors, identify and fix.<br>
+• Common bugs: Missing ENDIF, wrong comparison operator, forgetting to initialise, infinite loops, off-by-one errors.<br><br>
+
+<strong>Activity (10 min):</strong> "Bug hunt" — 5 programs with deliberate errors. Find and fix.<br><br>
+
+<strong>Plenary (5 min):</strong> Debugging checklist: (1) Declarations present? (2) Every IF has ENDIF? (3) Loop condition updates? (4) Correct data types?<br><br>
+
+<strong>Homework:</strong> Write pseudocode for ATM withdrawal: check balance, check multiple of 10, update balance, output receipt info.<br><br>
+
+<div class="assess">
+<strong>Week 3 Assessment: Code Tracing Quiz (20 minutes)</strong><br>
+• Q1: Trace table for IF...ELSE with compound condition (5 marks)<br>
+• Q2: Trace table for nested FOR loops (5 marks)<br>
+• Q3: Identify 3 errors in given pseudocode (6 marks)<br>
+• Q4: Write pseudocode for given specification (9 marks)<br>
+• Total: 25 marks — Formative
+</div>
+</div>
+</div>
+
+<!-- WEEK 4 -->
+<div class="week-box">
+<h3>Week 4: Subroutines — Procedures &amp; Functions <span class="bilingual">子程序：过程与函数</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Procedures <span class="bilingual">过程</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain purpose of procedures <span class="bilingual">解释过程的目的</span><br>
+• Write pseudocode for procedures with parameters <span class="bilingual">编写带参数的过程伪代码</span><br>
+• Understand scope of variables <span class="bilingual">理解变量的作用域</span><br><br>
+
+<strong>Starter (5 min):</strong> You need to greet 10 different students. Without copy-pasting code 10 times, how?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Procedure: Named block of code that performs a task. No return value. <span class="bilingual">过程：执行任务的命名代码块，无返回值。</span><br>
+• Syntax:<br>
+<pre><code>PROCEDURE Greet(Name : STRING)
+    OUTPUT "Hello, ", Name, "!"
+ENDPROCEDURE
+
+// Main program
+CALL Greet("Alice")
+CALL Greet("Bob")</code></pre><br>
+• Parameters: Values passed to procedure. <span class="bilingual">参数：传递给过程的值。</span><br>
+• Multiple parameters:<br>
+<pre><code>PROCEDURE DisplayResult(Subject : STRING, Score : INTEGER, Grade : STRING)
+    OUTPUT Subject, ": ", Score, " (", Grade, ")"
+ENDPROCEDURE</code></pre><br>
+• Scope: Variables declared inside procedure are LOCAL (only accessible there). <span class="bilingual">作用域：过程内声明的变量是局部的。</span><br>
+• Global variables: Declared outside, accessible everywhere. <span class="bilingual">全局变量：外部声明，到处可访问。</span><br>
+• Best practice: Minimise global variables. Use parameters and local variables. <span class="bilingual">最佳实践：最小化全局变量。</span><br><br>
+
+<strong>Activity (10 min):</strong> Write procedure to print a rectangle of asterisks given width and height. Call it 3 times with different sizes.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why are global variables considered bad practice?" Discuss: unintended side effects, hard to debug, not reusable.<br><br>
+
+<strong>Homework:</strong> Write 3 procedures for a calculator: Add, Subtract, Multiply. Each takes 2 parameters and outputs result.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Procedure <span class="bilingual">过程 (guòchéng)</span><br>
+• Parameter <span class="bilingual">参数 (cānshù)</span><br>
+• Argument <span class="bilingual">实参 (shícān)</span><br>
+• Scope <span class="bilingual">作用域 (zuòyòng yù)</span><br>
+• Local <span class="bilingual">局部的 (júbù de)</span><br>
+• Global <span class="bilingual">全局的 (quánjú de)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Functions <span class="bilingual">函数</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Distinguish functions from procedures <span class="bilingual">区分函数与过程</span><br>
+• Write functions that return values <span class="bilingual">编写返回值的函数</span><br>
+• Use functions in expressions <span class="bilingual">在表达式中使用函数</span><br><br>
+
+<strong>Starter (5 min):</strong> In maths, f(x) = 2x + 1. What is f(3)? Functions in programming are similar — they RETURN a value.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Function: Subroutine that returns a value to the calling code. <span class="bilingual">函数：向调用代码返回值的子程序。</span><br>
+• Syntax:<br>
+<pre><code>FUNCTION Max(a : INTEGER, b : INTEGER) RETURNS INTEGER
+    IF a &gt; b THEN
+        RETURN a
+    ELSE
+        RETURN b
+    ENDIF
+ENDFUNCTION
+
+// Usage
+Larger ← Max(5, 3)  // Larger = 5
+OUTPUT Max(10, 20)  // Outputs 20</code></pre><br>
+• Key difference from procedure: Function has RETURN statement and RETURNS type. <span class="bilingual">关键区别：函数有RETURN语句和返回类型。</span><br>
+• Functions can be used in expressions: <code>Result ← Max(x, y) + Max(a, b)</code><br>
+• Common function examples:<br>
+  — <code>FUNCTION IsEven(n : INTEGER) RETURNS BOOLEAN</code><br>
+  — <code>FUNCTION CircleArea(radius : REAL) RETURNS REAL</code><br>
+  — <code>FUNCTION GradeFromScore(Score : INTEGER) RETURNS STRING</code><br>
+• Functions should be PURE when possible: Same input always gives same output. No side effects. <span class="bilingual">纯函数：相同输入总是产生相同输出。</span><br><br>
+
+<strong>Activity (10 min):</strong> Write functions: (a) Fahrenheit to Celsius, (b) IsLeapYear, (c) Factorial (iterative).<br><br>
+
+<strong>Plenary (5 min):</strong> "Can a function contain OUTPUT statements?" Discuss: technically yes, but functions should calculate and return, not display. Mixed responsibilities.<br><br>
+
+<strong>Homework:</strong> Write function library: AreaOfRectangle, AreaOfTriangle, AreaOfCircle. Main program asks user which shape, calls appropriate function.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "Functions and procedures are the same" — Functions return values; procedures don't (or shouldn't)<br>
+• ❌ "You can only RETURN at the end" — RETURN can appear anywhere, but single exit point is cleaner
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Parameter Passing &amp; Practical Test <span class="bilingual">参数传递与实践测试</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Explain pass-by-value and pass-by-reference <span class="bilingual">解释值传递和引用传递</span><br>
+• Analyse effects of parameter passing on variables <span class="bilingual">分析参数传递对变量的影响</span><br>
+• Complete practical programming test <span class="bilingual">完成实践编程测试</span><br><br>
+
+<strong>Starter (5 min):</strong> You give a friend a photocopy of your essay (value) vs the original document (reference). What's the difference if they change it?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Pass by value: Copy of data sent to subroutine. Original unchanged. <span class="bilingual">值传递：发送数据的副本，原始数据不变。</span><br>
+• Pass by reference: Address sent. Subroutine can modify original. <span class="bilingual">引用传递：发送地址，子程序可以修改原始数据。</span><br>
+• CIE pseudocode: By default, parameters are pass by value. To indicate pass by reference, some systems use BYREF keyword (context-dependent in CIE).<br>
+• Example demonstrating difference:<br>
+<pre><code>PROCEDURE Triple(x : INTEGER)
+    x ← x * 3
+    OUTPUT "Inside: ", x
+ENDPROCEDURE
+
+// Main
+Num ← 5
+CALL Triple(Num)
+OUTPUT "Outside: ", Num  // Num is still 5 (pass by value)</code></pre><br>
+• If pass by reference, Num would become 15.<br>
+• Implications: Use pass by value for input data. Use pass by reference when subroutine needs to modify caller's data.<br><br>
+
+<strong>Activity (10 min):</strong> Predict output for 3 parameter-passing scenarios. Test understanding.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is pass by reference more efficient for large arrays?" Discuss: avoids copying entire array.<br><br>
+
+<div class="assess">
+<strong>Week 4 Assessment: Practical Programming Test (45 minutes)</strong><br>
+• Task 1: Write procedure to display a menu (6 marks)<br>
+• Task 2: Write function to calculate BMI from weight and height (8 marks)<br>
+• Task 3: Write main program using both, with input validation (10 marks)<br>
+• Task 4: Trace a given subroutine call with parameters (6 marks)<br>
+• Total: 30 marks — 10% of semester grade<br>
+• <span class="bilingual">实践测试：编写完整程序，展示对子程序的理解。</span>
+</div>
+</div>
+</div>
+
+<!-- WEEK 5 -->
+<div class="week-box">
+<h3>Week 5: Recursion <span class="bilingual">递归 (Dìguī)</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Introduction to Recursion <span class="bilingual">递归入门</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Define recursion and identify recursive patterns <span class="bilingual">定义递归并识别递归模式</span><br>
+• Explain base case and recursive case <span class="bilingual">解释基准情况和递归情况</span><br>
+• Trace simple recursive functions <span class="bilingual">追踪简单递归函数</span><br><br>
+
+<strong>Starter (5 min):</strong> Russian dolls — each doll contains a smaller doll. When does it stop? Smallest doll = base case.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Recursion: Function calls itself to solve smaller instance of same problem. <span class="bilingual">递归：函数调用自身解决同类更小问题。</span><br>
+• Two essential components:<br>
+  1. <span class="highlight">Base case:</span> Condition that stops recursion. <span class="bilingual">基准情况：停止递归的条件。</span><br>
+  2. <span class="highlight">Recursive case:</span> Function calls itself with simpler input. <span class="bilingual">递归情况：函数用更简单的输入调用自身。</span><br>
+• Factorial example:<br>
+<pre><code>FUNCTION Factorial(n : INTEGER) RETURNS INTEGER
+    IF n &lt;= 1 THEN
+        RETURN 1
+    ELSE
+        RETURN n * Factorial(n - 1)
+    ENDIF
+ENDFUNCTION</code></pre><br>
+  Factorial(4) = 4 × Factorial(3) = 4 × 3 × Factorial(2) = 4 × 3 × 2 × Factorial(1) = 4 × 3 × 2 × 1 = 24<br>
+• Stack frames: Each recursive call adds frame to call stack. When base case reached, frames unwind. <span class="bilingual">栈帧：每次递归调用向调用栈添加一帧。</span><br>
+• Memory risk: Deep recursion causes stack overflow. <span class="bilingual">内存风险：深层递归导致栈溢出。</span><br><br>
+
+<strong>Activity (10 min):</strong> Trace Factorial(5) on paper. Show stack frames at each level.<br><br>
+
+<strong>Plenary (5 min):</strong> "What happens if you forget the base case?" Infinite recursion → stack overflow → crash.<br><br>
+
+<strong>Homework:</strong> Write recursive function to calculate sum of first n integers. Trace for n=4.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "Recursion is just a loop" — Different mechanism (stack vs iteration), different use cases<br>
+• ❌ "Recursion is always better" — Iteration often more efficient (no stack overhead)
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Recursive Algorithms — Fibonacci &amp; Search <span class="bilingual">递归算法：斐波那契与搜索</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Implement Fibonacci recursively <span class="bilingual">递归实现斐波那契</span><br>
+• Compare recursive and iterative solutions <span class="bilingual">比较递归和迭代解决方案</span><br>
+• Understand when recursion is appropriate <span class="bilingual">理解何时使用递归</span><br><br>
+
+<strong>Starter (5 min):</strong> Fibonacci sequence: 1, 1, 2, 3, 5, 8, 13... Each number = sum of two previous. How to code this?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Fibonacci recursive:<br>
+<pre><code>FUNCTION Fibonacci(n : INTEGER) RETURNS INTEGER
+    IF n &lt;= 2 THEN
+        RETURN 1
+    ELSE
+        RETURN Fibonacci(n - 1) + Fibonacci(n - 2)
+    ENDIF
+ENDFUNCTION</code></pre><br>
+• Trace Fibonacci(4):<br>
+  Fib(4) = Fib(3) + Fib(2)<br>
+  Fib(3) = Fib(2) + Fib(1) = 1 + 1 = 2<br>
+  Fib(2) = 1<br>
+  Fib(4) = 2 + 1 = 3<br>
+• <span class="highlight">Problem:</span> Recursive Fibonacci is very inefficient! Fib(5) calls Fib(3) twice. Exponential time O(2^n).<br>
+• Iterative Fibonacci: O(n) time, O(1) space. Much better for large n.<br>
+• When to use recursion:<br>
+  — Tree/graph traversal (natural fit)<br>
+  — Divide and conquer (merge sort, quick sort)<br>
+  — Problems with recursive structure (file systems, nested menus)<br>
+  — When code clarity matters more than performance<br>
+• When to use iteration:<br>
+  — Simple sequential processing<br>
+  — Performance-critical code<br>
+  — Very deep processing (risk of stack overflow)<br><br>
+
+<strong>Activity (10 min):</strong> Compare recursive vs iterative for summing array. Which is faster? Why?<br><br>
+
+<strong>Plenary (5 min):</strong> "Recursion is elegant but dangerous." Discuss: readability vs stack limits, efficiency.<br><br>
+
+<strong>Homework:</strong> Write recursive function for power(base, exponent). Trace power(2, 5). Compare with iterative version.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Recursion <span class="bilingual">递归 (dìguī)</span><br>
+• Base case <span class="bilingual">基准情况 (jīzhǔn qíngkuàng)</span><br>
+• Recursive case <span class="bilingual">递归情况 (dìguī qíngkuàng)</span><br>
+• Stack overflow <span class="bilingual">栈溢出 (zhàn yìchū)</span><br>
+• Call stack <span class="bilingual">调用栈 (diàoyòng zhàn)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Recursion Worksheet &amp; Review <span class="bilingual">递归练习与复习</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Trace complex recursive programs <span class="bilingual">追踪复杂递归程序</span><br>
+• Identify base and recursive cases in given code <span class="bilingual">识别给定代码中的基准和递归情况</span><br>
+• Convert recursive solutions to iterative <span class="bilingual">将递归解决方案转换为迭代</span><br><br>
+
+<strong>Starter (5 min):</strong> Quick trace: What does this output?<br>
+<pre><code>FUNCTION Mystery(n : INTEGER) RETURNS INTEGER
+    IF n = 0 THEN
+        RETURN 0
+    ELSE
+        RETURN n + Mystery(n - 1)
+    ENDIF
+ENDFUNCTION
+OUTPUT Mystery(5)</code></pre><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Worksheet with 5 recursive functions. For each:<br>
+  — Identify base case<br>
+  — Identify recursive case<br>
+  — Trace for given input<br>
+  — State what the function calculates<br>
+• Functions include: Countdown, Digit sum, String reverse, Power, Count characters.<br>
+• Conversion exercise: Convert recursive countdown to iterative FOR loop.<br>
+• Exam-style question: "Explain why the recursive solution to Factorial is less efficient than an iterative solution for large values of n." (3 marks)<br><br>
+
+<strong>Activity (10 min):</strong> Challenge: Write recursive function to check if string is palindrome.<br><br>
+
+<strong>Plenary (5 min):</strong> Review worksheet answers. Address common tracing errors.<br><br>
+
+<div class="assess">
+<strong>Week 5 Assessment: Recursion Worksheet (30 minutes)</strong><br>
+• Q1: Trace recursive function (factorial variant) — 6 marks<br>
+• Q2: Identify base case and recursive case in 3 functions — 6 marks<br>
+• Q3: Convert recursive sum function to iterative — 5 marks<br>
+• Q4: Explain why recursion uses more memory than iteration — 3 marks<br>
+• Q5: Write recursive function for given specification — 5 marks<br>
+• Total: 25 marks — Formative
+</div>
+</div>
+</div>
+
+<!-- WEEK 6 -->
+<div class="week-box">
+<h3>Week 6: String &amp; File Handling <span class="bilingual">字符串与文件处理</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): String Operations <span class="bilingual">字符串操作</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Use string functions in pseudocode <span class="bilingual">在伪代码中使用字符串函数</span><br>
+• Manipulate strings using substring and concatenation <span class="bilingual">使用子串和连接操作字符串</span><br>
+• Convert between strings and other types <span class="bilingual">在字符串和其他类型之间转换</span><br><br>
+
+<strong>Starter (5 min):</strong> How many characters in "Hello, 世界"? How to extract first 3 characters? Last 2?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• CIE string functions:<br>
+  — <code>LENGTH(Text)</code> → number of characters<br>
+  — <code>Text[Start:End]</code> → substring from position Start to End inclusive<br>
+  — <code>LEFT(Text, n)</code> → first n characters<br>
+  — <code>RIGHT(Text, n)</code> → last n characters<br>
+  — <code>INT(String)</code> → converts string to integer<br>
+  — <code>STR(Number)</code> → converts number to string<br>
+  — <code>ASC(Character)</code> → ASCII code<br>
+  — <code>CHR(Code)</code> → character from ASCII code<br>
+• Examples:<br>
+  <code>LENGTH("Hello") = 5</code><br>
+  <code>"Hello"[1:3] = "Hel"</code><br>
+  <code>STR(42) = "42"</code><br>
+  <code>INT("123") = 123</code><br>
+  <code>ASC("A") = 65</code><br>
+  <code>CHR(65) = "A"</code><br>
+• String traversal: Loop through each character.<br>
+<pre><code>DECLARE Text : STRING
+DECLARE i : INTEGER
+Text ← "Hello"
+FOR i = 1 TO LENGTH(Text)
+    OUTPUT Text[i:i]
+ENDFOR</code></pre><br>
+• Practical applications: Password validation, text formatting, data parsing.<br><br>
+
+<strong>Activity (10 min):</strong> Write pseudocode to: (a) Reverse a string, (b) Count vowels, (c) Check if palindrome.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is string indexing 1-based in CIE pseudocode?" Discuss: different from Python (0-based), exam-specific convention.<br><br>
+
+<strong>Homework:</strong> Write pseudocode to validate email format: contains @, contains . after @, at least 5 characters total.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• String <span class="bilingual">字符串 (zìfúchuàn)</span><br>
+• Substring <span class="bilingual">子串 (zǐchuàn)</span><br>
+• Concatenation <span class="bilingual">连接 (liánjiē)</span><br>
+• Length <span class="bilingual">长度 (chángdù)</span><br>
+• ASCII <span class="bilingual">ASCII码</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): File Handling — Read &amp; Write <span class="bilingual">文件处理：读写</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Open, read, write, and close files in pseudocode <span class="bilingual">在伪代码中打开、读取、写入和关闭文件</span><br>
+• Process sequential files <span class="bilingual">处理顺序文件</span><br>
+• Handle end-of-file conditions <span class="bilingual">处理文件结束条件</span><br><br>
+
+<strong>Starter (5 min):</strong> Where does your game save progress? In a file! How does the program read it back?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• File operations in CIE pseudocode:<br>
+  — <code>OPENFILE "data.txt" FOR READ</code><br>
+  — <code>OPENFILE "output.txt" FOR WRITE</code> (creates new/overwrite)<br>
+  — <code>OPENFILE "log.txt" FOR APPEND</code> (adds to end)<br>
+  — <code>READFILE "data.txt", Line</code><br>
+  — <code>WRITEFILE "output.txt", "Hello"</code><br>
+  — <code>CLOSEFILE "data.txt"</code><br>
+• Reading until end of file:<br>
+<pre><code>OPENFILE "scores.txt" FOR READ
+WHILE NOT EOF("scores.txt") DO
+    READFILE "scores.txt", Score
+    OUTPUT Score
+ENDWHILE
+CLOSEFILE "scores.txt"</code></pre><br>
+• Writing to file:<br>
+<pre><code>OPENFILE "results.txt" FOR WRITE
+WRITEFILE "results.txt", "Name, Score, Grade"
+FOR i = 1 TO 10
+    WRITEFILE "results.txt", Names[i] & ", " & STR(Scores[i]) & ", " & Grades[i]
+ENDFOR
+CLOSEFILE "results.txt"</code></pre><br>
+• Important: Always close files! Open files consume resources. <span class="bilingual">重要：始终关闭文件！</span><br>
+• Error handling: Check file exists before reading. Handle empty files gracefully.<br><br>
+
+<strong>Activity (10 min):</strong> Write pseudocode to read 5 names from file, output them with line numbers.<br><br>
+
+<strong>Plenary (5 min):</strong> "What's the difference between FOR WRITE and FOR APPEND?" Discuss: overwrite vs preserve.<br><br>
+
+<strong>Homework:</strong> Write pseudocode to merge two sorted files into one sorted file.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "READFILE reads entire file at once" — It reads one line/record per call<br>
+• ❌ "You don't need to close files" — Resource leak, data may not be saved
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): CSV Processing <span class="bilingual">CSV处理</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Parse CSV data using string functions <span class="bilingual">使用字符串函数解析CSV数据</span><br>
+• Construct CSV records from data <span class="bilingual">从数据构建CSV记录</span><br>
+• Process structured data files <span class="bilingual">处理结构化数据文件</span><br><br>
+
+<strong>Starter (5 min):</strong> Show real CSV: Name,Age,Score
+Alice,16,85
+Bob,17,72. How to extract Alice's score?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• CSV (Comma Separated Values): Plain text format for tabular data. <span class="bilingual">CSV：表格数据的纯文本格式。</span><br>
+• Parsing CSV: Split line by comma delimiter.<br>
+<pre><code>// Given: Line = "Alice,16,85"
+DECLARE Name : STRING
+DECLARE Age : INTEGER
+DECLARE Score : INTEGER
+DECLARE Comma1, Comma2 : INTEGER
+
+Comma1 ← 0
+Comma2 ← 0
+
+// Find first comma
+FOR i = 1 TO LENGTH(Line)
+    IF Line[i:i] = "," AND Comma1 = 0 THEN
+        Comma1 ← i
+    ELSE
+        IF Line[i:i] = "," AND Comma1 &lt;&gt; 0 THEN
+            Comma2 ← i
+        ENDIF
+    ENDIF
+ENDFOR
+
+Name ← Line[1:Comma1-1]
+Age ← INT(Line[Comma1+1:Comma2-1])
+Score ← INT(Line[Comma2+1:LENGTH(Line)])</code></pre><br>
+• CIE simplified approach (using built-in where available):<br>
+  <code>DECLARE Fields : ARRAY[1:3] OF STRING</code><br>
+  // Conceptually split by comma<br>
+• Writing CSV: Ensure data separated by commas, strings may need quotes if containing commas.<br>
+• Practical: Read student data from CSV, calculate average, write results to new CSV.<br><br>
+
+<strong>Activity (10 min):</strong> Given CSV lines, write pseudocode to find highest score and output name.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is CSV still popular despite XML and JSON?" Discuss: simplicity, human-readable, universal compatibility.<br><br>
+
+<div class="assess">
+<strong>Week 6 Assessment: Mid-Unit Test — Programming Constructs (45 minutes)</strong><br>
+• Q1: Write pseudocode to reverse a string using loop (5 marks)<br>
+• Q2: Read numbers from file until EOF, count how many are positive (6 marks)<br>
+• Q3: Write pseudocode to parse CSV line and extract fields (6 marks)<br>
+• Q4: Write function to check if password is valid (8 marks)<br>
+• Q5: Trace recursive function with given input (5 marks)<br>
+• Q6: Explain difference between function and procedure (3 marks)<br>
+• Q7: Write pseudocode for menu-driven program using subroutines (7 marks)<br>
+• Total: 40 marks — 10% of semester grade
+</div>
+</div>
+</div>
+
+<!-- WEEKS 7-8 -->
+<div class="week-box">
+<h3>Week 7: 1D Arrays — Declaration, Traversal, Search, Sort <span class="bilingual">一维数组：声明、遍历、搜索、排序</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): Array Basics &amp; Traversal <span class="bilingual">数组基础与遍历</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Declare and initialise 1D arrays <span class="bilingual">声明和初始化一维数组</span><br>
+• Traverse arrays using loops <span class="bilingual">使用循环遍历数组</span><br>
+• Access and modify array elements <span class="bilingual">访问和修改数组元素</span><br><br>
+
+<strong>Starter (5 min):</strong> 30 students in class, each has a test score. 30 variables? No! Use array.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Array: Collection of elements of same type, accessed by index. <span class="bilingual">数组：同类型元素的集合，通过索引访问。</span><br>
+• Declaration: <code>DECLARE Scores : ARRAY[1:30] OF INTEGER</code><br>
+• Access: <code>Scores[5]</code> → element at position 5.<br>
+• Initialisation: Loop to set default values.<br>
+<pre><code>DECLARE Scores : ARRAY[1:30] OF INTEGER
+DECLARE i : INTEGER
+FOR i = 1 TO 30
+    Scores[i] ← 0
+ENDFOR</code></pre><br>
+• Traversal: Visit every element.<br>
+<pre><code>FOR i = 1 TO 30
+    OUTPUT "Student ", i, ": ", Scores[i]
+ENDFOR</code></pre><br>
+• <span class="highlight">Common error:</span> Off-by-one. Accessing <code>Scores[0]</code> or <code>Scores[31]</code> when array is [1:30]. Index out of bounds. <span class="bilingual">常见错误：越界访问。</span><br>
+• Parallel arrays: Multiple arrays with same index representing related data.<br>
+  <code>Names[1]</code> and <code>Scores[1]</code> belong to same student.<br><br>
+
+<strong>Activity (10 min):</strong> Declare array for 7 days temperature. Input values, calculate average.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why do arrays start at index 1 in CIE pseudocode?" Discuss: exam convention, different from some languages.<br><br>
+
+<strong>Homework:</strong> Write pseudocode to find maximum and minimum in array of 50 numbers.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• Array <span class="bilingual">数组 (shùzǔ)</span><br>
+• Index <span class="bilingual">索引 (suǒyǐn)</span><br>
+• Element <span class="bilingual">元素 (yuánsù)</span><br>
+• Traversal <span class="bilingual">遍历 (biànlì)</span><br>
+• Bounds <span class="bilingual">边界 (biānjiè)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Linear Search &amp; Bubble Sort <span class="bilingual">线性搜索与冒泡排序</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Implement linear search algorithm <span class="bilingual">实现线性搜索算法</span><br>
+• Implement bubble sort algorithm <span class="bilingual">实现冒泡排序算法</span><br>
+• Analyse efficiency of simple algorithms <span class="bilingual">分析简单算法的效率</span><br><br>
+
+<strong>Starter (5 min):</strong> Find "Zhang" in unordered class list. How? Check each name one by one. Introduce linear search.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Linear Search:<br>
+<pre><code>FUNCTION LinearSearch(arr : ARRAY, n : INTEGER, target : STRING) RETURNS INTEGER
+    DECLARE i : INTEGER
+    FOR i = 1 TO n
+        IF arr[i] = target THEN
+            RETURN i
+        ENDIF
+    ENDFOR
+    RETURN -1  // Not found
+ENDFUNCTION</code></pre><br>
+  — Best case: O(1) — target is first element.<br>
+  — Worst case: O(n) — target is last or not present.<br>
+  — Average: O(n).<br>
+• Bubble Sort:<br>
+<pre><code>PROCEDURE BubbleSort(arr : ARRAY, n : INTEGER)
+    DECLARE i, j : INTEGER
+    DECLARE temp : INTEGER
+    FOR i = 1 TO n - 1
+        FOR j = 1 TO n - i
+            IF arr[j] > arr[j + 1] THEN
+                temp ← arr[j]
+                arr[j] ← arr[j + 1]
+                arr[j + 1] ← temp
+            ENDIF
+        ENDFOR
+    ENDFOR
+ENDPROCEDURE</code></pre><br>
+  — Compare adjacent elements, swap if out of order. Largest "bubbles" to end.<br>
+  — Passes: n-1 passes needed.<br>
+  — Best case: O(n) if already sorted (with optimisation).<br>
+  — Worst/Average: O(n²).<br>
+  — Not suitable for large datasets but easy to understand.<br><br>
+
+<strong>Activity (10 min):</strong> Trace bubble sort on [5, 2, 8, 1, 9]. Show array after each pass.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why is bubble sort called 'bubble' sort?" Discuss: lighter (smaller) elements bubble up.<br><br>
+
+<strong>Homework:</strong> Implement bubble sort with early exit flag (stop if no swaps in a pass). Trace improved version.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "Linear search is O(n) always" — Best case is O(1), worst is O(n)<br>
+• ❌ "Bubble sort is the best sorting algorithm" — Very slow for large data; use for education only
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Array Practice — Find, Count, Filter <span class="bilingual">数组练习：查找、计数、筛选</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Write programs to count occurrences in arrays <span class="bilingual">编写程序计数数组中元素出现次数</span><br>
+• Filter arrays based on conditions <span class="bilingual">根据条件筛选数组</span><br>
+• Combine array operations <span class="bilingual">组合数组操作</span><br><br>
+
+<strong>Starter (5 min):</strong> How many students scored above 80? How many failed (below 50)?<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Count occurrences:<br>
+<pre><code>FUNCTION CountAbove(arr : ARRAY, n : INTEGER, threshold : INTEGER) RETURNS INTEGER
+    DECLARE count, i : INTEGER
+    count ← 0
+    FOR i = 1 TO n
+        IF arr[i] > threshold THEN
+            count ← count + 1
+        ENDIF
+    ENDFOR
+    RETURN count
+ENDFUNCTION</code></pre><br>
+• Filter to new array:<br>
+<pre><code>DECLARE Passed : ARRAY[1:50] OF INTEGER
+DECLARE PassCount, i : INTEGER
+PassCount ← 0
+FOR i = 1 TO 50
+    IF Scores[i] >= 50 THEN
+        PassCount ← PassCount + 1
+        Passed[PassCount] ← Scores[i]
+    ENDIF
+ENDFOR</code></pre><br>
+• Combined task: Find average of passed students, count distinctions (>=80), output statistics.<br><br>
+
+<strong>Activity (10 min):</strong> Write pseudocode for: Given array of 100 integers, output how many are even, how many are odd, how many are prime.<br><br>
+
+<strong>Plenary (5 min):</strong> "Why might filtering be inefficient for very large datasets?" Discuss: memory for new array, consider in-place filtering.<br><br>
+
+<strong>Homework:</strong> Complete array worksheet: 6 problems covering search, count, filter, average, max/min.<br><br>
+
+<strong>Differentiation:</strong><br>
+<span class="bronze">Bronze:</span> Complete partially written code for counting and filtering<br>
+<span class="silver">Silver:</span> Write complete pseudocode from specification<br>
+<span class="gold">Gold:</span> Optimise for single pass through array (calculate multiple stats simultaneously)
+</div>
+</div>
+
+<!-- WEEK 8 -->
+<div class="week-box">
+<h3>Week 8: 2D Arrays &amp; Records <span class="bilingual">二维数组与记录</span></h3>
+
+<div class="lesson">
+<strong>Lesson 1 (40 min): 2D Arrays <span class="bilingual">二维数组</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Declare and access 2D arrays <span class="bilingual">声明和访问二维数组</span><br>
+• Traverse 2D arrays using nested loops <span class="bilingual">使用嵌套循环遍历二维数组</span><br>
+• Apply 2D arrays to real problems <span class="bilingual">将二维数组应用于实际问题</span><br><br>
+
+<strong>Starter (5 min):</strong> Tic-tac-toe grid, spreadsheet, cinema seating. What do they have in common? Rows AND columns.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• 2D Array: Array of arrays. Two indices: row and column. <span class="bilingual">二维数组：数组的数组，两个索引：行和列。</span><br>
+• Declaration: <code>DECLARE Grid : ARRAY[1:3, 1:3] OF INTEGER</code><br>
+• Access: <code>Grid[2, 3]</code> → row 2, column 3.<br>
+• Initialisation with nested loops:<br>
+<pre><code>DECLARE Grid : ARRAY[1:3, 1:3] OF INTEGER
+DECLARE r, c : INTEGER
+FOR r = 1 TO 3
+    FOR c = 1 TO 3
+        Grid[r, c] ← 0
+    ENDFOR
+ENDFOR</code></pre><br>
+• Row-major traversal: Outer loop = rows, inner = columns.<br>
+• Column-major traversal: Outer loop = columns, inner = rows.<br>
+• Applications: Game boards, matrices, timetables, image pixels, seating plans.<br>
+• Sum of row: <code>FOR c = 1 TO 3: total ← total + Grid[r, c]</code><br>
+• Sum of column: <code>FOR r = 1 TO 3: total ← total + Grid[r, c]</code><br><br>
+
+<strong>Activity (10 min):</strong> Write pseudocode for 3×3 matrix addition. Two arrays input, third array stores sum.<br><br>
+
+<strong>Plenary (5 min):</strong> "How is a 2D array stored in memory?" Discuss: Row-major (all of row 1, then row 2...) vs column-major.<br><br>
+
+<strong>Homework:</strong> Write pseudocode for cinema booking: 5 rows × 8 seats. Mark booked seats, find available seats.<br><br>
+
+<strong>Bilingual Keywords:</strong><br>
+• 2D array <span class="bilingual">二维数组 (èr wéi shùzǔ)</span><br>
+• Row <span class="bilingual">行 (háng)</span><br>
+• Column <span class="bilingual">列 (liè)</span><br>
+• Matrix <span class="bilingual">矩阵 (jǔzhèn)</span>
+</div>
+
+<div class="lesson">
+<strong>Lesson 2 (40 min): Records (User-Defined Types) <span class="bilingual">记录（用户自定义类型）</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Define record types in pseudocode <span class="bilingual">在伪代码中定义记录类型</span><br>
+• Create and access records <span class="bilingual">创建和访问记录</span><br>
+• Use arrays of records <span class="bilingual">使用记录数组</span><br><br>
+
+<strong>Starter (5 min):</strong> Student has name, age, score, grade. Four separate arrays? Better: one structured type.<br><br>
+
+<strong>Main Activity (20 min):</strong><br>
+• Record: Composite data type combining multiple fields. <span class="bilingual">记录：组合多个字段的复合数据类型。</span><br>
+• Type definition:<br>
+<pre><code>TYPE Student
+    Name : STRING
+    Age : INTEGER
+    Score : INTEGER
+    Grade : STRING
+ENDTYPE
+
+DECLARE pupil : Student
+pupil.Name ← "Alice"
+pupil.Age ← 16
+pupil.Score ← 85
+pupil.Grade ← "A"</code></pre><br>
+• Arrays of records:<br>
+<pre><code>DECLARE Class : ARRAY[1:30] OF Student
+Class[1].Name ← "Alice"
+Class[1].Score ← 85</code></pre><br>
+• Processing array of records:<br>
+<pre><code>FOR i = 1 TO 30
+    IF Class[i].Score >= 80 THEN
+        Class[i].Grade ← "A"
+    ELSE
+        IF Class[i].Score >= 70 THEN
+            Class[i].Grade ← "B"
+        ENDIF
+    ENDIF
+ENDFOR</code></pre><br>
+• Benefits: Logical grouping, cleaner code, easier maintenance.<br>
+• Comparison with parallel arrays: Records keep related data together. No risk of index mismatch.<br><br>
+
+<strong>Activity (10 min):</strong> Define record type for Book (title, author, ISBN, price, available). Create array of 5 books, search by author.<br><br>
+
+<strong>Plenary (5 min):</strong> "When would you use records instead of 2D arrays?" Discuss: heterogeneous data, named fields, readability.<br><br>
+
+<strong>Homework:</strong> Define record for Car (make, model, year, mileage). Write pseudocode to find oldest car with mileage under 50,000.<br><br>
+
+<strong>Common Misconceptions:</strong><br>
+• ❌ "Records can contain different types of data in one field" — Each field has fixed type; record contains multiple fields with different types<br>
+• ❌ "Array of records is the same as 2D array" — No, array of records has named fields; 2D array has same type throughout
+</div>
+
+<div class="lesson">
+<strong>Lesson 3 (40 min): Integrated Programming Task <span class="bilingual">综合编程任务</span></strong><br><br>
+<strong>Learning Objectives:</strong><br>
+• Combine all programming constructs in complete solution <span class="bilingual">在完整解决方案中组合所有编程结构</span><br>
+• Apply structured design principles <span class="bilingual">应用结构化设计原则</span><br>
+• Write maintainable, readable pseudocode <span class="bilingual">编写可维护、可读的伪代码</span><br><br>
+
+<strong>Starter (5 min):</strong> Review: What have we learned? Variables, I/O, selection, iteration, subroutines, arrays, records, files. Time to put it together!<br><br>
+
+<strong>Main Activity (25 min):</strong><br>
+• Task: Student Management System<br>
+  — Store up to 50 students (record: Name, ID, 3 SubjectScores, Average, Grade)<br>
+  — Menu-driven: Add student, Display all, Calculate averages, Assign grades, Save to file, Load from file, Exit<br>
+  — Use subroutines for each menu option<br>
+  — Use arrays of records<br>
+  — Validate input<br>
+• Stepwise refinement:<br>
+  Level 1: Main loop → Menu → Actions → Exit<br>
+  Level 2: Each action refined into subroutine<br>
+  Level 3: Pseudocode implementation<br>
+• Teacher models: Main program structure and AddStudent subroutine.<br>
+• Students complete: DisplayAll, CalculateAverages, AssignGrades, SaveToFile, LoadFromFile.<br><br>
+
+<strong>Activity (10 min):</strong> Peer review of completed pseudocode. Check: all features, validation, structure.<br><br>
+
+<strong>Plenary (5 min):</strong> "What makes code 'good' beyond just working?" Discuss: readability, comments, structure, efficiency, maintainability.<br><br>
+
+<strong>Homework:</strong> Complete full pseudocode for Student Management System. Add at least one enhancement (search by name, sort by average).<br><br>
+
+<strong>EAL Support:</strong><br>
+• Provide bilingual flowchart for system design<br>
+• Sentence frames for explaining code: "This subroutine...", "The purpose of this loop is..."<br>
+• Allow Chinese annotations in draft pseudocode
+</div>
+</div>
+
+<!-- WEEK 9 -->
+<div class="week-box">
+<h3>Week 9: Half-Term Assessment &amp; Review <span class="bilingual">期中评估与复习</span></h3>
+
+<div class="assess">
+<strong>Half-Term Examination — Paper 2 Section A Style (Week 9)</strong><br><br>
+<strong>Format:</strong> 1 hour, 35 marks<br><br>
+<strong>Section A: Short Answer (15 marks)</strong><br>
+• Q1: Trace table for selection + iteration (5 marks)<br>
+• Q2: Identify errors in given pseudocode (4 marks)<br>
+• Q3: Explain difference between function and procedure (3 marks)<br>
+• Q4: State output of recursive function trace (3 marks)<br><br>
+<strong>Section B: Programming Tasks (20 marks)</strong><br>
+• Q5: Write pseudocode to find and display all prime numbers between 1 and 100 (8 marks)<br>
+• Q6: Write function to calculate average of array and return it (6 marks)<br>
+• Q7: Write pseudocode to read names from file, store in array, output in reverse order (6 marks)<br><br>
+<strong>Marking:</strong> Teacher-marked with detailed feedback. Focus on CIE pseudocode conventions.<br><br>
+<strong>Post-Assessment:</strong><br>
+• W9 L2: Review and error analysis<br>
+• W9 L3: Targeted programming practice for weak areas<br>
+• <span class="bilingual">考后针对性编程练习</span>
+</div>
+
+<div class="info">
+<strong>Week 9 Lesson Plan: Review &amp; Intervention</strong><br><br>
+<strong>Lesson 1 (40 min): Examination</strong><br>
+• Formal conditions, CIE-style paper<br>
+• No bilingual glossary (simulate exam conditions)<br>
+• Students write pseudocode in answer booklet<br><br>
+<strong>Lesson 2 (40 min): Whole-Class Review</strong><br>
+• Display mark scheme<br>
+• Common errors identified:<br>
+  — Missing ENDIF in nested IFs<br>
+  — Wrong loop bounds (off-by-one)<br>
+  — Not returning value from function<br>
+  — Missing declarations<br>
+  — Incorrect file closing<br>
+• Model answers shown<br><br>
+<strong>Lesson 3 (40 min): Differentiated Intervention</strong><br>
+• <span class="bronze">Group A:</span> Re-teach fundamentals with extra scaffolding; simplified tasks<br>
+• <span class="silver">Group B:</span> Targeted practice on weak construct (e.g., if recursion weak, extra recursion tasks)<br>
+• <span class="gold">Group C:</span> Advanced challenges — efficient algorithms, additional features, real-world scenarios<br>
+• <span class="bilingual">分层干预：根据评估结果分组进行针对性编程辅导</span>
+</div>
+</div>
+
+<div class="checklist">
+<strong>Weeks 1–9 Common Misconceptions Summary</strong><br><br>
+1. <strong>Variables:</strong> Forgetting to declare before use. Using = instead of ← for assignment.<br>
+2. <strong>Selection:</strong> Missing ENDIF. Using = for comparison in pseudocode (CIE uses = for both, context determines).<br>
+3. <strong>Iteration:</strong> Infinite loops (forgetting to update counter). Off-by-one errors.<br>
+4. <strong>Subroutines:</strong> Confusing procedures and functions. Not understanding scope.<br>
+5. <strong>Recursion:</strong> Forgetting base case. Not understanding stack growth.<br>
+6. <strong>Arrays:</strong> Index out of bounds. Confusing 1-based vs 0-based indexing.<br>
+7. <strong>Records:</strong> Incorrect dot notation (Class[1].Name not Class.Name[1]).<br>
+8. <strong>Files:</strong> Not closing files. Reading past EOF.<br>
+9. <strong>Strings:</strong> Confusing 1-based indexing for substring. Forgetting LENGTH function.<br>
+10. <strong>General:</strong> Insufficient comments. Unmeaningful variable names. No input validation.<br><br>
+<strong>Address each explicitly with examples and practice.</strong>
+</div>
+
+<p style="margin-top:40px; text-align:center; color:#7f8c8d;"><em>Victoria Park Academy Shenzhen — A-Level Computer Science Curriculum 2024–2026</em></p>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — Complete IA Handbook</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+  .code { background: #f4f4f4; padding: 10px; border-left: 3px solid #666; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>VPA IB DP Computer Science — Complete IA Handbook <span class="bilingual">内部评估完整手册 Nèibù Pínggū Wánzhěng Shǒucè</span></h1>
+<p><strong>Weight:</strong> 30% SL / 20% HL | <strong>Word Count:</strong> No official maximum (quality over quantity)</p>
+
+<h2>Part 1: Understanding the IA</h2>
+
+<h3>What is the IA?</h3>
+<p>The Internal Assessment is a <strong>software development project</strong> that solves a real problem for a real client. It is not a hypothetical exercise — the client must exist, the problem must be genuine, and the solution must be implemented and evaluated.</p>
+
+<h3>What Makes a Good IA?</h3>
+<table>
+<tr><th>Feature</th><th>Good IA</th><th>Poor IA</th></tr>
+<tr><td>Client</td><td>Real person with a real organisational role; documented contact</td><td>"My friend" with no clear role; invented client</td></tr>
+<tr><td>Problem</td><td>Specific, genuine, currently causing difficulty</td><td>Vague, already solved, purely hypothetical</td></tr>
+<tr><td>Solution</td><td>Software that addresses the problem directly</td><td>Generic website/app with no clear problem-solution link</td></tr>
+<tr><td>Complexity</td><td>Uses at least two complex techniques from the IB list</td><td>Simple calculator or basic form with no complex techniques</td></tr>
+<tr><td>Evidence</td><td>Client emails, meeting notes, screenshots, video</td><td>No evidence of client involvement</td></tr>
+</table>
+
+<h2>Part 2: Criteria Breakdown</h2>
+
+<h3>Criterion A: Planning (6 marks)</h3>
+
+<h4>A.1 — The Client and Problem</h4>
+<p>Introduce your client, their organisation, and their role. Quote the client describing the problem in their own words.</p>
+<div class="code">
+<strong>Exemplar Extract:</strong><br>
+"Ms. Chen Li is the Operations Manager at VPA Shenzhen's cafeteria. She manages food orders for 400 students daily, tracking inventory, recording allergies, and generating weekly purchase reports. Currently, she uses a paper logbook and Excel spreadsheets, which leads to lost records, inability to track allergens in real time, and hours spent manually compiling reports each Friday. Ms. Chen stated: 'I spend more time doing paperwork than managing the kitchen. I need a system that tracks everything automatically.'"
+</div>
+
+<h4>A.2 — Rationale for Solution</h4>
+<p>Explain why a computational solution is appropriate. Consider alternatives (manual, commercial software) and justify your custom solution.</p>
+
+<h4>A.3 — Success Criteria (3–5 criteria)</h4>
+<p>Each criterion must be <strong>specific, measurable, and testable</strong>. Avoid vague language.</p>
+<table>
+<tr><th>Weak Criterion</th><th>Strong Criterion</th></tr>
+<tr><td>"The system should be easy to use"</td><td>"The system shall allow a new food item to be added in fewer than 60 seconds without training"</td></tr>
+<tr><td>"The system should be fast"</td><td>"The system shall generate a weekly report in fewer than 5 seconds for 400 student records"</td></tr>
+<tr><td>"The system should store data"</td><td>"The system shall store at least 1,000 student allergy records with persistent storage"</td></tr>
+</table>
+
+<h4>A.4 — Record of Tasks</h4>
+<p>A dated log showing every significant activity. Include evidence of client consultation.</p>
+<table>
+<tr><th>Date</th><th>Task</th><th>Time</th><th>Client Consultation?</th></tr>
+<tr><td>2025-09-10</td><td>Initial meeting with Ms. Chen to discuss cafeteria problems</td><td>30 min</td><td>Yes — meeting notes attached</td></tr>
+<tr><td>2025-09-15</td><td>Drafted success criteria; sent to Ms. Chen for approval</td><td>45 min</td><td>Yes — email response received</td></tr>
+<tr><td>2025-09-20</td><td>Researched Python GUI libraries (Tkinter, PyQt)</td><td>60 min</td><td>No</td></tr>
+</table>
+
+<h3>Criterion B: Design (6 marks)</h3>
+
+<h4>B.1 — System Overview Diagram</h4>
+<p>Show the overall architecture: modules, data storage, user interface, data flow. Use tools like Lucidchart, Draw.io, or hand-drawn (scanned).</p>
+
+<h4>B.2 — Algorithms</h4>
+<p>Design your key algorithms in IB pseudocode <strong>before</strong> coding. Include:</p>
+<ul>
+<li>Input and output specifications</li>
+<li>Processing steps</li>
+<li>Loops, conditions, and data structures</li>
+<li>Complex techniques (e.g., file handling, searching, sorting)</li>
+</ul>
+<div class="code">
+<strong>Exemplar Algorithm (Student Record Search):</strong><br>
+function searchStudent(studentID)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;open file "students.csv" for reading<br>
+&nbsp;&nbsp;&nbsp;&nbsp;found ← false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;while not end of file do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;record ← read line from file<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if record.studentID = studentID then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;found ← true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output record<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end while<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if found = false then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output "Student not found"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;close file<br>
+end function
+</div>
+
+<h4>B.3 — Test Plan</h4>
+<table>
+<tr><th>Test #</th><th>Success Criterion</th><th>Test Data</th><th>Expected Result</th><th>Type</th></tr>
+<tr><td>1</td><td>Add item in &lt;60s</td><td>Valid item name, price, category</td><td>Item saved; confirmation message</td><td>Normal</td></tr>
+<tr><td>2</td><td>Generate weekly report in &lt;5s</td><td>400 student records</td><td>Report displayed in 4.2 seconds</td><td>Boundary</td></tr>
+<tr><td>3</td><td>Store 1,000 allergy records</td><td>1,001st record added</td><td>System rejects with error message</td><td>Erroneous</td></tr>
+</table>
+
+<h3>Criterion C: Development (12 marks)</h3>
+
+<h4>C.1 — Complex Techniques</h4>
+<p>To score highly, demonstrate <strong>at least two</strong> complex techniques:</p>
+<ul>
+<li>File handling (reading/writing structured data, CSV parsing)</li>
+<li>Searching or sorting algorithms (binary search, merge sort)</li>
+<li>Collections/arrays of records</li>
+<li>Object-oriented programming (classes, inheritance, polymorphism)</li>
+<li>Database connectivity (SQL queries, SQLite)</li>
+<li>API integration (REST APIs, JSON parsing)</li>
+<li>Recursive algorithms</li>
+<li>Multi-threading or concurrency</li>
+</ul>
+
+<h4>C.2 — Code with Commentary</h4>
+<p>Include key code sections with inline commentary. Do not dump your entire codebase. Select the sections that demonstrate complexity and design.</p>
+<div class="code">
+<strong>Commentary Example:</strong><br>
+// This function implements a binary search on the student array<br>
+// Binary search is chosen because the array is sorted by studentID<br>
+// and provides O(log n) efficiency rather than O(n) for linear search<br>
+function binarySearch(arr, target, low, high)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if low > high then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return -1  // Base case: element not found<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mid ← (low + high) / 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if arr[mid].studentID = target then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return mid  // Found at midpoint<br>
+&nbsp;&nbsp;&nbsp;&nbsp;else if arr[mid].studentID < target then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return binarySearch(arr, target, mid + 1, high)  // Search upper half<br>
+&nbsp;&nbsp;&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return binarySearch(arr, target, low, mid - 1)   // Search lower half<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end if<br>
+end function
+</div>
+
+<h4>C.3 — Video Evidence</h4>
+<p>A 5–7 minute narrated video demonstrating your solution. Requirements:</p>
+<ul>
+<li>Show the program running from launch</li>
+<li>Demonstrate each success criterion being met</li>
+<li>Include narration explaining what is happening</li>
+<li>Keep to 7 minutes maximum</li>
+<li>Upload to YouTube (unlisted) or school server; provide link</li>
+</ul>
+
+<h3>Criterion D: Evaluation (4 marks)</h3>
+
+<h4>D.1 — Testing Against Success Criteria</h4>
+<p>Show evidence for each criterion. Use screenshots, test data, and results.</p>
+<table>
+<tr><th>Criterion</th><th>Test Method</th><th>Result</th><th>Evidence</th></tr>
+<tr><td>Add item in &lt;60s</td><td>Stopwatch timing of 5 trials</td><td>Average 42 seconds</td><td>Screenshot of timer + system</td></tr>
+<tr><td>Report in &lt;5s</td><td>Stopwatch timing with 400 records</td><td>4.2 seconds</td><td>Screenshot of output</td></tr>
+</table>
+
+<h4>D.2 — Client Feedback</h4>
+<p>Include direct client feedback. Examples:</p>
+<ul>
+<li>Written evaluation form</li>
+<li>Email response</li>
+<li>Meeting notes</li>
+<li>Audio/video recording</li>
+</ul>
+<div class="code">
+<strong>Exemplar Client Feedback:</strong><br>
+"The system has significantly reduced my weekly paperwork from 3 hours to 15 minutes. I especially like the allergy alert feature — it has already prevented two potential incidents. However, I would like a Chinese language option in the future. Overall, I am very satisfied." — Ms. Chen Li, VPA Cafeteria Operations Manager
+</div>
+
+<h4>D.3 — Future Improvements</h4>
+<p>Identify at least two realistic improvements that could be made with more time or resources.</p>
+<ul>
+<li>Multi-language support (Chinese interface)</li>
+<li>Cloud synchronisation for multiple devices</li>
+<li>Barcode scanning integration for faster inventory entry</li>
+<li>Automated email alerts to suppliers when stock is low</li>
+</ul>
+
+<h2>Part 3: Exemplar Project Outline (Grade 7 Standard)</h2>
+
+<h3>Project: VPA Library Management System</h3>
+<p><strong>Client:</strong> Ms. Wang, School Librarian</p>
+<p><strong>Problem:</strong> Managing 5,000 books using a paper card system leads to lost books, untraceable loans, and no usage analytics.</p>
+<p><strong>Success Criteria:</strong></p>
+<ol>
+<li>Search for a book by title/author in under 3 seconds</li>
+<li>Check out a book in under 30 seconds</li>
+<li>Generate an overdue report automatically</li>
+<li>Store at least 5,000 book records persistently</li>
+<li>Produce a monthly usage statistics report</li>
+</ol>
+<p><strong>Complex Techniques:</strong></p>
+<ul>
+<li>File I/O with CSV structured data handling</li>
+<li>Binary search algorithm for efficient book lookup</li>
+<li>Object-oriented design (Book, Member, Loan classes)</li>
+</ul>
+
+<h2>Part 4: Common Pitfalls and How to Avoid Them</h2>
+<table>
+<tr><th>Pitfall</th><th>Why It Fails</th><th>How to Avoid</th></tr>
+<tr><td>Fake client</td><td>IB moderators can detect invented clients</td><td>Choose a real person; document all contact</td></tr>
+<tr><td>Trivial problem</td><td>Insufficient complexity for Criterion C</td><td>Ensure problem requires multiple features and complex techniques</td></tr>
+<tr><td>No client consultation evidence</td><td>Criteria A and D require proof of interaction</td><td>Save all emails, meeting notes, photos</td></tr>
+<tr><td>Vague success criteria</td><td>Cannot be tested or evaluated</td><td>Use numbers, times, quantities</td></tr>
+<tr><td>Video too long or unclear</td><td>Moderator cannot verify functionality</td><td>Script the video; keep to 7 minutes; show each criterion clearly</td></tr>
+<tr><td>Design after coding</td><td>Design must precede development</td><td>Complete design before writing code</td></tr>
+<tr><td>Plagiarised code</td><td>Academic misconduct; zero marks</td><td>Write your own code; cite any tutorials used</td></tr>
+<tr><td>Missing video evidence</td><td>Criterion C cannot be verified</td><td>Record, upload, and test link before submission</td></tr>
+</table>
+
+<h2>Part 5: EAL Support for the IA</h2>
+<table>
+<tr><th>Challenge</th><th>Support Provided</th></tr>
+<tr><td>Writing in academic English</td><td>Bilingual templates; sentence starters; peer review with fluent speakers</td></tr>
+<tr><td>Understanding command terms</td><td>Bilingual glossary of IA-specific terms; exemplar annotations</td></tr>
+<tr><td>Client communication</td><td>Permission to conduct consultations in L1; translation of key documents permitted</td></tr>
+<tr><td>Technical vocabulary</td><td>Bilingual code commentary template; pre-translated common phrases</td></tr>
+</table>
+
+<h2>Part 6: Timeline and Checklists</h2>
+
+<h3>Final Submission Checklist</h3>
+<div class="checklist">
+<ul>
+<li>☐ Criterion A: Planning (client, problem, rationale, success criteria, record of tasks)</li>
+<li>☐ Criterion B: Design (record of tasks, system overview, algorithms, test plan)</li>
+<li>☐ Criterion C: Development (complex techniques, commented code, video evidence)</li>
+<li>☐ Criterion D: Evaluation (testing evidence, client feedback, future improvements)</li>
+<li>☐ Word count reasonable (no maximum, but quality over quantity)</li>
+<li>☐ Video uploaded and link working</li>
+<li>☐ File naming follows IB requirements</li>
+<li>☐ Coversheet completed with candidate details</li>
+<li>☐ Teacher has reviewed draft and given feedback</li>
+<li>☐ No plagiarism; all sources cited</li>
+</ul>
+</div>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | IA Handbook</p>
+
+</body>
+</html>

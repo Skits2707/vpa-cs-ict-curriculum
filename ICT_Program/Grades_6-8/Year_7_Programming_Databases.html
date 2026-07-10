@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA ICT — Year 7: Programming & Databases</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .vocab-box { background: #eaf2f8; padding: 10px; border-radius: 5px; margin: 10px 0; }
+  .activity-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f39c12; margin: 15px 0; }
+  .assessment-box { background: #fdebd0; padding: 15px; border-left: 4px solid #e67e22; margin: 15px 0; }
+  .week-header { background-color: #d6eaf8; padding: 10px; margin-top: 20px; border-radius: 5px; }
+  .code-block { background: #f4f4f4; padding: 10px; border-left: 3px solid #3498db; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>Year 7: Programming Fundamentals &amp; Database Concepts</h1>
+<p><strong>Duration:</strong> 36 weeks | <strong>Language:</strong> Python 3.x | <strong>Database:</strong> Microsoft Access / SQLite</p>
+
+<h2>Unit 1: Python Programming (Weeks 1–18)</h2>
+
+<div class="week-header"><h3>Week 1 — Introduction to Python</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> Python <span class="bilingual">Python (编程语言)</span>, IDE <span class="bilingual">集成开发环境 (jíchéng kāifā huánjìng)</span>, interpreter <span class="bilingual">解释器 (jiěshìqì)</span>, syntax <span class="bilingual">语法 (yǔfǎ)</span>, execute <span class="bilingual">执行 (zhíxíng)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Set up Replit.com or IDLE. Run first program:
+<div class="code-block">print("Hello, World!")</div>
+<strong>Activity 2 (15 min):</strong> Experiment with print statements. Print name, age, favorite color on separate lines.<br><br>
+<strong>Activity 3 (10 min):</strong> Debugging — Fix 3 broken print statements (missing quotes, wrong capitalization).
+</div>
+
+<div class="week-header"><h3>Week 2 — Variables &amp; Data Types</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> variable <span class="bilingual">变量 (biànliàng)</span>, string <span class="bilingual">字符串 (zìfú chuàn)</span>, integer <span class="bilingual">整数 (zhěngshù)</span>, float <span class="bilingual">浮点数 (fúdiǎn shù)</span>, assignment <span class="bilingual">赋值 (fùzhí)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Create variables for personal information:
+<div class="code-block">
+name = "Li Wei"<br>
+age = 12<br>
+height = 1.55<br>
+print(name, "is", age, "years old.")
+</div>
+<strong>Activity 2 (15 min):</strong> Type checking — Use type() function to identify data types.<br><br>
+<strong>Activity 3 (10 min):</strong> Variable naming rules — Why can't we start with a number? Why no spaces?
+</div>
+
+<div class="week-header"><h3>Week 3 — User Input</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> input <span class="bilingual">输入 (shūrù)</span>, prompt <span class="bilingual">提示 (tíshì)</span>, string concatenation <span class="bilingual">字符串连接 (zìfú chuàn liánjiē)</span>, type casting <span class="bilingual">类型转换 (lèixíng zhuǎnhuàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Mad Libs" program — Ask for noun, verb, adjective; print silly story.<br><br>
+<strong>Activity 2 (15 min):</strong> Calculator v1 — Ask for 2 numbers, add them (remember int()!).<br><br>
+<strong>Activity 3 (10 min):</strong> Error handling — What happens if user types "five" instead of 5?
+</div>
+<div class="code-block">
+num1 = int(input("Enter first number: "))<br>
+num2 = int(input("Enter second number: "))<br>
+print("Sum:", num1 + num2)
+</div>
+
+<div class="week-header"><h3>Week 4 — Arithmetic Operations</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Build a BMI calculator: weight / (height ** 2)<br><br>
+<strong>Activity 2 (15 min):</strong> Temperature converter — Celsius to Fahrenheit and back.<br><br>
+<strong>Activity 3 (10 min):</strong> Math challenge — Calculate area of circle, triangle, rectangle with user input.
+</div>
+
+<div class="week-header"><h3>Week 5 — If/Else Statements</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> if <span class="bilingual">如果 (rúguǒ)</span>, else <span class="bilingual">否则 (fǒuzé)</span>, elif <span class="bilingual">否则如果 (fǒuzé rúguǒ)</span>, condition <span class="bilingual">条件 (tiáojiàn)</span>, comparison operator <span class="bilingual">比较运算符 (bǐjiào yùnsuàn fú)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Grade calculator — Input score, output grade (A/B/C/D/F).<br><br>
+<strong>Activity 2 (15 min):</strong> "Guess the Number" game — Computer picks 7; tells user if guess is too high/low.<br><br>
+<strong>Activity 3 (10 min):</strong> Login simulator — Check username and password.
+</div>
+<div class="code-block">
+score = int(input("Enter score: "))<br>
+if score >= 90:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Grade A")<br>
+elif score >= 80:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Grade B")<br>
+else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Keep trying!")
+</div>
+
+<div class="week-header"><h3>Week 6 — Loops: For &amp; While</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> for loop <span class="bilingual">for循环 (for xúnhuán)</span>, while loop <span class="bilingual">while循环 (while xúnhuán)</span>, iterate <span class="bilingual">迭代 (diédài)</span>, range <span class="bilingual">范围 (fànwéi)</span>, counter <span class="bilingual">计数器 (jìshùqì)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Multiplication table generator — for i in range(1, 11): print(n, "x", i, "=", n*i)<br><br>
+<strong>Activity 2 (15 min):</strong> Countdown timer using while loop.<br><br>
+<strong>Activity 3 (10 min):</strong> "When do I use for vs. while?" decision tree.
+</div>
+
+<div class="week-header"><h3>Week 7 — Lists</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> list <span class="bilingual">列表 (lièbiǎo)</span>, index <span class="bilingual">索引 (suǒyǐn)</span>, append <span class="bilingual">添加 (tiānjiā)</span>, remove <span class="bilingual">删除 (shānchú)</span>, length <span class="bilingual">长度 (chángdù)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Shopping list program — Add items, remove items, display list.<br><br>
+<strong>Activity 2 (15 min):</strong> "Top 5 Songs" — Create list, sort alphabetically, reverse order.<br><br>
+<strong>Activity 3 (10 min):</strong> List comprehension intro — Create list of squares: [x**2 for x in range(1, 11)]
+</div>
+
+<div class="week-header"><h3>Week 8 — Functions</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> function <span class="bilingual">函数 (hánshù)</span>, parameter <span class="bilingual">参数 (cānshù)</span>, return <span class="bilingual">返回 (fǎnhuí)</span>, call <span class="bilingual">调用 (diàoyòng)</span>, def <span class="bilingual">定义 (dìngyì)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Create greet(name) function. Call it 3 times with different names.<br><br>
+<strong>Activity 2 (15 min):</strong> Calculator functions — add(a,b), subtract(a,b), multiply(a,b), divide(a,b).<br><br>
+<strong>Activity 3 (10 min):</strong> Why functions? Discussion on DRY principle (Don't Repeat Yourself).
+</div>
+<div class="code-block">
+def calculate_area(length, width):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return length * width<br><br>
+print(calculate_area(5, 3))
+</div>
+
+<div class="week-header"><h3>Week 9 — String Manipulation</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Password validator — Check length, uppercase, number.<br><br>
+<strong>Activity 2 (15 min):</strong> Text analyzer — Count words, characters, find specific words.<br><br>
+<strong>Activity 3 (10 min):</strong> Palindrome checker — Is "radar" the same forwards and backwards?
+</div>
+
+<div class="week-header"><h3>Week 10 — File Handling</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> file <span class="bilingual">文件 (wénjiàn)</span>, open <span class="bilingual">打开 (dǎkāi)</span>, read <span class="bilingual">读取 (dúqǔ)</span>, write <span class="bilingual">写入 (xiěrù)</span>, close <span class="bilingual">关闭 (guānbì)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Read a text file and count lines.<br><br>
+<strong>Activity 2 (15 min):</strong> Write a diary entry to a file with timestamp.<br><br>
+<strong>Activity 3 (10 min):</strong> Quiz program — Read questions from file, check answers.
+</div>
+
+<div class="week-header"><h3>Week 11 — Mini Project: Quiz Game</h3></div>
+<div class="activity-box">
+<strong>Project Requirements:</strong>
+<ul>
+<li>5+ questions stored in a list or file</li>
+<li>Score tracking with variable</li>
+<li>Feedback for correct/incorrect answers</li>
+<li>Final score display with percentage</li>
+<li>Option to play again</li>
+</ul>
+</div>
+
+<div class="week-header"><h3>Week 12 — Python Assessment</h3></div>
+<div class="assessment-box">
+<strong>Practical Coding Test (40 min):</strong>
+<ol>
+<li>Write a program that asks for user's name and age, then calculates year of birth.</li>
+<li>Create a function that returns the largest of 3 numbers.</li>
+<li>Write a loop that prints even numbers from 2 to 20.</li>
+<li>Read a list of 5 scores and calculate the average.</li>
+<li>Write an if/else program that checks if a password is strong (8+ chars, has number).</li>
+</ol>
+</div>
+
+<h2>Unit 2: Database Concepts (Weeks 13–24)</h2>
+
+<div class="week-header"><h3>Week 13 — Introduction to Databases</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> database <span class="bilingual">数据库 (shùjùkù)</span>, table <span class="bilingual">表 (biǎo)</span>, record <span class="bilingual">记录 (jìlù)</span>, field <span class="bilingual">字段 (zìduàn)</span>, primary key <span class="bilingual">主键 (zhǔjiàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "Database vs. Spreadsheet" comparison. When do we need a database?<br><br>
+<strong>Activity 2 (15 min):</strong> Physical database model — Index cards as records. Sort by different fields.<br><br>
+<strong>Activity 3 (10 min):</strong> Identify fields in a student record: StudentID, Name, Class, DOB, Email.
+</div>
+
+<div class="week-header"><h3>Week 14 — Creating Tables in Access</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (20 min):</strong> Create a "Students" table with: ID (AutoNumber), FirstName (Text), LastName (Text), Class (Text), DOB (Date), Email (Text).<br><br>
+<strong>Activity 2 (15 min):</strong> Set data types correctly. What happens if you put text in a number field?<br><br>
+<strong>Activity 3 (5 min):</strong> Set StudentID as primary key.
+</div>
+
+<div class="week-header"><h3>Week 15 — Data Entry &amp; Validation</h3></div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Enter 10 student records. Practice navigation.<br><br>
+<strong>Activity 2 (15 min):</strong> Add validation rules: Class must be "7A", "7B", or "7C"; DOB must be before 2015.<br><br>
+<strong>Activity 3 (10 min):</strong> Create input masks for phone numbers.
+</div>
+
+<div class="week-header"><h3>Week 16 — Sorting &amp; Filtering</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> sort <span class="bilingual">排序 (páixù)</span>, filter <span class="bilingual">筛选 (shāixuǎn)</span>, ascending <span class="bilingual">升序 (shēngxù)</span>, descending <span class="bilingual">降序 (jiàngxù)</span>, criteria <span class="bilingual">条件 (tiáojiàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Sort students by LastName alphabetically. Then by DOB (oldest first).<br><br>
+<strong>Activity 2 (15 min):</strong> Filter to show only 7A students. Then only students born in 2012.<br><br>
+<strong>Activity 3 (10 min):</strong> Combined sort and filter challenge.
+</div>
+
+<div class="week-header"><h3>Week 17 — Simple Queries (SELECT)</h3></div>
+<div class="vocab-box">
+<strong>Keywords:</strong> query <span class="bilingual">查询 (cháxún)</span>, SQL <span class="bilingual">结构化查询语言 (jiégòuhuà cháxún yǔyán)</span>, SELECT <span class="bilingual">选择 (xuǎnzé)</span>, FROM <span class="bilingual">从 (cóng)</span>, WHERE <span class="bilingual">条件 (tiáojiàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Query design view — Show all students in 7B.<br><br>
+<strong>Activity 2 (15 min):</strong> SQL view introduction:
+<div class="code-block">
+SELECT FirstName, LastName FROM Students WHERE Class = "7B";
+</div>
+<strong>Activity 3 (10 min):</strong> Create 3 queries: all students with A in first name; all born after 2011; all in 7A or 7B.
+</div>
+
+<div class="week-header"><h3>Week 18 — Database Assessment</h3></div>
+<div class="assessment-box">
+<strong>Practical Test (40 min):</strong>
+<ol>
+<li>Create a "Library" database with Books table (BookID, Title, Author, Genre, Year, Available)</li>
+<li>Enter 8 records</li>
+<li>Create a query showing only "Fantasy" books</li>
+<li>Create a query showing books published after 2020</li>
+<li>Sort books by Author (A-Z)</li>
+</ol>
+</div>
+
+<h2>Standards Mapping</h2>
+<table>
+<tr><th>Unit</th><th>Standard</th><th>Description</th></tr>
+<tr><td>Python</td><td>CSTA 2-AP-10</td><td>Use flowcharts to plan and follow multistep instructions</td></tr>
+<tr><td>Python</td><td>CSTA 2-AP-11</td><td>Create clearly named variables representing different data types</td></tr>
+<tr><td>Databases</td><td>CSTA 2-DA-09</td><td>Refine computational models based on data</td></tr>
+</table>
+</body>
+</html>

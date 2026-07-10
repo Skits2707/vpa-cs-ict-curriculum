@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enrichment Programme — VPA A-Level Computer Science</title>
+<style>
+:root {
+  --vpa-blue: #003366;
+  --vpa-gold: #C9A227;
+  --vpa-light: #F5F7FA;
+  --vpa-accent: #0055A4;
+  --text-dark: #1F2937;
+  --text-body: #374151;
+  --border: #D1D5DB;
+  --success: #059669;
+  --warning: #D97706;
+  --danger: #DC2626;
+  --info: #2563EB;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: #FFFFFF;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+header {
+  background: var(--vpa-blue);
+  color: #FFFFFF;
+  padding: 40px 30px;
+  text-align: center;
+  border-bottom: 6px solid var(--vpa-gold);
+}
+header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 0.5px; }
+header h2 { margin: 8px 0 0; font-size: 1.15rem; font-weight: 400; color: #B0C4DE; }
+.container { max-width: 1100px; margin: 0 auto; padding: 30px; }
+.section { margin-bottom: 50px; }
+.section h2 {
+  color: var(--vpa-blue);
+  font-size: 1.6rem;
+  border-left: 5px solid var(--vpa-gold);
+  padding-left: 14px;
+  margin-bottom: 18px;
+}
+.section h3 {
+  color: var(--vpa-accent);
+  font-size: 1.2rem;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+.section h4 { color: var(--text-dark); font-size: 1.05rem; margin: 18px 0 8px; }
+
+/* Tables */
+table {
+  width: 100%; border-collapse: collapse;
+  margin: 16px 0; font-size: 0.95rem;
+}
+th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+th { background: var(--vpa-blue); color: #FFFFFF; font-weight: 600; }
+tr:nth-child(even) { background: var(--vpa-light); }
+
+/* Lists */
+ul, ol { margin: 10px 0 10px 20px; padding-left: 14px; }
+li { margin-bottom: 6px; }
+
+/* Boxes */
+.info-box {
+  background: #EFF6FF; border-left: 4px solid var(--info);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+.warning-box {
+  background: #FFFBEB; border-left: 4px solid var(--warning);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+.success-box {
+  background: #ECFDF5; border-left: 4px solid var(--success);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+.danger-box {
+  background: #FEF2F2; border-left: 4px solid var(--danger);
+  padding: 14px 18px; margin: 14px 0; border-radius: 4px;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 30px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--vpa-accent);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--vpa-gold);
+  border: 2px solid var(--vpa-blue);
+}
+.timeline-item .date {
+  font-weight: 700;
+  color: var(--vpa-blue);
+  font-size: 0.95rem;
+}
+
+/* Bilingual */
+.zh { color: #4B5563; font-style: italic; }
+
+/* Activity cards */
+.activity-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin: 14px 0;
+  background: #FAFBFC;
+}
+.activity-card h4 {
+  margin-top: 0;
+  color: var(--vpa-blue);
+  font-size: 1.1rem;
+}
+
+footer {
+  background: var(--vpa-blue); color: #FFFFFF;
+  text-align: center; padding: 24px 20px;
+  font-size: 0.9rem; margin-top: 40px;
+}
+
+@media print {
+  body { font-size: 10pt; }
+  .section { page-break-inside: avoid; }
+  header { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>A-Level Computer Science Enrichment Programme</h1>
+  <h2>A-Level计算机科学课外拓展计划 / Victoria Park Academy</h2>
+</header>
+
+<div class="container">
+
+<!-- Section 1: Introduction -->
+<div class="section">
+  <h2>1. Introduction / 引言</h2>
+  <p>The Enrichment Programme is designed to extend VPA A-Level Computer Science students beyond the syllabus, fostering deeper engagement, developing competitive portfolios, and building the skills and experiences that distinguish outstanding university applicants and future professionals.</p>
+  <p class="zh">课外拓展计划旨在让VPA A-Level计算机科学学生超越课程大纲，培养更深层次的参与度，发展有竞争力的作品集，并建立使杰出大学申请者和未来专业人士脱颖而出的技能和经验。</p>
+
+  <div class="info-box">
+    <strong>Philosophy / 理念：</strong> Enrichment is not "extra work" — it is the space where passion meets practice. Students who engage deeply with enrichment activities develop the independence, creativity, and resilience that define exceptional computer scientists.
+    <p class="zh">课外拓展不是"额外作业"——它是热情与实践相遇的空间。深入参与拓展活动的学生培养了定义杰出计算机科学家的独立性、创造力和韧性。</p>
+  </div>
+
+  <h3>1.1 Programme Aims / 计划目标</h3>
+  <ul>
+    <li>Extend subject knowledge beyond the A-Level syllabus. <span class="zh">将学科知识扩展到A-Level大纲之外。</span></li>
+    <li>Develop practical skills through competition, project work, and collaboration. <span class="zh">通过竞赛、项目工作和合作培养实践技能。</span></li>
+    <li>Build a competitive university application portfolio. <span class="zh">建立有竞争力的大学申请作品集。</span></li>
+    <li>Foster professional networks and industry awareness. <span class="zh">培养专业网络和行业意识。</span></li>
+    <li>Encourage leadership through peer mentoring and club organisation. <span class="zh">通过同伴辅导和俱乐部组织鼓励领导力。</span></li>
+    <li>Support wellbeing through structured, meaningful engagement. <span class="zh">通过结构化、有意义的参与支持身心健康。</span></li>
+  </ul>
+</div>
+
+<!-- Section 2: Coding Competitions -->
+<div class="section">
+  <h2>2. Coding Competitions / 编程竞赛</h2>
+  <p>Competitions develop algorithmic thinking, resilience under pressure, and the ability to solve novel problems within time constraints. <span class="zh">竞赛培养算法思维、压力下的韧性，以及在时间限制内解决新问题的能力。</span></p>
+
+  <h3>2.1 UK Bebras Computational Thinking Challenge / 英国Bebras计算思维挑战</h3>
+  <div class="activity-card">
+    <h4>Overview / 概述</h4>
+    <p>A 40-minute, multiple-choice challenge designed to introduce computational thinking to students. No programming required — focuses on logic, pattern recognition, and problem decomposition.</p>
+    <p class="zh">一项40分钟的多项选择挑战，旨在向学生介绍计算思维。不需要编程——专注于逻辑、模式识别和问题分解。</p>
+
+    <h4>Details / 详情</h4>
+    <ul>
+      <li><strong>Level:</strong> Senior (16–18) <span class="zh">级别：高级（16-18岁）</span></li>
+      <li><strong>When:</strong> November (annual) <span class="zh">时间：11月（每年）</span></li>
+      <li><strong>Format:</strong> Online, 40 minutes, multiple choice <span class="zh">形式：在线，40分钟，多项选择</span></li>
+      <li><strong>Cost:</strong> £3 per student (school-bulk pricing available) <span class="zh">费用：每位学生3英镑（学校批量定价可用）</span></li>
+      <li><strong>Website:</strong> <a href="https://www.bebras.uk/" target="_blank">bebras.uk</a></li>
+    </ul>
+
+    <h4>VPA Preparation / VPA准备</h4>
+    <ul>
+      <li>Practice with previous years' questions (available on website). <span class="zh">用往年试题练习（网站上可用）。</span></li>
+      <li>Run a "Bebras Breakfast Club" — 30 minutes of practice weekly from September. <span class="zh">开设"Bebras早餐俱乐部"——从9月起每周30分钟练习。</span></li>
+      <li>Top performers (top 10% nationally) are invited to the Oxford University Computing Challenge (OUCC). <span class="zh">顶尖表现者（全国前10%）将被邀请参加牛津大学计算挑战（OUCC）。</span></li>
+    </ul>
+  </div>
+
+  <h3>2.2 Oxford University Computing Challenge (OUCC) / 牛津大学计算挑战</h3>
+  <div class="activity-card">
+    <h4>Overview / 概述</h4>
+    <p>Invitation-only follow-up to Bebras for top-performing students. More challenging problems requiring deeper computational thinking.</p>
+    <p class="zh">Bebras的邀请制后续挑战，面向顶尖表现学生。更具挑战性的问题，需要更深层次的计算思维。</p>
+
+    <h4>Details / 详情</h4>
+    <ul>
+      <li><strong>When:</strong> January (annual) <span class="zh">时间：1月（每年）</span></li>
+      <li><strong>Format:</strong> Online, 1 hour, open-ended problems <span class="zh">形式：在线，1小时，开放式问题</span></li>
+      <li><strong>Eligibility:</strong> Top 10% in Bebras Senior <span class="zh">资格：Bebras高级前10%</span></li>
+      <li><strong>Website:</strong> <a href="https://www.ukmt.org.uk/" target="_blank">UKMT (administers OUCC)</a></li>
+    </ul>
+
+    <h4>VPA Preparation / VPA准备</h4>
+    <ul>
+      <li>Identify Bebras high-scorers in November; begin OUCC preparation immediately. <span class="zh">11月识别Bebras高分者；立即开始OUCC准备。</span></li>
+      <li>Use UKMT Senior Challenge resources for additional problem-solving practice. <span class="zh">使用UKMT高级挑战赛资源进行额外的问题解决练习。</span></li>
+    </ul>
+  </div>
+
+  <h3>2.3 British Informatics Olympiad (BIO) / 英国信息学奥林匹克</h3>
+  <div class="activity-card">
+    <h4>Overview / 概述</h4>
+    <p>The UK's selection competition for the International Olympiad in Informatics (IOI). Requires programming ability (Python, C++, or Java).</p>
+    <p class="zh">英国国际信息学奥林匹克（IOI）的选拔赛。需要编程能力（Python、C++或Java）。</p>
+
+    <h4>Details / 详情</h4>
+    <ul>
+      <li><strong>Round 1:</strong> January — 3-hour programming competition (online, school-supervised) <span class="zh">第一轮：1月——3小时编程竞赛（在线，学校监督）</span></li>
+      <li><strong>Round 2:</strong> February — Invitation-only, harder problems <span class="zh">第二轮：2月——邀请制，更难的问题</span></li>
+      <li><strong>Final:</strong> April — Residential training camp for IOI selection <span class="zh">决赛：4月——IOI选拔的住宿训练营</span></li>
+      <li><strong>Website:</strong> <a href="https://www.britishinformaticsolympiad.org/" target="_blank">britishinformaticsolympiad.org</a></li>
+    </ul>
+
+    <h4>VPA Preparation / VPA准备</h4>
+    <ul>
+      <li>Run a weekly "Olympiad Programming Club" from September. <span class="zh">从9月起每周开设"奥林匹克编程俱乐部"。</span></li>
+      <li>Focus on: recursion, graph algorithms, dynamic programming, greedy algorithms. <span class="zh">重点：递归、图算法、动态规划、贪心算法。</span></li>
+      <li>Use past BIO papers and USACO training resources. <span class="zh">使用历年BIO试卷和USACO培训资源。</span></li>
+      <li>Encourage C++ for competitive programming (faster execution). <span class="zh">鼓励使用C++进行竞技编程（执行速度更快）。</span></li>
+    </ul>
+  </div>
+
+  <h3>2.4 International Olympiad in Informatics (IOI) / 国际信息学奥林匹克</h3>
+  <div class="activity-card">
+    <h4>Overview / 概述</h4>
+    <p>The pinnacle of secondary school competitive programming. The UK sends 4 students annually. Requires years of dedicated preparation.</p>
+    <p class="zh">中学竞技编程的巅峰。英国每年派出4名学生。需要多年的专注准备。</p>
+
+    <h4>Details / 详情</h4>
+    <ul>
+      <li><strong>When:</strong> August–September (annual, location rotates globally) <span class="zh">时间：8月-9月（每年，地点全球轮换）</span></li>
+      <li><strong>Format:</strong> Two 5-hour programming contests over 2 days <span class="zh">形式：2天内进行两次5小时编程竞赛</span></li>
+      <li><strong>Eligibility:</strong> Selected from BIO finalists; must be under 20 and not enrolled in university <span class="zh">资格：从BIO决赛选手中选拔；必须未满20岁且未入读大学</span></li>
+      <li><strong>Website:</strong> <a href="https://ioinformatics.org/" target="_blank">ioinformatics.org</a></li>
+    </ul>
+  </div>
+
+  <h3>2.5 Other Competitions / 其他竞赛</h3>
+  <table>
+    <tr>
+      <th>Competition / 竞赛</th>
+      <th>When / 时间</th>
+      <th>Format / 形式</th>
+      <th>Level / 级别</th>
+    </tr>
+    <tr>
+      <td>UKMT Senior Mathematical Challenge</td>
+      <td>November</td>
+      <td>90 min, multiple choice</td>
+      <td>Strong maths + CS students</td>
+    </tr>
+    <tr>
+      <td>British Physics Olympiad (Computational Physics)</td>
+      <td>February</td>
+      <td>Written + computational</td>
+      <td>CS + Physics students</td>
+    </tr>
+    <tr>
+      <td>Cyber Discovery (UK)</td>
+      <td>September–March</td>
+      <td>Online cybersecurity challenges</td>
+      <td>All CS students (free)</td>
+    </tr>
+    <tr>
+      <td>Google Code Jam (global)</td>
+      <td>March–August</td>
+      <td>Online rounds, finals in person</td>
+      <td>Advanced programmers</td>
+    </tr>
+    <tr>
+      <td>Facebook Hacker Cup (global)</td>
+      <td>July–November</td>
+      <td>Online algorithmic contests</td>
+      <td>Advanced programmers</td>
+    </tr>
+    <tr>
+      <td>USACO (USA Computing Olympiad)</td>
+      <td>December–March</td>
+      <td>Monthly online contests</td>
+      <td>All levels; bronze to platinum</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Section 3: Tech Clubs -->
+<div class="section">
+  <h2>3. Tech Clubs / 科技俱乐部</h2>
+  <p>Clubs provide regular, structured opportunities for students to explore interests, develop projects, and collaborate with peers. <span class="zh">俱乐部为学生提供定期、结构化的机会，让他们探索兴趣、开发项目并与同伴合作。</span></p>
+
+  <h3>3.1 VPA Robotics Club / VPA机器人俱乐部</h3>
+  <div class="activity-card">
+    <h4>Overview / 概述</h4>
+    <p>Students design, build, and program robots using LEGO Mindstorms, Arduino, or Raspberry Pi. Prepares for competitions and develops hardware-software integration skills.</p>
+    <p class="zh">学生使用LEGO Mindstorms、Arduino或Raspberry Pi设计、构建和编程机器人。为竞赛做准备，并培养软硬件集成技能。</p>
+
+    <h4>Schedule / 时间安排</h4>
+    <ul>
+      <li><strong>When:</strong> Tuesdays, 15:30–17:00 (weekly) <span class="zh">时间：周二，15:30-17:00（每周）</span></li>
+      <li><strong>Where:</strong> VPA Design &amp; Technology Workshop <span class="zh">地点：VPA设计与技术工作坊</span></li>
+      <li><strong>Lead:</strong> CS Teacher + DT Technician <span class="zh">负责人：CS教师 + DT技术员</span></li>
+    </ul>
+
+    <h4>Activities / 活动</h4>
+    <ul>
+      <li>Autonomous line-following robot project (Year 12, Term 1) <span class="zh">自主循线机器人项目（12年级，第1学期）</span></li>
+      <li>Robot maze-solving challenge (Year 12, Term 2) <span class="zh">机器人迷宫解决挑战（12年级，第2学期）</span></li>
+      <li>Sumo robot competition (Year 12, Term 3) <span class="zh">相扑机器人竞赛（12年级，第3学期）</span></li>
+      <li>Advanced: ROS (Robot Operating System) introduction (Year 13) <span class="zh">进阶：ROS（机器人操作系统）入门（13年级）</span></li>
+    </ul>
+
+    <h4>Competitions / 竞赛</h4>
+    <ul>
+      <li>FIRST Robotics Competition (FRC) — registration opens September <span class="zh">FIRST机器人竞赛（FRC）——报名9月开放</span></li>
+      <li>VEX Robotics Competition — regional heats November–March <span class="zh">VEX机器人竞赛——地区赛11月-3月</span></li>
+      <li>Pi Wars (Raspberry Pi robot competition) — Cambridge, April <span class="zh">Pi Wars（Raspberry Pi机器人竞赛）——剑桥，4月</span></li>
+    </ul>
+  </div>
+
+  <h3>3.2 VPA AI &amp; Machine Learning Club / VPA人工智能与机器学习俱乐部</h3>
+  <div class="activity-card">
+    <h4>Overview / 概述</h4>
+    <p>Explores artificial intelligence concepts beyond the A-Level syllabus. Students build and train neural networks using Python (TensorFlow/Keras) and explore real-world applications.</p>
+    <p class="zh">探索A-Level大纲之外的人工智能概念。学生使用Python（TensorFlow/Keras）构建和训练神经网络，并探索实际应用。</p>
+
+    <h4>Schedule / 时间安排</h4>
+    <ul>
+      <li><strong>When:</strong> Thursdays, 15:30–17:00 (weekly) <span class="zh">时间：周四，15:30-17:00（每周）</span></li>
+      <li><strong>Where:</strong> VPA Computer Suite 2 <span class="zh">地点：VPA计算机室2</span></li>
+      <li><strong>Lead:</strong> CS Teacher + external mentor (PhD student from local university) <span class="zh">负责人：CS教师 + 外部导师（当地大学博士生）</span></li>
+    </ul>
+
+    <h4>Activities / 活动</h4>
+    <ul>
+      <li>Introduction to neural networks and backpropagation (Term 1) <span class="zh">神经网络和反向传播入门（第1学期）</span></li>
+      <li>Image classification project using TensorFlow (Term 2) <span class="zh">使用TensorFlow的图像分类项目（第2学期）</span></li>
+      <li>Natural language processing: sentiment analysis (Term 3) <span class="zh">自然语言处理：情感分析（第3学期）</span></li>
+      <li>Year 13: Independent research project with mentor guidance <span class="zh">13年级：在导师指导下进行独立研究项目</span></li>
+    </ul>
+
+    <h4>Resources / 资源</h4>
+    <ul>
+      <li>Fast.ai "Practical Deep Learning for Coders" (free online course) <span class="zh">Fast.ai "程序员的实用深度学习"（免费在线课程）</span></li>
+      <li>Google Colab (free GPU access for training models) <span class="zh">Google Colab（免费GPU访问用于训练模型）</span></li>
+      <li>Kaggle competitions (beginner-level) <span class="zh">Kaggle竞赛（入门级）</span></li>
+    </ul>
+  </div>
+
+  <h3>3.3 VPA Game Development Club / VPA游戏开发俱乐部</h3>
+  <div class="activity-card">
+    <h4>Overview / 概述</h4>
+    <p>Students design and develop video games using Unity (C#) or Godot (GDScript). Covers game design, physics, graphics, and audio.</p>
+    <p class="zh">学生使用Unity（C#）或Godot（GDScript）设计和开发视频游戏。涵盖游戏设计、物理、图形和音频。</p>
+
+    <h4>Schedule / 时间安排</h4>
+    <ul>
+      <li><strong>When:</strong> Fridays, 15:30–17:00 (weekly) <span class="zh">时间：周五，15:30-17:00（每周）</span></li>
+      <li><strong>Where:</strong> VPA Computer Suite 1 <span class="zh">地点：VPA计算机室1</span></li>
+      <li><strong>Lead:</strong> CS Teacher <span class="zh">负责人：CS教师</span></li>
+    </ul>
+
+    <h4>Activities / 活动</h4>
+    <ul>
+      <li>Unity basics: scenes, GameObjects, components (Term 1) <span class="zh">Unity基础：场景、游戏对象、组件（第1学期）</span></li>
+      <li>2D platformer project (Term 2) <span class="zh">2D平台游戏项目（第2学期）</span></li>
+      <li>Game Jam preparation: 48-hour game development challenge (Term 3) <span class="zh">Game Jam准备：48小时游戏开发挑战（第3学期）</span></li>
+      <li>Year 13: Portfolio game for university application <span class="zh">13年级：用于大学申请的作品集游戏</span></li>
+    </ul>
+
+    <h4>Competitions / 竞赛</h4>
+    <ul>
+      <li>BAFTA Young Game Designers Competition (ages 14–18) <span class="zh">BAFTA青年游戏设计师竞赛（14-18岁）</span></li>
+      <li>Global Game Jam (January, 48-hour event) <span class="zh">Global Game Jam（1月，48小时活动）</span></li>
+      <li>Independent Games Festival (IGF) Student Showcase <span class="zh">独立游戏节（IGF）学生展示</span></li>
+    </ul>
+  </div>
+
+  <h3>3.4 VPA Cybersecurity Club / VPA网络安全俱乐部</h3>
+  <div class="activity-card">
+    <h4>Overview / 概述</h4>
+    <p>Introduces ethical hacking, cryptography, network security, and digital forensics. Emphasises responsible disclosure and legal boundaries.</p>
+    <p class="zh">介绍道德黑客、密码学、网络安全和数字取证。强调负责任的披露和法律边界。</p>
+
+    <h4>Schedule / 时间安排</h4>
+    <ul>
+      <li><strong>When:</strong> Wednesdays, 15:30–16:30 (fortnightly) <span class="zh">时间：周三，15:30-16:30（每两周）</span></li>
+      <li><strong>Lead:</strong> CS Teacher + visiting cybersecurity professional <span class="zh">负责人：CS教师 + 访问网络安全专业人员</span></li>
+    </ul>
+
+    <h4>Activities / 活动</h4>
+    <ul>
+      <li>Capture The Flag (CTF) challenges on picoCTF and CyberStart <span class="zh">在picoCTF和CyberStart上进行夺旗赛（CTF）挑战</span></li>
+      <li>Password cracking and cryptography workshops <span class="zh">密码破解和密码学工作坊</span></li>
+      <li>Network packet analysis with Wireshark <span class="zh">使用Wireshark进行网络数据包分析</span></li>
+      <li>Guest talks from industry professionals <span class="zh">行业专业人士的客座讲座</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Section 4: Hackathons -->
+<div class="section">
+  <h2>4. Hackathons / 黑客马拉松</h2>
+  <p>Hackathons are intensive, time-limited events where teams collaborate to build a working prototype. They develop teamwork, rapid prototyping, and presentation skills. <span class="zh">黑客马拉松是密集的、有时间限制的活动，团队在其中合作构建工作原型。它们培养团队合作、快速原型设计和演讲技能。</span></p>
+
+  <h3>4.1 Recommended Hackathons for VPA Students / 推荐给VPA学生的黑客马拉松</h3>
+  <table>
+    <tr>
+      <th>Hackathon / 黑客马拉松</th>
+      <th>When / 时间</th>
+      <th>Location / 地点</th>
+      <th>Eligibility / 资格</th>
+    </tr>
+    <tr>
+      <td>Hack the Midlands</td>
+      <td>October</td>
+      <td>Birmingham, UK</td>
+      <td>16+; beginner-friendly</td>
+    </tr>
+    <tr>
+      <td>StudentHack</td>
+      <td>March</td>
+      <td>Manchester, UK</td>
+      <td>University + A-Level students</td>
+    </tr>
+    <tr>
+      <td>GreatUniHack</td>
+      <td>November</td>
+      <td>Manchester, UK</td>
+      <td>University students; A-Level by exception</td>
+    </tr>
+    <tr>
+      <td>Hack Cambridge</td>
+      <td>January</td>
+      <td>Cambridge, UK</td>
+      <td>University students; competitive</td>
+    </tr>
+    <tr>
+      <td>MLH (Major League Hacking) events</td>
+      <td>Year-round</td>
+      <td>Global (online + in-person)</td>
+      <td>All students; many beginner-friendly</td>
+    </tr>
+    <tr>
+      <td>Google Hash Code</td>
+      <td>February</td>
+      <td>Online + local hubs</td>
+      <td>All ages; team-based</td>
+    </tr>
+  </table>
+
+  <h3>4.2 VPA Hackathon Preparation / VPA黑客马拉松准备</h3>
+  <ul>
+    <li>Run an internal "VPA Mini-Hackathon" in Term 2 (6 hours, school-based). <span class="zh">在第2学期举办内部"VPA迷你黑客马拉松"（6小时，校内）。</span></li>
+    <li>Form teams of 3–4 students with complementary skills (coder, designer, presenter). <span class="zh">组建3-4人团队，具备互补技能（编码者、设计师、演讲者）。</span></li>
+    <li>Prepare a "hackathon toolkit": GitHub accounts, Figma (design), Replit (quick coding). <span class="zh">准备"黑客马拉松工具包"：GitHub账户、Figma（设计）、Replit（快速编码）。</span></li>
+    <li>Practise pitching: 2-minute demo presentations. <span class="zh">练习演讲：2分钟演示展示。</span></li>
+  </ul>
+</div>
+
+<!-- Section 5: Work Experience -->
+<div class="section">
+  <h2>5. Work Experience Placements / 工作经验实习</h2>
+  <p>Work experience provides invaluable insight into professional software development and strengthens university applications and CVs. <span class="zh">工作经验为专业软件开发提供了宝贵的洞察，并加强了大学申请和简历。</span></p>
+
+  <h3>5.1 Types of Placement / 实习类型</h3>
+  <table>
+    <tr>
+      <th>Type / 类型</th>
+      <th>Duration / 时长</th>
+      <th>When / 时间</th>
+      <th>How to Secure / 如何获得</th>
+    </tr>
+    <tr>
+      <td>Shadowing day</td>
+      <td>1 day</td>
+      <td>Any time</td>
+      <td>Parental contact; local tech companies</td>
+    </tr>
+    <tr>
+      <td>Week-long placement</td>
+      <td>5 days</td>
+      <td>Half-term or summer</td>
+      <td>Formal application; careers fair networking</td>
+    </tr>
+    <tr>
+      <td>Summer internship (structured)</td>
+      <td>2–4 weeks</td>
+      <td>July–August</td>
+      <td>Competitive application; Year 12 students</td>
+    </tr>
+    <tr>
+      <td>Virtual internship</td>
+      <td>Flexible</td>
+      <td>Any time</td>
+      <td>Forage, Springpod, Barclays LifeSkills</td>
+    </tr>
+  </table>
+
+  <h3>5.2 Target Employers / 目标雇主</h3>
+  <ul>
+    <li><strong>Local tech companies:</strong> Software houses, web agencies, app developers. <span class="zh">本地科技公司：软件公司、网页代理、应用开发者。</span></li>
+    <li><strong>Large corporations:</strong> IBM, Microsoft, Google (structured programmes). <span class="zh">大型企业：IBM、微软、Google（结构化项目）。</span></li>
+    <li><strong>Startups:</strong> High responsibility, close mentorship, often unpaid. <span class="zh">初创公司：高责任、密切指导，通常无薪。</span></li>
+    <li><strong>Public sector:</strong> NHS Digital, local council IT departments, GCHQ (cybersecurity). <span class="zh">公共部门：NHS数字部门、地方议会IT部门、GCHQ（网络安全）。</span></li>
+    <li><strong>Non-tech companies with IT departments:</strong> Banks, retailers, manufacturers. <span class="zh">有IT部门的非科技公司：银行、零售商、制造商。</span></li>
+  </ul>
+
+  <h3>5.3 VPA Support for Work Experience / VPA对工作经验的支持</h3>
+  <ul>
+    <li>Careers Fair (November): Invite local tech employers to present opportunities. <span class="zh">职业博览会（11月）：邀请本地科技雇主展示机会。</span></li>
+    <li>CV and cover letter workshop (Term 1, Year 12). <span class="zh">简历和求职信工作坊（12年级第1学期）。</span></li>
+    <li>Mock interview practice with CS teachers and external volunteers. <span class="zh">与CS教师和外部志愿者进行模拟面试练习。</span></li>
+    <li>Alumni network: Former VPA students in tech provide placement leads. <span class="zh">校友网络：在科技领域的VPA往届学生提供实习线索。</span></li>
+  </ul>
+
+  <h3>5.4 Virtual Work Experience / 虚拟工作经验</h3>
+  <ul>
+    <li><strong>Forage:</strong> Free virtual internships with companies like JPMorgan, Goldman Sachs, Microsoft. <span class="zh">Forage：与摩根大通、高盛、微软等公司的免费虚拟实习。</span></li>
+    <li><strong>Springpod:</strong> Virtual work experience in tech and cybersecurity. <span class="zh">Springpod：科技和网络安全的虚拟工作经验。</span></li>
+    <li><strong>Barclays LifeSkills:</strong> Interactive virtual work experience modules. <span class="zh">Barclays LifeSkills：互动虚拟工作经验模块。</span></li>
+  </ul>
+</div>
+
+<!-- Section 6: University Taster Days -->
+<div class="section">
+  <h2>6. University Taster Days / 大学体验日</h2>
+  <p>Taster days provide insight into university CS departments, teaching styles, and campus life. They also demonstrate "subject engagement" on personal statements. <span class="zh">体验日提供对大学CS系、教学风格和校园生活的洞察。它们还在个人陈述中展示"学科参与度"。</span></p>
+
+  <h3>6.1 Recommended Taster Days / 推荐的体验日</h3>
+  <table>
+    <tr>
+      <th>University / 大学</th>
+      <th>Event / 活动</th>
+      <th>When / 时间</th>
+      <th>Target Year / 目标年级</th>
+    </tr>
+    <tr>
+      <td>University of Oxford</td>
+      <td>Computer Science Taster Day</td>
+      <td>March / June</td>
+      <td>Year 12</td>
+    </tr>
+    <tr>
+      <td>University of Cambridge</td>
+      <td>Computer Science Masterclass</td>
+      <td>March / July</td>
+      <td>Year 12</td>
+    </tr>
+    <tr>
+      <td>Imperial College London</td>
+      <td>Computing Taster Day</td>
+      <td>June / July</td>
+      <td>Year 12</td>
+    </tr>
+    <tr>
+      <td>University of Manchester</td>
+      <td>Computer Science Experience Day</td>
+      <td>March / June</td>
+      <td>Year 12</td>
+    </tr>
+    <tr>
+      <td>University of Warwick</td>
+      <td>Computer Science Taster Day</td>
+      <td>June</td>
+      <td>Year 12</td>
+    </tr>
+    <tr>
+      <td>University of Southampton</td>
+      <td>Cybersecurity Taster Day</td>
+      <td>June</td>
+      <td>Year 12</td>
+    </tr>
+    <tr>
+      <td>University of Edinburgh</td>
+      <td>Informatics Taster Day</td>
+      <td>June</td>
+      <td>Year 12</td>
+    </tr>
+  </table>
+
+  <h3>6.2 VPA Taster Day Programme / VPA体验日计划</h3>
+  <ul>
+    <li><strong>Year 12, Term 2:</strong> Group trip to one Russell Group university (Oxford, Cambridge, Imperial, or Manchester). <span class="zh">12年级第2学期：团体前往一所罗素集团大学（牛津、剑桥、帝国理工或曼彻斯特）。</span></li>
+    <li><strong>Year 12, Summer:</strong> Students attend 1–2 additional taster days independently. <span class="zh">12年级暑假：学生独立参加1-2个额外体验日。</span></li>
+    <li><strong>Funding:</strong> VPA subsidises travel costs for students receiving Pupil Premium. <span class="zh">资金：VPA为接受学生津贴的学生补贴差旅费。</span></li>
+  </ul>
+</div>
+
+<!-- Section 7: Online Courses (MOOCs) -->
+<div class="section">
+  <h2>7. Online Courses (MOOCs) / 在线课程</h2>
+  <p>MOOCs allow students to explore advanced topics, learn from world-class institutions, and earn certificates for their portfolios. <span class="zh">MOOC允许学生探索高级主题，向世界级机构学习，并为他们的作品集获得证书。</span></p>
+
+  <h3>7.1 Recommended MOOCs by Level / 按级别推荐的MOOC</h3>
+  <table>
+    <tr>
+      <th>Course / 课程</th>
+      <th>Provider / 提供者</th>
+      <th>Level / 级别</th>
+      <th>Certificate / 证书</th>
+    </tr>
+    <tr>
+      <td>CS50: Introduction to Computer Science</td>
+      <td>Harvard (edX)</td>
+      <td>Beginner–Intermediate</td>
+      <td>Free (verified $149)</td>
+    </tr>
+    <tr>
+      <td>CS50's Introduction to Programming with Python</td>
+      <td>Harvard (edX)</td>
+      <td>Beginner</td>
+      <td>Free (verified $149)</td>
+    </tr>
+    <tr>
+      <td>MIT 6.0001: Introduction to Computer Science and Programming in Python</td>
+      <td>MIT OpenCourseWare</td>
+      <td>Intermediate</td>
+      <td>Free (no certificate)</td>
+    </tr>
+    <tr>
+      <td>Stanford CS106A: Programming Methodology</td>
+      <td>Stanford (online)</td>
+      <td>Beginner–Intermediate</td>
+      <td>Free</td>
+    </tr>
+    <tr>
+      <td>Machine Learning (Andrew Ng)</td>
+      <td>Stanford (Coursera)</td>
+      <td>Intermediate</td>
+      <td>Free audit (certificate $49)</td>
+    </tr>
+    <tr>
+      <td>Deep Learning Specialisation</td>
+      <td>DeepLearning.AI (Coursera)</td>
+      <td>Advanced</td>
+      <td>Subscription ($49/month)</td>
+    </tr>
+    <tr>
+      <td>Fast.ai: Practical Deep Learning for Coders</td>
+      <td>Fast.ai</td>
+      <td>Intermediate–Advanced</td>
+      <td>Free</td>
+    </tr>
+    <tr>
+      <td>Google IT Support Professional Certificate</td>
+      <td>Google (Coursera)</td>
+      <td>Beginner</td>
+      <td>Subscription ($49/month)</td>
+    </tr>
+    <tr>
+      <td>Introduction to Cybersecurity</td>
+      <td>Cisco Networking Academy</td>
+      <td>Beginner</td>
+      <td>Free</td>
+    </tr>
+    <tr>
+      <td>Responsive Web Design</td>
+      <td>freeCodeCamp</td>
+      <td>Beginner</td>
+      <td>Free</td>
+    </tr>
+  </table>
+
+  <h3>7.2 VPA MOOC Support / VPA MOOC支持</h3>
+  <ul>
+    <li>MOOC "study buddy" system: pair students taking the same course. <span class="zh">MOOC"学习伙伴"系统：将参加同一课程的学生配对。</span></li>
+    <li>Certificate reimbursement: VPA reimburses verified certificate costs for students who complete the course (up to £50/year). <span class="zh">证书报销：VPA为完成课程的学生报销验证证书费用（每年最多50英镑）。</span></li>
+    <li>MOOC showcase: Students present what they learned in a 5-minute assembly slot. <span class="zh">MOOC展示：学生在5分钟的集会时段展示他们学到的内容。</span></li>
+  </ul>
+</div>
+
+<!-- Section 8: Guest Speakers & Industry Visits -->
+<div class="section">
+  <h2>8. Guest Speakers &amp; Industry Visits / 客座讲师与行业参观</h2>
+
+  <h3>8.1 Guest Speaker Programme / 客座讲师计划</h3>
+  <p>Guest speakers provide real-world context, inspire students, and offer networking opportunities. <span class="zh">客座讲师提供现实世界的背景、激励学生，并提供社交机会。</span></p>
+
+  <table>
+    <tr>
+      <th>Speaker Type / 讲师类型</th>
+      <th>Topics / 主题</th>
+      <th>Frequency / 频率</th>
+    </tr>
+    <tr>
+      <td>Software Engineer (Tech Company)</td>
+      <td>Day in the life, agile development, career path</td>
+      <td>Termly</td>
+    </tr>
+    <tr>
+      <td>Data Scientist</td>
+      <td>Machine learning in industry, data pipelines, tools</td>
+      <td>Annually</td>
+    </tr>
+    <tr>
+      <td>Cybersecurity Professional</td>
+      <td>Ethical hacking, incident response, career in GCHQ</td>
+      <td>Annually</td>
+    </tr>
+    <tr>
+      <td>AI Researcher (Academic)</td>
+      <td>Cutting-edge research, PhD life, publication</td>
+      <td>Annually</td>
+    </tr>
+    <tr>
+      <td>Tech Entrepreneur</td>
+      <td>Startups, fundraising, product development</td>
+      <td>Annually</td>
+    </tr>
+    <tr>
+      <td>VPA Alumni in Tech</td>
+      <td>University experience, job search, advice</td>
+      <td>Termly</td>
+    </tr>
+    <tr>
+      <td>University Admissions Tutor</td>
+      <td>What we look for, personal statement tips, interview prep</td>
+      <td>Annually (Year 12)</td>
+    </tr>
+  </table>
+
+  <h3>8.2 Industry Visits / 行业参观</h3>
+  <ul>
+    <li><strong>Tech company HQ:</strong> Google, Microsoft, Amazon (London offices); apply through school partnerships. <span class="zh">科技公司总部：Google、微软、亚马逊（伦敦办公室）；通过学校合作伙伴关系申请。</span></li>
+    <li><strong>University research lab:</strong> Visit a local university's CS department; observe research in progress. <span class="zh">大学研究实验室：参观当地大学CS系；观察正在进行的研究。</span></li>
+    <li><strong>Startup incubator:</strong> Visit a local tech hub (e.g., Birmingham Tech Hub, Manchester Science Park). <span class="zh">初创企业孵化器：参观当地科技中心（如伯明翰科技中心、曼彻斯特科学园）。</span></li>
+    <li><strong>Data centre:</strong> Tour a commercial data centre to understand infrastructure at scale. <span class="zh">数据中心：参观商业数据中心，了解大规模基础设施。</span></li>
+  </ul>
+</div>
+
+<!-- Section 9: Research Projects -->
+<div class="section">
+  <h2>9. Research Projects / 研究项目</h2>
+  <p>Independent research projects develop the intellectual independence and depth of understanding that top universities value. <span class="zh">独立研究项目培养顶尖大学重视的智力独立性和理解深度。</span></p>
+
+  <h3>9.1 VPA Extended Research Project (ERP) / VPA拓展研究项目</h3>
+  <div class="activity-card">
+    <h4>Overview / 概述</h4>
+    <p>A 6-month independent research project completed in Year 13, supervised by a CS teacher. Equivalent to an EPQ (Extended Project Qualification) in scope and rigour.</p>
+    <p class="zh">13年级完成的为期6个月的独立研究项目，由CS教师监督。在范围和严谨性上相当于EPQ（拓展项目资格）。</p>
+
+    <h4>Structure / 结构</h4>
+    <ul>
+      <li><strong>Term 1 (Year 13):</strong> Choose topic, write proposal, conduct literature review. <span class="zh">13年级第1学期：选择主题，撰写提案，进行文献综述。</span></li>
+      <li><strong>Term 2 (Year 13):</strong> Conduct research, build prototype if applicable, analyse findings. <span class="zh">13年级第2学期：进行研究，如适用构建原型，分析发现。</span></li>
+      <li><strong>Term 3 (Year 13):</strong> Write final report (5,000 words), prepare presentation. <span class="zh">13年级第3学期：撰写最终报告（5000词），准备展示。</span></li>
+    </ul>
+
+    <h4>Sample Topics / 示例主题</h4>
+    <ul>
+      <li>"Comparing the efficiency of sorting algorithms on large datasets" <span class="zh">"比较排序算法在大型数据集上的效率"</span></li>
+      <li>"An investigation into the security vulnerabilities of IoT devices" <span class="zh">"物联网设备安全漏洞调查"</span></li>
+      <li>"Developing a neural network to classify handwritten Chinese characters" <span class="zh">"开发神经网络对手写汉字进行分类"</span></li>
+      <li>"The ethical implications of facial recognition technology in public spaces" <span class="zh">"公共场所面部识别技术的伦理影响"</span></li>
+      <li>"Optimising pathfinding algorithms for real-time strategy games" <span class="zh">"优化实时策略游戏的路径寻找算法"</span></li>
+    </ul>
+  </div>
+
+  <h3>9.2 Research Skills Workshops / 研究技能工作坊</h3>
+  <ul>
+    <li>Academic literature search (Google Scholar, IEEE Xplore, ACM Digital Library). <span class="zh">学术文献搜索（Google Scholar、IEEE Xplore、ACM数字图书馆）。</span></li>
+    <li>Referencing and citation (Harvard style). <span class="zh">引用和参考文献（哈佛风格）。</span></li>
+    <li>Writing an abstract and literature review. <span class="zh">撰写摘要和文献综述。</span></li>
+    <li>Data collection and analysis (quantitative and qualitative). <span class="zh">数据收集和分析（定量和定性）。</span></li>
+    <li>Academic integrity and avoiding plagiarism. <span class="zh">学术诚信和避免抄袭。</span></li>
+  </ul>
+</div>
+
+<!-- Section 10: Peer Mentoring -->
+<div class="section">
+  <h2>10. Peer Mentoring / 同伴辅导</h2>
+  <p>Peer mentoring benefits both mentors (consolidating knowledge, developing leadership) and mentees (receiving support from a near-peer). <span class="zh">同伴辅导对导师（巩固知识、培养领导力）和学员（从近龄同伴获得支持）都有益。</span></p>
+
+  <h3>10.1 VPA CS Peer Mentoring Scheme / VPA CS同伴辅导计划</h3>
+  <div class="activity-card">
+    <h4>Structure / 结构</h4>
+    <ul>
+      <li><strong>Mentors:</strong> Year 13 A-Level CS students (volunteers, selected by teacher). <span class="zh">导师：13年级A-Level CS学生（志愿者，由教师选拔）。</span></li>
+      <li><strong>Mentees:</strong> Year 12 A-Level CS students or IGCSE CS students. <span class="zh">学员：12年级A-Level CS学生或IGCSE CS学生。</span></li>
+      <li><strong>Frequency:</strong> Weekly, 30 minutes, during lunch or after school. <span class="zh">频率：每周，30分钟，午餐时间或放学后。</span></li>
+      <li><strong>Format:</strong> One-to-one or small group (1 mentor : 2–3 mentees). <span class="zh">形式：一对一或小组（1名导师：2-3名学员）。</span></li>
+    </ul>
+
+    <h4>Mentor Training / 导师培训</h4>
+    <ul>
+      <li>2-hour training session: active listening, questioning techniques, safeguarding. <span class="zh">2小时培训课程：积极倾听、提问技巧、保障安全。</span></li>
+      <li>Mentor handbook with topic guides and common misconceptions. <span class="zh">带有主题指南和常见误解的导师手册。</span></li>
+      <li>Monthly mentor debrief with CS teacher. <span class="zh">每月与CS教师进行导师汇报。</span></li>
+    </ul>
+
+    <h4>Recognition / 认可</h4>
+    <ul>
+      <li>Mentors receive a VPA Peer Mentoring Certificate. <span class="zh">导师获得VPA同伴辅导证书。</span></li>
+      <li>Mentoring logged as volunteering for Duke of Edinburgh Award. <span class="zh">辅导记录为爱丁堡公爵奖的志愿服务。</span></li>
+      <li>Outstanding mentors nominated for school awards. <span class="zh">杰出导师被提名学校奖项。</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Section 11: Two-Year Timeline -->
+<div class="section">
+  <h2>11. Two-Year Enrichment Timeline / 两年拓展时间线</h2>
+
+  <h3>Year 12 / 12年级</h3>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="date">September / 9月</span>
+      <ul>
+        <li>Clubs launch: Robotics, AI, Game Dev, Cybersecurity <span class="zh">俱乐部启动：机器人、AI、游戏开发、网络安全</span></li>
+        <li>Bebras registration and preparation begins <span class="zh">Bebras注册和准备开始</span></li>
+        <li>Peer mentoring scheme launches <span class="zh">同伴辅导计划启动</span></li>
+        <li>MOOC study buddy matching <span class="zh">MOOC学习伙伴配对</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">October / 10月</span>
+      <ul>
+        <li>Careers Fair: tech employers invited <span class="zh">职业博览会：邀请科技雇主</span></li>
+        <li>Hack the Midlands (optional attendance) <span class="zh">Hack the Midlands（可选参加）</span></li>
+        <li>First guest speaker: software engineer <span class="zh">第一位客座讲师：软件工程师</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">November / 11月</span>
+      <ul>
+        <li><strong>UK Bebras Challenge</strong> <span class="zh">英国Bebras挑战</span></li>
+        <li>UKMT Senior Mathematical Challenge <span class="zh">UKMT高级数学挑战赛</span></li>
+        <li>University taster day trip (Russell Group) <span class="zh">大学体验日之旅（罗素集团）</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">December / 12月</span>
+      <ul>
+        <li>Bebras results; OUCC invitations sent <span class="zh">Bebras结果；发送OUCC邀请</span></li>
+        <li>USACO December contest <span class="zh">USACO 12月竞赛</span></li>
+        <li>Christmas coding challenge (internal) <span class="zh">圣诞编程挑战（内部）</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">January / 1月</span>
+      <ul>
+        <li><strong>Oxford University Computing Challenge (OUCC)</strong> <span class="zh">牛津大学计算挑战（OUCC）</span></li>
+        <li><strong>British Informatics Olympiad Round 1</strong> <span class="zh">英国信息学奥林匹克第一轮</span></li>
+        <li>Global Game Jam (Game Dev Club) <span class="zh">Global Game Jam（游戏开发俱乐部）</span></li>
+        <li>VPA Mini-Hackathon <span class="zh">VPA迷你黑客马拉松</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">February / 2月</span>
+      <ul>
+        <li>BIO Round 2 (for invited students) <span class="zh">BIO第二轮（针对受邀学生）</span></li>
+        <li>Google Hash Code <span class="zh">Google Hash Code</span></li>
+        <li>Guest speaker: AI researcher <span class="zh">客座讲师：AI研究员</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">March / 3月</span>
+      <ul>
+        <li>StudentHack Manchester (optional) <span class="zh">StudentHack曼彻斯特（可选）</span></li>
+        <li>Work experience applications deadline <span class="zh">工作经验申请截止日期</span></li>
+        <li>MOOC showcase assembly <span class="zh">MOOC展示集会</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">April / 4月</span>
+      <ul>
+        <li>BIO Final / IOI selection camp (for finalists) <span class="zh">BIO决赛/IOI选拔营（针对决赛选手）</span></li>
+        <li>Pi Wars (Robotics Club) <span class="zh">Pi Wars（机器人俱乐部）</span></li>
+        <li>Industry visit: local tech company <span class="zh">行业参观：本地科技公司</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">May / 5月</span>
+      <ul>
+        <li>AS examinations <span class="zh">AS考试</span></li>
+        <li>Club activities pause for exam focus <span class="zh">俱乐部活动暂停以专注考试</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">June–July / 6月-7月</span>
+      <ul>
+        <li>University taster days (independent attendance) <span class="zh">大学体验日（独立参加）</span></li>
+        <li>Summer internships begin <span class="zh">暑期实习开始</span></li>
+        <li>MOOC completion push <span class="zh">MOOC完成冲刺</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">August / 8月</span>
+      <ul>
+        <li>AS results received <span class="zh">收到AS成绩</span></li>
+        <li>Reflection and Year 13 goal-setting <span class="zh">反思和13年级目标设定</span></li>
+        <li>IOI (for UK team members) <span class="zh">IOI（针对英国队成员）</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Year 13 / 13年级</h3>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="date">September / 9月</span>
+      <ul>
+        <li>Clubs resume with Year 13 leadership roles <span class="zh">俱乐部恢复，13年级担任领导角色</span></li>
+        <li>Bebras (mentors help prepare Year 12) <span class="zh">Bebras（导师帮助12年级准备）</span></li>
+        <li>Extended Research Project (ERP) launches <span class="zh">拓展研究项目（ERP）启动</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">October / 10月</span>
+      <ul>
+        <li>UCAS application deadline (Oxbridge, Medicine, Dentistry, Veterinary) <span class="zh">UCAS申请截止日期（牛津剑桥、医学、牙科、兽医）</span></li>
+        <li>Guest speaker: university admissions tutor <span class="zh">客座讲师：大学招生导师</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">November / 11月</span>
+      <ul>
+        <li>UK Bebras (Year 12 participation; Year 13 mentoring) <span class="zh">英国Bebras（12年级参与；13年级辅导）</span></li>
+        <li>Mock interviews for Oxbridge applicants <span class="zh">牛津剑桥申请者的模拟面试</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">December / 12月</span>
+      <ul>
+        <li>UCAS application deadline (most courses) <span class="zh">UCAS申请截止日期（大多数课程）</span></li>
+        <li>Christmas coding challenge (Year 13 organises) <span class="zh">圣诞编程挑战（13年级组织）</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">January / 1月</span>
+      <ul>
+        <li>OUCC / BIO (Year 12 participation; Year 13 coaching) <span class="zh">OUCC/BIO（12年级参与；13年级指导）</span></li>
+        <li>ERP midpoint review <span class="zh">ERP中期审查</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">February–March / 2月-3月</span>
+      <ul>
+        <li>University interview preparation (for those invited) <span class="zh">大学面试准备（针对被邀请者）</span></li>
+        <li>Guest speaker: VPA alumni (career advice) <span class="zh">客座讲师：VPA校友（职业建议）</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">April / 4月</span>
+      <ul>
+        <li>ERP final report deadline <span class="zh">ERP最终报告截止日期</span></li>
+        <li>ERP presentation evening <span class="zh">ERP展示晚会</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">May–June / 5月-6月</span>
+      <ul>
+        <li>A-Level examinations <span class="zh">A-Level考试</span></li>
+        <li>All enrichment activities pause <span class="zh">所有拓展活动暂停</span></li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <span class="date">July–August / 7月-8月</span>
+      <ul>
+        <li>A-Level results day <span class="zh">A-Level成绩公布日</span></li>
+        <li>University confirmation / Clearing <span class="zh">大学确认/补录</span></li>
+        <li>Year 13 leavers' enrichment celebration <span class="zh">13年级毕业生拓展庆祝活动</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Section 12: Enrichment Portfolio -->
+<div class="section">
+  <h2>12. Enrichment Portfolio / 拓展作品集</h2>
+  <p>Students are encouraged to maintain a digital portfolio documenting all enrichment activities. This portfolio is invaluable for university applications and job interviews. <span class="zh">鼓励学生维护一个记录所有拓展活动的数字作品集。这个作品集对大学申请和工作面试非常宝贵。</span></p>
+
+  <h3>12.1 Portfolio Contents / 作品集内容</h3>
+  <ul>
+    <li><strong>GitHub profile:</strong> All programming projects with README files and documentation. <span class="zh">GitHub个人资料：所有编程项目，附README文件和文档。</span></li>
+    <li><strong>Competition certificates:</strong> Scanned copies of all competition results. <span class="zh">竞赛证书：所有竞赛结果的扫描件。</span></li>
+    <li><strong>MOOC certificates:</strong> PDFs of completed course certificates. <span class="zh">MOOC证书：已完成课程的证书PDF。</span></li>
+    <li><strong>Work experience log:</strong> Dates, employer, supervisor, reflections. <span class="zh">工作经验日志：日期、雇主、主管、反思。</span></li>
+    <li><strong>Guest speaker notes:</strong> Summaries of talks attended, key takeaways. <span class="zh">客座讲师笔记：参加讲座的摘要、关键收获。</span></li>
+    <li><strong>Research project:</strong> Full report and presentation slides. <span class="zh">研究项目：完整报告和演示幻灯片。</span></li>
+    <li><strong>Peer mentoring log:</strong> Hours, mentees, topics covered. <span class="zh">同伴辅导日志：小时数、学员、涵盖主题。</span></li>
+    <li><strong>Hackathon projects:</strong> Links to submissions, team photos, reflections. <span class="zh">黑客马拉松项目：提交链接、团队照片、反思。</span></li>
+  </ul>
+
+  <h3>12.2 Portfolio Platform / 作品集平台</h3>
+  <ul>
+    <li><strong>Recommended:</strong> Personal website (GitHub Pages) + GitHub profile. <span class="zh">推荐：个人网站（GitHub Pages）+ GitHub个人资料。</span></li>
+    <li><strong>Alternative:</strong> LinkedIn profile + Google Drive portfolio. <span class="zh">替代：LinkedIn个人资料 + Google Drive作品集。</span></li>
+    <li><strong>Year 12 target:</strong> Portfolio established by end of Term 2. <span class="zh">12年级目标：在第2学期结束前建立作品集。</span></li>
+    <li><strong>Year 13 target:</strong> Portfolio refined and linked in UCAS application. <span class="zh">13年级目标：完善作品集并在UCAS申请中链接。</span></li>
+  </ul>
+</div>
+
+<!-- Section 13: Funding & Support -->
+<div class="section">
+  <h2>13. Funding &amp; Support / 资金与支持</h2>
+  <table>
+    <tr>
+      <th>Item / 项目</th>
+      <th>Cost / 费用</th>
+      <th>Funding Source / 资金来源</th>
+    </tr>
+    <tr>
+      <td>Bebras entry</td>
+      <td>£3/student</td>
+      <td>Department budget</td>
+    </tr>
+    <tr>
+      <td>BIO entry</td>
+      <td>Free</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Competition travel</td>
+      <td>Variable</td>
+      <td>Pupil Premium / department budget</td>
+    </tr>
+    <tr>
+      <td>University taster day travel</td>
+      <td>Variable</td>
+      <td>Pupil Premium / department budget</td>
+    </tr>
+    <tr>
+      <td>MOOC certificates</td>
+      <td>Up to £50/year</td>
+      <td>Department budget (reimbursement on completion)</td>
+    </tr>
+    <tr>
+      <td>Robotics equipment</td>
+      <td>£500–£1,000</td>
+      <td>PTA / department budget / grant applications</td>
+    </tr>
+    <tr>
+      <td>Guest speaker hospitality</td>
+      <td>£50/event</td>
+      <td>Department budget</td>
+    </tr>
+    <tr>
+      <td>Hackathon travel &amp; accommodation</td>
+      <td>£100–£300</td>
+      <td>Student self-funded / Pupil Premium</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Section 14: Contact -->
+<div class="section">
+  <h2>14. Contact &amp; Further Information / 联系与更多信息</h2>
+  <ul>
+    <li><strong>Enrichment Coordinator:</strong> enrichment@victoriaparkacademy.edu</li>
+    <li><strong>Head of Computer Science:</strong> cs@victoriaparkacademy.edu</li>
+    <li><strong>Careers Advisor:</strong> careers@victoriaparkacademy.edu</li>
+  </ul>
+  <div class="success-box">
+    <strong>Get Involved / 参与进来：</strong> All A-Level Computer Science students are encouraged to participate in at least two enrichment activities per term. Speak to your CS teacher or the Enrichment Coordinator to find the right opportunities for you.
+    <p class="zh">鼓励所有A-Level计算机科学学生每学期至少参加两项拓展活动。与您的CS教师或拓展协调员联系，找到适合您的机会。</p>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <p>© Victoria Park Academy | A-Level Computer Science (9618) | Enrichment Programme</p>
+  <p>Document Version 1.0 | Updated: 2025</p>
+</footer>
+
+</body>
+</html>

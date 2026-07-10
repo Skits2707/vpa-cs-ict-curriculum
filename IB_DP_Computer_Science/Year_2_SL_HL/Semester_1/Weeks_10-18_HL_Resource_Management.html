@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — Topic 6: Resource Management (HL Only, Weeks 10–18)</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+</style>
+</head>
+<body>
+
+<h1>Topic 6: Resource Management <span class="bilingual">资源管理 Zīyuán Guǎnlǐ</span> <span class="hl-only">HL ONLY</span></h1>
+<p><strong>IB Syllabus:</strong> Topic 6 (6.1–6.2) | <strong>Level:</strong> HL ONLY | <strong>Duration:</strong> 9 weeks (30 hours)</p>
+
+<h2>Topic 6.1: Operating Systems (Advanced) <span class="bilingual">操作系统（高级）Cāozuò Xìtǒng (Gāojí)</span></h2>
+
+<h3>Week 10 — CPU Scheduling <span class="bilingual">CPU调度 CPU Diàodù</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th><th>Differentiation</th></tr>
+<tr><td>1</td><td>Processes vs threads; process control block (PCB); context switching <span class="bilingual">(进程, 线程, 进程控制块)</span></td><td>Diagram PCB contents; trace context switch</td><td>Bronze: Identify PCB fields; Silver: Explain context switch; Gold: Compare process vs thread overhead</td></tr>
+<tr><td>2</td><td>Scheduling algorithms: FCFS, SJF, Round Robin, Priority scheduling</td><td>Calculate waiting time and turnaround for each algorithm</td><td>Bronze: Trace FCFS; Silver: Compare SJF and Round Robin; Gold: Analyse starvation in priority scheduling</td></tr>
+<tr><td>3</td><td>Preemptive vs non-preemptive scheduling; convoy effect; starvation</td><td>Scenario: choose algorithm for real-time system</td><td>All: Participate; Gold: Discuss multilevel feedback queues</td></tr>
+<tr><td>4</td><td>Real-time scheduling: hard vs soft real-time; deadline scheduling</td><td>Case study: airbag system, streaming video</td><td>All: Classify; Gold: Design schedule for given tasks</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> CPU scheduling algorithms embody different notions of "fairness." Is fairness a mathematical property or a moral one? Can an algorithm be unfair?</td><td>Debate; written argument</td><td>All: Contribute; Gold: Reference Rawls' theory of justice</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> CPU scheduling algorithms must balance efficiency, fairness, and responsiveness. When a scheduler prioritises one process over another, is this a technical decision or an ethical one? Can we objectively determine the "best" scheduling algorithm, or does "best" depend on what we value?
+</div>
+
+<h3>Week 11 — Memory Management <span class="bilingual">内存管理 Nèicún Guǎnlǐ</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Memory management overview: partitioning, fragmentation (internal/external), compaction <span class="bilingual">(分区, 碎片, 紧缩)</span></td><td>Calculate fragmentation; design compaction strategy</td></tr>
+<tr><td>2</td><td>Paging: page tables, logical vs physical address, page faults, translation lookaside buffer (TLB)</td><td>Translate logical to physical addresses; calculate page table size</td></tr>
+<tr><td>3</td><td>Segmentation: segment tables, base and limit registers; segmentation vs paging</td><td>Compare paging and segmentation with examples</td></tr>
+<tr><td>4</td><td>Virtual memory revisited: demand paging, page replacement algorithms (FIFO, LRU, optimal)</td><td>Simulate page replacement; count page faults for each algorithm</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Memory management calculations (25 marks)</td><td>Timed; peer marking</td></tr>
+</table>
+
+<h3>Week 12 — Deadlock and Concurrency <span class="bilingual">死锁与并发 Sǐsuǒ yǔ Bìngfā</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Deadlock: conditions (mutual exclusion, hold and wait, no preemption, circular wait); resource allocation graphs</td><td>Identify deadlock in resource graphs; suggest prevention</td></tr>
+<tr><td>2</td><td>Deadlock prevention, avoidance (banker's algorithm — conceptual), detection, recovery</td><td>Apply banker's algorithm to simple example</td></tr>
+<tr><td>3</td><td>Concurrency: race conditions, critical sections, mutual exclusion, semaphores</td><td>Trace concurrent execution; identify race conditions</td></tr>
+<tr><td>4</td><td>Semaphores and monitors: binary semaphore, counting semaphore; producer-consumer problem</td><td>Design semaphore solution for given scenario</td></tr>
+<tr><td>5</td><td><strong>Consolidation:</strong> OS concepts review quiz</td><td>Low-stakes retrieval practice</td></tr>
+</table>
+
+<h2>Topic 6.2: Control Systems <span class="bilingual">控制系统 Kòngzhì Xìtǒng</span></h2>
+
+<h3>Week 13 — Sensors, Actuators, and Feedback <span class="bilingual">传感器、执行器与反馈 Chuángǎnqì, Zhíxíngqì yǔ Fǎnkuì</span></h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Sensors: types (temperature, pressure, light, proximity, motion), analogue vs digital, ADC <span class="bilingual">(传感器, 模数转换器)</span></td><td>Research sensors in smartphones; identify types</td></tr>
+<tr><td>2</td><td>Actuators: motors, heaters, lights, solenoids; interfaces (DAC, relays, PWM)</td><td>Match actuator to control scenario; discuss power requirements</td></tr>
+<tr><td>3</td><td>Microprocessors vs microcontrollers: architecture, memory, I/O, use cases (Arduino, Raspberry Pi)</td><td>Compare specifications; choose device for project</td></tr>
+<tr><td>4</td><td>Open-loop vs closed-loop control; feedback; set point, error signal, correction</td><td>Diagram home heating system; identify loop components</td></tr>
+<tr><td>5</td><td><strong>TOK:</strong> A thermostat "knows" the temperature and "decides" to turn on the heater. In what sense is this knowledge and decision-making? Where is the boundary between control and intelligence?</td><td>Discussion; link to AI and embodiment</td></tr>
+</table>
+
+<div class="tok-box">
+<strong>TOK Knowledge Question:</strong> Control systems use feedback to maintain stability. Is this a form of "knowledge" about the environment, or merely a mechanical response? At what point does a feedback loop become sufficiently complex that we might call it "intelligent"?
+</div>
+
+<h3>Week 14 — Control System Applications</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Industrial control: PLC, SCADA, robotics; manufacturing examples</td><td>Case study: automated car assembly line</td></tr>
+<tr><td>2</td><td>Transportation control: traffic light systems, autopilot, anti-lock braking</td><td>Design traffic light control logic; discuss safety</td></tr>
+<tr><td>3</td><td>Environmental control: smart buildings, irrigation, waste management</td><td>Evaluate smart building system for VPA</td></tr>
+<tr><td>4</td><td>Medical control: pacemakers, insulin pumps, robotic surgery</td><td>Ethical discussion: responsibility for control system failures</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Control system design exercise (20 marks)</td><td>Design feedback loop for given scenario</td></tr>
+</table>
+
+<h3>Week 15 — Distributed and Autonomous Systems Preview (Topic 7 Bridge)</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Distributed control: multiple controllers, communication, consensus</td><td>Research: how do drone swarms coordinate?</td></tr>
+<tr><td>2</td><td>Autonomous agents: sensors + processing + actuation + decision-making</td><td>Analyse self-driving car architecture</td></tr>
+<tr><td>3</td><td>Reliability and safety: redundancy, fail-safe, fail-soft, watchdog timers</td><td>Evaluate reliability of aircraft control systems</td></tr>
+<tr><td>4</td><td>Topic 6 consolidation: concept mapping across OS and control systems</td><td>Collaborative map; identify cross-topic links</td></tr>
+<tr><td>5</td><td><strong>Formative:</strong> Topic 6 progress test (30 marks)</td><td>Timed; self-assessment</td></tr>
+</table>
+
+<h3>Week 16 — Topic 6 Deep Revision</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Revision: Scheduling algorithms — calculate and compare</td><td>Problem set; peer checking</td></tr>
+<tr><td>2</td><td>Revision: Paging, segmentation, virtual memory</td><td>Address translation practice</td></tr>
+<tr><td>3</td><td>Revision: Deadlock and concurrency</td><td>Resource graph analysis</td></tr>
+<tr><td>4</td><td>Revision: Control systems and feedback loops</td><td>Diagram construction</td></tr>
+<tr><td>5</td><td>Exam technique: 10-mark "Explain" and "Evaluate" OS questions</td><td>Essay planning; timed writing</td></tr>
+</table>
+
+<h3>Week 17 — Topic 6 Assessment Preparation</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1</td><td>Mixed revision: Topics 5–6 cross-topic questions</td><td>Problem solving</td></tr>
+<tr><td>2</td><td><strong>Assessment:</strong> Topic 6 End-of-Topic Test (1 hour, 50 marks)</td><td>Formal conditions</td></tr>
+<tr><td>3</td><td>Test feedback and DIRT</td><td>Markscheme analysis; target setting</td></tr>
+<tr><td>4</td><td>IA check: all students confirm draft status</td><td>One-to-one tutorials</td></tr>
+<tr><td>5</td><td>Semester 1 examination preparation</td><td>Paper 1 practice; exam technique</td></tr>
+</table>
+
+<h3>Week 18 — Semester 1 Examination</h3>
+<table>
+<tr><th>Lesson</th><th>Content</th><th>Activities</th></tr>
+<tr><td>1–2</td><td>Revision clinic (student-requested topics)</td><td>Q&A; problem solving</td></tr>
+<tr><td>3</td><td><strong>Semester 1 Examination</strong> (Paper 1 mock, HL 2h10)</td><td>Formal conditions</td></tr>
+<tr><td>4</td><td>Examination feedback</td><td>DIRT; target setting for Topic 7</td></tr>
+<tr><td>5</td><td>Winter break IA targets set</td><td>Individual action plans</td></tr>
+</table>
+
+<h2>Key Vocabulary (Topic 6)</h2>
+<table>
+<tr><th>English</th><th>中文</th><th>Pinyin</th><th>Definition</th></tr>
+<tr><td>Process</td><td>进程</td><td>jìnchéng</td><td>An instance of a program in execution with its own memory space</td></tr>
+<tr><td>Thread</td><td>线程</td><td>xiànchéng</td><td>A lightweight sub-process sharing memory with other threads</td></tr>
+<tr><td>Context switch</td><td>上下文切换</td><td>shàngxiàwén qiēhuàn</td><td>Saving state of one process and loading state of another</td></tr>
+<tr><td>Paging</td><td>分页</td><td>fēnyè</td><td>Dividing memory into fixed-size pages for virtual memory</td></tr>
+<tr><td>Segmentation</td><td>分段</td><td>fēnduàn</td><td>Dividing memory into variable-sized segments</td></tr>
+<tr><td>Deadlock</td><td>死锁</td><td>sǐsuǒ</td><td>A situation where processes are blocked waiting for each other</td></tr>
+<tr><td>Semaphore</td><td>信号量</td><td>xìnhào liàng</td><td>A variable controlling access to a shared resource</td></tr>
+<tr><td>Sensor</td><td>传感器</td><td>chuángǎnqì</td><td>A device detecting physical properties and converting to signals</td></tr>
+<tr><td>Actuator</td><td>执行器</td><td>zhíxíngqì</td><td>A device converting signals into physical action</td></tr>
+<tr><td>Feedback loop</td><td>反馈回路</td><td>fǎnkuì huílù</td><td>A system where output influences future input</td></tr>
+<tr><td>Microcontroller</td><td>微控制器</td><td>wēi kòngzhì qì</td><td>A compact integrated circuit designed for embedded control</td></tr>
+</table>
+
+<div class="checklist">
+<strong>Teacher Checklist — End of Topic 6:</strong>
+<ul>
+<li>☐ All IB 6.1–6.2 syllabus points covered</li>
+<li>☐ Students can calculate scheduling metrics</li>
+<li>☐ Students can translate logical to physical addresses</li>
+<li>☐ Students can identify and resolve deadlock</td>
+<li>☐ Students can design feedback control systems</li>
+<li>☐ IA first drafts reviewed and feedback given</li>
+</ul>
+</div>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | Topic 6 Scheme of Work</p>
+
+</body>
+</html>

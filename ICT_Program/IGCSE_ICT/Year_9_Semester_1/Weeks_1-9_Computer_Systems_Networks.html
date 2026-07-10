@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA ICT — IGCSE Y9S1 Weeks 1-9: Computer Systems & Networks</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .vocab-box { background: #eaf2f8; padding: 10px; border-radius: 5px; margin: 10px 0; }
+  .activity-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f39c12; margin: 15px 0; }
+  .assessment-box { background: #fdebd0; padding: 15px; border-left: 4px solid #e67e22; margin: 15px 0; }
+  .week-header { background-color: #d6eaf8; padding: 10px; margin-top: 20px; border-radius: 5px; }
+  .syllabus-ref { background: #e8daef; padding: 8px; border-radius: 5px; margin: 10px 0; font-weight: bold; }
+  .exam-tip { background: #d5f5e3; padding: 10px; border-left: 4px solid #27ae60; margin: 10px 0; }
+  .code-block { background: #f4f4f4; padding: 10px; border-left: 3px solid #3498db; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<h1>Weeks 1–9: Computer Systems, Input/Output, Storage &amp; Networks</h1>
+<p><strong>Syllabus:</strong> CIE IGCSE ICT (0417) Topics 1–4 | <strong>Lesson Length:</strong> 40 minutes</p>
+
+<h2>Week 1 — Types of Computer Systems</h2>
+<div class="syllabus-ref">Syllabus: 1.1 Types and Components of Computer Systems</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> mainframe <span class="bilingual">大型机 (dàxíng jī)</span>, supercomputer <span class="bilingual">超级计算机 (chāojí jìsuànjī)</span>, personal computer <span class="bilingual">个人电脑 (gèrén diànnǎo)</span>, laptop <span class="bilingual">笔记本电脑 (bǐjìběn diànnǎo)</span>, tablet <span class="bilingual">平板电脑 (píngbǎn diànnǎo)</span>, smartphone <span class="bilingual">智能手机 (zhìnéng shǒujī)</span>, embedded system <span class="bilingual">嵌入式系统 (qiànrù shì xìtǒng)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Matching game — Match computer type to its typical use case (hospital, weather forecasting, home, car).<br><br>
+<strong>Activity 2 (15 min):</strong> Comparison table — Compare mainframe, supercomputer, PC, embedded on: speed, cost, size, typical use.<br><br>
+<strong>Activity 3 (10 min):</strong> Discussion — "Is a smartwatch a computer?" Debate using definition criteria.
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> For "compare" questions, always give a balanced answer. Don't just describe one type — explicitly state similarities AND differences.
+</div>
+
+<h2>Week 2 — Hardware Components</h2>
+<div class="syllabus-ref">Syllabus: 1.2 Hardware — CPU, Memory, Motherboard</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> CPU <span class="bilingual">中央处理器 (zhōngyāng chǔlǐ qì)</span>, ALU <span class="bilingual">算术逻辑单元 (suànshù luójí dānyuán)</span>, CU <span class="bilingual">控制单元 (kòngzhì dānyuán)</span>, register <span class="bilingual">寄存器 (jìcúnqì)</span>, RAM <span class="bilingual">随机存取存储器 (suíjī cúnqǔ cúnchǔqì)</span>, ROM <span class="bilingual">只读存储器 (zhǐdú cúnchǔqì)</span>, motherboard <span class="bilingual">主板 (zhǔbǎn)</span>, bus <span class="bilingual">总线 (zǒngxiàn)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> CPU diagram labeling — Students label ALU, CU, registers, cache on a diagram.<br><br>
+<strong>Activity 2 (15 min):</strong> RAM vs. ROM comparison — Create a Venn diagram. What happens when power is lost?<br><br>
+<strong>Activity 3 (10 min):</strong> "Fetch-Decode-Execute" cycle — Students act out the cycle in groups of 3.
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> The fetch-decode-execute cycle is a common 4-mark question. State: 1) Address sent to memory, 2) Instruction fetched, 3) Instruction decoded by CU, 4) Instruction executed by ALU.
+</div>
+
+<h2>Week 3 — Input Devices</h2>
+<div class="syllabus-ref">Syllabus: 2.1 Input Devices</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> keyboard <span class="bilingual">键盘 (jiànpán)</span>, mouse <span class="bilingual">鼠标 (shǔbiāo)</span>, scanner <span class="bilingual">扫描仪 (sǎomiáo yí)</span>, microphone <span class="bilingual">麦克风 (màikèfēng)</span>, webcam <span class="bilingual">网络摄像头 (wǎngluò shèxiàngtóu)</span>, barcode reader <span class="bilingual">条码阅读器 (tiáomǎ yuèdúqì)</span>, RFID <span class="bilingual">射频识别 (shèpín shíbié)</span>, sensor <span class="bilingual">传感器 (chuángǎnqì)</span>, OCR <span class="bilingual">光学字符识别 (guāngxué zìfú shíbié)</span>, OMR <span class="bilingual">光学标记识别 (guāngxué biāojì shíbié)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Input device scavenger hunt — Find 5 input devices in the lab; photograph and label.<br><br>
+<strong>Activity 2 (15 min):</strong> Scenario matching — Given situations (supermarket, hospital, factory), choose the most appropriate input device and justify.<br><br>
+<strong>Activity 3 (10 min):</strong> OCR demonstration — Scan a printed page; compare accuracy to typed text.
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> "Suggest a suitable input device for..." questions require justification. Always state: device name + why it's suitable + why alternatives are less suitable.
+</div>
+
+<h2>Week 4 — Output Devices</h2>
+<div class="syllabus-ref">Syllabus: 2.2 Output Devices</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> monitor <span class="bilingual">显示器 (xiǎnshìqì)</span>, printer <span class="bilingual">打印机 (dǎyìnjī)</span>, inkjet <span class="bilingual">喷墨打印机 (pēnmò dǎyìnjī)</span>, laser <span class="bilingual">激光打印机 (jīguāng dǎyìnjī)</span>, 3D printer <span class="bilingual">3D打印机 (3D dǎyìnjī)</span>, speaker <span class="bilingual">扬声器 (yángshēngqì)</span>, actuator <span class="bilingual">执行器 (zhíxíngqì)</span>, plotter <span class="bilingual">绘图仪 (huìtú yí)</span>, projector <span class="bilingual">投影仪 (tóuyǐng yí)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Printer comparison — Compare inkjet vs. laser on: cost per page, speed, quality, use case.<br><br>
+<strong>Activity 2 (15 min):</strong> Output device role-play — One student is an architect, one a gamer, one a warehouse manager. Others suggest and justify output devices.<br><br>
+<strong>Activity 3 (10 min):</strong> "Output for disabilities" — Research and present: Braille printer, screen reader, haptic feedback.
+</div>
+
+<h2>Week 5 — Storage Devices &amp; Media</h2>
+<div class="syllabus-ref">Syllabus: 3.1–3.2 Storage Devices and Media</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> hard disk drive (HDD) <span class="bilingual">硬盘驱动器 (yìngpán qūdòngqì)</span>, solid state drive (SSD) <span class="bilingual">固态硬盘 (gùtài yìngpán)</span>, USB flash drive <span class="bilingual">U盘 (U pán)</span>, optical disc <span class="bilingual">光盘 (guāngpán)</span>, magnetic tape <span class="bilingual">磁带 (cídài)</span>, cloud storage <span class="bilingual">云存储 (yún cúnchǔ)</span>, NAS <span class="bilingual">网络附加存储 (wǎngluò fùjiā cúnchǔ)</span>, read/write speed <span class="bilingual">读写速度 (dúxiě sùdù)</span>, capacity <span class="bilingual">容量 (róngliàng)</span>, portability <span class="bilingual">便携性 (biànxié xìng)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Storage comparison matrix — Evaluate HDD, SSD, USB, DVD, Cloud on: capacity, speed, cost, portability, durability.<br><br>
+<strong>Activity 2 (15 min):</strong> "Best storage for..." — Scenarios: video editor, traveler, school archive, gamer.<br><br>
+<strong>Activity 3 (10 min):</strong> Calculate storage needs — How much space for 1000 photos (5MB each)? 10 hours of video (1GB/hour)?
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> For storage comparison questions, use the CAPS framework: Capacity, Access speed, Portability, Suitability (durability/cost).
+</div>
+
+<h2>Week 6 — Data Storage Units &amp; Compression</h2>
+<div class="syllabus-ref">Syllabus: 3.3 Data Storage — Bits, Bytes, and Compression</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> bit <span class="bilingual">位 (wèi)</span>, byte <span class="bilingual">字节 (zìjié)</span>, kilobyte <span class="bilingual">千字节 (qiān zìjié)</span>, megabyte <span class="bilingual">兆字节 (zhào zìjié)</span>, gigabyte <span class="bilingual">吉字节 (jí zìjié)</span>, terabyte <span class="bilingual">太字节 (tài zìjié)</span>, compression <span class="bilingual">压缩 (yāsuō)</span>, lossy <span class="bilingual">有损压缩 (yǒusǔn yāsuō)</span>, lossless <span class="bilingual">无损压缩 (wúsǔn yāsuō)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Conversion practice — Convert between bits, bytes, KB, MB, GB. Mental math: How many bytes in 2KB?<br><br>
+<strong>Activity 2 (15 min):</strong> Compression experiment — Save same image as BMP, PNG, JPG. Compare file sizes. Zoom in — what changed?<br><br>
+<strong>Activity 3 (10 min):</strong> Calculate image file size: 1024 × 768 pixels, 24-bit color = ? MB
+</div>
+<div class="code-block">
+File size = width × height × color depth (bits) ÷ 8 (to bytes) ÷ 1024 (to KB) ÷ 1024 (to MB)
+</div>
+
+<h2>Week 7 — Introduction to Networks</h2>
+<div class="syllabus-ref">Syllabus: 4.1–4.2 Network Types and Hardware</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> LAN <span class="bilingual">局域网 (júyù wǎng)</span>, WAN <span class="bilingual">广域网 (guǎngyù wǎng)</span>, WLAN <span class="bilingual">无线局域网 (wúxiàn júyù wǎng)</span>, PAN <span class="bilingual">个人局域网 (gèrén júyù wǎng)</span>, router <span class="bilingual">路由器 (lùyóuqì)</span>, switch <span class="bilingual">交换机 (jiāohuànjī)</span>, hub <span class="bilingual">集线器 (jíxiànqì)</span>, NIC <span class="bilingual">网卡 (wǎngkǎ)</span>, modem <span class="bilingual">调制解调器 (tiáozhì jiětiáo qì)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Network diagram drawing — Draw the school network. Label LAN, WAN, router, switch, server.<br><br>
+<strong>Activity 2 (15 min):</strong> Hardware matching — Match device to function. What's the difference between hub and switch?<br><br>
+<strong>Activity 3 (10 min):</strong> "Is the Internet a WAN?" Discussion — Yes! The largest WAN in the world.
+</div>
+
+<h2>Week 8 — Network Topologies</h2>
+<div class="syllabus-ref">Syllabus: 4.3 Network Topologies</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> bus topology <span class="bilingual">总线拓扑 (zǒngxiàn tuòpū)</span>, star topology <span class="bilingual">星型拓扑 (xīngxíng tuòpū)</span>, mesh topology <span class="bilingual">网状拓扑 (wǎngzhuàng tuòpū)</span>, node <span class="bilingual">节点 (jiédiǎn)</span>, backbone <span class="bilingual">骨干 (gǔgàn)</span>, terminator <span class="bilingual">终结器 (zhōngjié qì)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> Physical topology models — Use string and cups to build bus, star, and mesh models.<br><br>
+<strong>Activity 2 (15 min):</strong> Pros and cons table — For each topology: ease of setup, cost, fault tolerance, cable length.<br><br>
+<strong>Activity 3 (10 min):</strong> "What happens if...?" — Cable breaks in bus? Switch fails in star? One node fails in mesh?
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> Star topology is the most common in modern networks. Always mention: central device (switch/hub), easy fault detection, but single point of failure if central device fails.
+</div>
+
+<h2>Week 9 — Network Protocols &amp; Internet</h2>
+<div class="syllabus-ref">Syllabus: 4.4–4.5 Protocols, IP Addresses, and the Internet</div>
+<div class="vocab-box">
+<strong>Keywords:</strong> protocol <span class="bilingual">协议 (xiéyì)</span>, TCP/IP <span class="bilingual">传输控制协议/网际协议 (chuánshū kòngzhì xiéyì/wǎngjì xiéyì)</span>, HTTP/HTTPS <span class="bilingual">超文本传输协议 (chāo wénběn chuánshū xiéyì)</span>, FTP <span class="bilingual">文件传输协议 (wénjiàn chuánshū xiéyì)</span>, IP address <span class="bilingual">IP地址 (IP dìzhǐ)</span>, DNS <span class="bilingual">域名系统 (yùmíng xìtǒng)</span>, packet <span class="bilingual">数据包 (shùjù bāo)</span>, bandwidth <span class="bilingual">带宽 (dàikuān)</span>, latency <span class="bilingual">延迟 (yánchí)</span>
+</div>
+<div class="activity-box">
+<strong>Activity 1 (15 min):</strong> "How the Internet Works" video + diagram labeling — ISP, DNS server, web server, client.<br><br>
+<strong>Activity 2 (15 min):</strong> Packet simulation — Students pass "packets" (paper slips) across the room. What if one is lost? (TCP retransmission!)<br><br>
+<strong>Activity 3 (10 min):</strong> IP address format — IPv4 vs. IPv6. Why did we run out of IPv4 addresses?
+</div>
+<div class="exam-tip">
+<strong>Exam Tip:</strong> For "explain how a webpage is loaded" questions, use this sequence: 1) User types URL, 2) DNS converts to IP, 3) Request sent via ISP, 4) Web server sends data in packets, 5) Browser assembles and displays page.
+</div>
+
+<h2>Past Paper Practice — Weeks 1-9 Topics</h2>
+<div class="assessment-box">
+<p><strong>May/June 2023 Paper 1, Q1:</strong></p>
+<p>"State two differences between a mainframe computer and a personal computer." [2 marks]</p>
+<p><em>Model answer:</em> Mainframes support hundreds/thousands of simultaneous users; PCs support one user. Mainframes have greater processing power and storage capacity. Mainframes are more expensive.</p>
+<br>
+<p><strong>May/June 2022 Paper 1, Q3:</strong></p>
+<p>"Describe the purpose of a router in a network." [2 marks]</p>
+<p><em>Model answer:</em> A router directs data packets between networks. It determines the best path for data to travel and can connect a LAN to the Internet (WAN).</p>
+<br>
+<p><strong>Oct/Nov 2021 Paper 1, Q5:</strong></p>
+<p>"Explain why a solid-state drive (SSD) is more suitable than a hard disk drive (HDD) for use in a laptop." [3 marks]</p>
+<p><em>Model answer:</em> SSDs are more portable because they have no moving parts, making them more durable/shock-resistant. SSDs use less power, extending battery life. SSDs have faster read/write speeds, improving performance.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VPA IB DP CS — Year 1 Semester 1 Assessment Pack</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a5276; border-bottom: 3px solid #1a5276; padding-bottom: 10px; }
+  h2 { color: #2874a6; margin-top: 30px; }
+  h3 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #1a5276; color: white; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+  .bilingual { color: #c0392b; font-style: italic; }
+  .highlight { background-color: #fff3cd; padding: 2px 5px; }
+  .bronze { background-color: #cd7f32; color: white; padding: 3px 8px; border-radius: 3px; }
+  .silver { background-color: #c0c0c0; color: black; padding: 3px 8px; border-radius: 3px; }
+  .gold { background-color: #ffd700; color: black; padding: 3px 8px; border-radius: 3px; }
+  .checklist { background: #e8f6f3; padding: 15px; border-left: 4px solid #1abc9c; }
+  .tok-box { background: #f5eef8; padding: 15px; border-left: 4px solid #8e44ad; }
+  .ia-box { background: #fef9e7; padding: 15px; border-left: 4px solid #f1c40f; }
+  .hl-only { background: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0; }
+  .command-term { font-weight: bold; color: #1a5276; }
+</style>
+</head>
+<body>
+
+<h1>Year 1 Semester 1 Assessment Pack <span class="bilingual">评估包 Pínggū Bāo</span></h1>
+<p><strong>Topics:</strong> 1 (System Fundamentals) + 2 (Computer Organization) | <strong>Level:</strong> SL + HL</p>
+
+<h2>1. Assessment Philosophy</h2>
+<p>All assessments are aligned to the IB DP Computer Science Guide (First Assessment 2024) and use IB command terms, markbands, and question styles. Formative assessments build toward summative mastery. EAL students receive bilingual keyword lists and extended time (if approved by IB coordinator).</p>
+
+<h2>2. Semester 1 Assessment Calendar</h2>
+<table>
+<tr><th>Week</th><th>Assessment</th><th>Type</th><th>Duration</th><th>Marks</th><th>IB Alignment</th></tr>
+<tr><td>1</td><td>Diagnostic Test</td><td>Baseline</td><td>40 min</td><td>30</td><td>IGCSE recap + IB readiness</td></tr>
+<tr><td>5</td><td>Topic 1 Progress Check</td><td>Formative</td><td>40 min</td><td>25</td><td>Paper 1 short-answer</td></tr>
+<tr><td>9</td><td>Topic 1 End-of-Topic Test</td><td>Summative</td><td>1 hour</td><td>50</td><td>Paper 1 style (4, 8, 12-mark Qs)</td></tr>
+<tr><td>14</td><td>Topic 2 Progress Check</td><td>Formative</td><td>40 min</td><td>30</td><td>Paper 1 calculations + diagrams</td></tr>
+<tr><td>16</td><td>IA Client Proposal</td><td>IA Milestone</td><td>Homework</td><td>Pass/Fail</td><td>Criteria A: Planning</td></tr>
+<tr><td>18</td><td>Semester 1 Examination</td><td>Summative</td><td>SL 1h30 / HL 2h10</td><td>SL 70 / HL 100</td><td>Paper 1 Mock</td></tr>
+</table>
+
+<h2>3. Paper 1 Question Types and Mark Schemes</h2>
+
+<h3>Question Type A: Define / State (1–2 marks)</h3>
+<p><strong>Example:</strong> <em>Define the term "volatile memory."</em> [1]</p>
+<p><strong>Markscheme:</strong> Memory that loses its contents when power is removed. <strong>Accept:</strong> RAM is volatile. <strong>Do not accept:</strong> "temporary memory" without qualification.</p>
+
+<h3>Question Type B: Describe (3–5 marks)</h3>
+<p><strong>Example:</strong> <em>Describe the role of the control unit (CU) in the CPU.</em> [3]</p>
+<p><strong>Markscheme:</strong></p>
+<ul>
+<li>Award [1] for stating it controls/fetches/decodes/executes instructions</li>
+<li>Award [1] for describing it sends control signals to ALU/registers/bus</li>
+<li>Award [1] for explaining it coordinates timing via clock signals</li>
+</ul>
+
+<h3>Question Type C: Explain (5–8 marks)</h3>
+<p><strong>Example:</strong> <em>Explain why cache memory improves CPU performance.</em> [6]</p>
+<p><strong>Markscheme (IB-style markbands):</strong></p>
+<table>
+<tr><th>Marks</th><th>Descriptor</th></tr>
+<tr><td>1–2</td><td>Basic identification that cache is faster than RAM. Limited explanation.</td></tr>
+<tr><td>3–4</td><td>Clear explanation of temporal/spatial locality. Some reference to speed hierarchy.</td></tr>
+<tr><td>5–6</td><td>Comprehensive explanation including locality principles, speed comparison (cache vs RAM vs disk), reduced bus traffic, and impact on FDE cycle timing.</td></tr>
+</table>
+
+<h3>Question Type D: Evaluate / Discuss (8–12 marks)</h3>
+<p><strong>Example:</strong> <em>Evaluate the use of parallel changeover versus direct changeover when implementing a new school information system.</em> [10]</p>
+<p><strong>Markscheme (IB markbands for essays):</strong></p>
+<table>
+<tr><th>Marks</th><th>Descriptor</th></tr>
+<tr><td>1–3</td><td>Limited analysis. One-sided or descriptive only. Few relevant points.</td></tr>
+<tr><td>4–6</td><td>Some analysis with both sides presented. Examples given but not fully developed. Basic conclusion.</td></tr>
+<tr><td>7–8</td><td>Good analysis with balanced argument. Relevant examples from context. Clear conclusion with justified judgement.</td></tr>
+<tr><td>9–10</td><td>Excellent critical analysis. Sophisticated understanding of context. Well-chosen examples. Convincing, nuanced conclusion.</td></tr>
+</table>
+
+<h2>4. Topic 1 Sample Assessment Questions</h2>
+
+<h3>Q1 (a) — Define [1]</h3>
+<p>Define the term <strong>stakeholder</strong>. <span class="bilingual">(利益相关者 lìyì xiāngguān zhě)</span></p>
+<p><em>Award [1] for: A person or group with an interest in or affected by a system.</em></p>
+
+<h3>Q1 (b) — Describe [3]</h3>
+<p>Describe <strong>three</strong> components of an information system.</p>
+<p><em>Award [1] each for any three of: hardware, software, data, procedures, people. [1] each for valid description.</em></p>
+
+<h3>Q2 — Explain [6]</h3>
+<p>Explain the purpose of a feasibility study before system development begins.</p>
+<p><em>Markband:</em></p>
+<ul>
+<li>[1–2]: Identifies one type of feasibility (technical/economic/operational)</li>
+<li>[3–4]: Explains two types with relevant examples; shows why each matters</li>
+<li>[5–6]: Comprehensive coverage of all three types with clear links to project risk reduction and informed decision-making</li>
+</ul>
+
+<h3>Q3 — Construct [4]</h3>
+<p>A school library has the following entities: BOOK, MEMBER, LOAN. A member can borrow many books. A book can be borrowed by many members (over time). Each loan records one member and one book.</p>
+<p>Construct an ER diagram showing these entities, relationships, and cardinality.</p>
+<p><em>Award [1] for three entities; [1] for correct relationships; [1] for M:N between MEMBER and BOOK; [1] for LOAN as associative entity (or alternative valid representation).</em></p>
+
+<h3>Q4 — Evaluate [10]</h3>
+<p>A hospital is replacing its 20-year-old patient record system. Evaluate the use of <strong>phased changeover</strong> for this implementation.</p>
+
+<h2>5. Topic 2 Sample Assessment Questions</h2>
+
+<h3>Q5 — State / Define [2]</h3>
+<p>(a) State the purpose of the program counter (PC). [1]</p>
+<p>(b) State the purpose of the memory address register (MAR). [1]</p>
+
+<h3>Q6 — Describe [4]</h3>
+<p>Describe the fetch stage of the fetch-decode-execute cycle.</p>
+<p><em>Award [1] for: PC contents copied to MAR; [1] for: Address placed on address bus; [1] for: Memory returns instruction to MDR; [1] for: PC incremented.</em></p>
+
+<h3>Q7 — Explain [6]</h3>
+<p>Explain how virtual memory allows a computer to run programs that require more RAM than is physically installed.</p>
+
+<h3>Q8 — Calculate / Show [5]</h3>
+<p>(a) Convert the denary number 75 to 8-bit binary. [2]</p>
+<p>(b) Represent −75 using 8-bit two's complement. Show your working. [3]</p>
+
+<h3>Q9 — Construct [4]</h3>
+<p>A security system sounds an alarm (A = 1) when either motion is detected (M = 1) AND the system is armed (S = 1), OR when a manual panic button is pressed (P = 1) regardless of whether the system is armed.</p>
+<p>(a) Construct a truth table for this system. [2]</p>
+<p>(b) Draw a logic circuit for this system. [2]</p>
+
+<h3>Q10 — Discuss [12]</h3>
+<p>Discuss the impact of increasing the word length of a CPU on computer performance and system design.</p>
+
+<h2>6. Bilingual Glossary for Assessments</h2>
+<p>All students receive a bilingual keyword list before each assessment. EAL students may use an approved glossary in examinations (subject to IB regulations).</p>
+
+<h2>7. IA Client Proposal — Marking Criteria</h2>
+<table>
+<tr><th>Criterion</th><th>Requirement</th><th>Pass Criteria</th></tr>
+<tr><td>A.1 Client Identification</td><td>Real, specific, contactable client</td><td>Name, role, organisation, contact method provided</td></tr>
+<tr><td>A.2 Problem Definition</td><td>Clear, genuine problem statement</td><td>Problem described in client's own words; evidence of consultation</td></tr>
+<tr><td>A.3 Rationale</td><td>Why this problem matters</td><td>At least two reasons why solution is needed</td></tr>
+<tr><td>A.4 Success Criteria</td><td>Measurable, testable criteria</td><td>3–5 criteria, each with measurement method</td></tr>
+</table>
+
+<h2>8. Assessment for Learning (AfL) Strategies</h2>
+<ul>
+<li><strong>Peer marking:</strong> Students mark sample responses using IB markschemes before attempting their own</li>
+<li><strong>DIRT time:</strong> Dedicated lesson time after each assessment for reflection and improvement</li>
+<li><strong>Bronze/Silver/Gold targets:</strong> Students set differentiated improvement goals</li>
+<li><strong>Exit tickets:</strong> 3-minute written reflection at end of every lesson</li>
+<li><strong>Retrieval practice:</strong> Weekly low-stakes quizzes on prior content</li>
+</ul>
+
+<div class="checklist">
+<strong>Assessment Pack Checklist:</strong>
+<ul>
+<li>☐ Diagnostic test prepared and photocopied</li>
+<li>☐ All formative assessments have markschemes</li>
+<li>☐ Summative assessments mirror IB Paper 1 timing and structure</li>
+<li>☐ Bilingual glossaries prepared for EAL students</li>
+<li>☐ IA proposal criteria shared with students</li>
+<li>☐ Past paper questions compiled by topic</li>
+</ul>
+</div>
+
+<p style="margin-top:30px; text-align:center; color:#666;">© Victoria Park Academy Shenzhen | IB DP Computer Science | Assessment Pack</p>
+
+</body>
+</html>
